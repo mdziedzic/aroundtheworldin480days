@@ -1,0 +1,36 @@
+/* ----------------------------------------- # MAIN  */
+
+#main .container 
+	{
+/* 	height: 1%; */
+	}
+
+.nav
+	{
+	margin-bottom: 7px; /* otherwise bottom of blue highlights are clipped in ie7 */
+	}
+
+
+
+/* ----------------------------------------- # SUBNAV  */
+	
+#journal-content
+	{
+	top: 13px;
+	}
+	
+#photo-content
+	{
+	top: 17px;
+	}
+
+
+
+/* ----------------------------------------- # FOOTER  */
+
+#search-input 
+	{
+	border: 0;
+	}
+	
+

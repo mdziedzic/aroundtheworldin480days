@@ -1,0 +1,235 @@
+/* ----------------------------------------- # CONTENT  */
+
+.day-number
+	{
+	}	
+
+#ie-day-number-fix
+	{
+	margin-top: -4px;
+	}
+
+.photo
+	{
+	zoom: 1;
+	}
+	
+#previous-next
+	{
+	margin-bottom: 115px;
+	}	
+	
+#content-multiple #previous-next
+	{
+	margin-top: 9px;
+	}	
+	
+#content-single, #content-multiple
+	{
+	top: 39px;
+	}
+
+#content-single h2, #content-multiple h2
+	{
+	margin-top: 31px;
+	}	
+
+.continue-reading
+	{
+	margin-bottom: 0px;
+	}
+
+#cont-container .comments-counter
+	{
+	margin-top: 14px;
+	}
+
+#content-multiple
+	{
+	margin-bottom: 45px;
+	}
+
+
+
+/* ----------------------------------------- # NAVIGATION  */
+
+.nav li
+	{
+	position: absolute;
+	}
+		
+	
+
+/* ----------------------------------------- # CONTENT (FAQ, SEARCH-RESULTS, PRESS)  */
+
+#content-faq h2
+	{
+	margin-bottom: 39px;
+	}
+	
+#content-search-results h2,
+#content-press h2
+	{
+	margin-bottom: 38px;
+	}	
+
+.faq-question,
+.search-results-entry,
+.press-entry
+	{
+	margin-top: -19px;
+	}
+	
+#content-faq #cont-container .comments-counter,
+#content-search-results #cont-container .comments-counter
+	{
+	margin-top: 1px;
+	}		
+	
+.faq-x,
+.search-results-x,
+.press-x
+	{
+	margin-top: -1px;
+	}	
+	
+#content-faq-entry #cont-container .comments-counter
+	{
+	margin-top: 19px;
+	}		
+
+
+/* ----------------------------------------- # CONTENT / COMMENTS  */
+	
+
+#comments
+	{
+	height: 1%; /* to fix javascript font-size change bug */
+	}
+
+#comments .comments-counter
+	{
+	margin: 6px 0 0 0;
+	right: 50px;
+	}
+	
+#comments-closed
+	{
+	margin-top: -32px;
+	padding-bottom: 66px;
+	}
+	
+#comments-closed-no-responses
+	{
+	padding-bottom: 66px;
+	}
+	
+#comments-title
+	{
+	padding-left: 0px;
+	width: 300px;
+	left: -21px;
+	}
+
+.response
+	{
+	margin-left: 40px;
+	margin-bottom: -10px;
+	}
+
+.response-counter	
+	{
+	top: 42px;
+	}
+
+.respondee
+	{
+	margin-bottom: 11px;
+	}
+
+.response-box
+	{
+	margin: 0 20px 0px 0;
+	padding: 4px 20px 13px 29px;
+	}
+	
+.respondee-emily
+	{
+	margin-bottom: -20px;
+	}
+
+#post-comments
+	{
+	margin-top: 31px; 
+	margin-bottom: 55px;
+	padding-bottom: 3px;
+	}
+
+#post-comments-notification
+	{
+	top: -6px;
+	left: 25px;
+	}
+	
+/* #pc-submit, */
+#post-comments #submit
+	{
+	top: 10px;
+	text-indent: 0px;
+	}
+	
+#comments-inappropriate
+	{
+	top: -8px;
+	}	
+
+
+
+/* ----------------------------------------- # FOOTER  */
+
+#footer p 
+	{
+	filter:alpha(opacity=70);
+	-moz-opacity:.70;
+	}
+
+#contact p 
+	{
+	position: absolute;
+	top: 95px;
+	}
+
+#share p 
+	{
+	position: absolute;
+	top: 167px;
+	}
+
+#copyright 
+	{
+	position: absolute;
+	top: 95px;
+	left: 481px;
+	text-align: right;
+	}
+
+#xhtml-css-wordpress p 
+	{
+	position: absolute;
+	top: 149px;
+	left: 481px;
+	text-align: right;
+	}
+	
+#footer
+	{
+	position: relative; /* to keep footer and footer .container together when subnav changes height with WP-dTree */
+	margin-top: 0px;
+	zoom: 1;
+	}
+	
+#footer .container 
+	{
+	position: relative;
+	zoom: 1;
+	}

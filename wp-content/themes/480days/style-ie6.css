@@ -1,0 +1,231 @@
+body 
+	{
+	text-align: center;
+	}
+
+.container 
+	{
+	text-align: left;
+	}
+
+
+
+/* ----------------------------------------- # MAIN  */
+
+#main 
+	{
+	background-image: url(images/main/background.gif);
+	background-repeat: repeat-x;
+	}
+
+#main-bg-burst 
+	{
+	background-image: url(images/main/burst.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-position: top;
+	}
+
+#main .container 
+	{
+	background-image: url(images/main/masthead.gif);
+	background-repeat: no-repeat;
+	background-position: center top;
+	}
+
+
+
+/* ----------------------------------------- # NAVIGATION  */
+
+.nav 
+	{
+	margin-left: 40px;
+	margin-bottom: 20px;
+	}
+	
+
+/* ----------------------------------------- # SUBNAV  */
+
+#journal-content
+	{
+	top: 10px;
+	}
+	
+#photo-content
+	{
+	top: 16px;
+	}
+	
+
+
+/* ----------------------------------------- # CONTENT  */
+
+#content
+	{
+	margin-top: -4px;
+	}
+	
+.photo
+	{
+	margin-bottom: -1px;
+	}	
+	
+.photo-left, .photo-right
+	{
+	margin-bottom: -21px;
+	}	
+	
+.photo-right
+	{
+	left: 15px;
+	}
+	
+#comments-title
+	{
+	margin-bottom: 30px;
+	left: -23px;
+	}	
+
+#cont-container .comments-counter
+	{
+	margin-top: 18px;
+	}
+	
+#comments .comments-counter
+	{
+	margin-top: 10px;
+	}	
+	
+.divider
+	{
+	position: relative;
+	left: 0px;
+	overflow: hidden;
+	}
+	
+.response-counter	
+	{
+	left: -102px;
+	}		
+
+#post-comments
+	{
+	margin-bottom: 54px;
+	}
+
+#comments-inappropriate
+	{
+	top: -9px;
+	}	
+
+#font-size
+	{
+	margin-top: 108px;
+	}	
+		
+#previous-next p
+	{
+	margin-top: -4px;
+	}	
+
+#content-home .body-text-first-home
+	{
+	position: relative;
+	left: -6px;
+	margin-left: 0px;	
+	}
+	
+#emily-photo-01, #emily-photo-02, #emily-photo-03, 
+#emily-photo-04, #emily-photo-05, #emily-photo-06, 
+#emily-photo-07, #emily-photo-08, #emily-photo-09, 
+#emily-photo-10, #emily-photo-11, #emily-photo-12, 
+#emily-photo-13, #emily-photo-14, #emily-photo-15, 
+#emily-photo-16, #emily-photo-17, #emily-photo-18, 
+#emily-photo-19, #emily-photo-20, #emily-photo-21, 
+#emily-photo-22, #emily-photo-23 
+	{
+	position: relative;
+	margin: -3px 0 0 -40px;
+	}
+	
+#emily-photo-01
+	{
+	margin-top: -5px;
+	}	
+
+#michael-photo-01, #michael-photo-02, #michael-photo-03, 
+#michael-photo-04, #michael-photo-05, #michael-photo-06, 
+#michael-photo-07, #michael-photo-08, #michael-photo-09, 
+#michael-photo-10, #michael-photo-11, #michael-photo-12, 
+#michael-photo-13, #michael-photo-14, #michael-photo-15, 
+#michael-photo-16, #michael-photo-17, #michael-photo-18, 
+#michael-photo-19, #michael-photo-20, #michael-photo-21 
+	{
+	position: relative;
+	margin: -3px -5px 0 0;
+	}
+	
+#michael-photo-01
+	{
+	margin-top: -4px;
+	}	
+
+
+
+/* ----------------------------------------- # CONTENT (FAQ, SEARCH-RESULTS, PRESS)  */
+	
+.faq-section, 
+.search-results-section,
+.press-section
+	{
+	margin-top: -1px;
+	margin-bottom: 53px;
+	}
+
+#content-faq #cont-container .comments-counter,
+#content-search-results #cont-container .comments-counter
+	{
+	margin-top: 5px;
+	}		
+
+.faq-x,
+.search-results-x,
+.press-x
+	{
+	margin-top: -2px;
+	}	
+
+#content-faq-entry h2
+	{
+	margin-top: 16px;
+	}
+
+#content-faq-entry #cont-container .comments-counter
+	{
+	margin-top: 22px;
+	}			
+
+
+
+/* ----------------------------------------- # WP-DTREE HACKS  */
+
+#dtreec, #dtreea, #dtreep, #dtreel, #dtreecatwrapper, 
+#dtreearcwrapper, #dtreepgewrapper, #dtreelnkwrapper
+	{
+	font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;	
+	font-size: 11px;
+	margin-top: 3px;
+	}
+
+.wp_dTreewp_dtree_Node
+	{
+	margin-bottom: 3px;
+	}
+	
+#dtreec div div div
+	{
+	margin-left: -8px;
+	margin-top: 1px;
+	overflow: hidden;
+	}
+	
