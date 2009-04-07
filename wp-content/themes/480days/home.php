@@ -22,7 +22,7 @@
 							<div class="text-break">
 								<img src="<?php bloginfo('template_url'); ?>/images/content/text-break.png" width="78" height="18" alt="Text break" />
 							</div>
-							<p class="body-text-first-home">*And a few bits of river and sea, but really, mostly land!!!.</p>
+							<p class="body-text-first-home">*And a few bits of river and sea, but really, mostly land.</p>
 							<p class="body-text-home">And, well, to be perfectly honest, really more Singapore to Cape Town, South Africa by land as a flight from Perth, Australia to Bali, Indonesia because some Aussie holiday messed up our plans of taking a ferry from Darwin.</p> 
 							<p class="body-text-home">And, while we are at it, though we did spend a good amount of effort trying, the land borders between Thailand and Myanmar were closed, even to considerable efforts and contemplated bribery, so we had to take a small round-trip flight between Chiang Mai, Thailand and Yangon.</p>
 							<p class="body-text-home">And in the interest of full disclosure, a small prop plane in Ethiopia from Lalibella to Addis Ababa, mainly to save time as we did go from Addis Abab to Lalibella by land.</p>
