@@ -1124,6 +1124,13 @@ a:link, a:visited, a:hover, a:active
 
 /* ----------------------------------------- # CONTENT (FAQ-ENTRY)  */
 
+#content-faq-entry
+	{
+	position: relative;
+	top: -16px;
+	margin-bottom: 140px;
+	}
+
 #content-faq-entry h2
 	{
 	margin: 17px 0 37px 0;

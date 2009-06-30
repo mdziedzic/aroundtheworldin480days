@@ -11,58 +11,97 @@
 						</ul>
 					</div>	
 
+
+<?php 
+	$key="dayNumber";
+	if (get_post_meta($post->ID, $key, true) == "FAQ") { ?>
+	
+<div id="content"><div id="content-faq-entry">
+	<img src="<?php bloginfo('template_url'); ?>/images/content/faq/title.png" width="380" height="90" alt="FAQ" />
+	
+<?php } else { ?>
+
 <div id="content"><div id="content-single">
+
+<?php } ?>
 
 	<div id="cont-container">
 
+
+
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-		<div class="day-number" id="ie-day-number-fix">
-			<p><?php $key="dayNumber"; echo get_post_meta($post->ID, $key, true); ?></p>
-		</div>
-		<h1><?php the_title(); ?></h1>
-		<div class="comments-counter">
-			<p><a href="#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
-		</div>				
-		<h2><?php $excerpt = strip_tags(get_the_excerpt()); echo $excerpt; ?></h2>
-		<?php include (TEMPLATEPATH . '/font-size.php'); ?>
-		<?php the_content(); ?>
-
-	</div>
-
-	<div id="previous-next">
-		<?php	
-			$key="dayNumber"; 
-			if (get_post_meta($post->ID, $key, true) != "001") { ?>
-			<div id="previous">
-				<?php 
-					$previous_image_link = "<img src='" . get_bloginfo('template_url') . "/images/content/single/previous.gif' width='150' height='23' alt='Previous Day' />";
-					previous_post(' %', $previous_image_link, 'no');
 	
-					$prev_post = get_previous_post();				
-					$key = "dayNumber";
-					$previous_text_link = get_post_meta($prev_post->ID, $key, true) . " " . $prev_post->post_title;
-				?>
-				<p><?php previous_post(' %', $previous_text_link, 'no'); ?></p>	
-			</div>
-		<?php } ?>
+		<?php 
+			$key="dayNumber"; 
+			if (get_post_meta($post->ID, $key, true) == "FAQ") { ?>
+
+
 		
-		<?php	
-			$key="dayNumber"; 
-			if (get_post_meta($post->ID, $key, true) != "477") { ?>
-			<div id="next">
-				<?php 
-					$next_image_link = "<img src='" . get_bloginfo('template_url') . "/images/content/single/next.gif' width='150' height='23' alt='Next Day' />";
-					next_post(' %', $next_image_link, 'no');
-	
-					$next_post = get_next_post();				
-					$key = "dayNumber";
-					$next_text_link = get_post_meta($next_post->ID, $key, true) . " " . $next_post->post_title;
-				?>
-				<p><?php next_post(' %', $next_text_link, 'no'); ?></p>	
+				<div class="comments-counter">
+					<p><a href="#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
+				</div>	
+				<h2><?php the_title(); ?></h2>	
+				<?php include (TEMPLATEPATH . '/font-size.php'); ?>
+				<?php the_content(); ?>
+		
 			</div>
+
+
+		
+		<?php } else { ?>
+	
+	
+	
+				<div class="day-number" id="ie-day-number-fix">
+					<p><?php $key="dayNumber"; echo get_post_meta($post->ID, $key, true); ?></p>
+				</div>
+				<h1><?php the_title(); ?></h1>
+				<div class="comments-counter">
+					<p><a href="#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
+				</div>				
+				<h2><?php $excerpt = strip_tags(get_the_excerpt()); echo $excerpt; ?></h2>
+				<?php include (TEMPLATEPATH . '/font-size.php'); ?>
+				<?php the_content(); ?>
+		
+			</div>
+		
+			<div id="previous-next">
+				<?php	
+					$key="dayNumber"; 
+					if (get_post_meta($post->ID, $key, true) != "001") { ?>
+					<div id="previous">
+						<?php 
+							$previous_image_link = "<img src='" . get_bloginfo('template_url') . "/images/content/single/previous.gif' width='150' height='23' alt='Previous Day' />";
+							previous_post(' %', $previous_image_link, 'no');
+			
+							$prev_post = get_previous_post();				
+							$key = "dayNumber";
+							$previous_text_link = get_post_meta($prev_post->ID, $key, true) . " " . $prev_post->post_title;
+						?>
+						<p><?php previous_post(' %', $previous_text_link, 'no'); ?></p>	
+					</div>
+				<?php } ?>
+				
+				<?php	
+					$key="dayNumber"; 
+					if (get_post_meta($post->ID, $key, true) != "477") { ?>
+					<div id="next">
+						<?php 
+							$next_image_link = "<img src='" . get_bloginfo('template_url') . "/images/content/single/next.gif' width='150' height='23' alt='Next Day' />";
+							next_post(' %', $next_image_link, 'no');
+			
+							$next_post = get_next_post();				
+							$key = "dayNumber";
+							$next_text_link = get_post_meta($next_post->ID, $key, true) . " " . $next_post->post_title;
+						?>
+						<p><?php next_post(' %', $next_text_link, 'no'); ?></p>	
+					</div>
+				<?php } ?>
+			</div>	
+		
+		
+		
 		<?php } ?>
-	</div>	
 												
 </div></div>
 
