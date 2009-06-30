@@ -153,19 +153,19 @@ jQuery(document).ready(function($) {
 	function changePartNote(partNote) {
 		switch (partNote) {
 			case 'ourFavorites':
-				$('#pnc-ourFavorites').css('display', 'inline');
+				$('#pnc-ourFavorites').fadeIn(200);
 				$('#pnc-mostViews').css('display', 'none');
 				$('#pnc-mostComments').css('display', 'none');
 				break;
 			case 'mostViews':
 				$('#pnc-ourFavorites').css('display', 'none');
-				$('#pnc-mostViews').css('display', 'inline');
+				$('#pnc-mostViews').fadeIn(200);
 				$('#pnc-mostComments').css('display', 'none');			
 				break;
 			case 'mostComments':
 				$('#pnc-ourFavorites').css('display', 'none');
 				$('#pnc-mostViews').css('display', 'none');
-				$('#pnc-mostComments').css('display', 'inline');						
+				$('#pnc-mostComments').fadeIn(200);						
 				break;
 		}
 	}

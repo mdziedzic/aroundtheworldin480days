@@ -111,13 +111,7 @@
 										</ul>	
 									</div>		
 									<div id="pnc-mostViews">
-										<?php get_mostpopular(); ?>
-											<li><a href="">FAQ: What was your travelling philosphy?</a></li>																			<li><a href="">133 Flight to Yangon, Myanmar</a></li>
-											<li><a href="">FAQ: What did you bring with you?</a></li>
-											<li><a href="">402: Zanzibar and the Cerebral Malaria episode</a></li>
-											<li><a href="">35: Want boat?</a></li>
-											<li><a href="">FAQ: What medical precautions and perparations did you take?</a></li>
-										
+										<?php get_mostpopular(); ?>										
 									</div>																	
 									<div id="pnc-mostComments">
 										<ul>
