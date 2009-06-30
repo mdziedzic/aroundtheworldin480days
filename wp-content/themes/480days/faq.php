@@ -27,7 +27,7 @@ Template Name: FAQ
 						
 							<div class="faq-section">
 								<h2>Planning</h2>
-								<?php query_posts("cat=182&order=ASC") ?>
+								<?php query_posts("cat=193&order=ASC") ?>
 								<?php if (have_posts()) : ?>
 									<?php $counter = 0; ?>
 									<?php while (have_posts()) : the_post(); ?>
@@ -48,7 +48,7 @@ Template Name: FAQ
 
 							<div class="faq-section">
 								<h2>Life on the Road</h2>
-								<?php query_posts("cat=188&order=ASC") ?>
+								<?php query_posts("cat=194&order=ASC") ?>
 								<?php if (have_posts()) : ?>
 									<?php $counter = 0; ?>
 									<?php while (have_posts()) : the_post(); ?>
@@ -69,7 +69,7 @@ Template Name: FAQ
 
 							<div class="faq-section">
 								<h2>Most and Least Favorites</h2>
-								<?php query_posts("cat=16&order=ASC") ?>
+								<?php query_posts("cat=195&order=ASC") ?>
 								<?php if (have_posts()) : ?>
 									<?php $counter = 0; ?>
 									<?php while (have_posts()) : the_post(); ?>
