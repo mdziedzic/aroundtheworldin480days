@@ -183,7 +183,9 @@ if ( !class_exists('WordpressPopularPosts') ) {
 					if ( $this->options_holder[$summoner]['excerpt'] ) {
 						$post_title = "<span class=\"wpp-post-title\">" . substr(htmlspecialchars(stripslashes($tit)),0,$this->options_holder[$summoner]['characters']) . "...</span>";
 					} else {
-						$post_title = "<span class=\"wpp-post-title\">" . htmlspecialchars(stripslashes($tit)) . "</span>";
+						$key="dayNumber";
+						$ddaynnumber =  get_post_meta($wppost->ID, $key, true);
+						$post_title = "<span class=\"wpp-post-title\">" . $ddaynnumber . ": " . htmlspecialchars(stripslashes($tit)) . "</span>";
 					}
 					/* End qTranslate integration check */
 					
