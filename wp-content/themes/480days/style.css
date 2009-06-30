@@ -1053,6 +1053,16 @@ a:link, a:visited, a:hover, a:active
 
 /* ----------------------------------------- # CONTENT (FAQ, SEARCH-RESULTS, PRESS)  */
 
+#content-faq,
+#content-search-results,
+#content-press
+	{
+	position: relative;
+	top: -16px;
+	margin-bottom: 88px;
+	}
+
+
 #content-faq h2, 
 #content-search-results h2,
 #content-press h2
