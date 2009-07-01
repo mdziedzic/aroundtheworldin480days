@@ -11,6 +11,8 @@
 				<div id="search">
 					<img src="<?php bloginfo('template_url'); ?>/images/footer/search.gif" width="60" height="18"	alt="Search" />
 					<input type="text" id="search-input" /><a href="search-results.html"><input type="submit" id="search-submit" /></a>
+					
+					<br /><br /><?php get_search_form(); ?>
 				</div>
 				<div id="contact">
 					<img src="<?php bloginfo('template_url'); ?>/images/footer/contact.gif" width="60" height="18"	alt="Contact" /><br />
