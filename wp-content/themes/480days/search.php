@@ -1,31 +1,41 @@
-<?php
-/**
- * @package WordPress
- * @subpackage Default_Theme
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+					<!-- ================================================= NAVIGATION -->	
+								
+					<div>	
+						<ul class="nav current-press">
+							<li class="home"><a href="/aroundtheworldin480days/">Home</a></li>
+							<li class="about"><a href="index.php?page_id=2">About</a></li>
+							<li class="faq"><a href="index.php?page_id=1172">FAQ</a></li>
+							<li class="press"><a href="index.php?page_id=1175">Press</a></li>
+							<li class="map"><a href="index.php?cat=5">Map</a></li>
+						</ul>
+					</div>	
 
-	<div id="content" class="narrowcolumn" role="main">
+					<!-- ================================================= CONTENT -->									
+
+					<div id="content"><div id="content-search-results">
+						<img src="<?php bloginfo('template_url'); ?>/images/content/search-results/title.png" width="380" height="90" alt="Search Results" />
+						
+						<div id="cont-container">
+						
+							<div class="search-results-section">
+								<h2>Searched for "monkey"</h2>
 
 	<?php if (have_posts()) : ?>
 
-		<h2 class="pagetitle">Search Results</h2>
-
-		<div class="navigation">
-			<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
-			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
-		</div>
-
-
 		<?php while (have_posts()) : the_post(); ?>
+		
+		<div class="search-results-entry">		
 
-			<div <?php post_class() ?>>
-				<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-				<small><?php the_time('l, F jS, Y') ?></small>
-
-				<p class="postmetadata"><?php the_tags('Tags: ', ', ', '<br />'); ?> Posted in <?php the_category(', ') ?> | <?php edit_post_link('Edit', '', ' | '); ?>  <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></p>
+			<div class="comments-counter">
+				<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 			</div>
+			<div class="search-results-x">
+				<img src="<?php bloginfo('template_url'); ?>/images/content/x.png" width="7" height="7" alt="x" />
+			</div>
+			<p class="entry-link"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
+		</div>
 
 		<?php endwhile; ?>
 
@@ -41,8 +51,11 @@ get_header(); ?>
 
 	<?php endif; ?>
 
-	</div>
+							</div> <!-- .search-results-section -->
+						
+						</div>
+					</div></div>
+
 
 <?php get_sidebar(); ?>
-
 <?php get_footer(); ?>
