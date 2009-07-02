@@ -1960,3 +1960,16 @@ a:link, a:visited, a:hover, a:active
 	background-repeat: no-repeat;
 	}
 	
+	
+	
+	
+#datetimehide
+	{
+	display: none;
+	}
+	
+.search-results-entry	
+	{
+	margin-bottom: 50px;
+	font-size: 9px;
+	}

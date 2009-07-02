@@ -26,21 +26,22 @@
 
 		<?php while (have_posts()) : the_post(); ?>
 		
-		<div class="search-results-entry">		
-
-			<div class="comments-counter">
-				<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
+			<div class="search-results-entry">		
+	
+				<div class="comments-counter">
+					<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
+				</div>
+				<div class="search-results-x">
+					<img src="<?php bloginfo('template_url'); ?>/images/content/x.png" width="7" height="7" alt="x" />
+				</div>
+				<?php
+					$key="dayNumber";
+					$ddaynnumber =  get_post_meta($post->ID, $key, true);
+				?>
+				<p class="entry-link"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo ($ddaynnumber . ": "); the_title(); ?></a></p>
+				<small id="datetimehide"><?php the_time('l, F jS, Y') ?></small>
 			</div>
-			<div class="search-results-x">
-				<img src="<?php bloginfo('template_url'); ?>/images/content/x.png" width="7" height="7" alt="x" />
-			</div>
-			<?php
-				$key="dayNumber";
-				$ddaynnumber =  get_post_meta($post->ID, $key, true);
-			?>
-			<p class="entry-link"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo ($ddaynnumber . ": "); the_title(); ?></a></p>
-		</div>
-
+		
 		<?php endwhile; ?>
 
 		<div class="navigation">
