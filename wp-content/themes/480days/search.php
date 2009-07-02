@@ -34,7 +34,11 @@
 			<div class="search-results-x">
 				<img src="<?php bloginfo('template_url'); ?>/images/content/x.png" width="7" height="7" alt="x" />
 			</div>
-			<p class="entry-link"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>
+			<?php
+				$key="dayNumber";
+				$ddaynnumber =  get_post_meta($post->ID, $key, true);
+			?>
+			<p class="entry-link"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo ($ddaynnumber . ": "); the_title(); ?></a></p>
 		</div>
 
 		<?php endwhile; ?>
