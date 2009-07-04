@@ -1983,6 +1983,24 @@ a:link, a:visited, a:hover, a:active
 	
 .search-results-entry p
 	{
-	margin: 9px 0 0 0;
+	margin: 0px 0 0px 0;
 	}
+	
+.search-results-entry
+	{
+	margin-top: 37px;
+	margin-bottom: -2px;
+	margin-right: 50px;
+	}
+
+#content-search-results .entry-link
+	{
+	margin-bottom: 1px;	
+	}
+	
+#content-search-results #cont-container .comments-counter
+	{
+	margin-top: 1px;
+	}	
+	
 
