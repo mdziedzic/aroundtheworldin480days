@@ -9,10 +9,10 @@
 	
 			<div id="footer-content">
 				<div id="search">
-					<img src="<?php bloginfo('template_url'); ?>/images/footer/search.gif" width="60" height="18"	alt="Search" />
-					<input type="text" id="search-input" /><a href="search-results.html"><input type="submit" id="search-submit" /></a>
-					
-					<br /><br /><?php get_search_form(); ?>
+					<form role="search" method="get" id="searchform" action="http://localhost.local/aroundtheworldin480days/" >
+						<img src="<?php bloginfo('template_url'); ?>/images/footer/search.gif" width="60" height="18"	alt="Search" />
+						<input type="text" id="search-input" name="s" /><input type="submit" id="search-submit" />
+					</form>
 				</div>
 				<div id="contact">
 					<img src="<?php bloginfo('template_url'); ?>/images/footer/contact.gif" width="60" height="18"	alt="Contact" /><br />

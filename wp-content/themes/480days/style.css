@@ -1894,6 +1894,7 @@ a:link, a:visited, a:hover, a:active
 	font-size: 0px;
 	text-indent: -50px; /* for OmniWeb */
 	overflow: hidden;
+	cursor: pointer;
 	} 
 
 #contact img 
@@ -1962,14 +1963,26 @@ a:link, a:visited, a:hover, a:active
 	
 	
 	
+/* ----------------------------------------- # SEARCH-UNLEASHED PLUGIN  */
 	
-#datetimehide
+.datetimehide
 	{
 	display: none;
 	}
 	
 .search-results-entry	
 	{
-	margin-bottom: 50px;
+	margin-bottom: 36px;
 	font-size: 9px;
 	}
+	
+.search-results-x
+	{
+	margin: 5px 0 0 -19px;
+	}	
+	
+.search-results-entry p
+	{
+	margin: 9px 0 0 0;
+	}
+
