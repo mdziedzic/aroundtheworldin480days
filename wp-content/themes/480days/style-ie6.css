@@ -229,3 +229,16 @@ body
 	overflow: hidden;
 	}
 	
+
+
+/* ----------------------------------------- # SEARCH-UNLEASHED PLUGIN  */
+	
+.search-results-x
+	{
+	margin: 4px 0 0 -19px;
+	}	
+
+#content-search-results #cont-container .comments-counter
+	{
+	margin-top: 3px;
+	}	

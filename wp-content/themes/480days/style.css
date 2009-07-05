@@ -1970,12 +1970,6 @@ a:link, a:visited, a:hover, a:active
 	display: none;
 	}
 	
-.search-results-entry	
-	{
-	margin-bottom: 36px;
-	font-size: 9px;
-	}
-	
 .search-results-x
 	{
 	margin: 5px 0 0 -19px;
@@ -1991,6 +1985,8 @@ a:link, a:visited, a:hover, a:active
 	margin-top: 37px;
 	margin-bottom: -2px;
 	margin-right: 50px;
+	
+	font-size: 9px;
 	}
 
 #content-search-results .entry-link

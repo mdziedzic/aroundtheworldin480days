@@ -233,3 +233,18 @@
 	position: relative;
 	zoom: 1;
 	}
+	
+	
+	
+/* ----------------------------------------- # SEARCH-UNLEASHED PLUGIN  */
+	
+.search-results-entry
+	{
+	margin-top: 37px;
+	}
+
+.search-results-x
+	{
+	margin: 4px 0 0 -19px;
+	}	
+
