@@ -53,14 +53,13 @@
 							
 								<?php else : ?>
 							
-									<h2>No posts found. Try a different search?</h2>
+									<p>No posts found. Perhaps you would like to try a different search?</p>
 
-
-				<div id="search">
-					<form method="get" id="searchform" action="http://localhost.local/aroundtheworldin480days/" >
-						<p><input type="text" id="search-input" name="s" /><input type="submit" id="search-submit" /></p>
-					</form>
-				</div>
+									<div id="search">
+										<form method="get" id="searchform" action="http://localhost.local/aroundtheworldin480days/" >
+											<p><input type="text" id="search-input-noresults" name="s" /><input type="submit" id="search-submit-noresults" /></p>
+										</form>
+									</div>
 							
 								<?php endif; ?>
 

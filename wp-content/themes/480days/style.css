@@ -1998,3 +1998,34 @@ a:link, a:visited, a:hover, a:active
 	{
 	margin-top: 1px;
 	}	
+
+#search-input-noresults
+	{
+	position: relative;
+	width: 260px;
+	height: 18px;
+	top: 0px;
+	left: 0px;
+	padding: 0px;
+	background: #eeeeee;
+	border: none;	
+	font-weight: bold;
+	color: #ababab;
+	}
+	
+#search-submit-noresults
+	{
+	position: relative;	
+	width: 30px;
+	height: 34px;
+	top: -2px;
+	left: 5px;
+	background: url(images/footer/submit-noresults.gif);
+	background-repeat: no-repeat;
+	background-position: top;
+	border: none;
+	font-size: 0px;
+	text-indent: -50px; /* for OmniWeb */
+	overflow: hidden;
+	cursor: pointer;
+	} 
