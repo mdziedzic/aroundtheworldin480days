@@ -27,8 +27,7 @@
 
 
 
-	<div id="cont-container">
-
+	
 
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -37,22 +36,25 @@
 			$key="dayNumber"; 
 			if (get_post_meta($post->ID, $key, true) == "FAQ") { ?>
 
+	<div id="iefaqfix">			
+		<div id="cont-container">
 
 				<div class="search-unleashed-patch"><?php the_title(); ?></div>
 
-		<div id="iefaqfix">		
+			
 				<div class="comments-counter">
 					<p><a href="#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 				</div>	
 				<h2><?php the_title(); ?></h2>	
 				<?php include (TEMPLATEPATH . '/font-size.php'); ?>
 				<?php the_content(); ?>
-		
-			</div>
 		</div>
+	</div>
 		
 		<?php } else { ?>
 	
+		<div id="cont-container">
+
 				<div class="search-unleashed-patch"><?php the_title(); ?></div>
 	
 				<div class="day-number" id="ie-day-number-fix">
@@ -66,7 +68,7 @@
 				<?php include (TEMPLATEPATH . '/font-size.php'); ?>
 				<?php the_content(); ?>
 		
-			</div>
+		</div>
 		
 			<div id="previous-next">
 				<?php	
