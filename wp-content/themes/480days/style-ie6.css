@@ -242,3 +242,21 @@ body
 	{
 	margin-top: 3px;
 	}	
+
+
+
+/* ----------------------------------------- # FAQ FIXES  */
+
+#iefaqfix
+	{
+	width: 470px;
+	overflow: hidden;
+	margin-bottom: -68px;
+	}
+	
+#post-comments
+	{
+	position: relative;
+	margin: 43px 0 86px 0;
+	}
+	

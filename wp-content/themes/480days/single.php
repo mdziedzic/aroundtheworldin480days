@@ -38,7 +38,9 @@
 			if (get_post_meta($post->ID, $key, true) == "FAQ") { ?>
 
 
-		
+				<div class="search-unleashed-patch"><?php the_title(); ?></div>
+
+		<div id="iefaqfix">		
 				<div class="comments-counter">
 					<p><a href="#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 				</div>	
@@ -47,12 +49,11 @@
 				<?php the_content(); ?>
 		
 			</div>
-
-
+		</div>
 		
 		<?php } else { ?>
 	
-				<div id="search-unleashed-patch"><?php the_title(); ?></div>
+				<div class="search-unleashed-patch"><?php the_title(); ?></div>
 	
 				<div class="day-number" id="ie-day-number-fix">
 					<p><?php $key="dayNumber"; echo get_post_meta($post->ID, $key, true); ?></p>
