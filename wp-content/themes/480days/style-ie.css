@@ -247,4 +247,14 @@
 	{
 	margin: 4px 0 0 -19px;
 	}	
+	
+#search-submit-noresults
+	{
+	top: -58px;
+	left: 318px;
+	color: transparent;
+	text-transform: capitalize;
+	font-size: 0px;
+	} 
+
 

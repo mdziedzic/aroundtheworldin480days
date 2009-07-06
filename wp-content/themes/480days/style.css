@@ -1870,11 +1870,11 @@ a:link, a:visited, a:hover, a:active
 #search-input 
 	{
 	position: absolute;
-	width: 260px;
-	height: 18px;
+	width: 259px;
+	height: 16px;
 	top: 27px;
 	left: 0px;
-	padding: 0px;
+	padding: 2px 0 0 1px;
 	border: none;	
 	font-weight: bold;
 	color: #ababab;
@@ -2002,11 +2002,11 @@ a:link, a:visited, a:hover, a:active
 #search-input-noresults
 	{
 	position: relative;
-	width: 260px;
-	height: 18px;
+	width: 259px;
+	height: 16px;
 	top: -15px;
 	left: 0px;
-	padding: 0px;
+	padding: 2px 0 0 1px;
 	background: #eeeeee;
 	border: none;	
 	font-weight: bold;
@@ -2034,4 +2034,9 @@ a:link, a:visited, a:hover, a:active
 	{
 	position: relative;
 	top: -13px;
+	}
+
+#search-unleashed-patch
+	{
+	display: none;
 	}

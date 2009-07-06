@@ -52,7 +52,7 @@
 		
 		<?php } else { ?>
 	
-	
+				<div id="search-unleashed-patch"><?php the_title(); ?></div>
 	
 				<div class="day-number" id="ie-day-number-fix">
 					<p><?php $key="dayNumber"; echo get_post_meta($post->ID, $key, true); ?></p>

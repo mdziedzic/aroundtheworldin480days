@@ -11,7 +11,7 @@
 				<div id="search">
 					<img src="<?php bloginfo('template_url'); ?>/images/footer/search.gif" width="60" height="18"	alt="Search" />
 					<form method="get" id="searchform" action="http://localhost.local/aroundtheworldin480days/" >
-						<p><input type="text" id="search-input" name="s" /></p><div><input type="submit" id="search-submit" /></div>
+						<p><input type="text" id="search-input" name="s" tabindex="2" /></p><div><input type="submit" id="search-submit" /></div>
 					</form>
 				</div>
 				<div id="contact">
