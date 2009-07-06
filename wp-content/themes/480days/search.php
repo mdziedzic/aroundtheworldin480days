@@ -46,18 +46,13 @@
 									
 									<?php endwhile; ?>
 							
-									<div class="navigation">
-										<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
-										<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
-									</div>
-							
 								<?php else : ?>
 							
-									<p>No posts found. Perhaps you would like to try a different search?</p>
+									<h2 id="noresults-h2">Alas, no posts found. Perhaps you might consider trying to search for something else.</h2>
 
-									<div id="search">
-										<form method="get" id="searchform" action="http://localhost.local/aroundtheworldin480days/" >
-											<p><input type="text" id="search-input-noresults" name="s" /><input type="submit" id="search-submit-noresults" /></p>
+									<div>
+										<form method="get" action="http://localhost.local/aroundtheworldin480days/" >
+											<p><input type="text" id="search-input-noresults" name="s" /></p><div><input type="submit" id="search-submit-noresults" /></div>
 										</form>
 									</div>
 							

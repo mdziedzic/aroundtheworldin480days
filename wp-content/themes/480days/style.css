@@ -2004,7 +2004,7 @@ a:link, a:visited, a:hover, a:active
 	position: relative;
 	width: 260px;
 	height: 18px;
-	top: 0px;
+	top: -15px;
 	left: 0px;
 	padding: 0px;
 	background: #eeeeee;
@@ -2018,8 +2018,8 @@ a:link, a:visited, a:hover, a:active
 	position: relative;	
 	width: 30px;
 	height: 34px;
-	top: -2px;
-	left: 5px;
+	top: -55px;
+	left: 268px;
 	background: url(images/footer/submit-noresults.gif);
 	background-repeat: no-repeat;
 	background-position: top;
@@ -2029,3 +2029,9 @@ a:link, a:visited, a:hover, a:active
 	overflow: hidden;
 	cursor: pointer;
 	} 
+	
+#noresults-h2
+	{
+	position: relative;
+	top: -13px;
+	}
