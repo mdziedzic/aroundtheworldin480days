@@ -1,3 +1,8 @@
+	<div id="map">					
+	</div> <!-- #map -->
+	<div id="mapBackground"></div>
+
+
 <!-- ================================================= FOOTER -->
 
 	<div id="footer">

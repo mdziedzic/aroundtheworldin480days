@@ -1960,6 +1960,30 @@ a:link, a:visited, a:hover, a:active
 	background-image: url(images/footer/ship.png);
 	background-repeat: no-repeat;
 	}
+
+
+
+/* ----------------------------------------- # MAP  */
+
+#map
+	{
+	display: none;
+	position: absolute;
+	width: 1008px;
+	z-index: 501;
+	}
+		
+#mapBackground
+	{
+	display: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: #ffffff;
+	z-index: 500;
+	}
 	
 	
 	
