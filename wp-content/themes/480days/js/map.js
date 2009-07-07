@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
 	var mapStatus = false;
-	var mapBgOpacity = .65;
+	var mapBgOpacity = .40;
 
 
 
@@ -95,6 +95,9 @@ jQuery(document).ready(function($) {
 			loadMap(); 
 		});	
 
+		$('#map-close').click(function() {  
+			disableMap();  
+		});  
 
 
 
