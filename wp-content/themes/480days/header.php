@@ -14,7 +14,7 @@
 	<?php if (is_single()) { 
 		$key="dayNumber"; 
 		$dayNumber = get_post_meta($post->ID, $key, true);
-		$title = get_bloginfo('name') . " &raquo; " . $dayNumber . " " . get_the_title();
+		$title = get_bloginfo('name') . " &raquo; " . $dayNumber . ": " . get_the_title();
 	?>
 		<title><?php echo $title ?></title>
 	<?php } else { ?>
