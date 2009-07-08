@@ -5,6 +5,8 @@ jQuery(document).ready(function($) {
 
 
 
+
+
 	// -------------------------------------------------------------------- FUNCTIONS
 	
 	function getScrollXY() 
@@ -40,6 +42,25 @@ jQuery(document).ready(function($) {
 
 
 
+	function centerMap()  
+		{  
+			var windowWidth = document.documentElement.clientWidth;  
+			var windowHeight = document.documentElement.clientHeight;  
+			var mapWidth = $('#map').width();  		
+			var mapHeight = $('#map').height();  
+
+			$('#map').css({  
+				'position': 'absolute',  
+				'top': (windowHeight/2-mapHeight/2) + getScrollXY()[1] +10,  
+				'left': windowWidth/2-mapWidth/2 + 2
+			});  
+
+			// only need force for IE6  
+			$('#map-background').css({  
+				'height': $.getDocHeight()  
+			});  		
+		}	
+
 	function loadMap() 
 		{  		
 			if(!mapStatus) {  
@@ -67,25 +88,6 @@ jQuery(document).ready(function($) {
 				});  
 				mapStatus = false;  
 			}
-		}	
-
-	function centerMap()  
-		{  
-			var windowWidth = document.documentElement.clientWidth;  
-			var windowHeight = document.documentElement.clientHeight;  
-			var mapWidth = $('#map').width();  		
-			var mapHeight = $('#map').height();  
-
-			$('#map').css({  
-				'position': 'absolute',  
-				'top': (windowHeight/2-mapHeight/2) + getScrollXY()[1] +10,  
-				'left': windowWidth/2-mapWidth/2 + 2
-			});  
-
-			// only need force for IE6  
-			$('#map-background').css({  
-				'height': $.getDocHeight()  
-			});  		
 		}	
 
 
