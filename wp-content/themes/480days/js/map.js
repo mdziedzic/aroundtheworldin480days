@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
 	var mapStatus = false;
-	var mapBgOpacity = .40;
+	var mapBgOpacity = .60;
 
 
 
@@ -43,21 +43,27 @@ jQuery(document).ready(function($) {
 	function loadMap() 
 		{  		
 			if(!mapStatus) {  
-				$('#mapBackground').css({  
+				$('#map-background').css({  
 					'opacity': mapBgOpacity  
 				});  
-				$('#mapBackground').fadeIn(150, function() {
+				$('#map-background').fadeIn(150, function() {
 					$('#map').fadeIn(150);  
 				});  
 				mapStatus = true;  
-			} 
+			}
+			
+			if (GBrowserIsCompatible()) {
+		        var map = new GMap2(document.getElementById("map-canvas"), { size: new GSize(901,525) } );
+		        map.setCenter(new GLatLng(45.36, -122.36), 9);
+		        map.setUIToDefault();
+			} 			 
 		}	
 
 	function disableMap()
 		{  
 			if(mapStatus){  
 				$('#map').fadeOut(150, function() {
-					$('#mapBackground').fadeOut(150);  
+					$('#map-background').fadeOut(150);  
 				});  
 				mapStatus = false;  
 			}
@@ -72,33 +78,42 @@ jQuery(document).ready(function($) {
 
 			$('#map').css({  
 				'position': 'absolute',  
-				'top': (windowHeight/2-mapHeight/2) + getScrollXY()[1] -25,  
+				'top': (windowHeight/2-mapHeight/2) + getScrollXY()[1] +10,  
 				'left': windowWidth/2-mapWidth/2 + 2
 			});  
 
 			// only need force for IE6  
-			$('#mapBackground').css({  
+			$('#map-background').css({  
 				'height': $.getDocHeight()  
 			});  		
 		}	
 
 
 
-		// -------------------------------------------------------------------- EVENT HANDLERS
 
-		$('.map a').click(function(event) {
-			event.preventDefault();
-		});
 
-		$('.map').click(function() {  
-			centerMap();  
-			loadMap(); 
-		});	
+	// -------------------------------------------------------------------- CODE
 
-		$('#map-close').click(function() {  
-			disableMap();  
-		});  
 
+
+	// -------------------------------------------------------------------- EVENT HANDLERS
+
+	$('.map a').click(function(event) {
+		event.preventDefault();
+	});
+
+	$('.map').click(function() {  
+		centerMap();  
+		loadMap(); 
+	});	
+
+	$('#map-close').click(function() {  
+		disableMap();  
+	});  
+
+	$('#map-background').click(function() {  
+		disableMap();  
+	});  
 
 
 });

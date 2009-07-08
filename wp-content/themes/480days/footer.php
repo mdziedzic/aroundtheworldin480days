@@ -1,7 +1,8 @@
 	<div id="map">	
-		<div id="map-close"></div>			
-	</div> <!-- #map -->
-	<div id="mapBackground"></div>
+		<div id="map-canvas"></div>	
+		<div id="map-close"></div>				
+	</div>
+	<div id="map-background"></div>
 
 
 <!-- ================================================= FOOTER -->
