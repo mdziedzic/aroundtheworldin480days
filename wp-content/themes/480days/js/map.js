@@ -76,8 +76,14 @@ jQuery(document).ready(function($) {
 			if (GBrowserIsCompatible()) {
 		        var map = new GMap2(document.getElementById("map-canvas"), { size: new GSize(901,525) } );
 		        map.setCenter(new GLatLng(32, 25), 2);
-		        map.setUIToDefault();
 				map.setMapType(G_PHYSICAL_MAP);
+				
+				var customUI = map.getDefaultUI();
+				customUI.controls.maptypecontrol = false;
+				customUI.controls.menumaptypecontrol = true;
+				map.setUI(customUI);
+				
+				map.addControl(new GOverviewMapControl(new GSize(234,140)));
 			} 			 
 		}	
 
