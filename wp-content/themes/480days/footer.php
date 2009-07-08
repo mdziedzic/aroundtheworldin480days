@@ -33,8 +33,8 @@
 				<div id="eggfoo">
 					<a href="http://www.eggfoo.com"><img src="<?php bloginfo('template_url'); ?>/images/footer/eggfoo.gif" width="96" height="24"	alt="EGGFOO" /></a><br />				
 				</div>
-				<div id="copyright">
-					<p>Copyright &copy; 2004-2009 Emily &amp; Michael Dziedzic, EGGFOO</p>				
+				<div id="copyright-footer">
+					<p>Copyright &copy; 2004-2010 Emily &amp; Michael Dziedzic, EGGFOO</p>				
 				</div>
 				<div id="xhtml-css-wordpress">
 					<p>Built with valid <a href="http://validator.w3.org/check?uri=referer">XHTML</a>, <a href="http://jigsaw.w3.org/css-validator/">CSS</a><br />

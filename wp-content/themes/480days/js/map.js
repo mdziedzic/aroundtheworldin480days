@@ -75,8 +75,9 @@ jQuery(document).ready(function($) {
 			
 			if (GBrowserIsCompatible()) {
 		        var map = new GMap2(document.getElementById("map-canvas"), { size: new GSize(901,525) } );
-		        map.setCenter(new GLatLng(45.36, -122.36), 9);
+		        map.setCenter(new GLatLng(32, 25), 2);
 		        map.setUIToDefault();
+				map.setMapType(G_PHYSICAL_MAP);
 			} 			 
 		}	
 
