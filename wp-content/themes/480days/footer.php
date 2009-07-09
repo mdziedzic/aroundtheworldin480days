@@ -1,5 +1,5 @@
 	<div id="map">	
-		<div id="map-canvas"></div>	
+		<div id="map-canvas"><?php echo GeoMashup::map(); ?></div>	
 		<div id="map-close"></div>				
 	</div>
 	<div id="map-background"></div>
