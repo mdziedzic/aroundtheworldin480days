@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
 
 	var mapStatus = false;
 	var mapBgOpacity = .60;
-	var firstTime = true;
+	var mapViewed = false;
 
 
 
@@ -75,16 +75,14 @@ jQuery(document).ready(function($) {
 			}
 			
 			if (GBrowserIsCompatible()) {
-				
-				if (firstTime) {
+				if (!mapViewed) {
 		        	map = new GMap2(document.getElementById("map-canvas"), { size: new GSize(901,525) } );
-			        map.setCenter(new GLatLng(32, 25), 2);
-					map.setMapType(G_PHYSICAL_MAP);
-					map.addControl(new GOverviewMapControl(new GSize(234,140)));
-					map.setUIToDefault();
+			        map.setCenter(new GLatLng(32, 25), 2);		
+					map.setUIToDefault();	
+					map.setMapType(G_PHYSICAL_MAP);		
+					mapViewed = true;
 					
-					alert('firsttime');
-					firstTime = false;
+					map.addControl(new GOverviewMapControl(new GSize(234,140)));						
 				}
 			} 			 
 		}	
