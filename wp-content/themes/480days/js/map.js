@@ -78,11 +78,13 @@ jQuery(document).ready(function($) {
 				if (!mapViewed) {
 		        	map = new GMap2(document.getElementById("map-canvas"), { size: new GSize(901,525) } );
 			        map.setCenter(new GLatLng(32, 25), 2);		
-					map.setUIToDefault();	
-					map.setMapType(G_PHYSICAL_MAP);		
+					map.setUIToDefault();
+					
 					mapViewed = true;
 					
-					map.addControl(new GOverviewMapControl(new GSize(234,140)));						
+					map.addControl(new GOverviewMapControl(new GSize(234,140)));
+					map.setMapType(G_PHYSICAL_MAP);	
+											
 				}
 			} 			 
 		}	
