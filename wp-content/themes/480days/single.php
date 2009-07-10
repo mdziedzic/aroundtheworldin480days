@@ -67,7 +67,6 @@
 				<h2><?php $excerpt = strip_tags(get_the_excerpt()); echo $excerpt; ?></h2>
 				<?php include (TEMPLATEPATH . '/font-size.php'); ?>
 				<?php the_content(); ?>
-		
 		</div>
 		
 			<div id="previous-next">
