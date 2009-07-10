@@ -1,5 +1,5 @@
 	<div id="map">	
-		<div id="map-canvas"><?php echo GeoMashup::map('map_content=contextual&auto_info_open=true&map_control=GLargeMapControl3D'); ?></div>	
+		<div id="map-canvas"><?php echo GeoMashup::map('map_content=global&auto_info_open=true&map_control=GLargeMapControl3D'); ?></div>	
 		<div id="map-close"></div>				
 	</div>
 	<div id="map-background"></div>

@@ -74,6 +74,7 @@ jQuery(document).ready(function($) {
 				mapStatus = true;  
 			}
 			
+			
 			// if (GBrowserIsCompatible()) {
 			// 	if (!mapViewed) {
 			// 		        	map = new GMap2(document.getElementById("map-canvas"), { size: new GSize(901,525) } );
