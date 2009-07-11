@@ -1137,6 +1137,13 @@ GeoMashup = {
 		this.map = new google.maps.Map2( this.container, map_opts );
 		this.map.setCenter(new google.maps.LatLng(0,0), 0);
 
+// mdziedzic added this to enable keyboard control of map, a little wonky though...
+var uiOptions = this.map.getDefaultUI();
+uiOptions.keyboard = true;
+this.map.setUI(uiOptions);
+		
+		
+
 		this.doAction( 'newMap', opts, this.map );
 
 		// Add a loading spinner

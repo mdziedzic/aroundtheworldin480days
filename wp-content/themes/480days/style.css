@@ -2089,3 +2089,25 @@ a:link, a:visited, a:hover, a:active
 	{
 	display: none;
 	}
+	
+	
+	
+/* ----------------------------------------- # MAP INFO WINDOW  */
+	
+.map-info-window
+	{
+	padding-right: 25px;
+	}
+		
+.map-info-window h2
+	{
+	margin-bottom: 0px;
+	font-size: 14px;
+	}
+	
+.map-info-window p
+	{
+	margin-top: 2px;
+	font-size: 9px;
+	line-height: 14px;
+	}
