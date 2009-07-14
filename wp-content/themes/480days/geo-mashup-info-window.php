@@ -25,7 +25,7 @@ add_filter( 'the_excerpt', array( 'GeoMashupQuery', 'strip_brackets' ) );
 	
 	
 		<div class="map-info-window">
-			<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?> (<?php $key="dayNumber"; echo get_post_meta($post->ID, $key, true); ?>)</a></h2>
+			<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php $key="dayNumber"; echo get_post_meta($post->ID, $key, true); ?>: <?php the_title(); ?></a></h2>
 			<p><?php $excerpt = strip_tags(get_the_excerpt()); echo $excerpt; ?></p>
 			
 			<?php if ($wp_query->post_count == 1) : ?>
