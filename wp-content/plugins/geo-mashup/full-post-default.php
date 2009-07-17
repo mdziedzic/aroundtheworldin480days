@@ -15,7 +15,7 @@
 
 	<?php while (have_posts()) : the_post(); ?>
 
-		<h2><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+		<h2><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">fdfdf<?php the_title(); ?></a></h2>
 			<p class="meta"><span class="blogdate"><?php the_time('F jS, Y') ?></span> <?php the_category( ', ' ) ?></p>
 
 			<div class="storycontent">
