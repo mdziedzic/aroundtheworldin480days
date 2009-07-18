@@ -19,12 +19,20 @@ add_filter( 'the_content', array( 'GeoMashupQuery', 'strip_map_shortcodes' ), 1,
 
 	<?php while (have_posts()) : the_post(); ?>
 
-		<h2><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">rrr<?php the_title(); ?></a></h2>
-			<p class="meta"><span class="blogdate"><?php the_time('F jS, Y') ?></span> <?php the_category( ', ' ) ?></p>
 
-			<div class="storycontent">
+	
+		<div id="cont-container">
+
+				<div class="search-unleashed-patch"><?php the_title(); ?></div>
+	
+				<div class="day-number" id="ie-day-number-fix">
+					<p><?php $key="dayNumber"; echo get_post_meta($post->ID, $key, true); ?></p>
+				</div>
+				<h1><?php the_title(); ?></h1>
+				<h2><?php $excerpt = strip_tags(get_the_excerpt()); echo $excerpt; ?></h2>
 				<?php the_content(); ?>
-			</div>
+		</div>
+
 
 	<?php endwhile; ?>
 
