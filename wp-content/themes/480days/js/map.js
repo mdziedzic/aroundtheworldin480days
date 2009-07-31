@@ -125,8 +125,14 @@ jQuery(document).ready(function($) {
 
 	$('#map-background').click(function() {  
 		disableMap();  
-	});  
+	}); 
 
+	$(document).keydown(function(e) { 
+		if ((e.which == 27) && mapStatus) {  
+			disableMap();  
+		}  
+	});	 
+	 
 
 });
 
