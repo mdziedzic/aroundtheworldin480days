@@ -31,7 +31,7 @@
 						<div id="previous-next">
 								<div id="next">
 									<a href="http://localhost.local/aroundtheworldin480days/index.php?p=31"><img src="<?php bloginfo('template_url'); ?>/images/content/home/daily-journal.gif" width="150" height="23" alt="Next Day" /></a>								
-									<p><a href="http://localhost.local/aroundtheworldin480days/index.php?p=31">001 Portland to Mission Beach</a></p>	
+									<p><a href="http://localhost.local/aroundtheworldin480days/index.php?p=31">001: Portland to Mission Beach</a></p>	
 								</div>
 						</div>
 					</div></div>

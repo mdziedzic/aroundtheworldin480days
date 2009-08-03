@@ -80,7 +80,7 @@
 			
 							$prev_post = get_previous_post();				
 							$key = "dayNumber";
-							$previous_text_link = get_post_meta($prev_post->ID, $key, true) . " " . $prev_post->post_title;
+							$previous_text_link = get_post_meta($prev_post->ID, $key, true) . ": " . $prev_post->post_title;
 						?>
 						<p><?php previous_post(' %', $previous_text_link, 'no'); ?></p>	
 					</div>
@@ -96,7 +96,7 @@
 			
 							$next_post = get_next_post();				
 							$key = "dayNumber";
-							$next_text_link = get_post_meta($next_post->ID, $key, true) . " " . $next_post->post_title;
+							$next_text_link = get_post_meta($next_post->ID, $key, true) . ": " . $next_post->post_title;
 						?>
 						<p><?php next_post(' %', $next_text_link, 'no'); ?></p>	
 					</div>
