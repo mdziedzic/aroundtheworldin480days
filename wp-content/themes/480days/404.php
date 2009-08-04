@@ -1,7 +1,9 @@
 <?php
-/*
+/**
+ * @package WordPress
+ * @subpackage 480days
+ */
 
-*/
 ?>
 
 
