@@ -21,7 +21,7 @@
 		<title><?php bloginfo('name'); ?> <?php wp_title('&raquo;'); ?></title>
 	<?php } ?>
 	
-	<link rel="shortcut icon" href="images/favicon.ico" />	
+	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />	
 	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 	<!--[if IE 7]>
