@@ -28,17 +28,17 @@
 				</div>
 				<div id="share">
 					<img src="<?php bloginfo('template_url'); ?>/images/footer/share.gif" width="60" height="18"	alt="Share" /><br />
-					<p><a href="http://digg.com/submit?url=aroundtheworldin480days.com&amp;title=Around the World in 480 Days&amp;bodytext=Travel Site&amp;media=MEDIA&amp;topic=TOPIC">DIGG</a>  &nbsp;|&nbsp;  <a href="http://www.reddit.com">REDDIT</a>  &nbsp;|&nbsp;  <a href="http://www.del.icio.us">DEL.ICIO.US</a>  &nbsp;|&nbsp;  <a href="http://www.eggfoo.com">EMAIL</a>  &nbsp;|&nbsp;  <a href="http://www.facebook.com">FACEBOOK</a>  &nbsp;|&nbsp;  <a href="http://www.stumble.com">STUMBLE</a></p>
+					<p><a href="http://digg.com/submit?url=aroundtheworldin480days.com&amp;title=Around the World in 480 Days&amp;bodytext=Travel Site&amp;media=MEDIA&amp;topic=TOPIC" class="external-link">DIGG</a>  &nbsp;|&nbsp;  <a href="http://www.reddit.com" class="external-link">REDDIT</a>  &nbsp;|&nbsp;  <a href="http://del.icio.us" class="external-link">DEL.ICIO.US</a>  &nbsp;|&nbsp;  <a href="http://www.eggfoo.com" class="external-link">EMAIL</a>  &nbsp;|&nbsp;  <a href="http://www.facebook.com" class="external-link">FACEBOOK</a>  &nbsp;|&nbsp;  <a href="http://www.stumble.com" class="external-link">STUMBLE</a></p>
 				</div>
 				<div id="eggfoo">
-					<a href="http://www.eggfoo.com"><img src="<?php bloginfo('template_url'); ?>/images/footer/eggfoo.gif" width="96" height="24"	alt="EGGFOO" /></a><br />				
+					<a href="http://www.eggfoo.com" class="external-link"><img src="<?php bloginfo('template_url'); ?>/images/footer/eggfoo.gif" width="96" height="24"	alt="EGGFOO" /></a><br />				
 				</div>
 				<div id="copyright-footer">
 					<p>Copyright &copy; 2004-2010 Emily &amp; Michael Dziedzic, EGGFOO</p>				
 				</div>
 				<div id="xhtml-css-wordpress">
-					<p>Built with valid <a href="http://validator.w3.org/check?uri=referer">XHTML</a>, <a href="http://jigsaw.w3.org/css-validator/">CSS</a><br />
-					Powered by <a href="http://www.wordpress.org">WordPress</a></p>			
+					<p>Built with valid <a href="http://validator.w3.org/check?uri=referer" class="external-link">XHTML</a>, <a href="http://jigsaw.w3.org/css-validator/" class="external-link">CSS</a><br />
+					Powered by <a href="http://www.wordpress.org" class="external-link">WordPress</a></p>			
 				</div>
 			</div>
 		</div>
