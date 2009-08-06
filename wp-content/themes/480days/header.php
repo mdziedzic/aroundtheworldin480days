@@ -24,6 +24,8 @@
 	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />	
 	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+	<!--[if lte IE 8]>
+    	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style-ie-all.css" type="text/css" />
 	<!--[if IE 7]>
     	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style-ie7.css" type="text/css" />
 	<![endif]-->				

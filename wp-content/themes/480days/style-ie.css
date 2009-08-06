@@ -187,12 +187,6 @@
 
 /* ----------------------------------------- # FOOTER  */
 
-#footer p 
-	{
-	filter:alpha(opacity=70);
-	-moz-opacity:.70;
-	}
-
 #contact p 
 	{
 	position: absolute;

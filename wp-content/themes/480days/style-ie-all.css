@@ -1,0 +1,5 @@
+#footer p 
+	{
+	filter:alpha(opacity=65);
+	-moz-opacity:.65;
+	}
