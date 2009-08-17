@@ -24,8 +24,14 @@
 	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />	
 	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+	
+	<?php if (is_page('About')) { ?>
+		<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style-about.css" type="text/css" />
+	<?php } ?>
+	
 	<!--[if lte IE 8]>
     	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style-ie-all.css" type="text/css" />
+    <![endif]-->	
 	<!--[if IE 7]>
     	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style-ie7.css" type="text/css" />
 	<![endif]-->				
