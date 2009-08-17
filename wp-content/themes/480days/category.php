@@ -36,18 +36,6 @@
 		
 	</div>
 	
-<!--
-	<div id="previous-next">
-		<div id="previous">
-			<a href="single.html"><img src="<?php bloginfo('template_url'); ?>/images/content/multiple/previous.gif" width="180" height="23" alt="Previous Day" /></a>							
-			<p>129 - 132: Chiang Mai, Thailand</p>
-		</div>
-		<div id="next">
-			<a href="single.html"><img src="<?php bloginfo('template_url'); ?>/images/content/multiple/next.gif" width="150" height="23" alt="Next Day" /></a>								
-			<p>138 - 144: Mandalay, Myanmar</p>									
-		</div>
-	</div>												
--->
 
 	<?php else : ?>
 		Not found (no posts)
