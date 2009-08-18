@@ -38,6 +38,8 @@
 
 	<div id="iefaqfix">			
 		<div id="cont-container">
+		
+				<?php include (TEMPLATEPATH . '/location.php'); ?>
 
 				<div class="search-unleashed-patch"><?php the_title(); ?></div>
 
@@ -54,6 +56,8 @@
 		<?php } else { ?>
 	
 		<div id="cont-container">
+		
+				<?php include (TEMPLATEPATH . '/location.php'); ?>		
 
 				<div class="search-unleashed-patch"><?php the_title(); ?></div>
 	

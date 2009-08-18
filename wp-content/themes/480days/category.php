@@ -15,6 +15,8 @@
 
 	<div id="cont-container">
 
+	<?php include (TEMPLATEPATH . '/location.php'); ?>
+	
 	<?php query_posts($query_string . '&order=ASC') ?>
 	<?php if (have_posts()) : ?>
 		<?php $counter = 0; ?>
