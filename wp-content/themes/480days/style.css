@@ -333,7 +333,7 @@ a:link, a:visited, a:hover, a:active
 	color: #bebebe;
 	}	
 	
-#location
+.location
 	{
 	position: absolute;
 	width: 400px;
@@ -343,7 +343,7 @@ a:link, a:visited, a:hover, a:active
 	line-height: 18px;
 	text-align: left;
 	
-	color: #666666;
+	color: #bebebe;
 	background-color: #ffffff;
 	}
 	

@@ -1,4 +1,4 @@
-	<div id="location">
+	<div class="location">
 	<?php
 		$category = get_the_category($post->ID); 
 		$catName = substr($category[0]->cat_name, 4);
