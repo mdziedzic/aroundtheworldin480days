@@ -344,9 +344,20 @@ a:link, a:visited, a:hover, a:active
 	text-align: left;
 	
 	color: #bebebe;
-	background-color: #ffffff;
 	}
 	
+.single-summary .location
+	{
+	position: relative;
+	top: 5px;
+	}
+	
+.single-summary
+	{
+	position: relative;
+	top: -27px;
+	margin-bottom: -27px;
+	}
 
 .body-text, .body-text-home
 	{

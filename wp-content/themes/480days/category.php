@@ -15,13 +15,13 @@
 
 	<div id="cont-container">
 
-	<?php include (TEMPLATEPATH . '/location.php'); ?>
 	
 	<?php query_posts($query_string . '&order=ASC') ?>
 	<?php if (have_posts()) : ?>
 		<?php $counter = 0; ?>
 		<?php while (have_posts()) : the_post(); ?>
 			<div class="single-summary">
+			<?php include (TEMPLATEPATH . '/location.php'); ?>
 				<?php $counter++; ?>
 				<div class="day-number" <?php if ($counter == '1') echo 'id="ie-day-number-fix"'; ?> >
 					<p><?php $key="dayNumber"; echo get_post_meta($post->ID, $key, true); ?></p>
