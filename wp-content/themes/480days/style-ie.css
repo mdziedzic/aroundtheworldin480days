@@ -1,9 +1,5 @@
 /* ----------------------------------------- # CONTENT  */
 
-.day-number
-	{
-	}	
-
 #ie-day-number-fix
 	{
 	margin-top: -4px;
@@ -50,6 +46,8 @@
 	}
 
 
+/* fixes needed after adding location 
+	to post and category pages */
 
 #content-single
 	{
@@ -89,6 +87,13 @@
 	margin-top: 30px;
 	}	
 	
+#content-multiple .day-number
+	{
+	margin-top: -5px;
+	}	
+	
+
+
 	
 
 /* ----------------------------------------- # NAVIGATION  */
