@@ -26,7 +26,7 @@
 	
 #content-single, #content-multiple
 	{
-	top: 39px;
+	top: 42px;
 	}
 
 #content-single h2, #content-multiple h2
@@ -41,7 +41,7 @@
 
 #cont-container .comments-counter
 	{
-	margin-top: 14px;
+	margin-top: 13px;
 	}
 
 #content-multiple
@@ -50,6 +50,46 @@
 	}
 
 
+
+#content-single
+	{
+	top: 14px;
+	}
+
+#content-single .location
+	{
+	position: relative;
+	top: 2px;
+	}
+	
+#content-single h1
+	{
+	margin-top: 6px;
+	}
+	
+#content-single h2
+	{
+	margin-top: 30px;
+	}
+
+
+.single-summary .location
+	{
+	position: relative;
+	top: 1px;
+	}
+
+.single-summary
+	{
+	margin-bottom: -23px;
+	}
+	
+#content-multiple h2
+	{
+	margin-top: 30px;
+	}	
+	
+	
 
 /* ----------------------------------------- # NAVIGATION  */
 
