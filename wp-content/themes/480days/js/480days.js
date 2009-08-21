@@ -46,6 +46,22 @@ jQuery(document).ready(function($) {
 
 
 	/* 
+		------------------------------------------------------------------ DAY NUMBER
+	*/
+
+	$('#day-prev').fadeTo(200, .25);
+	
+	$('#day-prev').mouseover(function() {
+		$(this).fadeTo(200, 1);
+	}).mouseout(function() {
+		$(this).fadeTo(200, .25);
+	});
+
+
+
+
+
+	/* 
 		------------------------------------------------------------------ FONT SIZE
 	*/
 		

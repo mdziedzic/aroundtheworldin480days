@@ -61,8 +61,36 @@
 				<div class="search-unleashed-patch"><?php the_title(); ?></div>
 	
 				<div class="day-number" id="ie-day-number-fix">
-					<div id="day-prev"></div>
-					<div id="day-next"></div>				
+					<?php	
+						$key="dayNumber"; 
+						if (get_post_meta($post->ID, $key, true) != "001") { ?>
+							<div id="day-prev">
+								<?php 
+									$previous_image_link = "<img src='" . get_bloginfo('template_url') . "/images/content/day-prev.png' width='30' height='61' alt='Previous Day' />";
+									previous_post(' %', $previous_image_link, 'no');
+					
+									$prev_post = get_previous_post();				
+									$key = "dayNumber";
+									$previous_text_link = "";
+								?>
+								<p><?php previous_post(' %', $previous_text_link, 'no'); ?></p>	
+							</div>
+					<?php } ?>
+					<?php	
+						$key="dayNumber"; 
+						if (get_post_meta($post->ID, $key, true) != "477") { ?>
+							<div id="day-next">
+								<?php 
+									$next_image_link = "<img src='" . get_bloginfo('template_url') . "/images/content/day-next.png' width='30' height='61' alt='Next Day' />";
+									next_post(' %', $next_image_link, 'no');
+					
+									$next_post = get_next_post();				
+									$key = "dayNumber";
+									$next_text_link = "";
+								?>
+								<p><?php next_post(' %', $next_text_link, 'no'); ?></p>	
+							</div>
+					<?php } ?>
 					<p><?php $key="dayNumber"; echo get_post_meta($post->ID, $key, true); ?></p>
 				</div>
 				<h1><?php the_title(); ?></h1>

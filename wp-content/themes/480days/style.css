@@ -656,21 +656,15 @@ a:link, a:visited, a:hover, a:active
 #day-prev
 	{
 	position: absolute;
-	width: 8px;
-	height: 8px;
-	top: 26px;
+	top: 0px;
 	left: 0px;
-	background-image: url(images/content/day-prev.png);
 	}
 	
 #day-next
 	{
 	position: absolute;
-	width: 8px;
-	height: 8px;
-	top: 26px;
-	left: 54px;
-	background-image: url(images/content/day-next.png);
+	top: 0px;
+	left: 32px;
 	}
 	
 
