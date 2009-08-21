@@ -49,14 +49,25 @@ jQuery(document).ready(function($) {
 		------------------------------------------------------------------ DAY NUMBER
 	*/
 
-	$('#day-prev').fadeTo(200, .25);
-	
-	$('#day-prev').mouseover(function() {
-		$(this).fadeTo(200, 1);
-	}).mouseout(function() {
-		$(this).fadeTo(200, .25);
-	});
+	$('#day-prev').css('opacity', .25);
+	$('#day-prev').hover(
+		function() {
+			$(this).fadeTo(200, 1);
+		},
+		function() {
+			$(this).fadeTo(200, .25);
+		}
+	);
 
+	$('#day-next').css('opacity', .25);
+	$('#day-next').hover(
+		function() {
+			$(this).fadeTo(200, 1);
+		},
+		function() {
+			$(this).fadeTo(200, .25);
+		}
+	);
 
 
 
