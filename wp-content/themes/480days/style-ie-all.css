@@ -3,3 +3,9 @@
 	filter:alpha(opacity=65);
 	-moz-opacity:.65;
 	}
+
+#day-prev, #day-next
+	{
+	filter:alpha(opacity=25);
+	-moz-opacity:.25;	
+	}
