@@ -132,12 +132,48 @@ body
 	margin-top: -4px;
 	}	
 
+
+
+/* fixes needed after adding location 
+	to post and category pages */
+
+#content-single
+	{
+	top: 5px;
+	}
+
+#cont-container .comments-counter
+	{
+	margin-top: 15px;
+	}
+
+.text-break
+	{
+	margin-bottom: 22px;
+	}
+
+#content-multiple
+	{
+	top: 33px;
+	}
+
+
+
+
+
+
+/* ----------------------------------------- # CONTENT (HOME)  */
+
 #content-home .body-text-first-home
 	{
 	position: relative;
 	left: -6px;
 	margin-left: 0px;	
 	}
+
+
+
+/* ----------------------------------------- # CONTENT (ABOUT)  */
 	
 #emily-photo-01, #emily-photo-02, #emily-photo-03, 
 #emily-photo-04, #emily-photo-05, #emily-photo-06, 
@@ -246,3 +282,10 @@ body
 	{
 	margin-top: 3px;
 	}	
+
+
+
+
+
+
+
