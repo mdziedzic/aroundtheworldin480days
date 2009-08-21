@@ -42,7 +42,6 @@
 				<?php include (TEMPLATEPATH . '/location.php'); ?>
 
 				<div class="search-unleashed-patch"><?php the_title(); ?></div>
-
 			
 				<div class="comments-counter">
 					<p><a href="#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
@@ -62,6 +61,8 @@
 				<div class="search-unleashed-patch"><?php the_title(); ?></div>
 	
 				<div class="day-number" id="ie-day-number-fix">
+					<div id="day-prev"></div>
+					<div id="day-next"></div>				
 					<p><?php $key="dayNumber"; echo get_post_meta($post->ID, $key, true); ?></p>
 				</div>
 				<h1><?php the_title(); ?></h1>

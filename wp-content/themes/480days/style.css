@@ -653,6 +653,22 @@ a:link, a:visited, a:hover, a:active
 	font-weight: bold;
 	}
 
+#day-prev
+	{
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background-image: url(images/content/day-prev.png);
+	}
+	
+#day-next
+	{
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background-image: url(images/content/day-next.png);
+	}
+	
 
 	
 /* ----------------------------------------- # CONTENT / PREVIOUS-NEXT  */
