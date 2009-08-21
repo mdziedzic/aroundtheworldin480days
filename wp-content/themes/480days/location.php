@@ -1,7 +1,3 @@
-<?php 
-	if (! post_is_in_descendant_category( 192 )) {
-?>
-
 		<div class="location">
 		<?php	
 			$category = get_the_category($post->ID); 
@@ -15,5 +11,3 @@
 		?>
 			<p><?php echo $catName . ', ' . $categoryParent; ?></p>
 		</div>
-		
-<?php } ?>
