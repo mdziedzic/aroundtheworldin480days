@@ -18,12 +18,16 @@
 	?>
 		<title><?php echo $title ?></title>
 	<?php } else if (is_category()) { 
-		$category = $wp_query->get_queried_object();
-		$cat_name = $category->name;
-		$cat_name = substr_replace($cat_name, ":", 3, 0);
-		$cat_name =	get_bloginfo('name') . " &raquo; " . $cat_name;
+			$category = get_the_category($post->ID); 
+			$category_link = get_category_link($category[0]->cat_ID);
+			$catName = substr($category[0]->cat_name, 4);
+			
+			$categoryParent = get_category_parents($category[0], FALSE, '/', FALSE);
+			$categoryParent = substr($categoryParent, 4);
+			$chopPoint = strcspn($categoryParent, '/');
+			$categoryParent = substr($categoryParent, 0, $chopPoint);
 	?>
-		<title><?php echo $cat_name; ?></title>
+		<title><?php echo get_bloginfo('name') . " &raquo; " . $catName . ', ' . $categoryParent; ?></title>
 	<?php } else { ?>
 		<title><?php bloginfo('name'); ?> <?php wp_title('&raquo;'); ?></title>		
 	<?php } ?>
