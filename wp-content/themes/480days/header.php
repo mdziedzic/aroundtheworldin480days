@@ -17,8 +17,15 @@
 		$title = get_bloginfo('name') . " &raquo; " . $dayNumber . ": " . get_the_title();
 	?>
 		<title><?php echo $title ?></title>
+	<?php } else if (is_category()) { 
+		$category = $wp_query->get_queried_object();
+		$cat_name = $category->name;
+		$cat_name = substr_replace($cat_name, ":", 3, 0);
+		$cat_name =	get_bloginfo('name') . " &raquo; " . $cat_name;
+	?>
+		<title><?php echo $cat_name; ?></title>
 	<?php } else { ?>
-		<title><?php bloginfo('name'); ?> <?php wp_title('&raquo;'); ?></title>
+		<title><?php bloginfo('name'); ?> <?php wp_title('&raquo;'); ?></title>		
 	<?php } ?>
 	
 	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />	
