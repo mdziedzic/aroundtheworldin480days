@@ -23,7 +23,7 @@
 		</div>
 		<div id="comments-title">
 			<?php $themePath = get_bloginfo('template_url'); ?>
-			<?php $imagePath = '<img src="' . $themePath . '/images/content/rss.png" width="42" height="25" alt="RSS" />'; ?>		
+			<?php $imagePath = '<img src="' . $themePath . '/images/content/rss.gif" width="42" height="25" alt="RSS - This Post&rsquo;s Comments" title="RSS - This Post&rsquo;s Comments" />'; ?>		
 			<img src="<?php bloginfo('template_url'); ?>/images/content/comments.png" width="118" height="25" alt="Comments" />
 			<?php post_comments_feed_link( $link_text = $imagePath) ?>
 		</div>

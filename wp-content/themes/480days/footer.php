@@ -43,6 +43,12 @@
 					<p>Built with valid <a href="http://validator.w3.org/check?uri=referer" class="external-link">XHTML</a>, <a href="http://jigsaw.w3.org/css-validator/" class="external-link">CSS</a><br />
 					Powered by <a href="http://www.wordpress.org" class="external-link">WordPress</a></p>			
 				</div>
+				
+				<div id="footer-rss">
+					<a href="<?php bloginfo('comments_rss2_url'); ?>">
+					<img src="<?php bloginfo('template_url'); ?>/images/content/rss.gif" width="42" height="25" alt="RSS Feed - All Comments" title="RSS - All Comments" />
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>

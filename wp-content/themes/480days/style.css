@@ -1689,7 +1689,13 @@ a:link, a:visited, a:hover, a:active
 	background-repeat: no-repeat;
 	}
 
-
+#footer-rss
+	{
+	position: absolute;
+	top: -56px;
+	left: 891px;
+	}
+	
 
 /* ----------------------------------------- # MAP  */
 
