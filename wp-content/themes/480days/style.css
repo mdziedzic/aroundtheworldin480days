@@ -75,7 +75,7 @@ a:link, a:visited, a:hover, a:active
 
 #main-bg-burst 
 	{
-	background-image: url(images/main/burst.png);
+	background-image: url(images/main/burst.gif);
 	background-repeat: no-repeat;
 	background-position: center top;
 	}
@@ -1576,7 +1576,7 @@ a:link, a:visited, a:hover, a:active
 #footer .container 
 	{
 	height: 288px;
-	background-image:  url(images/footer/background.png);
+	background-image:  url(images/footer/background.gif);
 	background-repeat: no-repeat;
 	}
 
