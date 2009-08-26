@@ -1,11 +1,4 @@
-	<div id="map">	
-		<div id="map-canvas"><?php echo GeoMashup::map('map_content=global&open_object_id=' . get_the_ID() . 
-    							'&marker_select_center=true&marker_select_highlight=false' . 
-    							'&marker_select_info_window=true&marker_select_attachments=true&auto_info_open=true'); ?> 
-		</div>	
-		<div id="map-close"></div>				
-	</div>
-	<div id="map-background"></div>
+<div id="map-container"></div>
 
 
 <!-- ================================================= FOOTER -->

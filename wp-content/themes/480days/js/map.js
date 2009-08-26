@@ -115,24 +115,32 @@ jQuery(document).ready(function($) {
 	});
 
 	$('.map').click(function() {  
+		if (!mapViewed) {
+			alert("creating map");
+			$("<div id=\"map\"><div id=\"map-canvas\"></div><div id=\"map-close\"></div></div><div id=\"map-background\"></div>").insertAfter("#map-container");
+			$("#map-canvas").load("http://localhost.local/aroundtheworldin480days/wp-content/themes/480days/map.php");
+			mapViewed = true;
+			
+			$('#map-close').click(function() {  
+				disableMap();  
+			});  
+
+			$('#map-background').click(function() {  
+				disableMap();  
+			}); 
+
+			$(document).keydown(function(e) { 
+				if ((e.which == 27) && mapStatus) {  
+					disableMap();  
+				}  
+			});	 
+
+			
+		}
 		centerMap();  
 		loadMap(); 
 	});	
 
-	$('#map-close').click(function() {  
-		disableMap();  
-	});  
-
-	$('#map-background').click(function() {  
-		disableMap();  
-	}); 
-
-	$(document).keydown(function(e) { 
-		if ((e.which == 27) && mapStatus) {  
-			disableMap();  
-		}  
-	});	 
-	 
 
 });
 
