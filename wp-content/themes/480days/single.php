@@ -32,6 +32,12 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
+		<?php if (get_post_meta($post->ID, $key, true) != "FAQ") { ?>
+		<script type="text/javascript">
+			var mapWhereAmI = "<?php echo get_the_ID(); ?>";
+		</script>
+		<?php } ?>
+	
 		<?php 
 			$key="dayNumber"; 
 			if (get_post_meta($post->ID, $key, true) == "FAQ") { ?>

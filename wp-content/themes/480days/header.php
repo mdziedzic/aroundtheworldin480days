@@ -59,6 +59,11 @@
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/480days.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/map.js"></script>	
 	
+	<script type="text/javascript">
+		var mapWhereAmI = "<?php echo "5000"; ?>"; // default map postion when not on post or cateogry page
+	</script>
+
+			
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_head(); ?>	
 	

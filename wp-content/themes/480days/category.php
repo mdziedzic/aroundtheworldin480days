@@ -20,6 +20,13 @@
 	<?php if (have_posts()) : ?>
 		<?php $counter = 0; ?>
 		<?php while (have_posts()) : the_post(); ?>
+		
+			<?php if ($counter == 0) { ?>		
+			<script type="text/javascript">
+				var mapWhereAmI = "<?php echo get_the_ID(); ?>"; // sets map location to first post in category, when $counter = 0
+			</script>
+			<?php } ?>
+		
 			<div class="single-summary">
 			<?php include (TEMPLATEPATH . '/location.php'); ?>
 				<?php $counter++; ?>
