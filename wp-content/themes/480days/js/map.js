@@ -118,7 +118,7 @@ jQuery(document).ready(function($) {
 		if (!mapViewed) {
 			alert("creating map");
 			$("<div id=\"map\"><div id=\"map-canvas\"></div><div id=\"map-close\"></div></div><div id=\"map-background\"></div>").insertAfter("#map-container");
-			$("#map-canvas").load("http://localhost.local/aroundtheworldin480days/wp-content/themes/480days/map.php");
+			$("#map-canvas").load("index.php?page_id=1748");
 			mapViewed = true;
 			
 			$('#map-close').click(function() {  
