@@ -21,6 +21,10 @@ add_filter( 'the_excerpt', array( 'GeoMashupQuery', 'strip_brackets' ) );
 <?php /* query_posts($query_string."&orderby=date&order=ASC");  */ ?>
 
 <?php if (have_posts()) : ?>
+
+	<?php // to reverse the order of the posts
+	$wp_query->posts = array_reverse( $wp_query->posts ); ?> 
+
 	<?php while (have_posts()) : the_post(); ?>
 	
 	

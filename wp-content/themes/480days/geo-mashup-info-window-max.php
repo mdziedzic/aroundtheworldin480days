@@ -16,7 +16,10 @@ add_filter( 'the_content', array( 'GeoMashupQuery', 'strip_map_shortcodes' ), 1,
 ?>
 <div class="info-window-max">
 <?php if (have_posts()) : ?>
-
+	
+	<?php // to reverse the order of the posts
+	$wp_query->posts = array_reverse( $wp_query->posts ); ?> 
+	
 	<?php while (have_posts()) : the_post(); ?>
 
 
