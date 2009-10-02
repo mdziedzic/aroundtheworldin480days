@@ -22,6 +22,8 @@
 							<div class="search-results-section">
 								<h2>Searched for: <?php the_search_query(); ?></h2>
 
+								<?php // to reverse the order of the posts
+								$wp_query->posts = array_reverse( $wp_query->posts ); ?> 
 
 
 								<?php if (have_posts()) : ?>
