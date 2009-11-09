@@ -1077,14 +1077,20 @@ a:link, a:visited, a:hover, a:active
 #content-multiple h1 a:link,
 #content-multiple h1 a:visited,
 #content-multiple h1 a:hover,
-#content-multiple h1 a:active
+#content-multiple h1 a:active,
+.info-window-max h1 a:link,
+.info-window-max h1 a:visited,
+.info-window-max h1 a:hover,
+.info-window-max h1 a:active
 	{
 	color: #000000;
 	text-decoration: none;
 	}
 
 #content-multiple h1 a:hover,
-#content-multiple h1 a:active
+#content-multiple h1 a:active,
+.info-window-max h1 a:hover,
+.info-window-max h1 a:active
 	{
 	background-color: #fef2e3;
 	}
@@ -1845,3 +1851,16 @@ a:link, a:visited, a:hover, a:active
 	font-size: 9px;
 	line-height: 14px;
 	}
+	
+.info-window-max	
+	{
+	margin-left: 25px;
+	}
+	
+.info-window-max .individual-post
+	{
+	margin-bottom: 100px;
+	}
+	
+	
+	

@@ -12,37 +12,48 @@
  */
 
 // Avoid nested maps
-add_filter( 'the_content', array( 'GeoMashupQuery', 'strip_map_shortcodes' ), 1, 9 );
-?>
+add_filter( 'the_content', array( 'GeoMashupQuery', 'strip_map_shortcodes' ), 1, 9 ); ?>
+
 <div class="info-window-max">
-<?php if (have_posts()) : ?>
+
+<div id="content"><div id="content-single">
+
+	<div id="cont-container">
+
+	<?php if (have_posts()) : ?>
+		
+		<?php // to reverse the order of the posts
+		$wp_query->posts = array_reverse( $wp_query->posts ); ?> 
+		
+		<?php while (have_posts()) : the_post(); ?>
 	
-	<?php // to reverse the order of the posts
-	$wp_query->posts = array_reverse( $wp_query->posts ); ?> 
+			<div class="individual-post">
+				
+					<div class="search-unleashed-patch"><?php the_title(); ?></div>
+		
+					<div class="day-number" id="ie-day-number-fix">
+						<p><?php $key="dayNumber"; echo get_post_meta($post->ID, $key, true); ?></p>
+					</div>
+					<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+					<div class="comments-counter">
+						<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
+					</div>				
+					<h2><?php $excerpt = strip_tags(get_the_excerpt()); echo $excerpt; ?></h2>
+					<?php the_content(); ?>
+					
+			</div>			
 	
-	<?php while (have_posts()) : the_post(); ?>
-
-
+		<?php endwhile; ?>
 	
-		<div id="cont-container">
-
-				<div class="search-unleashed-patch"><?php the_title(); ?></div>
+	<?php else : ?>
 	
-				<div class="day-number" id="ie-day-number-fix">
-					<p><?php $key="dayNumber"; echo get_post_meta($post->ID, $key, true); ?></p>
-				</div>
-				<h1><?php the_title(); ?></h1>
-				<h2><?php $excerpt = strip_tags(get_the_excerpt()); echo $excerpt; ?></h2>
-				<?php the_content(); ?>
-		</div>
+		<h2 class="center">Not Found</h2>
+		<p class="center">Sorry, but you are looking for something that isn't here.</p>
+	
+	<?php endif; ?>
+	
+	</div> <!-- #cont-container -->
 
+</div></div> <!-- #content & #content-single -->
 
-	<?php endwhile; ?>
-
-<?php else : ?>
-
-	<h2 class="center">Not Found</h2>
-	<p class="center">Sorry, but you are looking for something that isn't here.</p>
-
-<?php endif; ?>
 </div>
