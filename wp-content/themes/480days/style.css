@@ -1847,7 +1847,8 @@ a:link, a:visited, a:hover, a:active
 	
 .map-info-window p
 	{
-	margin-top: 2px;
+	margin-top: 4px;
+	padding-bottom: 7px;
 	font-size: 9px;
 	line-height: 14px;
 	}
@@ -1858,11 +1859,7 @@ a:link, a:visited, a:hover, a:active
 	margin-left: 25px;
 	}
 	
-.info-window-max .individual-post
-	{
-/* 	margin-bottom: 63px; */
-	}
-	
+.map-info-window .location,
 .info-window-max .location
 	{
 	position: static;
@@ -1875,6 +1872,12 @@ a:link, a:visited, a:hover, a:active
 	
 	color: #bebebe;
 	}
+	
+.map-info-window .location
+	{
+	width: auto;
+	margin-bottom: 11px;
+	}	
 
 .info-window-max .divider
 	{

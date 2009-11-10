@@ -20,15 +20,24 @@ add_filter( 'the_excerpt', array( 'GeoMashupQuery', 'strip_brackets' ) );
 
 <?php /* query_posts($query_string."&orderby=date&order=ASC");  */ ?>
 
+<?php $postCount = 0; ?>
+
 <?php if (have_posts()) : ?>
 
 	<?php // to reverse the order of the posts
 	$wp_query->posts = array_reverse( $wp_query->posts ); ?> 
-
+	
 	<?php while (have_posts()) : the_post(); ?>
 	
-	
 		<div class="map-info-window">
+		
+			<?php 
+				if ($postCount == 0) {
+					include (TEMPLATEPATH . '/location.php');
+				}
+				$postCount++; 
+			?>
+
 			<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php $key="dayNumber"; echo get_post_meta($post->ID, $key, true); ?>: <?php the_title(); ?></a></h2>
 			<p><?php $excerpt = strip_tags(get_the_excerpt()); echo $excerpt; ?></p>
 			
@@ -36,8 +45,7 @@ add_filter( 'the_excerpt', array( 'GeoMashupQuery', 'strip_brackets' ) );
 			
 			<?php endif; ?>	
 				
-		</div>	
-		
+		</div>			
 
 	<?php endwhile; ?>
 
