@@ -19,16 +19,22 @@ add_filter( 'the_content', array( 'GeoMashupQuery', 'strip_map_shortcodes' ), 1,
 <div id="content"><div id="content-single">
 
 	<div id="cont-container">
-
+	
+	<?php $postCount = 0; ?>
+	
 	<?php if (have_posts()) : ?>
 		
 		<?php // to reverse the order of the posts
 		$wp_query->posts = array_reverse( $wp_query->posts ); ?> 
 		
 		<?php while (have_posts()) : the_post(); ?>
+		
+			<?php $postCount++; ?>
 	
 			<div class="individual-post">
 				
+				<?php include (TEMPLATEPATH . '/location.php'); ?>
+								
 					<div class="search-unleashed-patch"><?php the_title(); ?></div>
 		
 					<div class="day-number" id="ie-day-number-fix">
@@ -40,9 +46,11 @@ add_filter( 'the_content', array( 'GeoMashupQuery', 'strip_map_shortcodes' ), 1,
 					</div>				
 					<h2><?php $excerpt = strip_tags(get_the_excerpt()); echo $excerpt; ?></h2>
 					<?php the_content(); ?>
-					
+					<?php if ($postCount != sizeof($wp_query->posts)) { ?>
+						<div class="divider"></div>
+					<?php } ?>
 			</div>			
-	
+
 		<?php endwhile; ?>
 	
 	<?php else : ?>

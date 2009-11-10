@@ -1854,13 +1854,35 @@ a:link, a:visited, a:hover, a:active
 	
 .info-window-max	
 	{
+	margin-top: 0px;
 	margin-left: 25px;
 	}
 	
 .info-window-max .individual-post
 	{
-	margin-bottom: 100px;
+/* 	margin-bottom: 63px; */
 	}
 	
+.info-window-max .location
+	{
+	position: static;
+	width: 400px;
+	margin-bottom: -5px;
+	left: 2px;
+	font-size: 9px;
+	line-height: 18px;
+	text-align: left;
 	
+	color: #bebebe;
+	}
+
+.info-window-max .divider
+	{
+	width: 500px;
+	margin: 12px 0 41px -30px;
+	}
+	
+.info-window-max .day-number
+	{
+	}
 	

@@ -12,11 +12,11 @@
 		?>
 		
 		<?php
-			if (is_single()) { ?>
-				<p><a href="<?php echo $category_link ?>"><?php echo $catName . ', ' . $categoryParent; ?></a></p>
+			if (is_category()) { ?>
+				<p><?php echo $catName . ', ' . $categoryParent; ?></p>				
 		<?php
 			} else { ?>	
-				<p><?php echo $catName . ', ' . $categoryParent; ?></p>	
+				<p><a href="<?php echo $category_link ?>"><?php echo $catName . ', ' . $categoryParent; ?></a></p>		
 		<?php
 			} ?>
 			
