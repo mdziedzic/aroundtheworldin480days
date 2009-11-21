@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
 	var mapStatus = false;
-	var mapBgOpacity = .60;
+	var mapBgOpacity = .70;
 	var mapViewed = false;
 
 

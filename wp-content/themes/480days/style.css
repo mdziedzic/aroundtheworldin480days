@@ -1709,7 +1709,7 @@ a:link, a:visited, a:hover, a:active
 	{
 	display: none;
 	position: absolute;
-	width: 973px;
+	width: 947px;
 	height: 597px;
 	z-index: 501;
 	
@@ -1719,7 +1719,7 @@ a:link, a:visited, a:hover, a:active
 #map-canvas
 	{
 	position: absolute;
-	width: 901px;
+	width: 875px;
 	height: 525px;
 	left: 36px;
 	top: 21px;
