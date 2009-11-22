@@ -284,8 +284,17 @@ body
 	}	
 
 
+/* ----------------------------------------- # MAP  */
 
+#map
+	{
+	background-image: url(images/map/map.gif);
+	}
 
+#map-close
+	{	
+	background-image: url(images/map/map-close.gif);
+	}	
 
 
 
