@@ -68,9 +68,16 @@ jQuery(document).ready(function($) {
 				$('#map-background').css({  
 					'opacity': mapBgOpacity  
 				});  
-				$('#map-background').fadeIn(150, function() {
-					$('#map').fadeIn(150);  
-				});  
+				
+				if(!$.browser.msie) {
+					$('#map-background').fadeIn(150, function() {
+						$('#map').fadeIn(150);  
+					});  
+				} else {
+					$('#map-background').show();
+					$('#map').show();
+				}
+				
 				mapStatus = true;  
 			}
 			
@@ -93,9 +100,15 @@ jQuery(document).ready(function($) {
 	function disableMap()
 		{  
 			if(mapStatus){  
-				$('#map').fadeOut(150, function() {
-					$('#map-background').fadeOut(150);  
-				});  
+				
+				if(!$.browser.msie) {
+					$('#map').fadeOut(150, function() {
+						$('#map-background').fadeOut(150);  
+					}); 
+				} else {
+					$('#map').hide();
+					$('#map-background').hide();
+				} 
 				mapStatus = false;  
 			}
 		}	
