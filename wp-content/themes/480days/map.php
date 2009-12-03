@@ -18,5 +18,3 @@ Template Name: Map
 
 ?>
 
-    							
-    							

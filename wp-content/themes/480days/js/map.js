@@ -129,12 +129,9 @@ jQuery(document).ready(function($) {
 
 	$('.map').click(function() {  
 		if (!mapViewed) {
-//			alert("creating map");
+
 			$("<div id=\"map\"><div id=\"map-canvas\"></div><div id=\"map-close\"></div></div><div id=\"map-background\"></div>").insertAfter("#map-container");
-			
-			
-//			alert(mapWhereAmI);
-			
+									
 			$("#map-canvas").load("index.php?page_id=1748&mapLocation=" + mapWhereAmI);
 			mapViewed = true;
 			
