@@ -1728,6 +1728,7 @@ a:link, a:visited, a:hover, a:active
 	background-image: url(images/map/loader.gif);
 	background-repeat: no-repeat;
 	background-position: center center;
+	background-color: #99b3cc;
 	}
 
 iframe

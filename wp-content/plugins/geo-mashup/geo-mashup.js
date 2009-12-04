@@ -1149,8 +1149,8 @@ this.map.setUI(uiOptions);
 		// Add a loading spinner
 		spinner_div = document.createElement( 'div' );
 		spinner_div.innerHTML = '<div id="gm-loading-icon" style="-moz-user-select: none; z-index: 100; position: absolute; left: ' +
-			( this.map.getSize().width / 2 ) + 'px; top: ' + ( this.map.getSize().height / 2 ) + 'px;">' +
-			'<img style="border: 0px none ; margin: 0px; padding: 0px; width: 16px; height: 16px; -moz-user-select: none;" src="' +
+			( this.map.getSize().width / 2 - 64 ) + 'px; top: ' + ( this.map.getSize().height / 2 - 7 ) + 'px;">' +
+			'<img style="border: 0px none ; margin: 0px; padding: 0px; width: 128px; height: 15px; -moz-user-select: none;" src="' +
 			opts.url_path + '/images/busy_icon.gif"/></a></div>';
 		this.container.appendChild( spinner_div );
 		google.maps.Event.addListener( this.map, 'tilesloaded', function() {
