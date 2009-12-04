@@ -115,8 +115,6 @@ jQuery(document).ready(function($) {
 
 
 
-
-
 	// -------------------------------------------------------------------- CODE
 
 
@@ -156,4 +154,19 @@ jQuery(document).ready(function($) {
 
 
 });
+
+
+
+
+
+// function to display map iframe once it is fully loaded
+// necessar to avoid white background while iframe is loading
+
+function displayIframe()
+	{
+		document.getElementsByTagName("iframe")[0].style.visibility = "visible";
+	}
+
+
+
 

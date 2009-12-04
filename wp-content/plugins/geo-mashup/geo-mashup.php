@@ -403,7 +403,7 @@ class GeoMashup {
 		} else if ( isset($url_params['static']) &&  'true' === $url_params['static'] ) {
 			$content = "<div class=\"gm-map\">$map_image</div>";
 		} else {
-			$content =  "<div class=\"gm-map\"><iframe allowtransparency=\"true\" name=\"{$name}\" src=\"{$iframe_src}\" " .
+			$content =  "<div class=\"gm-map\"><iframe name=\"{$name}\" src=\"{$iframe_src}\" " .
 				"height=\"{$url_params['height']}\" width=\"{$url_params['width']}\" marginheight=\"0\" marginwidth=\"0\" ".
 				"scrolling=\"no\" frameborder=\"0\"></iframe></div>";
 		}

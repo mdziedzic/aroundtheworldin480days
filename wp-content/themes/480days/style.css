@@ -1723,9 +1723,18 @@ a:link, a:visited, a:hover, a:active
 	height: 525px;
 	left: 36px;
 	top: 21px;
-	overflow: hidden;	
+	overflow: hidden;
+	
+	background-image: url(images/map/loader.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
 	}
 
+iframe
+	{
+	visibility: hidden;
+	}
+	
 #map-close
 	{
 	position: absolute;

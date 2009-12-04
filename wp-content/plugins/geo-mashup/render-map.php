@@ -149,6 +149,7 @@ function geo_mashup_render_map ( ) {
 
 	//var_dump( $_GET );
 	?>
+	
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 			"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 	<html xmlns="http://www.w3.org/1999/xhtml">
@@ -159,6 +160,8 @@ function geo_mashup_render_map ( ) {
 		<head>
 			<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 		<title>Geo Mashup Map</title>
+		
+		
 			<?php $wp_scripts->print_scripts( array( 'google-jsapi' ) ); ?>
 
 			<script src="geo-mashup.js?v=<?php echo GEO_MASHUP_VERSION; ?>" type="text/javascript"></script>
@@ -180,13 +183,15 @@ function geo_mashup_render_map ( ) {
 			<link rel="stylesheet" href="<?php echo $style_url_path; ?>" type="text/css" media="screen" />
 			<?php endif; ?>
 			
-			<style type="text/css">
+			<style type="text/css">			
 				v\:* { behavior:url(#default#VML); }
 				#geo-mashup {
 					width:<?php echo $width; ?>;
 					height:<?php echo $height; ?>;
 				}
 			</style>
+			
+			
 		</head>
 		<body>
 		<div id="geo-mashup"></div>
@@ -194,6 +199,10 @@ function geo_mashup_render_map ( ) {
 			//<![CDATA[
 			GeoMashup.createMap(document.getElementById('geo-mashup'), { <?php echo GeoMashup::implode_assoc(':',',',$map_properties); ?> });	
 			//]]>
+			
+			/* eggfoo */
+			parent.displayIframe();
+
 		</script>
 		</body>	
 	</html>
