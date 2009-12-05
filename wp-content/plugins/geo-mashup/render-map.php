@@ -184,7 +184,7 @@ function geo_mashup_render_map ( ) {
 			<?php endif; ?>
 			
 			<style type="text/css">			
-				v\:* { behavior:url(#default#VML); }
+/* 				v\:* { behavior:url(#default#VML); } */
 				#geo-mashup {
 					width:<?php echo $width; ?>;
 					height:<?php echo $height; ?>;

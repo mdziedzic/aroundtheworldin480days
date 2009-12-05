@@ -42,7 +42,7 @@ a:link, a:visited, a:hover, a:active
 	}
 	
 :focus {
-	outline: 0;
+	outline: 1;
 }
 
 
