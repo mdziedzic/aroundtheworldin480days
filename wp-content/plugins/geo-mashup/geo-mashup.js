@@ -1137,7 +1137,7 @@ GeoMashup = {
 		this.map = new google.maps.Map2( this.container, map_opts );
 		this.map.setCenter(new google.maps.LatLng(0,0), 0);
 
-// mdziedzic added this to enable keyboard control of map, a little wonky though...
+// eggfoo: added this to enable keyboard control of map, a little wonky though...
 var uiOptions = this.map.getDefaultUI();
 uiOptions.keyboard = true;
 this.map.setUI(uiOptions);
@@ -1148,6 +1148,7 @@ this.map.setUI(uiOptions);
 
 		// Add a loading spinner
 		spinner_div = document.createElement( 'div' );
+// eggfoo: made some edits here for custom busy_icon.gif
 		spinner_div.innerHTML = '<div id="gm-loading-icon" style="-moz-user-select: none; z-index: 100; position: absolute; left: ' +
 			( this.map.getSize().width / 2 - 64 ) + 'px; top: ' + ( this.map.getSize().height / 2 - 7 ) + 'px;">' +
 			'<img style="border: 0px none ; margin: 0px; padding: 0px; width: 128px; height: 15px; -moz-user-select: none;" src="' +

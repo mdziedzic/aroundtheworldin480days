@@ -200,7 +200,7 @@ function geo_mashup_render_map ( ) {
 			GeoMashup.createMap(document.getElementById('geo-mashup'), { <?php echo GeoMashup::implode_assoc(':',',',$map_properties); ?> });	
 			//]]>
 			
-			/* eggfoo */
+			// eggfoo: call function in my map.js file to display make iframe visible
 			parent.displayIframe();
 
 		</script>
