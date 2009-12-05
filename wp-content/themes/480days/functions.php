@@ -28,7 +28,18 @@ function mytheme_comment($comment, $args, $depth) {
 				$comment->comment_author = 'Anonymous'; ?>
 				
 			<div class="respondee">
-				<p><span class="respondee-name"><?php printf(__('%s '), get_comment_author_link()) ?></span>| <?php printf(__('%1$s'), get_comment_date()) ?></p>
+				<p><span class="respondee-name">
+				<?php if (get_comment_author_url() != "") { ?>
+				
+					<?php if ($comment->comment_author == "Emily Dziedzic" || $comment->comment_author == "Michael Dziedzic"){ ?>
+						<a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a>
+					<?php } else { ?>
+						<a href="<?php comment_author_url(); ?>" class="external-link"><?php comment_author(); ?></a>
+					<?php } ?>
+					
+				<?php } else { ?>
+					<?php comment_author(); ?>
+				<?php } ?></span>| <?php printf(__('%1$s'), get_comment_date()) ?></p>
 			</div>
 	
 			<div <?php if ($comment->comment_approved == '0') echo 'class="response-box-moderation"'; ?> class="response-box">
@@ -47,12 +58,12 @@ function mytheme_comment($comment, $args, $depth) {
 				
 			</div>
 	
-			<?php if ($comment->comment_author_email == "em@eggfoo.com"){ ?>
+			<?php if ($comment->comment_author == "Emily Dziedzic"){ ?>
 				<div class="respondee-emily">
 					<img src="<?php bloginfo('template_url'); ?>/images/content/response-emily.png" width="45" height="29" alt="Emily's Response" />
 				</div>
 			<?php } ?>
-			<?php if ($comment->comment_author_email == "m@eggfoo.com"){ ?>
+			<?php if ($comment->comment_author == "Michael Dziedzic"){ ?>
 				<div class="respondee-michael">
 					<img src="<?php bloginfo('template_url'); ?>/images/content/response-michael.png" width="45" height="29" alt="Michael's Response" />
 				</div>

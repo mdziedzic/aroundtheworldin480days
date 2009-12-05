@@ -42,7 +42,7 @@ a:link, a:visited, a:hover, a:active
 	}
 	
 :focus {
-	outline: 1;
+/* 	outline: 0; */
 }
 
 
@@ -845,7 +845,7 @@ a:link, a:visited, a:hover, a:active
 	padding: 12px 20px 13px 29px;
 	background-color: #f2f2f2;
 	font-size: 11px;
-	color: #a3d3f4;
+	color: #99c6e5;
 	}
 	
 .response-box p

@@ -301,33 +301,33 @@ if (!CUSTOM_TAGS) {
 	 * @since 1.0.0
 	 */
 	$allowedtags = array(
-		'a' => array(
-			'href' => array (),
-			'title' => array ()),
-		'abbr' => array(
-			'title' => array ()),
-		'acronym' => array(
-			'title' => array ()),
-		'b' => array(),
-		'blockquote' => array(
-			'cite' => array ()),
+		// 'a' => array(
+		//	'href' => array (),
+		//	'title' => array ()),
+		// 'abbr' => array(
+		//	'title' => array ()),
+		// 'acronym' => array(
+		//	'title' => array ()),
+		// 'b' => array(),
+		// 'blockquote' => array(
+		//	'cite' => array ()),
 		//	'br' => array(),
-		'cite' => array (),
-		'code' => array(),
-		'del' => array(
-			'datetime' => array ()),
+		// 'cite' => array (),
+		// 'code' => array(),
+		// 'del' => array(
+		//	'datetime' => array ()),
 		//	'dd' => array(),
 		//	'dl' => array(),
 		//	'dt' => array(),
-		'em' => array (), 'i' => array (),
+		// 'em' => array (), 'i' => array (),
 		//	'ins' => array('datetime' => array(), 'cite' => array()),
 		//	'li' => array(),
 		//	'ol' => array(),
 		//	'p' => array(),
-		'q' => array(
-			'cite' => array ()),
-		'strike' => array(),
-		'strong' => array(),
+		// 'q' => array(
+		// 	'cite' => array ()),
+		// 'strike' => array(),
+		// 'strong' => array(),
 		//	'sub' => array(),
 		//	'sup' => array(),
 		//	'u' => array(),

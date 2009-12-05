@@ -86,7 +86,7 @@
 				<?php else : ?>
 
 					<div id="post-comments-name">
-						<input type="text" name="author" id="author" value="Name - Required" tabindex="1" maxlength="40" />
+						<input type="text" name="author" id="author" value="Name" tabindex="1" maxlength="40" />
 					</div>
 					<div id="post-comments-email">
 						<input type="text" name="email" id="email" value="Email - Required" size="22" tabindex="2" maxlength="150" />
