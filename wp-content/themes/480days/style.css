@@ -1428,8 +1428,12 @@ a:link, a:visited, a:hover, a:active
 	background-repeat: no-repeat;
 	}	
 
-
-
+.postcount
+	{
+	color: #c6e5fa;
+	font-weight: bold;
+	font-size: 10px;
+	}
 
 
 

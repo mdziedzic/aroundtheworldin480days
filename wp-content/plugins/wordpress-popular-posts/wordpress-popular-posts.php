@@ -185,11 +185,11 @@ if ( !class_exists('WordpressPopularPosts') ) {
 					if ( $this->options_holder[$summoner]['excerpt'] ) {
 						$post_title = "<span class=\"wpp-post-title\">" . substr(htmlspecialchars(stripslashes($tit)),0,$this->options_holder[$summoner]['characters']) . "...</span>";
 					} else {
-// mdziedzic edit					
+// eggfoo:				
 						$key="dayNumber";
 						$ddaynnumber =  get_post_meta($wppost->ID, $key, true);
 						$post_title = "<span class=\"wpp-post-title\">" . $ddaynnumber . ": " . htmlspecialchars(stripslashes($tit)) . "</span>";
-// end mdziedzic edit
+// eggfoo (end)
 					}
 					/* End qTranslate integration check */
 					
@@ -219,7 +219,9 @@ if ( !class_exists('WordpressPopularPosts') ) {
 						}			
 						
 						if ($post_stats != " ") {
-							$post_stats .= " | <span class=\"wpp-views\">$pageviews $views_text</span>";
+// eggfoo:						
+							$post_stats .= "<span class=\"postcount\">($pageviews)</span>";
+// eggfoo (end)
 						} else {							
 							$post_stats .= "<span class=\"wpp-views\">$pageviews $views_text</span>";
 						}										

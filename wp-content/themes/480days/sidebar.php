@@ -115,26 +115,8 @@
 									</div>																	
 									<div id="pnc-mostComments">
 										<ul>
-											<li><a href="">400 My Wilburs have Gone Nutty and But So Who The Fuck Do You Think You Are?</a></li>
-											<li><a href="">FAQ: What did you bring with you?</a></li>
-											<li><a href="">402: Zanzibar and the Cerebral Malaria episode</a></li>
-											<li><a href="">35: Want boat?</a></li>
-											<li><a href="">FAQ: What medical precautions and perparations did you take?</a></li>
-											<li><a href="">333: Cairo and the mistaken case of meat</a></li>
-											<li><a href="">375: Large bags of pot in Uganda</a></li>
-											<li><a href="">185: Streetfight on the streets of Hanoi and the case of the questionable luggage</a></li>
-											<li><a href="">95: What the fuck is that monkey doing to my leg?</a></li>
-											<li><a href="">FAQ: What was your travelling philosphy?</a></li>																			<li><a href="">133 Flight to Yangon, Myanmar</a></li>
-											<li><a href="">FAQ: What did you bring with you?</a></li>
-											<li><a href="">402: Zanzibar and the Cerebral Malaria episode</a></li>
-											<li><a href="">35: Want boat?</a></li>
-											<li><a href="">FAQ: What medical precautions and perparations did you take?</a></li>
-											<li><a href="">333: Cairo and the mistaken case of meat</a></li>
-											<li><a href="">375: Large bags of pot in Uganda</a></li>
-											<li><a href="">185: Streetfight on the streets of Hanoi and the case of the questionable luggage</a></li>
-											<li><a href="">95: What the fuck is that monkey doing to my leg?</a></li>
-											<li><a href="">FAQ: What was your travelling philosphy?</a></li>
-										</ul>	
+											<?php mdv_most_commented(20); ?>
+										</ul>
 									</div>																	
 								</div>
 								
