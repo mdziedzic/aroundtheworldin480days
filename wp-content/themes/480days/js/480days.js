@@ -5,8 +5,7 @@ jQuery(document).ready(function($) {
 	*/
 	
 	$(".external-link").attr("target", "_blank");
-	$(".photo a").attr("target", "flickr-view");
-	$("#photo-content a").attr("target", "flickr-view");
+	$("a[href^=http://www.flickr.com]").attr("target", "flickr-view");
 	
 	
 	
