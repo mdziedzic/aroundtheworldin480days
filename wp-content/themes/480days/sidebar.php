@@ -22,54 +22,15 @@
 							<div id="photo">
 								<img src="<?php bloginfo('template_url'); ?>/images/subnav/photo.png" width="63" height="36" alt="Photo Series" />
 								<div id="photo-content">
-									<ul>
-										<li class="close"><a href="">Australia</a></li>
-										<li class="close"><a href="">Indonesia</a></li>
-										<li class="close"><a href="">Malaysia</a></li>
-										<li class="off"><a href="">Singapore</a></li>
-										<li class="close"><a href="">Thailand</a></li>
-										<li class="open"><a href="">Myanmar</a>
-											<ul>
-												<li class="off"><a href="">Yangon</a></li>
-												<li class="off"><a href="">Mandalay</a></li>
-												<li class="off"><a href="">Kalaw</a></li>
-												<li class="off"><a href="">Mandalay</a></li>
-												<li class="off"><a href="">Pyin U Lwin</a></li>
-												<li class="off"><a href="">Hsipaw</a></li>
-												<li class="off"><a href="">Mawlamyine</a></li>
-												<li class="off"><a href="">Hpa An</a></li>
-											</ul>
-										</li>											
-										<li class="close"><a href="">Laos</a></li>
-										<li class="close"><a href="">Cambodia</a></li>
-										<li class="close"><a href="">Vietnam</a></li>
-										<li class="close"><a href="">China</a></li>
-										<li class="off"><a href="">Mongolia</a></li>
-										<li class="close"><a href="">Russia</a></li>
-										<li class="off"><a href="">Estonia</a></li>
-										<li class="off"><a href="">Latvia</a></li>
-										<li class="off"><a href="">Lithuania</a></li>
-										<li class="close"><a href="">Poland</a></li>
-										<li class="close"><a href="">Turkey</a></li>
-										<li class="close"><a href="">Syria</a></li>
-										<li class="off"><a href="">Jordan</a></li>
-										<li class="close"><a href="">Egypt</a></li>
-										<li class="close"><a href="">Sudan</a></li>
-										<li class="close"><a href="">Ethiopia</a></li>
-										<li class="off"><a href="">Kenya</a></li>
-										<li class="close"><a href="">Uganda</a></li>
-										<li class="close"><a href="">Rwanda</a></li>
-										<li class="off"><a href="">Burundi</a></li>
-										<li class="close"><a href="">Tanzania</a></li>
-										<li class="off"><a href="">Zambia</a></li>
-										<li class="close"><a href="">Namibia</a></li>
-										<li class="close"><a href="">South Africa</a></li>
-										<li class="off">&nbsp;</li>											
-										<li class="off"><a href="">Food</a></li>	
-										<li class="off"><a href="">Transportation</a></li>	
-										<li class="off"><a href="">Architecture</a></li>	
-										<li class="off"><a href="">Us</a></li>	
-									</ul>
+								
+										<?php 
+											if (function_exists('wp_dtree_get_links')){
+												wp_dtree_get_links();
+											}else{
+												wp_list_categories('show_count=1');
+											} 
+										?>				
+
 								</div> <!-- photo-content -->
 							</div> <!-- photo -->
 						</div> <!-- journal-photo -->
