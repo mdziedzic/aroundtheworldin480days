@@ -40,7 +40,7 @@
 											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Animals</a></li>
 											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Art &amp; Objects</a></li>
 											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Animals</a></li>											
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Transport</a></li>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Transportation</a></li>
 											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Our Favorites</a></li>
 											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Us</a></li>
 										</ul>
