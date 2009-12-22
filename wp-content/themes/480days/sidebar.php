@@ -30,6 +30,21 @@
 												wp_list_categories('show_count=1');
 											} 
 										?>				
+										
+										<br />
+										<ul>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Food</a> <a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Drink</a></li>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Architecture</a></li>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">People</a></li>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Landscape</a></li>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Animals</a></li>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Art &amp; Objects</a></li>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Animals</a></li>											
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Transport</a></li>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Our Favorites</a></li>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Us</a></li>
+										</ul>
+
 
 								</div> <!-- photo-content -->
 							</div> <!-- photo -->
