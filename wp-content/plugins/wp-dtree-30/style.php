@@ -90,7 +90,7 @@ if ( isset($_REQUEST['rssgfxh']) ) {
 	font-family: <?php echo $fontf ?>;
 	margin: 3px 0px 0px 0px; /*spacing from the open/close all links*/
 
-	/* aroundtheworldin480days customization */
+	/* eggfoo customization */
 	margin: 0px 0px 0px 0px;
 	font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
 		
@@ -106,7 +106,7 @@ if ( isset($_REQUEST['rssgfxh']) ) {
 	display:inline;
 	margin: 0 0px 0px 0;
 	
-	/* aroundtheworldin480days customization */
+	/* eggfoo customization */
 	margin-top: -2px;
 	margin-bottom: -1px;		
 	
@@ -114,8 +114,9 @@ if ( isset($_REQUEST['rssgfxh']) ) {
 	line-height: <?php echo $fontsize; ?>px !important;
 }
 
-/* aroundtheworldin480days customization */
-#dtreec>div>div>div
+/* eggfoo customization */
+#dtreec>div>div>div,
+#dtreel>div>div>div
 	{
 	margin-left: -8px;
 	}
@@ -151,7 +152,7 @@ if ( isset($_REQUEST['rssgfxh']) ) {
 	white-space: nowrap;
 	padding: 1px 2px 1px 2px;
 	
-	/* aroundtheworldin480days customization */
+	/* eggfoo customization */
 	line-height: 18px;
 }
 
