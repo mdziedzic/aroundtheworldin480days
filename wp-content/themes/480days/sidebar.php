@@ -33,16 +33,15 @@
 										
 										<br />
 										<ul>
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Food</a> <a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Drink</a></li>
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Architecture</a></li>
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">People</a></li>
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Landscape</a></li>
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Animals</a></li>
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Art &amp; Objects</a></li>
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Animals</a></li>											
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Transportation</a></li>
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Our Favorites</a></li>
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/">Us</a></li>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Food">Food</a> <a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Drink">Drink</a></li>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Architecture">Architecture</a></li>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="People">People</a></li>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Landscape">Landscape</a> <a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Markets">Markets</a></li>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Animals">Animals</a></li>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Artifacts">Artifacts</a></li>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Transportation">Transportation</a></li>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Our Favorites">Our Favorites</a></li>
+											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Us">Us</a></li>
 										</ul>
 
 

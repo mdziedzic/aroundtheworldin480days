@@ -1343,6 +1343,21 @@ a:link, a:visited, a:hover, a:active
 	left: 0px;
 	}
 		
+.slideshow-icon
+	{
+	width: 9px;
+	height: 8px;
+	
+/* 	display: inline-table; */
+	
+		
+	background-image: url(images/subnav/slideshow-icon.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+				
+/* 	background-color: #f4e6d4; */
+	}		
+
 
 
 /* ----------------------------------------- # SUBNAV / NOTEWORTHY  */	
