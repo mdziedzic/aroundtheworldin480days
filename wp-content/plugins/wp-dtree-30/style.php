@@ -115,11 +115,15 @@ if ( isset($_REQUEST['rssgfxh']) ) {
 }
 
 /* eggfoo customization */
-#dtreec>div>div>div,
-#dtreel>div>div>div
+#dtreec>div>div>div
 	{
 	margin-left: -8px;
 	}
+#dtreel>div>div>div
+	{
+	margin-left: -7px;
+	}
+	
 
 #dtreec a, #dtreea a, #dtreep a, #dtreel a, #dtreecatwrapper a, #dtreearcwrapper a, #dtreepgewrapper a, #dtreelnkwrapper a {
 	display: inline;
