@@ -33,15 +33,14 @@
 										
 										<br />
 										<ul>
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Food">Food</a> <a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Drink">Drink</a></li>
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Architecture">Architecture</a></li>
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="People">People</a></li>
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Landscape">Landscape</a> <a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Markets">Markets</a></li>
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Animals">Animals</a></li>
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Artifacts">Artifacts</a></li>
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Transportation">Transportation</a></li>
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Our Favorites">Our Favorites</a></li>
-											<li><a href="http://www.flickr.com/photos/mdziedzic/sets/72157622927559801/" title="Us">Us</a></li>
+											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623016896189/" title="Food">Food</a></li>
+											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623141508176/" title="People">People</a></li>
+											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623141529172/" title="Architecture">Architecture</a></li>
+											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623141532386/" title="Markets">Markets</a></li>
+											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623016976187/" title="Transportation">Transportation</a></li>
+											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623016994323/" title="Typography">Typography</a></li>											
+											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623141501424/" title="Our Favorites">Our Favorites</a></li>
+											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623141508176/" title="Us">Us</a></li>
 										</ul>
 
 
