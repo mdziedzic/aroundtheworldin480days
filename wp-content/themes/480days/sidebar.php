@@ -33,14 +33,14 @@
 										
 										<br />
 										<ul>
-											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623024159535/" title="Food">Food</a></li>
-											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623024162467/" title="People">People</a></li>
-											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623148722442/" title="Architecture">Architecture</a></li>
-											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623148732396/" title="Markets">Markets</a></li>
-											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623148734614/" title="Transportation">Transportation</a></li>
-											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623024170995/" title="Typography">Typography</a></li>											
-											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623148742988/" title="Our Favorites">Favorites</a></li>
-											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623024162467/" title="Us">Us</a></li>
+											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623204115102/" title="Food">Food</a></li>
+											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623079644323/" title="People">People</a></li>
+											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623079648115/" title="Architecture">Architecture</a></li>
+											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623204131924/" title="Markets">Markets</a></li>
+											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623079658595/" title="Transportation">Transportation</a></li>
+											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623204142578/" title="Typography">Typography</a></li>											
+											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623079671813/" title="Our Favorites">Favorites</a></li>
+											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157623079644323/" title="Us">Us</a></li>
 										</ul>
 
 
