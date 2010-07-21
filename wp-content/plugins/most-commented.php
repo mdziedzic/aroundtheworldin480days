@@ -59,7 +59,14 @@ class Most_Commented_Widget extends WP_Widget {
 					foreach ( $posts as $post ) {
 						$post_title = apply_filters( 'the_title', $post->post_title );
 
-						$output .= $before . '<a href="' . get_permalink( $post->ID ) . '" title="' . esc_attr( $post_title ) . '">' . $post_title . '</a> (' . $post->comment_count .')' . $after;
+// eggfoo:
+						$key="dayNumber";
+						$dddaynnnumber =  get_post_meta($post->ID, $key, true);
+
+						$output .= $before . '<a href="' . get_permalink( $post->ID ) . '" title="' . esc_attr( $post_title ) . '">' . $dddaynnnumber . ": " . $post_title . '</a> <span class="postcount">(' . $post->comment_count .')</span>' . $after;
+// eggfoo (end)				
+						
+						
 					}
 				} else {
 					$output .= $before . 'None found' . $after;
