@@ -47,7 +47,8 @@ class DefaultEngine extends SearchEngine {
 	function posts_request( $request ) {
 		global $wpdb;
 		
-		$this->terms = get_query_var( 'search_terms' );
+		$term = get_query_var( 's' );
+		$this->terms = $term;
 		
 		// Get running modules
 		include_once dirname( dirname( __FILE__ ) ).'/models/search-module.php';
@@ -66,42 +67,31 @@ class DefaultEngine extends SearchEngine {
 		}
 		
 		if ( count( $tax ) > 0 ) {
-			foreach ( $this->terms AS $term ) {
-				$join[] = " LEFT JOIN $wpdb->term_relationships AS rel ON ($wpdb->posts.ID=rel.object_id) LEFT JOIN $wpdb->term_taxonomy AS tax ON (".implode( ' OR ', $tax )." AND rel.term_taxonomy_id=tax.term_taxonomy_id) LEFT JOIN $wpdb->terms AS term ON (tax.term_id=term.term_id)";
-				$extra[] = "term.slug LIKE '%$term%'";
-			}
+			$join[] = " LEFT JOIN $wpdb->term_relationships AS rel ON ($wpdb->posts.ID=rel.object_id) LEFT JOIN $wpdb->term_taxonomy AS tax ON (".implode( ' OR ', $tax )." AND rel.term_taxonomy_id=tax.term_taxonomy_id) LEFT JOIN $wpdb->terms AS term ON (tax.term_id=term.term_id)";
+			$extra[] = "term.slug LIKE '%$term%'";
 		}
 
 		// Author
 		if ( isset( $modules['search_post_author'] ) ) {
-			foreach ( $this->terms AS $term ) {
-				$extra[] = "($wpdb->users.display_name LIKE '%$term%')";
-				$join[]  = "INNER JOIN $wpdb->users ON $wpdb->users.ID=$wpdb->posts.post_author";
-			}
+			$extra[] = "($wpdb->users.display_name LIKE '%$term%')";
+			$join[]  = "INNER JOIN $wpdb->users ON $wpdb->users.ID=$wpdb->posts.post_author";
 		}
 		
 		// Comments
 		$comments = false;
 		if ( isset( $modules['search_comment_author'] ) ) {
 			$comments = true;
-			foreach ( $this->terms AS $term ) {
-				$extra[] = "($wpdb->comments.comment_author LIKE '%$term%')";
-			}
+			$extra[] = "($wpdb->comments.comment_author LIKE '%$term%')";
 		}
 
 		if ( isset( $modules['search_comment_url'] ) ) {
 			$comments = true;
-			foreach ( $this->terms AS $term ) {
-				$extra[] = "($wpdb->comments.comment_author_url LIKE '%$term%')";
-			}
+			$extra[] = "($wpdb->comments.comment_author_url LIKE '%$term%')";
 		}
 
 		if ( isset( $modules['search_comment_content'] ) ) {
 			$comments = true;
-
-			foreach ( $this->terms AS $term ) {
-				$extra[] = "($wpdb->comments.comment_content LIKE '%$term%')";
-			}
+			$extra[] = "($wpdb->comments.comment_content LIKE '%$term%')";
 		}
 		
 		if ( $comments )
@@ -109,26 +99,19 @@ class DefaultEngine extends SearchEngine {
 		
 		// Easy one - search URL
 		if ( isset( $modules['search_post_slug'] ) ) {
-			foreach ( $this->terms AS $term ) {
-				$extra[] = "($wpdb->posts.post_name LIKE '%$term%')";
-			}
+			$extra[] = "($wpdb->posts.post_name LIKE '%$term%')";
 		}
 
 		// Easy one - search excerpt
 		if ( isset( $modules['search_post_excerpt'] ) ) {
-			foreach ( $this->terms AS $term ) {
-				$extra[] = "($wpdb->posts.post_excerpt LIKE '%$term%')";
-			}
+			$extra[] = "($wpdb->posts.post_excerpt LIKE '%$term%')";
 		}
 		
 		// Search post meta
 		if ( isset( $modules['search_post_meta'] ) ) {
 			$module  = $modules['search_post_meta'];
-			
-			foreach ( $this->terms AS $term ) {
-				$extra[] = "($wpdb->postmeta.meta_value LIKE '%$term%' AND $wpdb->postmeta.meta_key IN (".$module->get_keys()."))";
-				$join[]  = "INNER JOIN $wpdb->postmeta ON $wpdb->postmeta.post_id=$wpdb->posts.ID";
-			}
+			$extra[] = "($wpdb->postmeta.meta_value LIKE '%$term%' AND $wpdb->postmeta.meta_key IN (".$module->get_keys()."))";
+			$join[]  = "INNER JOIN $wpdb->postmeta ON $wpdb->postmeta.post_id=$wpdb->posts.ID";
 		}
 		
 		// Insert our extra stuff
@@ -139,10 +122,6 @@ class DefaultEngine extends SearchEngine {
 			$request = str_replace('WHERE', implode( ' ', $join ).' WHERE', $request);
 
 		$request = str_replace( 'SELECT', 'SELECT DISTINCT', $request );
-		
-		if ( is_array( $this->terms ) )
-			$this->terms = implode( ' ', $this->terms );
-		
 		return $request;
 	}
 

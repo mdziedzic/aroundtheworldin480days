@@ -95,8 +95,6 @@ class SearchUnleashedAjax extends Search_Plugin {
 			require dirname( __FILE__ ).'/models/spider.php';
 			require dirname( __FILE__ ).'/models/search-engine.php';
 
-			ob_start();
-			
 			$spider = new SearchSpider( $this->options );
 			$engine = SearchEngine::get_engine( $this->options, $this->options['search_engine'] );
 			$offset = intval( $_POST['offset'] );
@@ -112,8 +110,6 @@ class SearchUnleashedAjax extends Search_Plugin {
 			//       Status = Status message
 			list( $remaining, $total ) = $spider->index( $offset, intval( $_POST['limit'] ), $engine );
 
-			ob_end_clean();
-			
 			$percent = 100;
 			if ($total > 0)
 				$percent = ( ( $total - $remaining ) / $total ) * 100;

@@ -98,10 +98,7 @@ ClusterMarker.prototype.clusterMarkerIcon=function($count){
 	}else{
 		// create the required icon, cache it and return it from this method
 		var $count=$count.toString(), $icon, $iconOptions=this.iconOptions; 
-		if ( ! $iconOptions.labelPadding ) { 
-			$iconOptions.labelPadding = 10;
-		}
-		$iconOptions.width=($count.length*$iconOptions.labelSize)+$iconOptions.labelPadding;
+		$iconOptions.width=($count.length*$iconOptions.labelSize)+10;
 		$iconOptions.label=$count;
 		$icon=MapIconMaker.createFlatIcon($iconOptions);
 		this.clusterMarkerIconCache[$count]=$icon;

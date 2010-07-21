@@ -100,16 +100,6 @@ class SearchSpider {
 						return false;
 				}
 
-				// Check post status
-				if ( $this->options['private'] == false && $post->post_status == 'private' )
-					return false;
-
-				if ( $this->options['draft'] == false && $post->post_status == 'draft' )
-					return false;
-
-				if ( $this->options['protected'] == false && $post->post_password != '' )
-					return false;
-
 				return true;
 			}
 		}
@@ -258,7 +248,7 @@ class SearchSpider {
 		// Remove comments and JavaScript
 		$text = preg_replace( preg_encoding( '/<script(.*?)<\/script>/s' ), '', $text );
 		$text = preg_replace( preg_encoding( '/<!--(.*?)-->/s' ), '', $text );
-
+				
 		$text = str_replace( '<', ' <', $text );   // Insert a space before HTML so the strip will have seperate words
 		$text = preg_replace( '/&#\d*;/', '', $text );
 		$text = addslashes( wp_kses( stripslashes( strip_html( $text ) ), array() ) );

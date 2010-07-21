@@ -89,7 +89,6 @@ class Search_Log {
 		else if ( isset( $_SERVER['HTTP_X_FORWARDED_FOR'] ) )
 		  $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
 	
-		$ip = substr( $ip, 0, 18 );
 		if ( $referrer ) {
 			if ( $referrer->engine != 'local' ) {
 				$ref = $wpdb->escape( $referrer->referrer );

@@ -42,7 +42,7 @@ class Highlighter {
 
 		$this->matches     = 0;
 		$this->first_match = strlen( $text );
-
+		
 		// Find the first matched term
 		foreach ( (array)$words AS $word ) {
 			if ( preg_match( '/('.$word.')(?!=")/i', $this->text, $matches, PREG_OFFSET_CAPTURE ) > 0 )
@@ -164,7 +164,7 @@ class Highlighter {
 			$this->word_pos   = $pos;
 
 			if ( $html )
-				$text = @preg_replace_callback( preg_encoding( '/(?<=>)([^<]+)?('.$word.')(?!=")/i' ), array( &$this, 'highlight_html_word' ), $text );
+				$text = preg_replace_callback( preg_encoding( '/(?<=>)([^<]+)?('.$word.')(?!=")/i' ), array( &$this, 'highlight_html_word' ), $text );
 			else
 				$text = preg_replace_callback( '/('.$word.')(?!=")/iu', array( &$this, 'highlight_plain_word' ), $text );
 		}

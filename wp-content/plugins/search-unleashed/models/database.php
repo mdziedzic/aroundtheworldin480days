@@ -52,7 +52,7 @@ class SU_Database {
 		  `phrase` varchar(200) NOT NULL default '',
 		  `ip` varchar(18) NOT NULL,
 		  `searched_at` datetime NOT NULL,
-		  `referrer` varchar(255) default NULL,
+		  `referrer` varchar(300) default NULL,
 		  PRIMARY KEY  (`id`)
 		) ENGINE=MyISAM CHARSET=utf8";
 		

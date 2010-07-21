@@ -223,8 +223,7 @@ class LuceneEngine extends SearchEngine {
 	public function store( $post_id, $details, $data ) {
 		$lucene = $this->open();
 
-		if ( ini_get('safe_mode') == 0 )
-			@set_time_limit( 0 );
+		set_time_limit( 0 );
 		
 		if ( $lucene ) {
 			try {

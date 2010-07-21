@@ -41,8 +41,8 @@ class MysqlEngine extends IndexedEngine {
 		$_GET['s'] = get_query_var( 's' );
 
 		// Extract search terms
-		$term = trim( $_GET['s'] );
-		$term = preg_replace_callback( "/['\"](.*?)['\"]/", array( &$this, 'exact_words' ), $term );
+		$term = trim( $wpdb->escape( $_GET['s'] ) );
+		$term = preg_replace_callback( "/'(.*?)'/", array( &$this, 'exact_words' ), $term );
 		
 		$term = preg_replace_callback( preg_encoding( '/(\w*)\s*AND\s*(\w*)/' ), array( &$this, 'logical_and' ), $term );
 		$term = preg_replace( preg_encoding( '/(\w*)\s*OR\s*(\w*)/' ), '$1 $2', $term );
