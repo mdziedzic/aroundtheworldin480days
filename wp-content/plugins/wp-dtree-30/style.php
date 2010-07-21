@@ -89,10 +89,15 @@ if ( isset($_REQUEST['rssgfxh']) ) {
 #dtreec, #dtreea, #dtreep, #dtreel, #dtreecatwrapper, #dtreearcwrapper, #dtreepgewrapper, #dtreelnkwrapper {
 	font-family: <?php echo $fontf ?>;
 	margin: 3px 0px 0px 0px; /*spacing from the open/close all links*/
+
+	/* eggfoo customization */
+	margin: 0px 0px 0px 0px;
+	font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+		
 	font-size: <?php echo $fontsize; ?>px;
 	color: #<?php echo $mfontcolor; ?>;
 	white-space: nowrap;
-	text-align:left; !important
+	text-align:left !important;
 }
 #dtreec img, #dtreea img, #dtreep img, #dtreel img {
 	border: 0px;
@@ -100,9 +105,26 @@ if ( isset($_REQUEST['rssgfxh']) ) {
 	float: none; 
 	display:inline;
 	margin: 0 0px 0px 0;
+	
+	/* eggfoo customization */
+	margin-top: -2px;
+	margin-bottom: -1px;		
+	
 	padding: 0px !important;
 	line-height: <?php echo $fontsize; ?>px !important;
 }
+
+/* eggfoo customization */
+#dtreec>div>div>div
+	{
+	margin-left: -8px;
+	}
+#dtreel>div>div>div
+	{
+	margin-left: -7px;
+	}
+	
+
 #dtreec a, #dtreea a, #dtreep a, #dtreel a, #dtreecatwrapper a, #dtreearcwrapper a, #dtreepgewrapper a, #dtreelnkwrapper a {
 	display: inline;
 	padding: 0;
@@ -133,7 +155,11 @@ if ( isset($_REQUEST['rssgfxh']) ) {
 #dtreec a.node, #dtreea a.node, #dtreep a.node, #dtreel a.node, #dtreec a.nodeSel, #dtreea a.nodeSel, #dtreep a.nodeSel, #dtreel a.nodeSel {
 	white-space: nowrap;
 	padding: 1px 2px 1px 2px;
+	
+	/* eggfoo customization */
+	line-height: 18px;
 }
+
 #dtreec a:hover, #dtreec a.node:hover, #dtreec a.nodeSel:hover, #dtreea a:hover, #dtreea a.node:hover, #dtreea a.nodeSel:hover, #dtreep a:hover, #dtreep a.node:hover, #dtreep a.nodeSel:hover, #dtreel a:hover, #dtreel a.node:hover, #dtreel a.nodeSel:hover {
 	color: #<?php echo $hfontcolor; ?>;
 	text-decoration: <?php echo $hfontdecor; ?>;

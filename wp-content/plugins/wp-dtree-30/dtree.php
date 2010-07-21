@@ -136,8 +136,8 @@ function wp_dTree(objName, baseUrl, truncate){
 		plusBottom	: '<?php echo $curdir; ?>/dtree-img/plusbottom.gif',
 		minus		: '<?php echo $curdir; ?>/dtree-img/minus.gif',
 		minusBottom	: '<?php echo $curdir; ?>/dtree-img/minusbottom.gif',
-		nlPlus		: '<?php echo $curdir; ?>/dtree-img/nolines_plus.gif',
-		nlMinus		: '<?php echo $curdir; ?>/dtree-img/nolines_minus.gif'	
+        nlPlus          : '<?php echo $curdir; ?>/dtree-img/nolines_plus.png',     // eggfoo edit
+        nlMinus          : '<?php echo $curdir; ?>/dtree-img/nolines_minus.png'    // eggfoo edit    
 	};
 	this._url = baseUrl; 
 	this._truncate = truncate;
