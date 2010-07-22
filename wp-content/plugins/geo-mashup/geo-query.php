@@ -1,10 +1,32 @@
 <?php
+
+require_once('../../../wp-blog-header.php');
+
 /**
- * Respond to Geo Mashup AJAX requests for object locations.
- *
- * @since 1.0
- * @package GeoMashup
+ * Establish locate_template for WP 2.6.
  */
+if ( !function_exists( 'locate_template' ) ) {
+	function locate_template($template_names, $load = false) {
+		if (!is_array($template_names))
+			return '';
+
+		$located = '';
+		foreach($template_names as $template_name) {
+			if ( file_exists(STYLESHEETPATH . '/' . $template_name)) {
+				$located = STYLESHEETPATH . '/' . $template_name;
+				break;
+			} else if ( file_exists(TEMPLATEPATH . '/' . $template_name) ) {
+				$located = TEMPLATEPATH . '/' . $template_name;
+				break;
+			}
+		}
+
+		if ($load && '' != $located)
+			load_template($located);
+
+		return $located;
+	}
+}
 
 if ( empty( $_GET['object_ids'] ) ) {
 	GeoMashupQuery::generate_location_json( );
@@ -13,12 +35,7 @@ if ( empty( $_GET['object_ids'] ) ) {
 }
 
 /**
- * Class for query handling namespace
- *
- * @since 1.2
- * @package GeoMashup
- * @access public
- * @static
+ * GeoMashupQuery - static class provides namespace 
  */
 class GeoMashupQuery {
 
@@ -27,39 +44,15 @@ class GeoMashupQuery {
 	 *
 	 * Shortcodes are not registered in the bare-bones query environments, 
 	 * but we can strip all bracketed content.
-	 *
-	 * @since 1.3
-	 * @access public
-	 * @static
-	 *
-	 * @param string $content Content to strip square brackets from
-	 * @return string Content minus square brackets
 	 */
 	function strip_brackets( $content ) {
 		return preg_replace( '/\[.*?\]/', '', $content );
 	}
 
-	/**
-	 * Strip map shortcodes.
-	 * 
-	 * @since 1.3
-	 * @access public
-	 * @static
-	 *
-	 * @param string $content 
-	 * @return string Content without map shortcodes.
-	 */
 	function strip_map_shortcodes( $content ) {
 		return preg_replace( '/\[geo_mashup_map.*?\]/', '', $content );
 	}
 
-	/**
-	 * Use templates to output content for objects.
-	 * 
-	 * @since 1.3
-	 * @access public
-	 * @static
-	 */
 	function generate_object_html( ) {
 		global $geo_mashup_options, $geo_mashup_custom, $comments, $users;
 
@@ -108,22 +101,19 @@ class GeoMashupQuery {
 			$template = trailingslashit( $geo_mashup_custom->dir_path ) . $template_base . '.php';
 		}
 		if ( !is_readable( $template ) ) {
-			$template = trailingslashit( GEO_MASHUP_DIR_PATH ) . $template_base . '-default.php';
+			$template = $template_base . '-default.php';
 		}
 		if ( !is_readable( $template ) ) {
-			$template = trailingslashit( GEO_MASHUP_DIR_PATH ) . 'info-window-default.php';
+			$template = 'info-window-default.php';
 		}
 		load_template( $template );
 	}
 
 	/** 
-	 * Set the comment global. 
-	 *
-	 * Not sure why WP 2.7 comment templating requires this for callbacks, but it does.
+	 * Set the comment global. Not sure why WP 2.7 comment templating
+	 * requires this for callbacks, but it does.
 	 *
 	 * @since 1.3
-	 * @access public
-	 * @static
 	 *
 	 * @param object $comment The comment object to make global.
 	 */
@@ -135,10 +125,8 @@ class GeoMashupQuery {
 	 * Wrap access to comments global.
 	 *
 	 * @since 1.3
-	 * @access public
-	 * @static
 	 *
-	 * @return bool Whether there are any comments to be listed.
+	 * @returns bool Whether there are any comments to be listed.
 	 */
 	function have_comments( ) {
 		global $comments;
@@ -151,8 +139,6 @@ class GeoMashupQuery {
 	 * otherwise a simple comment loop.
 	 *
 	 * @since 1.3
-	 * @access public
-	 * @static
 	 * @see wp_list_comments()
 	 *
 	 * @param string|array $args Formatting options
@@ -172,7 +158,7 @@ class GeoMashupQuery {
 				if ( !empty( $args['callback'] ) ) {
 					call_user_func( $args['callback'], $comment, $args, 1 );
 				} else {
-					echo '<p>' . esc_html( $comment->comment_author ) . ':<br/>' . esc_html( $comment->comment_content ) . '</p>';
+					echo '<p>' . $comment->comment_author . ':<br/>' . $comment->comment_content . '</p>';
 				}
 			}
 			$in_comment_loop = false;
@@ -180,13 +166,10 @@ class GeoMashupQuery {
 	}
 
 	/** 
-	 * Set the user global. 
-	 *
-	 * Probably only Geo Mashup using it here for a templated list of users.
+	 * Set the user global. Probably only Geo Mashup using it here
+	 * for a templated list of users.
 	 *
 	 * @since 1.3
-	 * @access public
-	 * @static
 	 *
 	 * @param object $user The user object to make global.
 	 */
@@ -195,13 +178,10 @@ class GeoMashupQuery {
 	}
 
 	/** 
-	 * Wrap access to users global. 
-	 *
-	 * Probably only Geo Mashup using it here for a templated list of users.
+	 * Wrap access to users global. Probably only Geo Mashup using it here
+	 * for a templated list of users.
 	 *
 	 * @since 1.3
-	 * @access public
-	 * @static
 	 *
 	 * @returns bool Whether there are any users to be listed.
 	 */
@@ -215,8 +195,6 @@ class GeoMashupQuery {
 	 * A simple user loop that takes a callback option for formatting.
 	 *
 	 * @since 1.3
-	 * @access public
-	 * @static
 	 *
 	 * @param string|array $args Formatting options
 	 */
@@ -233,7 +211,7 @@ class GeoMashupQuery {
 			if ( !empty( $args['callback'] ) ) {
 				call_user_func( $args['callback'], $user, $args );
 			} else {
-				echo '<p>' . esc_html( $user->display_name ) .
+				echo '<p>' . $user->display_name .
 					( empty( $user->user_url ) ? '' : ' - ' . $user->url ) . '</p>';
 			}
 		}
@@ -241,15 +219,8 @@ class GeoMashupQuery {
 	}
 
 
-	/**
-	 * Run a query for object locations from GET parameters and print JSON results.
-	 * 
-	 * @since 1.2
-	 * @access public
-	 * @static
-	 */
 	function generate_location_json( ) {
-		/* TODO: Try to track modification?
+		/*
 		if ( !empty( $_SERVER['HTTP_IF_MODIFIED_SINCE'] ) ) {
 			$http_time = strtotime( $_SERVER['HTTP_IF_MODIFIED_SINCE'] );
 			$mod_time = strtotime( $post->post_modified_gmt . ' GMT' );

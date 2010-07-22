@@ -9,8 +9,6 @@
  * installed. Those files take precedence over this one.
  *
  * For styling of the info window, see map-style-default.css.
- *
- * @package GeoMashup
  */
 ?>
 <div class="locationinfo user-location-info">
@@ -26,23 +24,17 @@
 <?php endif; ?>
 </div>
 <?php 
-/**
- * Template callback for GeoMashupQuery::list_users()
- *
- * @since 1.3
- * @param object $user The user to display.
- */
 function geo_mashup_user_default_template( $user ) { 
 	GeoMashupQuery::set_the_user( $user );
 ?>
-<div id="div-user-<?php echo esc_attr( $user->ID ); ?>" class="vcard">
+<div id="div-user-<?php echo $user->ID ?>" class="vcard">
 	<div class="fn">
-		<span class="type"><?php _e( 'Display Name' ); ?></span>: <span class="value"><?php echo esc_attr( $user->display_name ); ?></span>
+		<span class="type"><?php _e( 'Display Name' ); ?></span>: <span class="value"><?php echo $user->display_name; ?></span>
 	</div>
 	<?php echo GeoMashup::location_info( 'fields=locality_name,admin_code&format=<div class="adr"><span class="locality">%s</span>, <span class="region">%s</span></div>' ); ?>
 	<?php if ( isset( $user->user_url ) && strlen( $user->user_url ) > 7 ) : ?>
 	<div class="url">
-		<span class="type"><?php _e( 'Website' ); ?></span>: <a class="value" href="<?php echo esc_attr( $user->user_url ); ?>"><?php echo esc_attr( $user->user_url ); ?></a>
+		<span class="type"><?php _e( 'Website' ); ?></span>: <a class="value" href="<?php echo $user->user_url; ?>"><?php echo $user->user_url; ?></a>
 	</div>
 	<?php endif; ?>
 </div>
