@@ -371,7 +371,23 @@ a:link, a:visited, a:hover, a:active
 	margin: 0 10px 0 0;
 	font-size: 12px;
 	text-indent: 0px;
+	}
+	
+.body-text-photo-series
+	{
+	margin: 31px 255px -6px -30px;
+	padding: 5px 0 4px 31px;
+	font-size: 11px;
+	text-indent: 0px;
+	
+	background-color: #f3f9fe;
 	}	
+	
+.body-text-photo-series img
+	{
+	margin: 0 8px 0 8px;
+	}
+	
 	
 .body-text-photo
 	{
