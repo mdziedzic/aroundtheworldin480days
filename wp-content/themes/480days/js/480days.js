@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
 	$(".external-link").attr("target", "_blank");
 	$("a[href^=http://www.flickr.com]").attr("target", "flickr-view");
 	
-	$("a[href^=http://www.flickr.com]").each(function() {
+	$("#photo a[href^=http://www.flickr.com]").each(function() {
 		var ssUrl = $(this).attr("href");
 		ssUrl += "show/";
 		var ssAlt = $(this).attr("title");
