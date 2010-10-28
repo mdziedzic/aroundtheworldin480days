@@ -82,7 +82,7 @@
 					<?php } ?>
 					<?php	
 						$key="dayNumber"; 
-						if (get_post_meta($post->ID, $key, true) != "477") { ?>
+						if (get_post_meta($post->ID, $key, true) != "479") { ?>
 							<div id="day-next">
 								<?php 
 									$next_image_link = "<img src='" . get_bloginfo('template_url') . "/images/content/day-next.gif' width='30' height='61' alt='Next Day' />";

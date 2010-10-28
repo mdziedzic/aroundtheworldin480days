@@ -59,6 +59,19 @@
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/480days.js"></script>
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/map.js"></script>	
 	
+	
+	<?php if (is_single()) { ?>
+	
+		<?php if ($dayNumber != "001") { ?>
+			<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/prev-day.js"></script>
+		<?php } ?>
+		
+		<?php if ($dayNumber != "479") { ?>
+			<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/next-day.js"></script>
+		<?php } ?>
+	
+	<?php } ?>
+	
 	<script type="text/javascript">
 		var mapWhereAmI = "<?php echo "5000"; ?>"; // default map postion when not on post or cateogry page
 	</script>
