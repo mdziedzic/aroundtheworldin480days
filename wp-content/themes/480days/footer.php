@@ -30,7 +30,7 @@
 					<a href="http://www.eggfoo.com" class="external-link"><img src="<?php bloginfo('template_url'); ?>/images/footer/eggfoo.gif" width="96" height="24"	alt="EGGFOO" /></a><br />				
 				</div>
 				<div id="copyright-footer">
-					<p>Copyright &copy; 2004-2010 Emily &amp; Michael Dziedzic</p>				
+					<p>Copyright &copy; 2004-2012 Emily &amp; Michael Dziedzic</p>				
 				</div>
 				<div id="xhtml-css-wordpress">
 					<p>Built with valid <a href="http://validator.w3.org/check?uri=referer" class="external-link">XHTML</a>, <a href="http://jigsaw.w3.org/css-validator/" class="external-link">CSS</a><br />
