@@ -86,7 +86,7 @@
 										</ul>	
 									</div>		
 									<div id="pnc-mostViews">
-										<?php get_mostpopular(); ?>										
+										<?php wpp_get_mostpopular("range='all'&limit=20&order_by='views'&stats_comments=0&stats_views=1&pages=0"); ?>		
 									</div>																	
 									<div id="pnc-mostComments">
 										<ul>

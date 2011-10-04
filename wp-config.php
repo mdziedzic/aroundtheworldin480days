@@ -33,6 +33,22 @@ define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
+
+
+
+
+// eggfoo
+
+	/** added this on 10/4/2011 to stop memory exhaustion error that prevented homepage from loading */
+	define('WP_MEMORY_LIMIT', '64M');
+
+// eggfoo
+
+
+
+
+
+
 /**#@+
  * Authentication Unique Keys.
  *

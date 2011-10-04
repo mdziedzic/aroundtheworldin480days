@@ -1,5 +1,15 @@
 <?php
 
+if ( function_exists('register_sidebar') )
+    register_sidebar();
+    
+/*
+if (function_exists('wpp_get_mostpopular')) 
+	wpp_get_mostpopular("range='all'&limit=20&order_by='views'"); 
+
+*/
+
+
 function post_is_in_descendant_category( $cats, $_post = null )
 {
 	foreach ( (array) $cats as $cat ) {
