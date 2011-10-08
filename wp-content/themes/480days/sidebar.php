@@ -1,4 +1,4 @@
-				</div>
+5				</div>
 				
 				<!-- ================================================= SUBNAVIGATION -->									
 				<div id="subnav">
@@ -9,13 +9,12 @@
 								<img src="<?php bloginfo('template_url'); ?>/images/subnav/journal.png" width="81" height="40" alt="Daily Journal" />
 								<div id="journal-content">
 								
+									<div class="dtree">
 										<?php 
-											if (function_exists('wp_dtree_get_categories')){
-												wp_dtree_get_categories();
-											}else{
-												wp_list_categories('show_count=1');
-											} 
+											if (function_exists('wpdt_list_categories'))
+												wpdt_list_categories('exclude=3,192,193,194,195&orderby=name&depth=1&useicons=0&uselines=0&oclinks=0&listposts=0');
 										?>				
+									</div>
 
 								</div>
 							</div>
@@ -23,13 +22,12 @@
 								<img src="<?php bloginfo('template_url'); ?>/images/subnav/photo.png" width="63" height="36" alt="Photo Series" />
 								<div id="photo-content">
 								
+									<div class="dtree">
 										<?php 
-											if (function_exists('wp_dtree_get_links')){
-												wp_dtree_get_links();
-											}else{
-												wp_list_categories('show_count=1');
-											} 
+											if (function_exists('wpdt_list_links'))
+												wpdt_list_links('sortby=ID&catsorderby=ID&depth=1&useicons=0&uselines=0&oclinks=0&listposts=0');
 										?>				
+									</div>
 										
 										<br />
 										<ul>
