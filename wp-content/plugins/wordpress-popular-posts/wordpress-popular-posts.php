@@ -653,6 +653,12 @@ if ( !class_exists('WordpressPopularPosts') ) {
 						$tit = mb_substr($tit, 0, $instance['shorten_title']['length'], $this->charset) . "...";
 					}
 					
+// eggfoo					
+					$key="dayNumber";
+					$ddaynnumber =  get_post_meta($wppost->ID, $key, true);
+					$tit = $ddaynnumber . ": " . htmlspecialchars(stripslashes($tit));
+// eggfoo										
+					
 					$tit = htmlentities($tit, ENT_QUOTES, $this->charset);
 					
 					// get post excerpt
@@ -685,7 +691,9 @@ if ( !class_exists('WordpressPopularPosts') ) {
 						if ($post_stats != "") {
 							$post_stats .= " | <span class=\"wpp-views\">$pageviews $views_text</span>";
 						} else {							
-							$post_stats .= "<span class=\"wpp-views\">$pageviews $views_text</span>";
+// eggfoo												
+							$post_stats .= "<span class=\"wpp-views\">($pageviews)</span>";
+// eggfoo
 						}										
 					}
 					if ( $instance['stats_tag']['author'] ) {
