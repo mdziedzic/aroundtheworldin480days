@@ -28,12 +28,27 @@ class GeoMashupRenderMap {
 	 * @param string $element_id The DOM id of the map container.
 	 * @return string The script tag to generate the map for this request.
 	 */
+	 
+// eggfoo
+	 
+/*
 	public static function map_script( $element_id ) {
 		return '<script type="text/javascript">' . "\n" .
 			'GeoMashup.createMap(document.getElementById("' . $element_id . '"), { ' .
 			GeoMashup::implode_assoc( ':', ',', self::$map_data ) . ' });' .
 			"\n" . '</script>';
 	}
+*/
+	
+	public static function map_script( $element_id ) {
+		return '<script type="text/javascript">' . "\n" .
+			'GeoMashup.createMap(document.getElementById("' . $element_id . '"), { ' .
+			GeoMashup::implode_assoc( ':', ',', self::$map_data ) . ' });' .
+			"\n" . 'parent.displayIframe(); </script>';
+	}	
+
+// eggfoo
+
 
 	/**
 	 * Enqueue a style to be included in the map frame.
