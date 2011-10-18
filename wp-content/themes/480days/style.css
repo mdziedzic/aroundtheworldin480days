@@ -1363,6 +1363,7 @@ a:link, a:visited, a:hover, a:active
 	{
 	width: 9px;
 	height: 8px;
+	margin-left: 2px;
 	
 /* 	display: inline-table; */
 	
