@@ -16,7 +16,7 @@ body
 	margin: 0 0 0 0;
 	}
 
-p, li, h1, h2, #pc-name-input, #pc-email-input, #pc-url-input, #pc-comments-input
+p, li, h1, h2, h3, #pc-name-input, #pc-email-input, #pc-url-input, #pc-comments-input
 	{	
 /* 	font-family: "Lucida Grande", Tahoma, Helvetica, Arial, san-serif; */
 	font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;	
@@ -229,6 +229,7 @@ a:link, a:visited, a:hover, a:active
 	{
 	background: url(images/nav/nav.png) no-repeat -158px -36px;
 	}	
+
     
 /* --------------------- # PRESS  */
 
@@ -332,6 +333,16 @@ a:link, a:visited, a:hover, a:active
 	font-weight: 100;
 	color: #bebebe;
 	}	
+
+#faq-single-header h1
+	{
+	margin-bottom: 32px;
+	}	
+
+#content li
+	{
+	font-size: 12px;
+	}
 	
 .location
 	{
@@ -472,6 +483,11 @@ a:link, a:visited, a:hover, a:active
 	margin: 7px 0 0 -79px;
 	}	
 	
+#faq-single-header .comments-counter
+	{
+	padding-top: 13px;
+	}
+
 #comments .comments-counter
 	{
 	margin: -3px 0 0 -49px;
