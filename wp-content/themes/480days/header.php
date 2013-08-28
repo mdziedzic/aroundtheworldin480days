@@ -66,7 +66,7 @@
 			<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/prev-day.js"></script>
 		<?php } ?>
 		
-		<?php if ($dayNumber != "479") { ?>
+		<?php if ($dayNumber != "480") { ?>
 			<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/next-day.js"></script>
 		<?php } ?>
 	
