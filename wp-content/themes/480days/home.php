@@ -30,8 +30,8 @@
 						</div>
 						<div id="previous-next">
 								<div id="next">
-									<a href="http://localhost.local/aroundtheworldin480days/index.php?p=2245"><img src="<?php bloginfo('template_url'); ?>/images/content/home/daily-journal.gif" width="150" height="23" alt="Next Day" /></a>								
-									<p><a href="http://localhost.local/aroundtheworldin480days/index.php?p=2245">001: Goodbye Portland. Hello World.</a></p>	
+									<a href="http://localhost/aroundtheworldin480days/index.php?p=2245"><img src="<?php bloginfo('template_url'); ?>/images/content/home/daily-journal.gif" width="150" height="23" alt="Next Day" /></a>								
+									<p><a href="http://localhost/aroundtheworldin480days/index.php?p=2245">001: Goodbye Portland. Hello World.</a></p>	
 								</div>
 						</div>
 					</div></div>

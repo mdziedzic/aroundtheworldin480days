@@ -53,7 +53,7 @@
 									<h2 id="noresults-h2">Alas, no posts found. Perhaps you might consider trying to search for something else.</h2>
 
 									<div>
-										<form method="get" action="http://localhost.local/aroundtheworldin480days/" >
+										<form method="get" action="http://localhost/aroundtheworldin480days/" >
 											<p><input type="text" id="search-input-noresults" name="s" tabindex="1" /></p><div><input type="submit" id="search-submit-noresults" /></div>
 										</form>
 									</div>
