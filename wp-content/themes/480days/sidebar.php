@@ -12,7 +12,7 @@
 									<div class="dtree">
 										<?php 
 											if (function_exists('wpdt_list_categories'))
-												wpdt_list_categories('exclude=3,192,193,194,195&orderby=name&depth=1&useicons=0&uselines=0&oclinks=0&listposts=0');
+												wpdt_list_categories('exclude=3,192,193,194,195, 226, 227, 228&orderby=name&depth=1&useicons=0&uselines=0&oclinks=0&listposts=0');
 										?>				
 									</div>
 

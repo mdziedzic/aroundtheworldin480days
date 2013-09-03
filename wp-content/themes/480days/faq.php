@@ -130,6 +130,26 @@ Template Name: FAQ
 								<?php endif; ?>																		
 							</div>
 
+							<div class="faq-section">
+								<h2>Website</h2>
+								<?php query_posts("cat=228&order=ASC") ?>
+								<?php if (have_posts()) : ?>
+									<?php $counter = 0; ?>
+									<?php while (have_posts()) : the_post(); ?>
+										<div class="faq-question">
+											<div class="comments-counter">
+												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
+											</div>
+											<div class="faq-x">
+												<img src="<?php bloginfo('template_url'); ?>/images/content/x.png" width="7" height="7" alt="x" />
+											</div>
+											<p class="entry-link"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>			
+										</div>
+									<?php endwhile; ?>								
+								<?php else : ?>
+									Not found (no posts)
+								<?php endif; ?>																		
+							</div>
 
 						
 						</div>
