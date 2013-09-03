@@ -1356,7 +1356,12 @@ a:link, a:visited, a:hover, a:active
 	{
 	background-color: #ddecf7;
 	}
-	
+
+#photo-series-title a:hover
+	{
+	background-color: transparent;
+	}
+
 #photo li.close
 	{
 	background-image: url(images/subnav/photo-close.png);

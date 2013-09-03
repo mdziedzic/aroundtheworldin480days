@@ -7,13 +7,13 @@ jQuery(document).ready(function($) {
 	$(".external-link").attr("target", "_blank");
 	$("a[href^=http://www.flickr.com]").attr("target", "flickr-view");
 	
-	$("#photo a[href^=http://www.flickr.com]").each(function() {
-		var ssUrl = $(this).attr("href");
-		ssUrl += "show/";
-		var ssAlt = $(this).attr("title");
-		$(this).after('<a href="' + ssUrl + '" title="' + ssAlt 
-						+ ' Slideshow" target="flickr-view"><span class="slideshow-icon">&nbsp;&nbsp;&nbsp;</span></a>');
-	});
+	// $("#photo a[href^=http://www.flickr.com]").each(function() {
+	// 	var ssUrl = $(this).attr("href");
+	// 	ssUrl += "show/";
+	// 	var ssAlt = $(this).attr("title");
+	// 	$(this).after('<a href="' + ssUrl + '" title="' + ssAlt 
+	// 					+ ' Slideshow" target="flickr-view"><span class="slideshow-icon">&nbsp;&nbsp;&nbsp;</span></a>');
+	// });
 	
 	
 	

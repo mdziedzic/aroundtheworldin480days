@@ -19,7 +19,9 @@
 								</div>
 							</div>
 							<div id="photo">
-								<img src="<?php bloginfo('template_url'); ?>/images/subnav/photo.png" width="63" height="36" alt="Photo Series" />
+								<div id="photo-series-title">
+									<a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/"><img src="<?php bloginfo('template_url'); ?>/images/subnav/photo.png" width="63" height="36" alt="Photo Series" /></a>
+								</div>
 								<div id="photo-content">
 								
 									<div class="dtree">
