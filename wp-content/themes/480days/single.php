@@ -17,7 +17,7 @@
 	if (get_post_meta($post->ID, $key, true) == "FAQ") { ?>
 	
 <div id="content"><div id="content-faq-entry">
-	<img src="<?php bloginfo('template_url'); ?>/images/content/faq/title.png" width="380" height="90" alt="FAQ" />
+	<a href="index.php?page_id=1172"><img src="<?php bloginfo('template_url'); ?>/images/content/faq/title.png" width="380" height="90" alt="FAQ" /></a>
 	
 <?php } else { ?>
 
