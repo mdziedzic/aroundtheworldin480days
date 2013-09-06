@@ -1480,7 +1480,7 @@ a:link, a:visited, a:hover, a:active
 	margin-left: 30px;
 	background-image: url(images/subnav/noteworthy-footer.png);
 	background-repeat: no-repeat;
-	}	
+	}
 
 .partNoteOpt 
 	{
@@ -2001,6 +2001,16 @@ iframe
 	font-size: 10px;
 	}
 
-	
+
+/* ----------------------------------------- # WP POPULAR MOST COMMENTED PLUGIN  */
+
+.post-stats
+	{
+	color: #c6e5fa;
+	font-weight: bold;
+	font-size: 10px;
+	}
+
+
 	
 	
