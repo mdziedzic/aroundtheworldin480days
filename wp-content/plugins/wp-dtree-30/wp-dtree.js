@@ -103,8 +103,8 @@ function wpdTree(objName, baseUrl, truncate){
 		plusBottom	: WPdTreeSettings.imgurl + 'dtree-img/plusbottom.gif',
 		minus		: WPdTreeSettings.imgurl + 'dtree-img/minus.gif',
 		minusBottom	: WPdTreeSettings.imgurl + 'dtree-img/minusbottom.gif',
-		nlPlus		: WPdTreeSettings.imgurl + 'dtree-img/nolines_plus.png',		// eggfoo
-		nlMinus		: WPdTreeSettings.imgurl + 'dtree-img/nolines_minus.png'		// eggfoo	
+		nlPlus		: WPdTreeSettings.imgurl + 'dtree-img/nolines_plus.gif',
+		nlMinus		: WPdTreeSettings.imgurl + 'dtree-img/nolines_minus.gif'	
 	};
 	this._url = baseUrl; 
 	this._truncate = truncate;

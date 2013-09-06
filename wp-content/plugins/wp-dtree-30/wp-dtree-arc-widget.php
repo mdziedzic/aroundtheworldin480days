@@ -1,9 +1,10 @@
 <?php
-class WPDT_Archives_Widget extends WPDT_Widget {	
-	function WPDT_Archives_Widget(){				
+class WPDT_Archives_Widget extends WPDT_Widget {
+		
+	function __construct() {				
 		$widget_ops = array('classname' => 'wpdt-archives', 'description' => __('Dynamic javascript archives', 'wpdtree') ); //widget settings. 
 		$control_ops = array('width' => 200, 'height' => 350, 'id_base' => 'wpdt-archives-widget'); //Widget control settings.
-		$this->WP_Widget('wpdt-archives-widget', __('WP-dTree Archives', 'wpdtree'), $widget_ops, $control_ops ); //Create the widget.		
+		parent::__construct('wpdt-archives-widget', __('WP-dTree Archives', 'wpdtree'), $widget_ops, $control_ops ); //Create the widget.       			
 	}
 	
 	function widget($args, $settings){ 
@@ -18,6 +19,7 @@ class WPDT_Archives_Widget extends WPDT_Widget {
 		$settings['showcount'] 	= isset($new_settings['showcount']) ? 1 : 0;	
 		$settings['showrss'] 	= isset($new_settings['showrss']) ? 1 : 0;	
 		$settings['limit_posts'] = intval($new_settings['limit_posts']);
+		$settings['exclude_cats'] = wpdt_clean_exclusion_list($new_settings['exclude_cats']);
 		$settings['include'] 	= '';		
 		$settings['treetype']	= 'arc';
 		return $settings;
@@ -27,7 +29,11 @@ class WPDT_Archives_Widget extends WPDT_Widget {
 		$defaults = wpdt_get_defaults('arc');	
 		$settings = wp_parse_args((array) $settings, $defaults); 
 		parent::form($settings);
-	?>		
+	?>
+		<p>
+			<label for="<?php echo $this->get_field_id('exclude_cats'); ?>" title="A comma-separated list of category IDs to be excluded from the tree (example: 3,7,31)."><?php _e('Exclude cats:', 'wpdtree'); ?></label>
+			<input id="<?php echo $this->get_field_id('exclude_cats'); ?>" name="<?php echo $this->get_field_name('exclude_cats'); ?>" value="<?php echo $settings['exclude_cats']; ?>"/>
+		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id('sortby'); ?>"><?php _e('Sort by:', 'wpdtree'); ?></label> 	
 			<select id="<?php echo $this->get_field_id('sortby'); ?>" name="<?php echo $this->get_field_name('sortby'); ?>" class="widefat" style="width:100px;">	
