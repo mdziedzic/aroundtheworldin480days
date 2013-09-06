@@ -5,8 +5,8 @@
  * @package GeoMashup
  */
 
-// init action
-add_action( 'init', array( 'GeoMashupDB', 'init' ) );
+// Init at load time - just adds hooks
+GeoMashupDB::init();
 
 /**
  * Static class to provide a namespace for Geo Mashup data functions.
@@ -47,7 +47,6 @@ class GeoMashupDB {
 	 * WordPress action to set up data-related WordPress hooks.
 	 *
 	 * @since 1.4
-	 * @usedby do_action() init
 	 */
 	public static function init() {
 		global $geo_mashup_options;
@@ -61,7 +60,7 @@ class GeoMashupDB {
 		add_action( 'delete_comment', array( 'GeoMashupDB', 'delete_comment' ) );
 		add_action( 'delete_user', array( 'GeoMashupDB', 'delete_user' ) );
 
-		if ( 'true' == $geo_mashup_options->get( 'overall', 'copy_geodata' ) )
+		if ( 'true' == $geo_mashup_options->get( 'overall', 'copy_geodata' ) or '' != $geo_mashup_options->get( 'overall', 'import_custom_field' ) )
 			self::add_geodata_sync_hooks();
 	}
 
@@ -191,9 +190,11 @@ class GeoMashupDB {
 		global $geo_mashup_options, $wpdb;
 
 		// Do nothing if meta_key is not a known location field
-		$location_keys = array( 'geo_latitude', 'geo_longitude', 'geo_lat_lng' );
-		$import_custom_key = $geo_mashup_options->get( 'overall', 'import_custom_field' );
-		$location_keys[] = $import_custom_key;
+		$location_keys = array();
+		if ( 'true' == $geo_mashup_options->get( 'overall', 'copy_geodata' ) )
+			$location_keys = array_merge( $location_keys, array( 'geo_latitude', 'geo_longitude', 'geo_lat_lng' ) );
+		$import_custom_keys = preg_split( '/\s*,\s*/', trim( $geo_mashup_options->get( 'overall', 'import_custom_field' ) ) );
+		$location_keys = array_merge( $location_keys, $import_custom_keys );
 		if ( ! in_array( $meta_key, $location_keys ) ) 
 			return;
 
@@ -228,15 +229,31 @@ class GeoMashupDB {
 				return;
 			$location['lat'] = $lat;
 
-		} else if ( $import_custom_key == $meta_key ) {
+		} else if ( 'post' == $meta_type and in_array( $meta_key, $import_custom_keys ) ) {
 
 			$lat_lng = preg_split( '/\s*[, ]\s*/', trim( $meta_value ) );
 			if ( count( $lat_lng ) == 2 and is_numeric( $lat_lng[0] ) and is_numeric( $lat_lng[1] ) ) {
 				$location['lat'] = $lat_lng[0];
 				$location['lng'] = $lat_lng[1];
 			} else if ( !empty( $meta_value ) ) {
+				$geocode_values = array();
+				foreach( $import_custom_keys as $import_custom_key ) {
+					if ( $meta_key == $import_custom_key ) {
+						$geocode_values[] = $meta_value;
+					} else {
+						$value = get_metadata( $meta_type, $object_id, $import_custom_key, true );
+
+						// All keys must have a value - do nothing if not
+						if ( $value ) 
+							$geocode_values[] = $value;
+						else
+							return;
+					}
+				}
 				$location = self::blank_location( ARRAY_A );
-				self::geocode( $meta_value, $location );
+				self::geocode( implode( ',', $geocode_values ), $location );
+				if ( self::$geocode_error ) 
+					update_metadata( $meta_type, $object_id, 'geocoding_error', self::$geocode_error->get_error_message() );
 			}
 		}
 
@@ -249,7 +266,9 @@ class GeoMashupDB {
 
 		// Save the location, attempt reverse geocoding
 		self::remove_geodata_sync_hooks();
-		self::set_object_location( $meta_type, $object_id, $location, null );
+		// Use geo date if it exists
+		$geo_date = get_metadata( $meta_type, $object_id, 'geo_date', true );
+		self::set_object_location( $meta_type, $object_id, $location, null, $geo_date );
 		self::add_geodata_sync_hooks();
 		$wpdb->insert_id = $restore_insert_id;
 	}
@@ -267,19 +286,20 @@ class GeoMashupDB {
 
 		$geo_latitude = get_metadata( $meta_type, $object_id, 'geo_latitude', true );
 		$geo_longitude = get_metadata( $meta_type, $object_id, 'geo_longitude', true );
-		$existing_location = self::get_location( $location_id );
+		$existing_object_location = self::get_object_location( $meta_type, $object_id );
 
 		// Do nothing if the geodata already exists
 		if ( $geo_latitude and $geo_longitude ) {
 			$epsilon = 0.00001;
-			if ( abs( $geo_latitude - $existing_location->lat ) < $epsilon and abs( $geo_longitude - $existing_location->lng ) < $epsilon )
+			if ( abs( $geo_latitude - $existing_object_location->lat ) < $epsilon and abs( $geo_longitude - $existing_object_location->lng ) < $epsilon )
 				return;
 		}
 		
 		self::remove_geodata_sync_hooks();
-		update_metadata( $meta_type, $object_id, 'geo_latitude', $existing_location->lat );
-		update_metadata( $meta_type, $object_id, 'geo_longitude', $existing_location->lng );
-		update_metadata( $meta_type, $object_id, 'geo_address', $existing_location->address );
+		update_metadata( $meta_type, $object_id, 'geo_latitude', $existing_object_location->lat );
+		update_metadata( $meta_type, $object_id, 'geo_longitude', $existing_object_location->lng );
+		update_metadata( $meta_type, $object_id, 'geo_address', $existing_object_location->address );
+		update_metadata( $meta_type, $object_id, 'geo_date', $existing_object_location->geo_date );
 		self::$copied_to_geodata[$meta_type . '-' . $object_id] = true;
 		self::add_geodata_sync_hooks();
 	}
@@ -621,6 +641,14 @@ class GeoMashupDB {
 		$location_table_name = $wpdb->prefix . 'geo_mashup_locations';
 		$relationships_table_name = $wpdb->prefix . 'geo_mashup_location_relationships';
 		$administrative_names_table_name = $wpdb->prefix . 'geo_mashup_administrative_names';
+
+		$charset_collate = '';
+
+		if ( ! empty($wpdb->charset) )
+			$charset_collate = "DEFAULT CHARACTER SET $wpdb->charset";
+		if ( ! empty($wpdb->collate) )
+			$charset_collate .= " COLLATE $wpdb->collate";
+
 		if ( self::installed_version() != GEO_MASHUP_DB_VERSION ) {
 			$sql = "
 				CREATE TABLE $location_table_name (
@@ -640,7 +668,7 @@ class GeoMashupDB {
 					UNIQUE KEY latlng ( lat, lng ),
 					KEY lat ( lat ),
 					KEY lng ( lng )
-				);
+				) $charset_collate;
 				CREATE TABLE $relationships_table_name (
 					object_name VARCHAR( 80 ) NOT NULL,
 					object_id BIGINT( 20 ) NOT NULL,
@@ -649,7 +677,7 @@ class GeoMashupDB {
 					PRIMARY KEY  ( object_name, object_id, location_id ),
 					KEY object_name ( object_name, object_id ),
 					KEY object_date_key ( object_name, geo_date )
-				);
+				) $charset_collate;
 				CREATE TABLE $administrative_names_table_name (
 					country_code VARCHAR( 2 ) NOT NULL,
 					admin_code VARCHAR( 20 ) NOT NULL,
@@ -657,7 +685,7 @@ class GeoMashupDB {
 					geoname_id MEDIUMINT( 9 ) NULL,
 					name VARCHAR( 200 ) NOT NULL,
 					PRIMARY KEY admin_id ( country_code, admin_code, isolanguage )
-				);";
+				) $charset_collate;";
 			require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 			// Capture error messages - some are ok
 			$old_show_errors = $wpdb->show_errors( true );
@@ -702,7 +730,7 @@ class GeoMashupDB {
 	 * @param string $language Language code, defaults to the WordPress locale language.
 	 * @return string|null Place name in the appropriate language, or if not available in the default language.
 	 */
-	public function get_administrative_name( $country_code, $admin_code = null, $language = '' ) {
+	public static function get_administrative_name( $country_code, $admin_code = null, $language = '' ) {
 		$language = self::primary_language_code( $language );
 		$name = GeoMashupDB::get_cached_administrative_name( $country_code, $admin_code, $language );
 		if ( empty( $name ) ) {
@@ -1164,7 +1192,7 @@ class GeoMashupDB {
 					add_post_meta( $post_id, '_geo_converted', $wpdb->prefix . 'geo_mashup_locations.id = ' . $set_id );
 					self::activation_log( 'OK: post_id ' . $post_id );
 				} else {
-					$msg = sprintf( __( 'Failed to convert location (%s). You can %sedit the post%s ' .
+					$msg = sprintf( __( 'Failed to convert location (%s). You can %s edit the post %s ' .
 						'to update the location, and try again.', 'GeoMashup' ),
 						$postmeta->meta_value, '<a href="post.php?action=edit&post=' . $post_id . '">', '</a>');
 					$msg .= ' (' . $set_id->get_error_message() . ')';
@@ -1285,7 +1313,7 @@ class GeoMashupDB {
 	 * 
 	 * @param string $names Comma separated table field names.
 	 * @param array $where Associtive array of conditional field names and values.
-	 * @return object WP_DB query results.
+	 * @return array WP_DB query results.
 	 */
 	public static function get_distinct_located_values( $names, $where = null ) {
 		global $wpdb;
@@ -1360,7 +1388,7 @@ class GeoMashupDB {
 	 * @since 1.3
 	 *
 	 * @param string $object_name 'post', 'user', a GeoMashupDB::object_storage() index.
-	 * @param id $object_id Object 
+	 * @param int $object_id Object
 	 * @param string $output (optional) one of ARRAY_A | ARRAY_N | OBJECT constants.  Return an
 	 * 		associative array (column => value, ...), a numerically indexed array (0 => value, ...)
 	 * 		or an object ( ->column = value ), respectively.
@@ -1373,10 +1401,18 @@ class GeoMashupDB {
 
 		$object_location = wp_cache_get( $cache_id, 'geo_mashup_object_locations' );
 		if ( !$object_location ) {
-			$select_string = "SELECT * 
+			$object_store = self::object_storage( $object_name );
+			$field_string = "gmlr.object_id, gmlr.geo_date, o.{$object_store['label_column']} as label, gml.*";
+
+			if ( 'post' == $object_name )
+				$field_string .= ', o.post_author';
+
+			$select_string = "SELECT {$field_string}
 				FROM {$wpdb->prefix}geo_mashup_locations gml
-				JOIN {$wpdb->prefix}geo_mashup_location_relationships gmlr ON gmlr.location_id = gml.id " .
-				$wpdb->prepare( 'WHERE gmlr.object_name = %s AND gmlr.object_id = %d', $object_name, $object_id );
+				INNER JOIN {$wpdb->prefix}geo_mashup_location_relationships gmlr " .
+				$wpdb->prepare( 'ON gmlr.object_name = %s AND gmlr.location_id = gml.id ', $object_name ) .
+				"INNER JOIN {$object_store['table']} o ON o.{$object_store['id_column']} = gmlr.object_id " .
+				$wpdb->prepare( 'WHERE gmlr.object_id = %d', $object_id ); 
 
 			$object_location = $wpdb->get_row( $select_string );
 			wp_cache_add( $cache_id, $object_location, 'geo_mashup_object_locations' );
@@ -1449,11 +1485,14 @@ class GeoMashupDB {
 			'radius_km' => null,
 			'radius_mi' => null,
 			'map_cat' => null,
+			'tax_query' => null,
 			'map_post_type' => 'any',
 			'object_name' => 'post',
 			'show_future' => 'false', 
 			'suppress_filters' => false,
-	 		'limit' => 0 );
+	 		'limit' => 0,
+			'map_offset' => 0,
+		);
 		$query_args = wp_parse_args( $query_args, $default_args );
 		
 		// Construct the query 
@@ -1462,7 +1501,9 @@ class GeoMashupDB {
 		if ( empty( $object_store ) ) {
 			return null;
 		}
-		$field_string = "gmlr.object_id, o.{$object_store['label_column']} as label, gml.*";
+
+		// Giving tables an alias was a mistake, now filters depend on them
+		$field_string = "gmlr.object_id, gmlr.geo_date, o.{$object_store['label_column']} as label, gml.*";
 		$table_string = "{$wpdb->prefix}geo_mashup_locations gml " . 
 			"INNER JOIN {$wpdb->prefix}geo_mashup_location_relationships gmlr " .
 			$wpdb->prepare( 'ON gmlr.object_name = %s AND gmlr.location_id = gml.id ', $object_name ) .
@@ -1480,6 +1521,9 @@ class GeoMashupDB {
 			} else {
 				$wheres[] = 'post_status = \'publish\'';
 			}
+
+		} else if ( 'comment' == $object_name ) {
+			$wheres[] = 'comment_approved = \'1\'';
 		}
 
 		// Check for a radius query
@@ -1514,13 +1558,17 @@ class GeoMashupDB {
 		if ( is_numeric( $query_args['maxlat'] ) ) $wheres[] = "lat < {$query_args['maxlat']}";
 		if ( is_numeric( $query_args['maxlon'] ) ) $wheres[] = "lng < {$query_args['maxlon']}";
 
-		// Handle inclusion and exclusion of categories
+		// Handle inclusion and exclusion of terms
+		if ( ! empty( $query_args['tax_query'] ) and is_array( $query_args['tax_query'] ) )
+			$tax_query = $query_args['tax_query'];
+		else
+			$tax_query = array();
+
 		if ( ! empty( $query_args['map_cat'] ) ) {
 
 			$cats = preg_split( '/[,\s]+/', $query_args['map_cat'] );
 
 			$escaped_include_ids = array();
-			$escaped_include_slugs = array();
 			$escaped_exclude_ids = array();
 
 			foreach( $cats as $cat ) {
@@ -1546,54 +1594,57 @@ class GeoMashupDB {
 				}
 			} 
 
-			$table_string .= " JOIN $wpdb->term_relationships tr ON tr.object_id = gmlr.object_id ";
-
 			if ( ! empty( $escaped_include_ids ) ) {
-				$term_tax_ids = $wpdb->get_col(
-						"SELECT term_taxonomy_id FROM $wpdb->term_taxonomy " .
-						"WHERE taxonomy = 'category' AND term_id IN (" .
-						implode( ',', $escaped_include_ids ) . ')'
+				$tax_query[] = array(
+					'taxonomy' => 'category',
+					'terms' => $escaped_include_ids,
+					'field' => 'term_id',
 				);
-				$wheres[] = 'tr.term_taxonomy_id IN (' . implode( ',', $term_tax_ids ) . ')';
 			}
 
 			if ( ! empty( $escaped_exclude_ids ) ) {
-				$term_tax_ids = $wpdb->get_col(
-						"SELECT term_taxonomy_id FROM $wpdb->term_taxonomy " .
-						"WHERE taxonomy = 'category' AND term_id IN (" .
-						implode( ',', $escaped_exclude_ids ) . ')'
+				$tax_query[] = array(
+					'taxonomy' => 'category',
+					'terms' => $escaped_exclude_ids,
+					'operator' => 'NOT IN',
+					'field' => 'term_id',
 				);
-				$wheres[] = "o.ID NOT IN ( " .
-						"SELECT object_id " .
-						"FROM $wpdb->term_relationships " .
-						"WHERE term_taxonomy_id IN ( " .
-						implode( ',', $term_tax_ids ) . ') )';
 			}
 
-			$groupby = 'GROUP BY gmlr.object_id';
 		} // end if map_cat exists 
+
+		if ( !empty( $tax_query ) ) {
+			$tax_clauses = get_tax_sql( $tax_query, 'o', $object_store['id_column'] );
+			$table_string .= $tax_clauses['join'];
+			$wheres[] = preg_replace( '/^ AND/', '', $tax_clauses['where'] );
+			$groupby = 'GROUP BY gmlr.object_id';
+		}
 
 		if ( 'post' == $object_name ) {
 			// Handle inclusion and exclusion of post types
 			if ( 'any' == $query_args['map_post_type'] ) {
-				$exclude_post_types = '';
-				$in_search_post_types = get_post_types( array('exclude_from_search' => false) );
+				$include_post_types = '';
+				$searchable_post_types = GeoMashup::get_searchable_post_types();
 
-				if ( ! empty( $in_search_post_types ) )
-					$exclude_post_types .= $wpdb->prepare("o.post_type IN ('" . join("', '", $in_search_post_types ) . "')");
+				if ( ! empty( $searchable_post_types ) )
+					$include_post_types .= "o.post_type IN ('" . join("', '", array_map( 'esc_sql', $searchable_post_types ) ) . "')";
 
-				$wheres[] = $exclude_post_types;
+				$wheres[] = $include_post_types;
 			} else {
-				$post_types = preg_split( '/[,\s]+/', $query_args['map_post_type'] );
-				$wheres[] = "o.post_type IN ('" . join("', '", $post_types) . "')";
+				if ( !is_array( $query_args['map_post_type'] ) ) 
+					$query_args['map_post_type'] = preg_split( '/[,\s]+/', $query_args['map_post_type'] );
+				$wheres[] = "o.post_type IN ('" . join("', '", $query_args['map_post_type']) . "')";
 			}
 		} 
 
 		if ( ! empty( $query_args['object_id'] ) ) {
 			$wheres[] = 'gmlr.object_id = ' . $wpdb->escape( $query_args['object_id'] );
 		} else if ( ! empty( $query_args['object_ids'] ) ) {
-			$wheres[] = 'gmlr.object_id in ( ' . $wpdb->escape( $query_args['object_ids'] ) .' )';
+			$wheres[] = 'gmlr.object_id IN ( ' . $wpdb->escape( $query_args['object_ids'] ) .' )';
 		}
+
+		if ( ! empty( $query_args['exclude_object_ids'] ) ) 
+			$wheres[] = 'gmlr.object_id NOT IN ( ' . $wpdb->escape( $query_args['exclude_object_ids'] ) . ' )';
 
 		$no_where_fields = array( 'object_name', 'object_id', 'geo_date' );
 		foreach ( self::blank_object_location( ARRAY_A ) as $field => $blank ) {
@@ -1605,7 +1656,12 @@ class GeoMashupDB {
 		$where = ( empty( $wheres ) ) ? '' :  'WHERE ' . implode( ' AND ', $wheres ); 
 		$sort = ( isset( $query_args['sort'] ) ) ? $query_args['sort'] : $object_store['sort'];
 		$sort = ( empty( $sort ) ) ? '' : 'ORDER BY ' . $wpdb->escape( $sort );
-		$limit = ( is_numeric( $query_args['limit'] ) && $query_args['limit']>0 ) ? " LIMIT 0,{$query_args['limit']}" : '';
+		$offset = absint( $query_args['map_offset'] );
+		$limit = absint( $query_args['limit'] );
+		if ( $limit or $offset )
+			$limit = " LIMIT {$offset},{$limit}";
+		else
+			$limit = '';
 
 		if ( ! $query_args['suppress_filters'] ) {
 			$field_string	= apply_filters( 'geo_mashup_locations_fields', $field_string );
@@ -1614,6 +1670,24 @@ class GeoMashupDB {
 			$sort = apply_filters( 'geo_mashup_locations_orderby', $sort );
 			$groupby = apply_filters( 'geo_mashup_locations_groupby', $groupby );
 			$limit = apply_filters( 'geo_mashup_locations_limits', $limit );
+
+			$suppress_post_filters = defined( 'GEO_MASHUP_SUPPRESS_POST_FILTERS' ) && GEO_MASHUP_SUPPRESS_POST_FILTERS;
+			if ( 'post' === $object_name and ! $suppress_post_filters and isset( $GLOBALS['sitepress'] ) ) {
+				// Ok, we're catering to WPML here. If we ever integrate with a WP_Query object for posts,
+				// this could be made more general
+
+				// This filter will include all translatable post types, I hope
+				add_filter( 'get_translatable_documents', array( __CLASS__, 'wpml_filter_get_translatable_documents' ) );
+
+				// Apply post query filters, changing posts table references to our alias
+				// As of WPML 2.9 these calls can trigger undefined variable notices
+				$table_string = $GLOBALS['sitepress']->posts_join_filter( $table_string, null );
+				$table_string = str_replace( $wpdb->posts . '.', 'o.', $table_string );
+				$where = $GLOBALS['sitepress']->posts_where_filter( $where, null );
+				$where = str_replace( $wpdb->posts . '.', 'o.', $where );
+
+				remove_filter( 'get_translatable_documents', array( __CLASS__, 'wpml_filter_get_translatable_documents' ) );
+			}
 		}
 		
 		$query_string = "SELECT $field_string FROM $table_string $where $groupby $having $sort $limit";
@@ -1621,6 +1695,19 @@ class GeoMashupDB {
 		$wpdb->query( $query_string );
 		
 		return $wpdb->last_result;
+	}
+
+	/**
+	 * Expand the post types returned by WPML for our queries
+	 *
+	 * @since 1.5
+	 * @param $post_types
+	 * @return array Location enabled post types, flipped so ids are keys as WPML expects
+	 */
+	public static function wpml_filter_get_translatable_documents( $post_types ) {
+		global $geo_mashup_options;
+		// Our post types may not be translatable, but I couldn't get those out of WPML
+		return array_flip( $geo_mashup_options->get( 'overall', 'located_post_types' ) );
 	}
 
 	/**
@@ -1690,6 +1777,8 @@ class GeoMashupDB {
 			$set_id = $location_id;
 			do_action( 'geo_mashup_updated_object_location', $object_name, $object_id, $geo_date, $location_id );
 		}
+		wp_cache_delete( $object_name . '-' . $object_id, 'geo_mashup_object_locations');
+
 		return $set_id;
 	}
 
@@ -1717,7 +1806,9 @@ class GeoMashupDB {
 			$do_lookups = ( $geo_mashup_options->get( 'overall', 'enable_reverse_geocoding' ) == 'true' );
 		}
 
+		$input_type = ARRAY_A;
 		if ( is_object( $location ) ) {
+			$input_type = OBJECT;
 			$location = (array) $location;
 		}
 
@@ -1730,6 +1821,7 @@ class GeoMashupDB {
 		if ( (string) 1.1 != '1.1' ) {
 			$original_locale = setlocale( constant( 'LC_NUMERIC' ), null );
 			setlocale( constant( 'LC_NUMERIC' ), 'en_US' );
+			$changed_locale = true;
 		}
 
 		if ( isset( $location['id'] ) && is_numeric( $location['id'] ) ) {
@@ -1767,7 +1859,7 @@ class GeoMashupDB {
 			self::reverse_geocode_location( $location );
 		}
 
-		// Don't set blank entries
+		// Don't set blank entries (use the set_null pseudo field)
 		foreach ( $location as $name => $value ) {
 			if ( !is_numeric( $value ) && empty( $value ) ) {
 				unset( $location[$name] );
@@ -1801,6 +1893,17 @@ class GeoMashupDB {
 			unset( $location['lat'] );
 			unset( $location['lng'] );
 			if ( !empty ( $location ) ) {
+
+				if ( isset( $location['set_null'] ) ) {
+					// WP doesn't yet have a mechanism for setting NULLs, https://core.trac.wordpress.org/ticket/15158
+					$null_fields = $location['set_null'];
+					if ( !is_array( $null_fields ) ) 
+						$null_fields = explode( ',', $null_fields );
+					$null_fields = array_map( create_function( '$field', 'return $field . "=NULL";' ), $null_fields );
+					$wpdb->query( $wpdb->prepare( "UPDATE $location_table SET " . implode( ',', $null_fields) . " WHERE id=%d", $db_location['id'] ) );
+					unset( $location['set_null'] );
+				}
+
 				$wpdb->update( $location_table, $location, array( 'id' => $db_location['id'] ) );
 				if ( $wpdb->last_error ) {
 					if ( $changed_locale )
@@ -1814,8 +1917,15 @@ class GeoMashupDB {
 			$location['lng'] = $tmp_lng;
 
 		}
+
 		if ( $changed_locale )
 			setlocale( constant( 'LC_NUMERIC' ), $original_locale );
+
+		wp_cache_delete( $set_id, 'geo_mashup_locations' );
+
+		if( OBJECT === $input_type )
+			$location = (object) $location;
+
 		return $set_id;
 	}
 
@@ -1846,6 +1956,9 @@ class GeoMashupDB {
 				$rows_affected += $wpdb->query( $delete_string );
 				if ( $wpdb->last_error )
 					return new WP_Error( 'delete_object_location_error', $wpdb->last_error );
+
+				wp_cache_delete( $object_name . '-' . $object_id, 'geo_mashup_object_locations' );
+
 				do_action( 'geo_mashup_deleted_object_location', $object_location );
 			}
 		}
@@ -1872,6 +1985,7 @@ class GeoMashupDB {
 				$rows_affected += $wpdb->query( $wpdb->prepare( "DELETE FROM {$wpdb->prefix}geo_mashup_locations WHERE id = %d", $id ) );
 				if ( $wpdb->last_error )
 					return new WP_Error( 'delete_location_error', $wpdb->last_error );
+				wp_cache_delete( $id, 'geo_mashup_locations' );
 				do_action( 'geo_mashup_deleted_location', $location );
 			}
 		}
@@ -1946,36 +2060,33 @@ class GeoMashupDB {
 	public static function get_comment_in( $args ) {
 		global $wpdb;
 
-		$args = wp_parse_args( $args );
+		$default_args = array( 'comment__in' => '' );
+		$args = wp_parse_args( $args, $default_args );
 		if ( is_array( $args['comment__in'] ) ) {
 			$comment_ids = implode( ',', $args['comment__in'] );
 		} else {
 			$comment_ids = ( isset( $args['comment__in'] ) ) ? $args['comment__in'] : '0';
 		}
 		$select_string = "SELECT * FROM $wpdb->comments WHERE comment_ID IN (" .
-			$wpdb->prepare( $comment_ids ) . ') ORDER BY comment_date_gmt DESC';
+			implode( ',', wp_parse_id_list( $args['comment__in'] ) ) . ') ORDER BY comment_date_gmt DESC';
 		return $wpdb->get_results( $select_string );
 	}
 
 	/**
 	 * Get multiple users.
 	 *
-	 * What is the WordPress way? Expect deprecation.
+	 * Now just a wrapper for get_users().
 	 * 
 	 * @return array Users.
 	 */
 	public static function get_user_in( $args ) {
 		global $wpdb;
 
-		$args = wp_parse_args( $args );
-		if ( is_array( $args['user__in'] ) ) {
-			$user_ids = implode( ',', $args['user__in'] );
-		} else {
-			$user_ids = ( isset( $args['user__in'] ) ) ? $args['user__in'] : '0';
+		if ( isset( $args['user__in'] ) ) {
+			$args['include'] = $args['user__in'];
+			unset( $args['user__in'] );
 		}
-		$select_string = "SELECT * FROM $wpdb->users WHERE ID IN (" .
-			$wpdb->prepare( $user_ids ) . ') ORDER BY display_name ASC';
-		return $wpdb->get_results( $select_string );
+		return get_users( $args );
 	}
 
 	/**
@@ -2023,7 +2134,8 @@ class GeoMashupDB {
 		global $wpdb;
 		if ( isset( $_GET['q'] ) ) {
 			$limit = (int) apply_filters( 'postmeta_form_limit', 30 );
-			$like = $wpdb->escape( $_GET['q'] );
+			$stub = trim( array_pop( explode( ',', $_GET['q'] ) ) );
+			$like = $wpdb->escape( $stub );
 			$keys = $wpdb->get_col( "
 				SELECT meta_key
 				FROM $wpdb->postmeta

@@ -1,30 +1,28 @@
 /**
+ * @fileOverview
  * The default Geo Mashup location editor AJAX interface.
- *
- * @package GeoMashup
- * @subpackage Client
- */ 
+ */
 
 /*global jQuery */
 /*global mxn */
+/*global GeoMashupLocationEditor: true */ // Misnamed, not a constructor
+/*global geo_mashup_location_editor: true, geo_mashup_location_editor_settings */
+/*jslint browser: true, white: true, sloppy: true, undef: true */
 
-/*global GeoMashupLocationEditor */ // Misnamed, not a constructor
-/*global geo_mashup_location_editor */ 
 var GeoMashupLocationEditor, geo_mashup_location_editor;
 
 /**
- * The public interface for the location editor.
+ * @namespace The public interface for the location editor.
  *
- * The camel case name is against convention, since it is not 
- * a constructor, and is deprecated. Use geo_mashup_location_editor.
- *
- * The object is created with event properties defined. Other members are 
+ * The object is created with event properties defined. Other members are
  * added when the editor loads.
+ *
+ * Events use the Mapstraction mxn.Event interface.
  *
  * @public
  * @since 1.4
  */
-geo_mashup_location_editor = GeoMashupLocationEditor = {
+geo_mashup_location_editor = {
 
 	/**
 	 * The object id being edited
@@ -42,22 +40,30 @@ geo_mashup_location_editor = GeoMashupLocationEditor = {
 
 	/**
 	 * An event fired when the map is created.
+	 * @event
+	 * @name geo_mashup_location_editor#mapCreated
 	 */
 	mapCreated: new mxn.Event( 'mapCreated', this ),
 
 	/**
 	 * An event fired when the editor has loaded.
+	 * @event
+	 * @name geo_mashup_location_editor#loaded
 	 */
 	loaded: new mxn.Event( 'loaded', this ),
 
 	/**
 	 * An event fired when a marker is created.
+	 * @event
+	 * @name geo_mashup_location_editor#markerCreated
 	 * @param object Marker filter.
 	 */
 	markerCreated: new mxn.Event( 'markerCreated', this ),
 
 	/**
 	 * An event fired when a marker is selected.
+	 * @event
+	 * @name geo_mashup_location_editor#markerSelected
 	 * @param object Marker filter.
 	 */
 	markerSelected: new mxn.Event( 'markerSelected', this )
@@ -102,6 +108,7 @@ var
 	$admin_name_input = $( '#geo_mashup_admin_name' ),
 	$sub_admin_code_input = $( '#geo_mashup_sub_admin_code' ),
 	$sub_admin_name_input = $( '#geo_mashup_sub_admin_name' ),
+	$null_fields_input = $( '#geo_mashup_null_fields' ),
 	$kml_url_input = $( '#geo_mashup_kml_url' ),
 	$locality_name_input = $( '#geo_mashup_locality_name' ),
 	$display = $( '#geo_mashup_display' ),
@@ -242,7 +249,7 @@ var
 	/**
 	 * An object to manage the saved location select box.
 	 */
-	saved_selector = function() {
+	saved_selector = (function() {
 		var $select = $( '#geo_mashup_select' ),
 			select = $select.get( 0 ),
 			selected_latlng = null,
@@ -353,9 +360,12 @@ var
 				if ( ! select.options || ! select.options.length ) {
 					return false;
 				}
+				if ( typeof text !== 'string' ) {
+					text = text.toString();
+				}
 
 				for( i = 1; i < select.options.length; i += 1 ) {
-					if ( i !== select.selectedIndex && select.options[i].text == text ) {
+					if ( i !== select.selectedIndex && select.options[i].text === text ) {
 						select.selectedIndex = i;
 						updateSelection();
 						return true;
@@ -365,7 +375,7 @@ var
 				return false;
 			}
 		};
-	}(),
+	}()),
 
 	/**
 	 * Initialize the interface when the document and Maps API
@@ -407,7 +417,7 @@ var
 		geo_mashup_location_editor.showBusyIcon();
 		map.load.addHandler( function() {geo_mashup_location_editor.hideBusyIcon();}, map );
 		map.setCenterAndZoom( new mxn.LatLonPoint( 0, 0 ), 2 );
-		if ( 'enableGeoMashupExtras' in map ) {
+		if ( typeof map.enableGeoMashupExtras === 'function' ) {
 			map.enableGeoMashupExtras();
 		}
 		geo_mashup_location_editor.mapCreated.fire();
@@ -443,7 +453,7 @@ var
 			if ( saved_selector.getSelectedID()!== loc.id ) {
 				saved_selector.selectByID( loc.id );
 			}
-			$location_id_input.val( ( loc.id ? loc.id : '' ) );
+			$location_id_input.val( loc.id || '' );
 			$location_input.val( latlng_string );
 			$geoname_input.val( loc.geoname );
 			$address_input.val( loc.address );
@@ -470,8 +480,8 @@ var
 	 * @param GeoMashupAddress loc The related Geo Mashup location info.
 	 */
 	createMarker = function(latlng, loc) {
-		var marker, filter;
-		var marker_opts = {
+		var marker, filter,
+			marker_opts = {
 				label: loc.title,
 				icon: red_icon.image,
 				iconSize: green_icon.iconSize,
@@ -499,7 +509,7 @@ var
 		geo_mashup_location_editor.markerCreated.fire( filter );
 
 		map.addMarker( filter.marker );
-		if ( 'dragend' in filter.marker ) {
+		if ( filter.marker.dragend ) {
 			// Drag handling must be set after the marker is added to a map
 			filter.marker.dragend.addHandler( function( name, source, args) {
 				// Dragging will create a new location under the hood
@@ -561,7 +571,7 @@ var
 
 		// Look for provider-specific geocoder responses
 		// Only google v3 provides the status argument
-		if ( response && typeof status !== 'undefined' && google.maps.GeocoderStatus.OK == status ) {
+		if ( response && typeof status !== 'undefined' && google.maps.GeocoderStatus.OK === status ) {
 
 			// Google v3 results
 			for ( i = 0; i < response.length && i<20 && response[i].geometry; i += 1 ) {
@@ -572,7 +582,7 @@ var
 				marker = createMarker( latlng, new GeoAddress( response[i] ) );
 			}
 
-		} else if ( typeof status === 'undefined' && response && 200 == response.Status.code && response.Placemark && response.Placemark.length > 0 ) {
+		} else if ( typeof status === 'undefined' && response && 200 === response.Status.code && response.Placemark && response.Placemark.length > 0 ) {
 
 			// Google v2 results
 			for ( i = 0; i < response.Placemark.length && i < 20 && response.Placemark[i]; i += 1) {
@@ -716,6 +726,7 @@ var
 		have_unsaved_changes = false;
 		$changed_input.val( '' );
 	};
+
 	// End of private function variables
 
 	// Add public members
@@ -849,12 +860,12 @@ var
 
 		// Make sure no coordinates are submitted
 		$location_input.val( '' );
-	 	post_data = $( '#geo_mashup_location_editor input' ).serialize() + 
+		post_data = $( '#geo_mashup_location_editor input' ).serialize() +
 			'&geo_mashup_delete_location=true&action=geo_mashup_edit';
 		$ajax_message.hide();
 		$.post( ajax_url, post_data, function( data ) {
 			$ajax_message.html( data.status.message ).fadeIn( 'slow' );
-			if ( 200 == data.status.code ) {
+			if ( 200 === data.status.code ) {
 				clearHaveUnsavedChanges();
 				$display.find( '.ui-state-highlight' ).removeClass( 'ui-state-highlight' );
 				map.removeAllMarkers();
@@ -872,12 +883,25 @@ var
 	} );
 
 	$update_button.click( function() {
-		var post_data = $( '#geo_mashup_location_editor input' ).serialize() + 
-			'&geo_mashup_update_location=true&action=geo_mashup_edit';
+		var post_data = $( '#geo_mashup_location_editor input' ).serialize() +
+				'&geo_mashup_update_location=true&action=geo_mashup_edit',
+			copy_geodata = ( geo_mashup_location_editor_settings.copy_geodata === 'true' ),
+			$lat_custom_key = $( '#postcustom input[value="geo_latitude"]');
+
+		if ( '' === $location_name_input.val() && $saved_name_ui.hasClass( 'ui-state-highlight' ) ) {
+			// The saved name has been cleared
+			post_data += '&geo_mashup_null_fields=saved_name';
+		}
 		$ajax_message.hide();
+
 		$.post( ajax_url, post_data, function( data ) {
 			$ajax_message.html( data.status.message ).fadeIn( 'slow' );
-			if ( 200 == data.status.code ) {
+			if ( 200 === data.status.code ) {
+				if ( copy_geodata && $lat_custom_key.length > 0 ) {
+					// Custom fields were updated in the DB but not the current view
+					// A reload (not an update) will load the new values
+					window.location.reload();
+				}
 				clearHaveUnsavedChanges();
 				$display.find( '.ui-state-highlight' ).removeClass( 'ui-state-highlight' );
 				$update_button.hide();
@@ -896,3 +920,10 @@ var
 	}
 
 } );
+
+
+/**
+* @deprecated GeoMashupLocationEditor The camel case name is against convention, since it is not
+* a constructor, and is deprecated. Use geo_mashup_location_editor.
+*/
+GeoMashupLocationEditor = geo_mashup_location_editor;

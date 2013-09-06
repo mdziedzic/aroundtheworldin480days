@@ -10,6 +10,8 @@
  *
  * For styling of map elements, see map-style-default.dev.css.
  *
+ * Map properties include height, width, and name (see the style tag for example).
+ * 
  * Individual registered scripts can be added with code like
  *
  * <code>GeoMashupRenderMap::enqueue_script( 'colorbox' );</code>
@@ -38,23 +40,20 @@
 		<?php GeoMashupRenderMap::head(); ?>
 
 		<style type="text/css">
-		
-/* 	
-eggfoo
-		v\:* { behavior:url(#default#VML); } 
-eggfoo
-*/
-	
+			v\:* { behavior:url(#default#VML); }
 			#geo-mashup {
 				width:<?php echo GeoMashupRenderMap::map_property( 'width' ); ?>;
 				height:<?php echo GeoMashupRenderMap::map_property( 'height' ); ?>;
+				<?php if ( GeoMashupRenderMap::map_property( 'background_color' ) ) : ?>
+				background-color: <?php echo GeoMashupRenderMap::map_property( 'background_color' ); ?>;
+				<?php endif; ?>
 			}
 		</style>
 	</head>
 	<body>
 	<div id="geo-mashup">
 		<noscript>
-			<p><?php _e( 'This map requires JavaScript. You may have to enable it in your settings.', 'GeoMashup' ); ?></p>
+			<p><?php _e( 'This map requires JavaScript. You may have to enable it in your browser\'s settings.', 'GeoMashup' ); ?></p>
 		</noscript>
 	</div>
 	<?php echo GeoMashupRenderMap::map_script( 'geo-mashup' ); ?>

@@ -23,7 +23,7 @@ class GeoMashupUIManager {
 	 * @since 1.3
 	 *
 	 * @param string $name The class name of the manager.
-	 * @return GeoMashupUIManager The singleton object.
+	 * @return GeoMashupUIPostManager|GeoMashupUIUserManager|GeoMashupUICommentManager The singleton object.
 	 */
 	public static function &get_instance( $name ) {
 		static $instances = array();
@@ -70,11 +70,12 @@ class GeoMashupUIManager {
 				true );
 
 		$map_api = $geo_mashup_options->get( 'overall', 'map_api' );
+		$copy_geodata = $geo_mashup_options->get( 'overall', 'copy_geodata' );
 		$geonames_username = $geo_mashup_options->get( 'overall', 'geonames_username' );
 		$ajax_nonce = wp_create_nonce('geo-mashup-ajax-edit');
 		$ajax_url = admin_url( 'admin-ajax.php' );
 		$geo_mashup_url_path = GEO_MASHUP_URL_PATH;
-		wp_localize_script( 'mxn-core', 'geo_mashup_location_editor_settings', compact( 'map_api', 'ajax_url', 'geo_mashup_url_path', 'geonames_username' ) );
+		wp_localize_script( 'mxn-core', 'geo_mashup_location_editor_settings', compact( 'map_api', 'copy_geodata', 'ajax_url', 'geo_mashup_url_path', 'geonames_username' ) );
 		$required_scripts = array( 'jquery');
 		if ( 'google' == $map_api ) {
 			wp_register_script( 
@@ -100,9 +101,12 @@ class GeoMashupUIManager {
 				
 			$required_scripts[] = 'mxn-google-2-gm';
 		} else if ( 'googlev3' == $map_api ) {
+			$scheme = ( empty( $_SERVER['HTTPS'] ) ? 'http' : 'https' );
 			wp_register_script( 
 					'google-maps-3',
-					'http://maps.google.com/maps/api/js?sensor=false&amp;language=' . GeoMashup::get_language_code(), 
+					$scheme .
+						'://maps.google.com/maps/api/js?sensor=false&amp;language=' .
+						GeoMashup::get_language_code(),
 					null, 
 					'', 
 					true );
@@ -279,6 +283,8 @@ class GeoMashupUIManager {
 					$post_location['admin_code'] = $_POST['geo_mashup_admin_code'];
 					$post_location['sub_admin_code'] = $_POST['geo_mashup_sub_admin_code'];
 					$post_location['locality_name'] = $_POST['geo_mashup_locality_name'];
+					if ( !empty( $_POST['geo_mashup_null_fields'] ) )
+						$post_location['set_null'] = $_POST['geo_mashup_null_fields'];
 				}
 			}
 			
@@ -703,7 +709,7 @@ class GeoMashupPostUIManager extends GeoMashupUIManager {
 	}
 
 	/**
-	 * Add Flash-uploaded KML to the location editor map.
+	 * Add AJAX uploaded KML to the location editor map.
 	 *
 	 * media_meta {@link http://codex.wordpress.org/Plugin_API/Filter_Reference filter}
 	 * called by WordPress.
@@ -711,11 +717,14 @@ class GeoMashupPostUIManager extends GeoMashupUIManager {
 	 * @since 1.3
 	 */
 	public function media_meta( $content, $post ) {
-		// Only chance to run some javascript after a flash upload?
-		if (strlen($post->guid) > 0) {
-			$content .= '<script type="text/javascript"> ' .
-				'if (\'GeoMashupLocationEditor\' in parent) parent.GeoMashupLocationEditor.loadKml(\''.$post->guid.'\');' .
-				'</script>';
+		// Only chance to run some javascript after an ajax upload?
+		if ( 'attachment' == $post->post_type ) {
+			$url = wp_get_attachment_url( $post->ID );
+			if ( '.km' == substr( $url, -4, 3 ) ) {
+				$content .= '<script type="text/javascript"> ' .
+					'if (\'GeoMashupLocationEditor\' in parent) parent.GeoMashupLocationEditor.loadKml(\''.$url.'\');' .
+					'</script>';
+			}
 		}
 		return $content;
 	}
@@ -767,7 +776,6 @@ class GeoMashupPostUIManager extends GeoMashupUIManager {
 	 * @since 1.3
 	 */
 	public function wp_handle_upload( $args ) {
-		// TODO: use transient API instead of option
 		delete_transient( 'gm_uploaded_kml_url' );
 		if ( is_array( $args ) && isset( $args['file'] ) ) {
 			if ( stripos( $args['file'], '.km' ) == strlen( $args['file'] ) - 4 ) {

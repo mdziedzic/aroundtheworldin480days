@@ -1,4 +1,5 @@
-/*global GeoMashupLoader */
+/*global GeoMashupLoader: true */
+/*jslint sloppy: true */
 var GeoMashupLoader;
 
 /**
@@ -13,11 +14,11 @@ GeoMashupLoader = {
 		html.push(name);
 		html.push('" src="');
 		html.push(frame_url);
-		html.push('" height="');
+		html.push('" style="height:');
 		html.push(height);
-		html.push('" width="');
+		html.push('; width:');
 		html.push(width);
-		html.push('" marginheight="0" marginwidth="0" frameborder="0" scrolling="no"></iframe>');
+		html.push('; overflow: hidden; border: none;"></iframe>');
 		element.innerHTML = html.join('');
 	}
 };

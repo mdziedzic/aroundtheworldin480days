@@ -2,16 +2,16 @@
 Contributors: cyberhobo
 Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=11045324
 Tags: map, maps, google maps, google map, mapping, mashup, geo, google, geocms
-Requires at least: 2.8
-Tested up to: 3.2
-Stable tag: 1.4.1
+Requires at least: 3.5
+Tested up to: 3.6-beta4
+Stable tag: 1.6.2
  
-Include Google maps in posts and pages, and map posts, pages, and other objects on global maps. Make WordPress into a GeoCMS.
+Include Google and OpenStreetMap maps in posts and pages, and map posts, pages, and other objects on global maps. Make WordPress into a GeoCMS.
 
 == Description ==
 
 This plugin lets you save location information with posts, pages, and other WordPress objects. 
-These can then be presented on interactive Google maps in many ways.
+These can then be presented on interactive maps in many ways.
 
 = Examples =
 
@@ -23,10 +23,12 @@ Geo Mashup, like WordPress, has a simple interface for basic features,
 templates for control of output, and APIs for endless customization options.
 Some popular features are:
 
-  * Use Google Maps v2 or v3, or [OpenStreetMap](http://openstreetmap.org) as a map provider.
+  * Use [Google Maps v3](https://developers.google.com/maps/documentation/javascript/reference) or [OpenStreetMap](http://openstreetmap.org) as a map provider.
   * Global maps can present your posts in many ways
-	They can show just one category or custom post type, for example
+	They can show just one category, custom taxonomy term, or custom post type, for example
 	Clicking on a post marker shows a customizable summary of the post or page in an info window
+  * A Geo Search widget enables searching for content by distance from a search location
+  * Marker clustering for Google maps
   * Location can be saved for all post types (including pages) users, and comments
   * Synchronize [Geodata](http://codex.wordpress.org/Geodata) with the Geo location mobile client and other plugins
   * Support for both standard WordPress [shortcodes](http://codex.wordpress.org/Shortcode_API) and [template tags](http://codex.wordpress.org/Template_Tags/How_to_Pass_Tag_Parameters) to add maps to your site.
@@ -43,7 +45,7 @@ and the [tag reference](http://code.google.com/p/wordpress-geo-mashup/wiki/TagRe
 
 Geo Mashup was one of the earliest WordPress mapping plugins, first released
 in 2005. Eventually the author began using it for freelance jobs, which he
-still does. As such Geo Mashup is more tailored to customization than ease of
+still does. As such Geo Mashup is more tailored to customization and hacking than ease of
 use, but many user-requested features have been
 [released](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=type%3DEnhancement) 
 over the years. Geo Mashup creates three tables to optimize location
@@ -59,18 +61,27 @@ me via [my site](http://www.cyberhobo.net/hire-me) and I'll work with you.
 
 The author monitors [WP Questions](http://wpquestions.com/affiliates/register/name/cyberhobo),
 and there is a public [Google Group](http://groups.google.com/group/wordpress-geo-mashup-plugin).
+The author doesn't promise free support, but is amenable to questions that contribute something
+to the community.
 
 = Translations =
 
+* German by [Thomas Morvay](http://internet-dienste.biz/) added in version 1.5.4
+* Slovak by B. Radenovich of [Web Hosting Watch](http://webhostingw.com) updated in version 1.5.4
+* Romanian by [Florin Dumitru](http://www.fitnesstimisoara.ro/) added in version 1.5
+* Irish by [Vikas Arora](http://www.apoto.com) added in version 1.4.11
+* Russian by [Tony](http://tohapro.com) added in version 1.4.10
+* Hindi by [Outshine Solutions](http://outshinesolutions.com) added in version 1.4.9
+* Polish by [Kamil](http://wbartoszycach.pl) added in version 1.4.7
+* Portugese by [Antonio Xeira](http://flyingsouth.thehappytoadfish.com/) added in version 1.4.2
 * Italian by [Federico](http://thrifytuscany.com/) added in version 1.3.10
 * Dutch by Kurt Stockman of [eten in Gent](http://www.eteningent.be/) added in version 1.3.9
 * French updated in version 1.3.7
 * Spanish by [Reven](http://www.reven.org/blog/2010/03/15/traduccion-de-geo-mashup/) added in version 1.3.3
 * Swedish by [Joakim Green](http://www.joakimgreen.com/) added in version 1.3.3
-* German by [Thomas Morvay](http://internet-dienste.biz/) added in version 1.3.2
 * Belorussian by [FatCow](http://www.fatcow.com) added in version 1.2.8
 
-Please contact the author if you'd like to add or update a translation.
+[Translators welcome](https://code.google.com/p/wordpress-geo-mashup/wiki/Translating).
 
 = Beta Features = 
 
@@ -82,8 +93,9 @@ for more.
 
 = Mashup Ingredients =
 
-Geo Mashup combines WordPress, [Google Maps](http://maps.google.com), [OpenStreetMap](http://openstreetmap.org)
-and [GeoNames](http://geonames.org) to create a GeoCMS that puts you in control of all your content, including geographic data.
+Geo Mashup combines WordPress, [Google Maps](http://maps.google.com), [OpenStreetMap](http://openstreetmap.org),
+[GeoNames](http://geonames.org), and [geoPlugin](http://geoplugin.net) to create a GeoCMS that puts you in control
+of all your content, including geographic data.
 
 == Installation ==
 
@@ -99,10 +111,63 @@ for the best way to keep your custom files safe moving forward.
 
 == Change Log ==
 
-= 1.4.1 =
+Features are generally added in one-dot releases, while two-dot releases contain fixes and small updates.
+
+= 1.6.2 Jul 9 2013 =
+[milestone 1.6.2 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.6.2)
+
+= 1.6.1 Jun 22 2013 =
+[milestone 1.6.1 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.6.1)
+
+= 1.6.0 May 1 2013 =
+[milestone 1.6 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.6)
+
+= 1.5.3 Feb 25 2013 =
+[milestone 1.5.3 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.5.3)
+
+= 1.5.2 Feb 11 2013 =
+[milestone 1.5.2 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.5.2)
+
+= 1.5.1 Feb 9 2013 =
+[milestone 1.5.1 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.5.1)
+
+= 1.5 Feb 7 2013 =
+[milestone 1.5 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.5)
+
+= 1.4.12 Dec 6 2012 =
+[milestone 1.4.12 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.4.12)
+
+= 1.4.11 Dec 5 2012 =
+[milestone 1.4.11 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.4.11)
+
+= 1.4.10 Aug 5 2012 =
+[milestone 1.4.10 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.4.10)
+
+= 1.4.8 Mar 27 2012 =
+[milestone 1.4.8 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.4.8)
+
+= 1.4.7 Feb 11 2012 =
+[milestone 1.4.7 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.4.7)
+
+= 1.4.6 Jan 2012 =
+[milestone 1.4.6 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.4.6)
+
+= 1.4.5 Dec 2011 =
+[milestone 1.4.5 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.4.5)
+
+= 1.4.4 Nov 2011 =
+[milestone 1.4.4 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.4.4)
+
+= 1.4.3 Nov 2011 =
+[milestone 1.4.3 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.4.3)
+
+= 1.4.2 Nov 2011 =
+[milestone 1.4.2 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.4.2)
+
+= 1.4.1 Jul 2011 =
 [milestone 1.4.1 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.4.1)
 
-= 1.4 =
+= 1.4 Jul 2011 =
 [milestone 1.4 changes](http://code.google.com/p/wordpress-geo-mashup/issues/list?can=1&q=Milestone%3D1.4)
 
 = 1.3.11 =
@@ -212,3 +277,6 @@ Fixed:
 
 * New features lost to the fogs of time.
 
+= First released on [Nov 15 2005][inception] =
+
+[inception]: http://plugins.trac.wordpress.org/timeline?from=11%2F15%2F05&daysback=1&authors=cyberhobo&ticket=on&changeset=on&wiki=on&update=Update
