@@ -1095,6 +1095,8 @@ if ( !class_exists('WordpressPopularPosts') ) {
 					$data = array();
 
 					// TITLE
+
+
 					$title = ($this->qTrans) ? qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($p->title) : $p->title;
 					$title = strip_tags($title);
 					$title_sub = strip_tags($title);
@@ -1122,6 +1124,13 @@ if ( !class_exists('WordpressPopularPosts') ) {
 						}
 
 					}
+
+// eggfoo (added)                 
+                    $key="dayNumber";
+                    $ddaynnumber =  get_post_meta($p->id, $key, true);
+                    $title_sub = $ddaynnumber . ": " . htmlspecialchars(stripslashes($title));
+// eggfoo                   
+
 
 					$title = htmlspecialchars( $title, ENT_QUOTES, $this->charset );
 					$title_sub = htmlspecialchars( $title_sub, ENT_QUOTES, $this->charset );
@@ -1169,7 +1178,9 @@ if ( !class_exists('WordpressPopularPosts') ) {
 							);
 						}
 
-						$stats .= ($stats == "") ? "<span class=\"wpp-views\">" . $views_text . "</span>" : " | <span class=\"wpp-views\">" . $views_text . "</span>";
+// eggfoo (changed)
+						$stats .= ($stats == "") ? "<span class=\"wpp-views\">" . "(" . $views_text . ")" . "</span>" : " | <span class=\"wpp-views\">" . $views_text . "</span>";
+// eggfoo
 
 					}
 					//author

@@ -8,7 +8,7 @@ Author URI: www.eggfoo.com
 */
 
 
-body 
+body
 	{
 	background-color: white;
 	padding: 0 0 0 0;
@@ -1482,16 +1482,6 @@ a:link, a:visited, a:hover, a:active
 	background-repeat: no-repeat;
 	}	
 
-.post-stats
-	{
-	color: #c6e5fa;
-	font-weight: bold;
-	font-size: 10px;
-	}
-
-
-
-
 .partNoteOpt 
 	{
 	position: relative;
@@ -1999,7 +1989,18 @@ iframe
 	overflow: hidden;
 	visibility: hidden; 
 	}
-	
+
+
+
+/* ----------------------------------------- # WP POPULAR POSTS PLUGIN  */
+
+.wpp-views
+	{
+	color: #c6e5fa;
+	font-weight: bold;
+	font-size: 10px;
+	}
+
 	
 	
 	
