@@ -1992,6 +1992,13 @@ iframe
 	margin-right: 2px;
 	}
 	
+.dtree .oclinks
+	{
+	display: none;
+	height: 0; 
+	overflow: hidden;
+	visibility: hidden; 
+	}
 	
 	
 	
