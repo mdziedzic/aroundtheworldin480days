@@ -375,10 +375,10 @@ if ( ! CUSTOM_TAGS ) {
 	 * @since 1.0.0
 	 */
 	$allowedtags = array(
-		'a' => array(
-			'href' => true,
-			'title' => true,
-		),
+		//'a' => array(
+		//	'href' => true,
+		//	'title' => true,
+		//),
 		'abbr' => array(
 			'title' => true,
 		),
