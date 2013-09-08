@@ -107,11 +107,13 @@ a:link, a:visited, a:hover, a:active
 	{
 	position: relative;
 	float: left;
-	width: 377px;
+	/*width: 377px;*/
+	width: 291px;
 	height: 36px;
 	margin-top: 306px;
 	margin-left: 80px;
-	background-image: url(images/nav/nav.png);
+	/*background-image: url(images/nav/nav.png);*/
+	background-image: url(images/nav/nav-nopress.png);
 	background-repeat: no-repeat;
 	}
 	
@@ -139,14 +141,17 @@ a:link, a:visited, a:hover, a:active
     }
 .nav .home a:hover, .nav .home a:focus 
 	{
-	background: url(images/nav/nav.png) no-repeat 0px -36px;
+	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat 0px -36px;
     }
 .nav .home a:active
 	{
-	background: url(images/nav/nav.png) no-repeat 0px -36px;
+	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat 0px -36px;
     }
 .current-home .home a:link, .current-home .home a:visited {
-	background: url(images/nav/nav.png) no-repeat 0px -36px;
+	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat 0px -36px;
 	cursor: default;
 	}  
 .nav-home, .nav-home-click 
@@ -156,11 +161,13 @@ a:link, a:visited, a:hover, a:active
 	left: 0px;
 	width: 69px;
 	height: 36px;
-	background: url(images/nav/nav.png) no-repeat 0px -36px;
+	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat 0px -36px;
 	}
 .nav-home-click 
 	{
-	background: url(images/nav/nav.png) no-repeat 0px -36px;
+	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat 0px -36px;
 	}
  	  
  
@@ -173,14 +180,17 @@ a:link, a:visited, a:hover, a:active
     }
 .nav .about a:hover, .nav .about a:focus 
 	{
-	background: url(images/nav/nav.png) no-repeat -69px -36px;
+	/*background: url(images/nav/nav.png) no-repeat -69px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -69px -36px;
     }
 .nav .about a:active
 	{
-	background: url(images/nav/nav.png) no-repeat -69px -36px;
+	/*background: url(images/nav/nav.png) no-repeat -69px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -69px -36px;
     }
 .current-about .about a:link, .current-about .about a:visited {
-	background: url(images/nav/nav.png) no-repeat -69px -36px;
+	/*background: url(images/nav/nav.png) no-repeat -69px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -69px -36px;
 	cursor: default;
 	}    
 .nav-about, .nav-about-click 
@@ -190,11 +200,13 @@ a:link, a:visited, a:hover, a:active
 	left: 69px;
 	width: 89px;
 	height: 36px;
-	background: url(images/nav/nav.png) no-repeat -69px -36px;
+	/*background: url(images/nav/nav.png) no-repeat -69px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -69px -36px;
 	}
 .nav-about-click 
 	{
-	background: url(images/nav/nav.png) no-repeat -69px -36px;
+	/*background: url(images/nav/nav.png) no-repeat -69px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -69px -36px;
 	}	
     
 /* --------------------- # FAQ  */
@@ -206,14 +218,17 @@ a:link, a:visited, a:hover, a:active
     }
 .nav .faq a:hover, .nav .faq a:focus 
 	{
-	background: url(images/nav/nav.png) no-repeat -158px -36px;
+	/*background: url(images/nav/nav.png) no-repeat -158px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -158px -36px;
     }
 .nav .faq a:active
 	{
-	background: url(images/nav/nav.png) no-repeat -158px -36px;
+	/*background: url(images/nav/nav.png) no-repeat -158px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -158px -36px;
     }
 .current-faq .faq a:link, .current-faq .faq a:visited {
-	background: url(images/nav/nav.png) no-repeat -158px -36px;
+	/*background: url(images/nav/nav.png) no-repeat -158px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -158px -36px;
 	cursor: default;
 	}     
 .nav-faq, .nav-faq-click 
@@ -223,17 +238,19 @@ a:link, a:visited, a:hover, a:active
 	left: 158px;
 	width: 72px;
 	height: 36px;
-	background: url(images/nav/nav.png) no-repeat -158px -36px;
+	/*background: url(images/nav/nav.png) no-repeat -158px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -158px -36px;
 	}
 .nav-faq-click 
 	{
-	background: url(images/nav/nav.png) no-repeat -158px -36px;
+	/*background: url(images/nav/nav.png) no-repeat -158px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -158px -36px;
 	}	
 
     
 /* --------------------- # PRESS  */
 
-.nav .press a:link, .nav .press a:visited 
+/*.nav .press a:link, .nav .press a:visited 
 	{
 	left: 230px;
 	width: 86px;
@@ -262,39 +279,45 @@ a:link, a:visited, a:hover, a:active
 .nav-press-click 
 	{
 	background: url(images/nav/nav.png) no-repeat -230px -36px;
-	}	
+	}	*/
 
 /* --------------------- # MAP  */
 
 .nav .map a:link, .nav .map a:visited 
 	{
-	left: 316px;
+	/*left: 316px;*/
+	left: 230px;
 	width: 61px;
     }
 .nav .map a:hover, .nav .map a:focus 
 	{
-	background: url(images/nav/nav.png) no-repeat -316px -36px;
+	/*background: url(images/nav/nav.png) no-repeat -316px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -230px -36px;
     }
 .nav .map a:active
 	{
-	background: url(images/nav/nav.png) no-repeat -316px -36px;
+	/*background: url(images/nav/nav.png) no-repeat -316px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -230px -36px;
     }
 .current-map .map a:link, .current-map .map a:visited {
-	background: url(images/nav/nav.png) no-repeat -316px -36px;
+	/*background: url(images/nav/nav.png) no-repeat -316px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -230px -36px;
 	cursor: default;
 	}         
 .nav-map, .nav-map-click 
 	{
 	position: absolute;
 	top: 0;
-	left: 316px;
+	left: 230px;
 	width: 61px;
 	height: 36px;
-	background: url(images/nav/nav.png) no-repeat -316px -36px;
+	/*background: url(images/nav/nav.png) no-repeat -316px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -230px -36px;
 	}
 .nav-map-click 
 	{
-	background: url(images/nav/nav.png) no-repeat -316px -36px;
+	/*background: url(images/nav/nav.png) no-repeat -316px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -230px -36px;
 	}	
 
 

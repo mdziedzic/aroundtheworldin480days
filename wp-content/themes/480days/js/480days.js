@@ -34,7 +34,7 @@ jQuery(document).ready(function($) {
 	attachNavEvents(".nav", "home");
 	attachNavEvents(".nav", "about");
 	attachNavEvents(".nav", "faq");
-	attachNavEvents(".nav", "press");
+	// attachNavEvents(".nav", "press");
 	attachNavEvents(".nav", "map");
 
 	function attachNavEvents(parent, myClass) {

@@ -42,6 +42,9 @@ define('DB_COLLATE', '');
 	/** added this on 10/4/2011 to stop memory exhaustion error that prevented homepage from loading */
 	define('WP_MEMORY_LIMIT', '64M');
 
+	// needed to add this to repiar db on 2013-09-07
+	define('WP_ALLOW_REPAIR', true);
+
 // eggfoo
 
 
