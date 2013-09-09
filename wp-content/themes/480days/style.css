@@ -1992,7 +1992,7 @@ iframe
 	
 .dtree a.nodeSel 
 	{ /*the currently selected node, if "Highlight selection" is on*/
-	text-decoration: underline;  !important; 
+	text-decoration: underline !important; 
 	}
 
 .dtree .clip 
