@@ -34,7 +34,7 @@ Use the following classes to style your popular posts list as you like.
 		
 		/* Stats tag styles */
 		.post-stats {
-			font-size:9px;
+			font-size:11px;    /* eggfoo - changed font-size from 9x to 11px */
 			font-weight:bold;
 		}
 			
