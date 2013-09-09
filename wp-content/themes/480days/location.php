@@ -13,7 +13,7 @@
 		
 		<?php
 			if (is_category()) { ?>
-				<p><?php echo $catName . ', ' . $categoryParent; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<?php the_date(); ?></p>				
+				<p><?php echo $catName . ', ' . $categoryParent; ?>&nbsp;&nbsp;|&nbsp;&nbsp;<?php the_date(); ?></p>				
 		<?php
 			} else { ?>	
 				<p><a href="<?php echo $category_link ?>"><?php echo $catName . ', ' . $categoryParent; ?></a>&nbsp;&nbsp;|&nbsp;&nbsp;<?php the_date(); ?></p>		
