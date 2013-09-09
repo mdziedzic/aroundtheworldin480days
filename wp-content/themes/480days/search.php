@@ -37,6 +37,7 @@
 											?>
 											<p class="entry-link"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php echo ($ddaynnumber . ": "); the_title(); ?></a></p>
 											<small class="datetimehide"><?php the_time('l, F jS, Y') ?></small>
+											<?php the_excerpt(); ?>
 										</div>
 									
 									<?php endwhile; ?>
