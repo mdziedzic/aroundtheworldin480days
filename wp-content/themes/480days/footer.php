@@ -22,9 +22,9 @@
 					<p>Feel free to send us an <a href="mailto:info@aroundtheworldin480days.com">EMAIL</a><br />
 					Or look for us in Portland, Oregon, USA</p>
 				</div>
-				<div id="share">
-					<img src="<?php bloginfo('template_url'); ?>/images/footer/share.gif" width="60" height="18"	alt="Share" /><br />
-					<p><a href="http://digg.com/submit?url=aroundtheworldin480days.com&amp;title=Around the World in 480 Days&amp;bodytext=Travel Site&amp;media=MEDIA&amp;topic=TOPIC" class="external-link">DIGG</a>  &nbsp;|&nbsp;  <a href="http://www.reddit.com" class="external-link">REDDIT</a>  &nbsp;|&nbsp;  <a href="http://del.icio.us" class="external-link">DEL.ICIO.US</a>  &nbsp;|&nbsp;  <a href="http://www.eggfoo.com" class="external-link">EMAIL</a>  &nbsp;|&nbsp;  <a href="http://www.facebook.com" class="external-link">FACEBOOK</a>  &nbsp;|&nbsp;  <a href="http://www.stumble.com" class="external-link">STUMBLE</a></p>
+				<div id="follow">
+					<img src="<?php bloginfo('template_url'); ?>/images/footer/follow.png" width="60" height="18" alt="Follow" /><br />
+					<p><a href="https://www.facebook.com/michaelandrewdziedzic" class="external-link">FACEBOOK</a>  &nbsp;|&nbsp;  <a href="https://twitter.com/480days" class="external-link">TWITTER</a>  </p>
 				</div>
 				<div id="eggfoo">
 					<a href="http://www.eggfoo.com" class="external-link"><img src="<?php bloginfo('template_url'); ?>/images/footer/eggfoo.png" width="96" height="24"	alt="EGGFOO" /></a><br />				
