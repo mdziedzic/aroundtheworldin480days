@@ -13,7 +13,7 @@
 						<div id="cont-container">
 						
 							<h1>Tasmania to Cape Town by land.*</h1>
-							<h2>A 480-day, 34-country odyssey featuring leeches, rashes, cerebral malaria, scuffles with the indigenous population, a standoff or two with military police, great joy, deep despair, lots of fatigue, probably a bit too much of the local beer (wine, mead, whiskey, tej, waragi…) and an over-caffeinated monkey. Along the way we took a lot of photos; here are some of our <a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157624185440774/" title="Favorites">favorites</a>.</h2>
+							<h2>A 480-day, 34-country odyssey featuring leeches, rashes, cerebral malaria, scuffles with the indigenous population, a standoff or two with military police, great joy, deep despair, lots of fatigue, probably a bit too much of the local beer (wine, mead, whiskey, tej, waragi…) and an over-caffeinated monkey. Along the way we brought a camera; here are some of our <a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157624185440774/" title="Favorites">favorite photos</a>.</h2>
 							<div class="text-break">
 								<img src="<?php bloginfo('template_url'); ?>/images/content/text-break.png" width="78" height="18" alt="Text break" />
 							</div>
