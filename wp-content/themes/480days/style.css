@@ -406,7 +406,12 @@ a:link, a:visited, a:hover, a:active
 	font-size: 12px;
 	text-indent: 0px;
 	}
-	
+
+#big-asterix
+	{
+	font-size: 24px;
+	}	
+
 .body-text-photo-series
 	{
 	margin: 31px 255px -6px -30px;
@@ -421,7 +426,6 @@ a:link, a:visited, a:hover, a:active
 	{
 	margin: 0 8px 0 8px;
 	}
-	
 	
 .body-text-photo
 	{
