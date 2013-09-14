@@ -24,7 +24,7 @@
 				</div>
 				<div id="follow">
 					<img src="<?php bloginfo('template_url'); ?>/images/footer/follow.png" width="60" height="18" alt="Follow" /><br />
-					<p><a href="https://www.facebook.com/michaelandrewdziedzic" class="external-link">FACEBOOK</a>  &nbsp;|&nbsp;  <a href="https://twitter.com/480days" class="external-link">TWITTER</a>  </p>
+					<p><a href="https://www.facebook.com/AroundTheWorldIn480Days" class="external-link">FACEBOOK</a>  &nbsp;|&nbsp;  <a href="https://twitter.com/480days" class="external-link">TWITTER</a>  </p>
 				</div>
 				<div id="eggfoo">
 					<a href="http://www.eggfoo.com" class="external-link"><img src="<?php bloginfo('template_url'); ?>/images/footer/eggfoo.png" width="96" height="24"	alt="EGGFOO" /></a><br />				

@@ -716,7 +716,30 @@ a:link, a:visited, a:hover, a:active
 	}
 	
 
-	
+
+/* ----------------------------------------- # CONTENT / SHARE  */
+
+#share
+	{
+	text-align: left;;
+	margin-top: 30px;
+	}
+
+#share ul
+	{
+	margin: 0;
+	padding: 0;
+	}
+
+#share li
+	{
+	display: inline;
+	list-style-type: none;
+	padding-right: 2px;
+	}
+
+
+		
 /* ----------------------------------------- # CONTENT / PREVIOUS-NEXT  */
 
 #previous-next
@@ -743,6 +766,14 @@ a:link, a:visited, a:hover, a:active
 	background: url(images/content/previous-bg.png);
 	}
 
+#previous-blank
+	{
+	float: left;
+	width: 245px;
+	height: 90px;
+	background: url(images/content/previous-bg-blank.png);
+	}
+
 #previous img
 	{
 	margin: 18px 0 0 30px;
@@ -767,6 +798,14 @@ a:link, a:visited, a:hover, a:active
 	width: 245px;
 	height: 90px;
 	background: url(images/content/next-bg.png);
+	}
+
+#next-blank
+	{
+	float: right;
+	width: 245px;
+	height: 90px;
+	background: url(images/content/next-bg-blank.png);
 	}
 
 #next img
@@ -2030,5 +2069,3 @@ iframe
 	}
 
 
-	
-	

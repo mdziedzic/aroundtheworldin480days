@@ -46,6 +46,9 @@
 				<h1><?php echo relevanssi_highlight_in_docs(get_the_title()); ?></h1>	
 				<?php include (TEMPLATEPATH . '/font-size.php'); ?>
 				<?php the_content(); ?>
+
+				<?php include (TEMPLATEPATH . '/share.php'); ?>
+				
 			</div>
 		</div>
 	</div>
@@ -99,6 +102,8 @@
 				<?php include (TEMPLATEPATH . '/font-size.php'); ?>
 				<?php the_content(); ?>
 
+				<?php include (TEMPLATEPATH . '/share.php'); ?>
+
 				<?php include (TEMPLATEPATH . '/todays-photo-series.php'); ?>
 
 		</div>
@@ -119,6 +124,12 @@
 						<p><?php previous_post(' %', $previous_text_link, 'no'); ?></p>	
 					</div>
 				<?php } ?>
+
+				<?php 
+					if (get_post_meta($post->ID, $key, true) == "001") { ?>
+					<div id="previous-blank">
+					</div>
+				<?php } ?>				
 				
 				<?php	
 					$key="dayNumber"; 
@@ -135,9 +146,14 @@
 						<p><?php next_post(' %', $next_text_link, 'no'); ?></p>	
 					</div>
 				<?php } ?>
-			</div>	
-		
-		
+
+				<?php 
+					if (get_post_meta($post->ID, $key, true) == "480") { ?>
+					<div id="next-blank">
+					</div>
+				<?php } ?>				
+
+			</div>			
 		
 		<?php } ?>
 			
