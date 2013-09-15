@@ -98,13 +98,11 @@
 				<div class="comments-counter">
 					<p><a href="#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 				</div>
-				<h2><?php echo relevanssi_highlight_in_docs(strip_tags(get_the_excerpt())); ?></h2>
+				<h2><?php echo relevanssi_highlight_in_docs(strip_tags(get_the_excerpt())); ?><br /><?php include (TEMPLATEPATH . '/todays-photo-series.php'); ?></h2>
 				<?php include (TEMPLATEPATH . '/font-size.php'); ?>
 				<?php the_content(); ?>
 
 				<?php include (TEMPLATEPATH . '/share.php'); ?>
-
-				<?php include (TEMPLATEPATH . '/todays-photo-series.php'); ?>
 
 		</div>
 		
