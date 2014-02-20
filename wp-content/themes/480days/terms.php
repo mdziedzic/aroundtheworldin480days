@@ -35,7 +35,7 @@ Template Name: Terms of Use
 
 
 								<!-- ================================================= DIVIDER -->
-								<div class="text-break"><img src="http://localhost/aroundtheworldin480days/wp-content/themes/480days/images/content/text-break.png" width="78" height="18" alt="Text break" /></div>
+								<div class="text-break"><img src="http://eggfoo.dev/aroundtheworldin480days/wp-content/themes/480days/images/content/text-break.png" width="78" height="18" alt="Text break" /></div>
 
 								<h3>Definitions</h3>
 
@@ -44,7 +44,7 @@ Template Name: Terms of Use
 
 
 								<!-- ================================================= DIVIDER -->
-								<div class="text-break"><img src="http://localhost/aroundtheworldin480days/wp-content/themes/480days/images/content/text-break.png" width="78" height="18" alt="Text break" /></div>
+								<div class="text-break"><img src="http://eggfoo.dev/aroundtheworldin480days/wp-content/themes/480days/images/content/text-break.png" width="78" height="18" alt="Text break" /></div>
 
 								<h3>Limited License</h3>
 
@@ -52,7 +52,7 @@ Template Name: Terms of Use
 
 
 								<!-- ================================================= DIVIDER -->
-								<div class="text-break"><img src="http://localhost/aroundtheworldin480days/wp-content/themes/480days/images/content/text-break.png" width="78" height="18" alt="Text break" /></div>
+								<div class="text-break"><img src="http://eggfoo.dev/aroundtheworldin480days/wp-content/themes/480days/images/content/text-break.png" width="78" height="18" alt="Text break" /></div>
 
 								<h3>Legal Compliance</h3>
 
@@ -60,7 +60,7 @@ Template Name: Terms of Use
 
 
 								<!-- ================================================= DIVIDER -->
-								<div class="text-break"><img src="http://localhost/aroundtheworldin480days/wp-content/themes/480days/images/content/text-break.png" width="78" height="18" alt="Text break" /></div>
+								<div class="text-break"><img src="http://eggfoo.dev/aroundtheworldin480days/wp-content/themes/480days/images/content/text-break.png" width="78" height="18" alt="Text break" /></div>
 
 								<h3>Intellectual Property</h3>
 
@@ -68,7 +68,7 @@ Template Name: Terms of Use
 
 
 								<!-- ================================================= DIVIDER -->
-								<div class="text-break"><img src="http://localhost/aroundtheworldin480days/wp-content/themes/480days/images/content/text-break.png" width="78" height="18" alt="Text break" /></div>
+								<div class="text-break"><img src="http://eggfoo.dev/aroundtheworldin480days/wp-content/themes/480days/images/content/text-break.png" width="78" height="18" alt="Text break" /></div>
 
 								<h3>Links to Other Websites</h3>
 
@@ -76,7 +76,7 @@ Template Name: Terms of Use
 
 
 								<!-- ================================================= DIVIDER -->
-								<div class="text-break"><img src="http://localhost/aroundtheworldin480days/wp-content/themes/480days/images/content/text-break.png" width="78" height="18" alt="Text break" /></div>
+								<div class="text-break"><img src="http://eggfoo.dev/aroundtheworldin480days/wp-content/themes/480days/images/content/text-break.png" width="78" height="18" alt="Text break" /></div>
 
 								<h3>Warranty Disclaimer</h3>
 
@@ -86,7 +86,7 @@ Template Name: Terms of Use
 
 
 								<!-- ================================================= DIVIDER -->
-								<div class="text-break"><img src="http://localhost/aroundtheworldin480days/wp-content/themes/480days/images/content/text-break.png" width="78" height="18" alt="Text break" /></div>
+								<div class="text-break"><img src="http://eggfoo.dev/aroundtheworldin480days/wp-content/themes/480days/images/content/text-break.png" width="78" height="18" alt="Text break" /></div>
 
 								<h3>Limitation of Liability</h3>
 
@@ -98,7 +98,7 @@ Template Name: Terms of Use
 
 
 								<!-- ================================================= DIVIDER -->
-								<div class="text-break"><img src="http://localhost/aroundtheworldin480days/wp-content/themes/480days/images/content/text-break.png" width="78" height="18" alt="Text break" /></div>
+								<div class="text-break"><img src="http://eggfoo.dev/aroundtheworldin480days/wp-content/themes/480days/images/content/text-break.png" width="78" height="18" alt="Text break" /></div>
 
 								<h3>General Terms</h3>
 
