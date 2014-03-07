@@ -18,7 +18,7 @@ Template Name: About
 						<img src="<?php bloginfo('template_url'); ?>/images/content/about/title.png" width="380" height="90" alt="About" />
 						<div id="emily-michael-photo">
 							<img src="<?php bloginfo('template_url'); ?>/images/content/about/us.jpg" width="442" height="284" class="photo-horiz" alt="Emily and Michael" />
-							<p class="photo-tagline-horiz">Xi'an, China.</p>
+							<p class="photo-tagline-horiz">Emily and Michael Dziedzic in Xi'an, China.</p>
 						</div>
 						
 						<div id="cont-container">
