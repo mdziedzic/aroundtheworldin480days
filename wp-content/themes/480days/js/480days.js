@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
 	
 	$(".external-link").attr("target", "_blank");
 	$("a[href^=http://www.flickr.com]").attr("target", "flickr-view");
+	$("a[href^=https://www.flickr.com]").attr("target", "flickr-view");
 	
 	// $("#photo a[href^=http://www.flickr.com]").each(function() {
 	// 	var ssUrl = $(this).attr("href");
