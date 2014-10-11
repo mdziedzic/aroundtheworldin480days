@@ -14,7 +14,7 @@
 						
 							<h1>Tasmania to Cape Town by Land*</h1>
 
-							<h2>A gallivanting gallimaufry spanning 480 days and 34 countries. Offbeat characters, teeming markets, amazing architecture, unforgettable meals. Questionable transport through ever-changing landscapes. A standoff or two (or three) with the locals. A circus bear and at least one over-caffeinated monkey. Even a drunken role-player. And probably a bit too much of the local beer (wine, mead, whisky, tej, waragi…). Oh, and lots of mosquitos. Along the way we took some <a href="https://www.flickr.com/photos/aroundtheworldin480days/sets/" title="Photos">photos</a> (here are our <a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157624185440774/" title="Favorite photos">favorites</a>).</h2>
+							<h2>A gallivanting gallimaufry spanning 480 days and 34 countries. Offbeat characters, teeming markets, amazing architecture, and unforgettable food. Questionable transport through ever-changing landscapes. A standoff or two (or three) with the locals. A circus bear and at least one over-caffeinated monkey. Even a drunken role-player. And probably a bit too much of the local beer (wine, mead, whisky, tej, waragi…). Oh, and lots of mosquitos. Along the way we took some <a href="https://www.flickr.com/photos/aroundtheworldin480days/sets/" title="Photos">photos</a> (here are our <a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157624185440774/" title="Favorite photos">favorites</a>).</h2>
 							<div class="text-break">
 								<img src="<?php bloginfo('template_url'); ?>/images/content/text-break.png" width="78" height="18" alt="Text break" />
 							</div>
