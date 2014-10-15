@@ -28,6 +28,19 @@ img
 	border: 0px;
 	}
 
+sup	
+	{
+	vertical-align: baseline;
+   	position: relative;
+   	top: -0.4em;
+   	}
+
+sup.sup-h1
+	{
+	font-size: 12px;
+	top: -1em;
+	}
+
 a:link, a:visited, a:hover, a:active 
 	{ 
 	color: #f7941d; 
