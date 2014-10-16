@@ -14,7 +14,7 @@
 						
 							<h1>Tasmania to Cape Town by Land<sup class="sup-h1">&dagger;</sup></h1>
 
-							<h2>A 34-country, 480-day, 30,000-mile gallivanting gallimaufry of offbeat characters in faraway places; delights architectural, foods unforgettable; dubious transport through landscapes untold; a standoff or two (or three) with touts and the law; a circus bear; at least one over-stimulated monkey; and a bit too much of the local beer.<sup>&Dagger;</sup> Oh, and lots of mosquitos. Along the way we took some <a href="https://www.flickr.com/photos/aroundtheworldin480days/sets/" title="Photos">photos</a> (here are some of our <a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157624185440774/" title="Favorite photos">favorites</a>).</h2>
+							<h2>A 34-country, 480-day, 30,000-mile gallivanting gallimaufry of offbeat characters in faraway places; delights architectural and foods unforgettable; dubious transport through landscapes untold; a standoff or two (or three) with touts and the law; a circus bear and at least one over-stimulated monkey. Probably a bit too much of the local beer.<sup>&Dagger;</sup> Oh, and lots of mosquitos. Along the way we took some <a href="https://www.flickr.com/photos/aroundtheworldin480days/sets/" title="Photos">photos</a> (here are some of our <a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157624185440774/" title="Favorite photos">favorites</a>).</h2>
 							<div class="text-break">
 								<img src="<?php bloginfo('template_url'); ?>/images/content/text-break.png" width="78" height="18" alt="Text break" />
 							</div>
