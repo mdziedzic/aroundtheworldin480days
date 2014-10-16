@@ -44,7 +44,7 @@
 							
 								<?php else : ?>
 							
-									<h2 id="noresults-h2">Alas, no posts found. Perhaps you might consider trying to search for something else.</h2>
+									<h2 id="noresults-h2">Alas, no posts found. Common words ("the," "while," "somehow," etc.) are not included in the search.</h2>
 
 									<div>
 										<form method="get" action="http://eggfoo.dev/aroundtheworldin480days/" >
