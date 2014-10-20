@@ -64,33 +64,39 @@
 								<div id="particularly-noteworthy-content">
 									<div id="pnc-ourFavorites">
 										<ul>
-											<li><a href="">133 Flight to Yangon, Myanmar</a></li>
-											<li><a href="">FAQ: What did you bring with you?</a></li>
-											<li><a href="">402: Zanzibar and the Cerebral Malaria episode</a></li>
-											<li><a href="">35: Want boat?</a></li>
-											<li><a href="">FAQ: What medical precautions and perparations did you take?</a></li>
-											<li><a href="">333: Cairo and the mistaken case of meat</a></li>
-											<li><a href="">375: Large bags of pot in Uganda</a></li>
-											<li><a href="">185: Streetfight on the streets of Hanoi and the case of the questionable luggage</a></li>
-											<li><a href="">95: What the fuck is that monkey doing to my leg?</a></li>
-											<li><a href="">FAQ: What was your travelling philosphy?</a></li>																			<li><a href="">133 Flight to Yangon, Myanmar</a></li>
-											<li><a href="">FAQ: What did you bring with you?</a></li>
-											<li><a href="">402: Zanzibar and the Cerebral Malaria episode</a></li>
-											<li><a href="">35: Want boat?</a></li>
-											<li><a href="">FAQ: What medical precautions and perparations did you take?</a></li>
-											<li><a href="">333: Cairo and the mistaken case of meat</a></li>
-											<li><a href="">375: Large bags of pot in Uganda</a></li>
-											<li><a href="">185: Streetfight on the streets of Hanoi and the case of the questionable luggage</a></li>
-											<li><a href="">95: What the fuck is that monkey doing to my leg?</a></li>
-											<li><a href="">FAQ: What was your travelling philosphy?</a></li>
+											<li><a href="index.php?page_id=244">034: Want Sarong?</a></li>
+											<li><a href="index.php?page_id=276">050: Indonesian Jones</a></li>
+											<li><a href="index.php?page_id=280">052: O Canada</a></li>
+											<li><a href="index.php?page_id=429">122: Best Cowboy</a></li>
+											<li><a href="index.php?page_id=468">140: I Like it Authentic</a></li>
+											<li><a href="index.php?page_id=492">152: Happy Herb’s Pizza</a></li>
+											<li><a href="index.php?page_id=542">176: Maybe Next Time</a></li>
+											<li><a href="index.php?page_id=564">187: Chinese-Mexican Standoff</a></li>
+											<li><a href="index.php?page_id=566">188: Not Your Problem, Our Problem</a></li>
+											<li><a href="index.php?page_id=599">204: Everybody Dance Now</a></li>
+											<li><a href="index.php?page_id=643">226: A Very Dangerous Man</a></li>
+											<li><a href="index.php?page_id=792">299: Go Away!</a></li>
+											<li><a href="index.php?page_id=814">310: Whitney Houston, I Love Her</a></li>
+											<li><a href="index.php?page_id=826">316: The Golden Age of Travel</a></li>
+											<li><a href="index.php?page_id=832">319: They’re Like That, Aren’t They?</a></li>
+											<li><a href="index.php?page_id=894">350: Have a Good Life!</a></li>
+											<li><a href="index.php?page_id=899">352: Nous Sommes Embarqués</a></li>
+											<li><a href="index.php?page_id=909">357: Pyramid Scheme</a></li>
+											<li><a href="index.php?page_id=913">359: Much Bad Happened</a></li>
+											<li><a href="index.php?page_id=915">360: So Many Can’t Have a Dream</a></li>
+											<li><a href="index.php?page_id=939">372: The Prime Directive</a></li>
+											<li><a href="index.php?page_id=957">381: Welcome to Kenya!</a></li>
+											<li><a href="index.php?page_id=1039">421: Run For It!</a></li>
+											<li><a href="index.php?page_id=1041">422: Muzungu Use Phone</a></li>
+											<li><a href="index.php?page_id=1077">440: False Negatives</a></li>										
 										</ul>	
 									</div>		
 									<div id="pnc-mostViews">
-										<?php wpp_get_mostpopular("range='all'&limit=20&order_by='views'&stats_comments=0&stats_views=1&pages=0&pid='2,1172,1748,28,1175'"); ?>		
+										<?php wpp_get_mostpopular("range='all'&limit=25&order_by='views'&stats_comments=0&stats_views=1&pages=0&pid='2,1172,1748,28,1175'"); ?>		
 									</div>																	
 									<div id="pnc-mostComments">
 										<ul>
-											<?php mdv_most_commented(20); ?>
+											<?php mdv_most_commented(25); ?>
 										</ul>
 									</div>																	
 								</div>
