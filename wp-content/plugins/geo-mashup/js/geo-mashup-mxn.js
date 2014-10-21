@@ -617,10 +617,30 @@ GeoMashup.createMap = function(container, opts) {
 
 	// Create the loading spinner icon and show it
 	this.spinner_div = document.createElement( 'div' );
+
+
+
+
+// eggfoo
+
+	// this.spinner_div.innerHTML = '<div id="gm-loading-icon" style="-moz-user-select: none; z-index: 100; position: absolute; left: ' +
+		// ( jQuery(this.container).width() / 2 ) + 'px; top: ' + ( jQuery(this.container).height() / 2 ) + 'px;">' +
+		// '<img style="border: 0px none ; margin: 0px; padding: 0px; width: 16px; height: 16px; -moz-user-select: none;" src="' +
+		// opts.url_path + '/images/busy_icon.gif"/></a></div>';
+
+
 	this.spinner_div.innerHTML = '<div id="gm-loading-icon" style="-moz-user-select: none; z-index: 100; position: absolute; left: ' +
-		( jQuery(this.container).width() / 2 ) + 'px; top: ' + ( jQuery(this.container).height() / 2 ) + 'px;">' +
-		'<img style="border: 0px none ; margin: 0px; padding: 0px; width: 16px; height: 16px; -moz-user-select: none;" src="' +
+		( jQuery(this.container).width() / 2 - 64) + 'px; top: ' + ( jQuery(this.container).height() / 2 - 7) + 'px;">' +
+		'<img style="border: 0px none ; margin: 0px; padding: 0px; width: 128px; height: 15px; -moz-user-select: none;" src="' +
 		opts.url_path + '/images/busy_icon.gif"/></a></div>';
+
+
+
+
+// eggfoo
+
+
+
 	this.showLoadingIcon();
 	this.map.load.addHandler( function() {GeoMashup.hideLoadingIcon();} );
 
