@@ -85,7 +85,7 @@
 											<li><a href="index.php?page_id=913">359: Much Bad Happened</a></li>
 											<li><a href="index.php?page_id=915">360: So Many Can’t Have a Dream</a></li>
 											<li><a href="index.php?page_id=939">372: The Prime Directive</a></li>
-											<li><a href="index.php?page_id=957">381: Welcome to Kenya!</a></li>
+											<li><a href="index.php?page_id=957">381: Shaken Not Deterred</a></li>
 											<li><a href="index.php?page_id=1039">421: Run For It!</a></li>
 											<li><a href="index.php?page_id=1041">422: Muzungu Use Phone</a></li>
 											<li><a href="index.php?page_id=1077">440: False Negatives</a></li>										
