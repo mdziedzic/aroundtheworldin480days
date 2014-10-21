@@ -3,10 +3,10 @@
 	GeoMashup.addAction( 'colorIcon', function( properties, icon, color_name ) {
 		// For single category icons use the Geo Mashup color icon names, 
 		// but the 24x24 ones in the custom image directory
-		icon.image = properties.custom_url_path + '/images/mm_20_' + color_name + '.png';
+		icon.image = properties.custom_url_path + '/images/single.png';
 		icon.iconShadow = '';
-		icon.iconSize = [ 24, 24 ];
-		icon.iconAnchor = [ 12, 24 ];
+		icon.iconSize = [ 12, 20 ];
+		icon.iconAnchor = [ 6, 20 ];
 		icon.iconInfoWindowAnchor = [ 12, 1 ];
 	} );
  
@@ -36,7 +36,7 @@
 	GeoMashup.addAction( 'multiObjectMarker', function( properties, marker ) {
  
 		// When there is more than one marker assigned to the same location - mm_20_plus.png
-		marker.setIcon( properties.custom_url_path + '/images/mm_20_plus.png' );
+		marker.setIcon( properties.custom_url_path + '/images/plus.png' );
  
 	} );
  
