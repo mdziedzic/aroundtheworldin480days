@@ -31,7 +31,7 @@ class GeoMashupRenderMap {
 	public static function map_script( $element_id ) {
 		return '<script type="text/javascript">' . "\n" .
 			'GeoMashup.createMap(document.getElementById("' . $element_id . '"), ' .
-			self::$map_data . ' );' .  "\n" . '</script>';
+			self::$map_data . ' );' .  "\n" . 'parent.displayIframe(); </script>';			// eggfoo
 	}
 
 	/**

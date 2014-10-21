@@ -40,7 +40,7 @@
 		<?php GeoMashupRenderMap::head(); ?>
 
 		<style type="text/css">
-			v\:* { behavior:url(#default#VML); }
+			/*v\:* { behavior:url(#default#VML); }*/		/* eggfoo */
 			#geo-mashup {
 				width:<?php echo GeoMashupRenderMap::map_property( 'width' ); ?>;
 				height:<?php echo GeoMashupRenderMap::map_property( 'height' ); ?>;
