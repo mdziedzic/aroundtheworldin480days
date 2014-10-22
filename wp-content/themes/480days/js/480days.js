@@ -229,21 +229,21 @@ jQuery(document).ready(function($) {
 			currentPartNote = myClass;
 			changePartNote(myClass);
 			moveCurrentPartNoteIndicator(myClass);
-			$.cookie(partNoteCookieName, currentPartNote, { expires: 100 });
+			$.cookie(partNoteCookieName, currentPartNote, { expires: 100, path: '/' });
 		})
 	}
 
 
 
 	var currentPartNote = "ourFavorites";
-	var partNoteCookieName = "aroundtheworldin480days-PartNote";
+	var partNoteCookieName = "aroundtheworldin480days-PartNote2014";
 
 	// if exists load saved value, otherwise store it
 	if ($.cookie(partNoteCookieName)) {
 		currentPartNote = $.cookie(partNoteCookieName);
 		changePartNote(currentPartNote);
 	} else {
-		$.cookie(partNoteCookieName, currentPartNote, { expires: 100 });
+		$.cookie(partNoteCookieName, currentPartNote, { expires: 100, path: '/' });
 	}
 
 	moveCurrentPartNoteIndicator(currentPartNote);

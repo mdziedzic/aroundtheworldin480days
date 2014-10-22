@@ -2083,11 +2083,10 @@ iframe
 
 /* ----------------------------------------- # WP POPULAR MOST COMMENTED PLUGIN  */
 
-.post-stats
+.post-stats-mostcomments
 	{
 	color: #c6e5fa;
 	font-weight: bold;
 	font-size: 11px;
 	}
-
 

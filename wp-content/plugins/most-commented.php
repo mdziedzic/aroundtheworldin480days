@@ -65,7 +65,7 @@ class Most_Commented_Widget extends WP_Widget {
 						$key="dayNumber";
 						$dddaynnnumber =  get_post_meta($post->ID, $key, true);
 
-						$output .= $before . '<a href="' . get_permalink( $post->ID ) . '" title="' . esc_attr( $post_title ) . '">' . $dddaynnnumber . ": " . $post_title . '</a> <span class="post-stats">(' . $post->comment_count .')</span>' . $after;
+						$output .= $before . '<a href="' . get_permalink( $post->ID ) . '" title="' . esc_attr( $post_title ) . '">' . $dddaynnnumber . ": " . $post_title . '</a> <span class="post-stats-mostcomments">(' . $post->comment_count .')</span>' . $after;
 // eggfoo (end)				
 
 
