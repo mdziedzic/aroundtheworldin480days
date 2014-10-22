@@ -140,21 +140,21 @@ jQuery(document).ready(function($) {
 			currentFontSize = myClass;
 			changeFontSize(myClass);
 			moveCurrentFontSizeIndicator(myClass);
-			$.cookie(cookieName, currentFontSize, { expires: 100 });
+			$.cookie(cookieName, currentFontSize, { expires: 100, path: '/' });
 		})
 	}
 
 
 
 	var currentFontSize = "normal";
-	var cookieName = "aroundtheworldin480days-FontSize";
+	var cookieName = "aroundtheworldin480days-FontSize2014";
 
 	// if exists load saved value, otherwise store it
 	if ($.cookie(cookieName)) {
 		currentFontSize = $.cookie(cookieName);
 		changeFontSize(currentFontSize);
 	} else {
-		$.cookie(cookieName, currentFontSize, { expires: 100 });
+		$.cookie(cookieName, currentFontSize, { expires: 100, path: '/' });
 	}
 
 	moveCurrentFontSizeIndicator(currentFontSize);
