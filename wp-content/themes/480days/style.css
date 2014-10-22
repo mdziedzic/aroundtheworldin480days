@@ -1584,8 +1584,13 @@ a:link, a:visited, a:hover, a:active
     overflow: hidden;
     z-index: 10;
 }
-	
-	
+
+#pnc-mostViews, #pnc-mostComments
+	{
+	display: none;
+	}
+
+
 /* --------------------- # OUR FAVORITES  */
 
 .partNoteOpt .ourFavorites a:link, .partNoteOpt .ourFavorites a:visited 
@@ -1687,10 +1692,8 @@ a:link, a:visited, a:hover, a:active
 	{
 	background: url(images/subnav/noteworthy-options.png) no-repeat -160px -18px;
 	}
-	
-	
-	
-	
+		
+
 
 	
 			
