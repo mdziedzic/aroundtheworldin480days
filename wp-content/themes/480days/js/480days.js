@@ -5,8 +5,8 @@ jQuery(document).ready(function($) {
 	*/
 	
 	$(".external-link").attr("target", "_blank");
-	$("a[href^=http://www.flickr.com]").attr("target", "flickr-view");
-	$("a[href^=https://www.flickr.com]").attr("target", "flickr-view");
+	$("a[href^='http://www.flickr.com']").attr("target", "flickr-view");
+	$("a[href^='https://www.flickr.com']").attr("target", "flickr-view");
 	
 	// $("#photo a[href^=http://www.flickr.com]").each(function() {
 	// 	var ssUrl = $(this).attr("href");
@@ -17,8 +17,6 @@ jQuery(document).ready(function($) {
 	// });
 	
 	
-	
-
 	/* 
 		------------------------------------------------------------------ NAVIGATION
 	*/
@@ -253,6 +251,5 @@ jQuery(document).ready(function($) {
 	attachPartNoteEvents(".partNoteOpt", "mostViews");
 	attachPartNoteEvents(".partNoteOpt", "mostComments");
 	
-
 
 });
