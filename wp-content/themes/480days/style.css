@@ -365,7 +365,7 @@ a:link, a:visited, a:hover, a:active
 	width: 420px;
 	margin: -4px 0 0px 0;
 	font-size: 14px;
-	line-height: 18px;
+	line-height: 21px;
 	font-weight: 100;
 	color: #bebebe;
 	}	
@@ -380,8 +380,9 @@ a:link, a:visited, a:hover, a:active
 	font-size: 12px;
 	}
 	
-.location
+.location, location p
 	{
+	-webkit-text-size-adjust: 100%;
 	position: absolute;
 	width: 400px;
 	top: -31px;
@@ -406,17 +407,23 @@ a:link, a:visited, a:hover, a:active
 	margin-bottom: -27px;
 	}
 
-.body-text, .body-text-home
+.body-text, .body-text-home, .body-text-first, .body-text-first-home, #cont-container li
+	{
+	font-family: Baskerville, “Baskerville Old Face”, “Hoefler Text”, Palatino, “Times New Roman”, serif;	
+	font-size: 16px;
+	line-height: 24px;		
+	}
+
+
+.body-text, .body-text-home, .body-text-first, .body-text-first-home
 	{
 	margin: 0 10px 0 0;
-	font-size: 12px;
+
 	text-indent: 35px;
 	}
 	
 .body-text-first, .body-text-first-home
 	{
-	margin: 0 10px 0 0;
-	font-size: 12px;
 	text-indent: 0px;
 	}
 
