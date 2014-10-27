@@ -16,7 +16,11 @@ jQuery(document).ready(function($) {
 	// 					+ ' Slideshow" target="flickr-view"><span class="slideshow-icon">&nbsp;&nbsp;&nbsp;</span></a>');
 	// });
 	
-	
+
+
+
+
+
 	/* 
 		------------------------------------------------------------------ NAVIGATION
 	*/

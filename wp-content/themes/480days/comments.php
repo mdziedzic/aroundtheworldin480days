@@ -86,13 +86,13 @@
 				<?php else : ?>
 
 					<div id="post-comments-name">
-						<input type="text" name="author" id="author" value="Name" tabindex="1" maxlength="40" />
+						<input type="text" name="author" id="author" value="Name" tabindex="1" maxlength="40" onClick="this.focus();this.select()" />
 					</div>
 					<div id="post-comments-email">
-						<input type="text" name="email" id="email" value="Email - Required" size="22" tabindex="2" maxlength="150" />
+						<input type="text" name="email" id="email" value="Email - Required" size="22" tabindex="2" maxlength="150" onClick="this.focus();this.select()" />
 					</div>
 					<div id="post-comments-url">
-						<input type="text" name="url" id="url" value="http://" size="22" tabindex="3" maxlength="300" />
+						<input type="text" name="url" id="url" value="http://" size="22" tabindex="3" maxlength="300" onClick="this.focus();this.select()" />
 					</div>
 		
 				<?php endif; ?>
