@@ -4,6 +4,15 @@ jQuery(document).ready(function($) {
 	var mapBgOpacity = .70;
 	var mapViewed = false;
 
+	// ie browser check
+	var ms_ie = false;
+    var ua = window.navigator.userAgent;
+    var old_ie = ua.indexOf('MSIE ');
+    var new_ie = ua.indexOf('Trident/');
+	if ((old_ie > -1) || (new_ie > -1)) {
+        ms_ie = true;
+    }
+
 
 
 
@@ -69,7 +78,7 @@ jQuery(document).ready(function($) {
 					'opacity': mapBgOpacity  
 				});  
 				
-				if(!$.browser.msie) {
+				if(!ms_ie) {
 					$('#map-background').fadeIn(150, function() {
 						$('#map').fadeIn(150);  
 					});  
@@ -101,7 +110,7 @@ jQuery(document).ready(function($) {
 		{  
 			if(mapStatus){  
 				
-				if(!$.browser.msie) {
+				if(!ms_ie) {
 					$('#map').fadeOut(150, function() {
 						$('#map-background').fadeOut(150);  
 					}); 
