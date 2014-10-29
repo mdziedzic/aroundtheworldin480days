@@ -91,7 +91,7 @@
 
 	<div id="header">
 		<div class="container">
-			<a href="/aroundtheworldin480days/"><img src="<?php bloginfo('template_url'); ?>/images/header/logo.png" width="500" height="36" alt="Around the World in 480 Days" /></a></div>
+			<a href="/aroundtheworldin480days/"><img src="<?php bloginfo('template_url'); ?>/images/header/logo2x.png" width="500" height="36" alt="Around the World in 480 Days" /></a></div>
 	</div>
 
 
