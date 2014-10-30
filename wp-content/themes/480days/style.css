@@ -35,12 +35,6 @@ sup
    	top: -0.4em;
    	}
 
-sup.sup-h1
-	{
-	font-size: 12px;
-	top: -1em;
-	}
-
 a:link, a:visited, a:hover, a:active 
 	{ 
 	color: #f7941d; 
@@ -81,16 +75,18 @@ a:link, a:visited, a:hover, a:active
 
 #main 
 	{
-	background-image: url(images/main/background.png);
+	background-image: url(images/main/background2x.png);
 	background-repeat: repeat-x;
 	background-position: top;
+	background-size: auto 288px;
 	}
 
 #main-bg-burst 
 	{
-	background-image: url(images/main/burst.gif);
+	background-image: url(images/main/burst2x.png);
 	background-repeat: no-repeat;
 	background-position: center top;
+	background-size: 1720px 288px;
 	}
 
 #main .container 
@@ -101,9 +97,10 @@ a:link, a:visited, a:hover, a:active
   	height:2304px;
 */
 	min-height: 288px;
-	background-image: url(images/main/masthead.png);
+	background-image: url(images/main/masthead2x.png);
 	background-repeat: no-repeat;
 	background-position: center top;
+	background-size: 100%;
 	}
 
 #nav-content
@@ -126,8 +123,9 @@ a:link, a:visited, a:hover, a:active
 	margin-top: 306px;
 	margin-left: 80px;
 	/*background-image: url(images/nav/nav.png);*/
-	background-image: url(images/nav/nav-nopress.png);
+	background-image: url(images/nav/nav-nopress2x.png);
 	background-repeat: no-repeat;
+	background-size: 291px 72px;
 	}
 	
 .nav li
@@ -155,17 +153,20 @@ a:link, a:visited, a:hover, a:active
 .nav .home a:hover, .nav .home a:focus 
 	{
 	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat 0px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat 0px -36px;
+	background-size: 291px 72px;
     }
 .nav .home a:active
 	{
 	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat 0px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat 0px -36px;
+	background-size: 291px 72px;
     }
 .current-home .home a:link, .current-home .home a:visited {
 	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat 0px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat 0px -36px;
 	cursor: default;
+	background-size: 291px 72px;
 	}  
 .nav-home, .nav-home-click 
 	{
@@ -175,12 +176,14 @@ a:link, a:visited, a:hover, a:active
 	width: 69px;
 	height: 36px;
 	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat 0px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat 0px -36px;
+	background-size: 291px 72px;
 	}
 .nav-home-click 
 	{
 	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat 0px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat 0px -36px;
+	background-size: 291px 72px;
 	}
  	  
  
@@ -194,17 +197,20 @@ a:link, a:visited, a:hover, a:active
 .nav .about a:hover, .nav .about a:focus 
 	{
 	/*background: url(images/nav/nav.png) no-repeat -69px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat -69px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat -69px -36px;
+	background-size: 291px 72px;
     }
 .nav .about a:active
 	{
 	/*background: url(images/nav/nav.png) no-repeat -69px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat -69px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat -69px -36px;
+	background-size: 291px 72px;
     }
 .current-about .about a:link, .current-about .about a:visited {
 	/*background: url(images/nav/nav.png) no-repeat -69px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat -69px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat -69px -36px;
 	cursor: default;
+	background-size: 291px 72px;
 	}    
 .nav-about, .nav-about-click 
 	{
@@ -214,12 +220,14 @@ a:link, a:visited, a:hover, a:active
 	width: 89px;
 	height: 36px;
 	/*background: url(images/nav/nav.png) no-repeat -69px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat -69px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat -69px -36px;
+	background-size: 291px 72px;
 	}
 .nav-about-click 
 	{
 	/*background: url(images/nav/nav.png) no-repeat -69px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat -69px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat -69px -36px;
+	background-size: 291px 72px;
 	}	
     
 /* --------------------- # FAQ  */
@@ -232,17 +240,20 @@ a:link, a:visited, a:hover, a:active
 .nav .faq a:hover, .nav .faq a:focus 
 	{
 	/*background: url(images/nav/nav.png) no-repeat -158px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat -158px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat -158px -36px;
+	background-size: 291px 72px;
     }
 .nav .faq a:active
 	{
 	/*background: url(images/nav/nav.png) no-repeat -158px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat -158px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat -158px -36px;
+	background-size: 291px 72px;
     }
 .current-faq .faq a:link, .current-faq .faq a:visited {
 	/*background: url(images/nav/nav.png) no-repeat -158px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat -158px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat -158px -36px;
 	cursor: default;
+	background-size: 291px 72px;
 	}     
 .nav-faq, .nav-faq-click 
 	{
@@ -252,12 +263,14 @@ a:link, a:visited, a:hover, a:active
 	width: 72px;
 	height: 36px;
 	/*background: url(images/nav/nav.png) no-repeat -158px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat -158px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat -158px -36px;
+	background-size: 291px 72px;
 	}
 .nav-faq-click 
 	{
 	/*background: url(images/nav/nav.png) no-repeat -158px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat -158px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat -158px -36px;
+	background-size: 291px 72px;
 	}	
 
     
@@ -271,14 +284,17 @@ a:link, a:visited, a:hover, a:active
 .nav .press a:hover, .nav .press a:focus 
 	{
 	background: url(images/nav/nav.png) no-repeat -230px -36px;
+	background-size: 291px 72px;
     }
 .nav .press a:active
 	{
 	background: url(images/nav/nav.png) no-repeat -230px -36px;
+	background-size: 291px 72px;
     }
 .current-press .press a:link, .current-press .press a:visited {
 	background: url(images/nav/nav.png) no-repeat -230px -36px;
 	cursor: default;
+	background-size: 291px 72px;
 	}         
 .nav-press, .nav-press-click 
 	{
@@ -288,10 +304,12 @@ a:link, a:visited, a:hover, a:active
 	width: 86px;
 	height: 36px;
 	background: url(images/nav/nav.png) no-repeat -230px -36px;
+	background-size: 291px 72px;
 	}
 .nav-press-click 
 	{
 	background: url(images/nav/nav.png) no-repeat -230px -36px;
+	background-size: 291px 72px;
 	}	*/
 
 /* --------------------- # MAP  */
@@ -305,17 +323,20 @@ a:link, a:visited, a:hover, a:active
 .nav .map a:hover, .nav .map a:focus 
 	{
 	/*background: url(images/nav/nav.png) no-repeat -316px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat -230px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat -230px -36px;
+	background-size: 291px 72px;
     }
 .nav .map a:active
 	{
 	/*background: url(images/nav/nav.png) no-repeat -316px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat -230px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat -230px -36px;
+	background-size: 291px 72px;
     }
 .current-map .map a:link, .current-map .map a:visited {
 	/*background: url(images/nav/nav.png) no-repeat -316px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat -230px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat -230px -36px;
 	cursor: default;
+	background-size: 291px 72px;
 	}         
 .nav-map, .nav-map-click 
 	{
@@ -325,12 +346,14 @@ a:link, a:visited, a:hover, a:active
 	width: 61px;
 	height: 36px;
 	/*background: url(images/nav/nav.png) no-repeat -316px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat -230px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat -230px -36px;
+	background-size: 291px 72px;
 	}
 .nav-map-click 
 	{
 	/*background: url(images/nav/nav.png) no-repeat -316px -36px;*/
-	background: url(images/nav/nav-nopress.png) no-repeat -230px -36px;
+	background: url(images/nav/nav-nopress2x.png) no-repeat -230px -36px;
+	background-size: 291px 72px;
 	}	
 
 

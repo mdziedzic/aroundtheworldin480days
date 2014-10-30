@@ -9,5 +9,165 @@
 	filter:alpha(opacity=25);
 	-moz-opacity:.25;	
 	}
+
+
+
+/*ie8 doesn't support background-size, so use non-retina images */
+
+#main 
+	{
+	background-image: url(images/main/background.png);
+	}
+
+#main .container 
+	{
+	background-image: url(images/main/masthead.png);
+	}
+
+#main-bg-burst 
+	{
+	background-image: url(images/main/burst.gif);
+	}
+
 	
 	
+
+
+	.nav 
+	{
+	/*background-image: url(images/nav/nav.png);*/
+	background-image: url(images/nav/nav-nopress.png);
+	}
+	
+/* --------------------- # HOME  */
+
+.nav .home a:hover, .nav .home a:focus 
+	{
+	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat 0px -36px;
+    }
+.nav .home a:active
+	{
+	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat 0px -36px;
+    }
+.current-home .home a:link, .current-home .home a:visited {
+	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat 0px -36px;
+	}  
+.nav-home, .nav-home-click 
+	{
+	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat 0px -36px;
+	}
+.nav-home-click 
+	{
+	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat 0px -36px;
+	}
+ 	  
+ 
+/* --------------------- # ABOUT  */
+
+.nav .about a:hover, .nav .about a:focus 
+	{
+	/*background: url(images/nav/nav.png) no-repeat -69px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -69px -36px;
+    }
+.nav .about a:active
+	{
+	/*background: url(images/nav/nav.png) no-repeat -69px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -69px -36px;
+    }
+.current-about .about a:link, .current-about .about a:visited {
+	/*background: url(images/nav/nav.png) no-repeat -69px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -69px -36px;
+	}    
+.nav-about, .nav-about-click 
+	{
+	/*background: url(images/nav/nav.png) no-repeat -69px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -69px -36px;
+	}
+.nav-about-click 
+	{
+	/*background: url(images/nav/nav.png) no-repeat -69px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -69px -36px;
+	}	
+    
+/* --------------------- # FAQ  */
+
+.nav .faq a:hover, .nav .faq a:focus 
+	{
+	/*background: url(images/nav/nav.png) no-repeat -158px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -158px -36px;
+    }
+.nav .faq a:active
+	{
+	/*background: url(images/nav/nav.png) no-repeat -158px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -158px -36px;
+    }
+.current-faq .faq a:link, .current-faq .faq a:visited {
+	/*background: url(images/nav/nav.png) no-repeat -158px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -158px -36px;
+	}     
+.nav-faq, .nav-faq-click 
+	{
+	/*background: url(images/nav/nav.png) no-repeat -158px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -158px -36px;
+	}
+.nav-faq-click 
+	{
+	/*background: url(images/nav/nav.png) no-repeat -158px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -158px -36px;
+	}	
+
+    
+/* --------------------- # PRESS  */
+
+/*.nav .press a:hover, .nav .press a:focus 
+	{
+	background: url(images/nav/nav.png) no-repeat -230px -36px;
+    }
+.nav .press a:active
+	{
+	background: url(images/nav/nav.png) no-repeat -230px -36px;
+    }
+.current-press .press a:link, .current-press .press a:visited {
+	background: url(images/nav/nav.png) no-repeat -230px -36px;
+	}         
+.nav-press, .nav-press-click 
+	{
+	background: url(images/nav/nav.png) no-repeat -230px -36px;
+	}
+.nav-press-click 
+	{
+	background: url(images/nav/nav.png) no-repeat -230px -36px;
+	}	*/
+
+/* --------------------- # MAP  */
+
+.nav .map a:hover, .nav .map a:focus 
+	{
+	/*background: url(images/nav/nav.png) no-repeat -316px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -230px -36px;
+    }
+.nav .map a:active
+	{
+	/*background: url(images/nav/nav.png) no-repeat -316px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -230px -36px;
+    }
+.current-map .map a:link, .current-map .map a:visited {
+	/*background: url(images/nav/nav.png) no-repeat -316px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -230px -36px;
+	}         
+.nav-map, .nav-map-click 
+	{
+	/*background: url(images/nav/nav.png) no-repeat -316px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -230px -36px;
+	}
+.nav-map-click 
+	{
+	/*background: url(images/nav/nav.png) no-repeat -316px -36px;*/
+	background: url(images/nav/nav-nopress.png) no-repeat -230px -36px;
+	}	
+
