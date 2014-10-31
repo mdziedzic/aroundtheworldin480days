@@ -393,6 +393,11 @@ a:link, a:visited, a:hover, a:active
 	color: #bebebe;
 	}	
 
+#content ul
+	{
+	list-style-type: circle;
+	}
+
 #faq-single-header h1
 	{
 	margin-bottom: 32px;
@@ -1740,8 +1745,9 @@ a:link, a:visited, a:hover, a:active
 #footer .container 
 	{
 	height: 288px;
-	background-image:  url(images/footer/background.gif);
+ 	background-image:  url(images/footer/background2x.png);
 	background-repeat: no-repeat;
+	background-size: 980px 288px;
 	}
 
 #footer p 
@@ -1779,9 +1785,10 @@ a:link, a:visited, a:hover, a:active
 	height: 34px;
 	top: 20px;
 	left: 268px;
-	background: url(images/footer/submit.gif);
+	background: url(images/footer/submit2x.png);
 	background-repeat: no-repeat;
 	background-position: top;
+	background-size: 30px 34px;
 	border: none;
 	font-size: 0px;
 	text-indent: -50px; /* for OmniWeb */
@@ -1849,8 +1856,9 @@ a:link, a:visited, a:hover, a:active
 	height: 342px;
 	top: -342px;
 	left: 560px;
-	background-image: url(images/footer/ship.png);
+	background-image: url(images/footer/ship2x.png);
 	background-repeat: no-repeat;
+	background-size: 420px 342px;
 	}
 
 #footer-rss
@@ -1977,9 +1985,10 @@ iframe
 	height: 34px;
 	top: -55px;
 	left: 268px;
-	background: url(images/footer/submit-noresults.gif);
+	background: url(images/footer/submit2x.png);
 	background-repeat: no-repeat;
 	background-position: top;
+	background-size: 30px 34px;
 	border: none;
 	font-size: 0px;
 	text-indent: -50px; /* for OmniWeb */

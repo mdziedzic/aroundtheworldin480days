@@ -14,7 +14,7 @@
 						
 							<h1>Tasmania to Cape Town by Land<sup>*</sup></h1>
 
-							<h2>34 countries, 480 days, 30,000 miles. Transport dubious, landscapes untold. A standoff or two<sup>&dagger;</sup> with the locals. A drunken role-player and a dwarven army. A circus bear and a caffeinated monkey. And probably a bit too much of the homegrown beer.<sup>&Dagger;</sup> Oh, and lots of mosquitoes. Along the way we took some <a href="https://www.flickr.com/photos/aroundtheworldin480days/sets/" title="Photos">photos</a> (here are some of our <a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157624185440774/" title="Favorite photos">favorites</a>).</h2>
+							<h2>34 countries, 30,000 miles in 480 days. Untold landscapes. Dubious transport. A standoff or two (or three) with the locals. A drunken role-player and a dwarven army. A circus bear and one ubercaffeinated monkey. And probably a bit too much of the homegrown beer.<sup>&dagger;</sup> Oh, and lots of mosquitoes. Along the way we took some <a href="https://www.flickr.com/photos/aroundtheworldin480days/sets/" title="Photos">photos</a> (here are some of our <a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157624185440774/" title="Favorite photos">favorites</a>).</h2>
 							<div class="text-break">
 								<img src="<?php bloginfo('template_url'); ?>/images/content/text-break.png" width="78" height="18" alt="Text break" />
 							</div>
@@ -23,9 +23,7 @@
 							<p class="body-text-home">And, while we are at it, though we did spend a fair amount of effort trying, the land border between Thailand and Myanmar was closed, and despite considerable effort and contemplated bribery, we had to take a short round-trip flight between Chiang Mai, Thailand and Yangon to get in and out of Myanmar.</p>
 							<p class="body-text-home">And in the interest of full disclosure, a small prop plane in Ethiopia from Lalibela to Addis Ababa as we had already done the trip in reverse by bus, it was near the end our trip, and we were running out steam (money, and, quite frankly, the will to live).</p>
 							<br/>
-							<p class="body-text-first-home"><sup>&dagger;</sup>Or three...</p>
-							<br/>
-							<p class="body-text-first-home"><sup>&Dagger;</sup>Wine, whiskey, vodka, mead, waragi, arak, betel, kef, tej...</p>
+							<p class="body-text-first-home"><sup>&dagger;</sup>Wine, whiskey, vodka, mead, waragi, arak, betel, kef, tej...</p>
 
 
 							<?php include (TEMPLATEPATH . '/share.php'); ?>

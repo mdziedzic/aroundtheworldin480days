@@ -29,6 +29,26 @@
 	background-image: url(images/main/burst.gif);
 	}
 
+#footer .container 
+	{
+ 	background-image:  url(images/footer/background.gif);
+	}
+
+#search-submit 
+	{
+	background: url(images/footer/submit.gif);
+	}	
+
+#search-submit-noresults
+	{
+	background: url(images/footer/submit-noresults.gif);
+	}
+
+#ship
+	{
+	background-image: url(images/footer/ship.png);
+	}	
+
 	
 	
 
