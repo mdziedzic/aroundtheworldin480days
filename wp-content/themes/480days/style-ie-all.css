@@ -49,6 +49,17 @@
 	background-image: url(images/footer/ship.png);
 	}	
 
+#journal-photo-container 
+	{
+	background-image: url(images/subnav/bg.png);
+	}
+
+#noteworthy-container 
+	{
+	background-image: url(images/subnav/bg.png);
+	}
+
+
 	
 	
 

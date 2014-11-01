@@ -437,7 +437,7 @@ a:link, a:visited, a:hover, a:active
 
 .body-text, .body-text-home, .body-text-first, .body-text-first-home, #cont-container li
 	{
-	font-family: Baskerville, “Baskerville Old Face”, “Hoefler Text”, Palatino, “Times New Roman”, serif;	
+	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Palatino, "Times New Roman", serif;	
 	font-size: 16px;
 	line-height: 24px;		
 	}
@@ -1364,9 +1364,10 @@ a:link, a:visited, a:hover, a:active
 	position: relative;
 	width: 420px;
 	margin-top: 234px;
-	background-image: url(images/subnav/bg.png);
+	background-image: url(images/subnav/bg2x.png);
 	background-repeat: no-repeat;
 	background-position: center top;
+	background-size: 420px 504px;
 	}
 
 #journal-photo 
@@ -1434,7 +1435,8 @@ a:link, a:visited, a:hover, a:active
 	
 #journal li.close
 	{
-	background-image: url(images/subnav/journal-close.png);
+	background-image: url(images/subnav/journal-close2x.png);
+	background-size: 16px 16px;
 	}
 	
 #journal li.open
@@ -1516,9 +1518,10 @@ a:link, a:visited, a:hover, a:active
 	{
 	width: 420px;
 	margin-top: 18px;
-	background-image: url(images/subnav/bg.png);
+	background-image: url(images/subnav/bg2x.png);
 	background-repeat: no-repeat;
 	background-position: center top;
+	background-size: 420px 504px;	
 	}
 
 #noteworthy 
