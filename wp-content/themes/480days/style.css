@@ -1376,8 +1376,9 @@ a:link, a:visited, a:hover, a:active
 	width: 380px;
 	margin-left: 30px;
 	padding-bottom: 64px;
-	background-image: url(images/subnav/journal-photo-bg.png);
+	background-image: url(images/subnav/journal-photo-bg2x.png);
 	background-repeat: repeat-y;
+	background-size: 380px 1px;
 	overflow: hidden;
 	}
 

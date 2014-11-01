@@ -6,7 +6,7 @@
 					<div id="journal-photo-container">
 						<div id="journal-photo">
 							<div id="journal">
-								<img src="<?php bloginfo('template_url'); ?>/images/subnav/journal.png" width="81" height="40" alt="Daily Journal" />
+								<img src="<?php bloginfo('template_url'); ?>/images/subnav/journal2x.png" width="81" height="40" alt="Daily Journal" />
 								<div id="journal-content">
 								
 									<div class="dtree">
@@ -20,7 +20,7 @@
 							</div>
 							<div id="photo">
 								<div id="photo-series-title">
-									<a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/"><img src="<?php bloginfo('template_url'); ?>/images/subnav/photo.png" width="63" height="36" alt="Photo Series" /></a>
+									<a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/"><img src="<?php bloginfo('template_url'); ?>/images/subnav/photo2x.png" width="63" height="36" alt="Photo Series" /></a>
 								</div>
 								<div id="photo-content">
 								
