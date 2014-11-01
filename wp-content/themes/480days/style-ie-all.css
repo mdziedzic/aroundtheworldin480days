@@ -64,9 +64,25 @@
 	background-image: url(images/subnav/journal-photo-bg.png);
 	}
 
+#noteworthy 
+	{
+	background-image: url(images/subnav/noteworthy-bg.png);
+	}	
+
+#particularly-noteworthy-content li
+	{
+	background-image: url(images/subnav/noteworthy-bullet.png);
+	}
+
+#noteworthy-footer 
+	{
+	background-image: url(images/subnav/noteworthy-footer.png);
+	}
+
 	
 	
 
+/* ---------------------------------------------------------- # NAV  */
 
 	.nav 
 	{
@@ -205,4 +221,87 @@
 	/*background: url(images/nav/nav.png) no-repeat -316px -36px;*/
 	background: url(images/nav/nav-nopress.png) no-repeat -230px -36px;
 	}	
+
+
+
+
+/* ---------------------------------------------------------- # PARTICULARLY NOTEWORTHY  */
+
+	.partNoteOpt 
+	{
+	background-image: url(images/subnav/noteworthy-options.png);
+	}
+	
+/* --------------------- # OUR FAVORITES  */
+
+.partNoteOpt .ourFavorites a:hover, .partNoteOpt .ourFavorites a:focus 
+	{
+	background: url(images/subnav/noteworthy-options.png) no-repeat 0px -18px;
+    }
+.partNoteOpt .ourFavorites a:active
+	{
+	background: url(images/subnav/noteworthy-options.png) no-repeat 0px -18px;
+    }
+.current-ourFavorites .ourFavorites a:link, .current-ourFavorites .ourFavorites a:visited 
+	{
+	background: url(images/subnav/noteworthy-options.png) no-repeat 0px -18px;
+	}  
+.partNoteOpt-ourFavorites, .partNoteOpt-ourFavorites-click 
+	{
+	background: url(images/subnav/noteworthy-options.png) no-repeat 0px -18px;
+	}
+.partNoteOpt-ourFavorites-click 
+	{
+	background: url(images/subnav/noteworthy-options.png) no-repeat 0px -18px;
+	}
+	
+/* --------------------- # MOST VIEWS  */
+
+.partNoteOpt .mostViews a:hover, .partNoteOpt .mostViews a:focus 
+	{
+	background: url(images/subnav/noteworthy-options.png) no-repeat -84px -18px;
+   }
+.partNoteOpt .mostViews a:active
+	{
+	background: url(images/subnav/noteworthy-options.png) no-repeat -84px -18px;
+    }
+.current-mostViews .mostViews a:link, .current-mostViews .mostViews a:visited 
+	{
+	background: url(images/subnav/noteworthy-options.png) no-repeat -84px -18px;
+	}  
+.partNoteOpt-mostViews, .partNoteOpt-mostViews-click 
+	{
+	background: url(images/subnav/noteworthy-options.png) no-repeat -84px -18px;
+	}
+.partNoteOpt-mostViews-click 
+	{
+	background: url(images/subnav/noteworthy-options.png) no-repeat -84px -18px;
+	}
+	
+/* --------------------- # MOST COMMENTS  */
+
+.partNoteOpt .mostComments a:hover, .partNoteOpt .mostComments a:focus 
+	{
+	background: url(images/subnav/noteworthy-options.png) no-repeat -160px -18px;
+   }
+.partNoteOpt .mostComments a:active
+	{
+	background: url(images/subnav/noteworthy-options.png) no-repeat -160px -18px;
+   }
+.current-mostComments .mostComments a:link, .current-mostComments .mostComments a:visited 
+	{
+	background: url(images/subnav/noteworthy-options.png) no-repeat -160px -18px;
+	}  
+.partNoteOpt-mostComments, .partNoteOpt-mostComments-click 
+	{
+	background: url(images/subnav/noteworthy-options.png) no-repeat -160px -18px;
+	}
+.partNoteOpt-mostComments-click 
+	{
+	background: url(images/subnav/noteworthy-options.png) no-repeat -160px -18px;
+	}
+		
+
+
+
 

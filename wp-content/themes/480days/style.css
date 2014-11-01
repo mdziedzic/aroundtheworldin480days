@@ -1529,8 +1529,9 @@ a:link, a:visited, a:hover, a:active
 	width: 380px;
 	margin-left: 30px;
 	padding-bottom: 64px;
-	background-image: url(images/subnav/noteworthy-bg.png);
+	background-image: url(images/subnav/noteworthy-bg2x.png);
 	background-repeat: repeat-y;
+	background-size: 380px 1px;
 	}
 	
 /*
@@ -1582,9 +1583,10 @@ a:link, a:visited, a:hover, a:active
 	{
 	font-size: 11px;
 	display: block;
-	background-image: url(images/subnav/noteworthy-bullet.png);
+	background-image: url(images/subnav/noteworthy-bullet2x.png);
 	background-repeat: no-repeat;
 	background-position: 0 5px;
+	background-size: 8px 8px;
 	padding-left: 20px;
 	}
 	
@@ -1593,8 +1595,9 @@ a:link, a:visited, a:hover, a:active
 	width: 380px;
 	height: 108px;
 	margin-left: 30px;
-	background-image: url(images/subnav/noteworthy-footer.png);
+	background-image: url(images/subnav/noteworthy-footer2x.png);
 	background-repeat: no-repeat;
+	background-size: 380px 108px;
 	}
 
 .partNoteOpt 
@@ -1604,8 +1607,9 @@ a:link, a:visited, a:hover, a:active
 	width: 253px;
 	height: 18px;
 	margin: 0 0 4px -1px;
-	background-image: url(images/subnav/noteworthy-options.png);
+	background-image: url(images/subnav/noteworthy-options2x.png);
 	background-repeat: no-repeat;
+	background-size: 253px 36px;
 	}
 	
 .partNoteOpt li
@@ -1638,15 +1642,18 @@ a:link, a:visited, a:hover, a:active
     }
 .partNoteOpt .ourFavorites a:hover, .partNoteOpt .ourFavorites a:focus 
 	{
-	background: url(images/subnav/noteworthy-options.png) no-repeat 0px -18px;
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat 0px -18px;
+	background-size: 253px 36px;	
     }
 .partNoteOpt .ourFavorites a:active
 	{
-	background: url(images/subnav/noteworthy-options.png) no-repeat 0px -18px;
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat 0px -18px;
+	background-size: 253px 36px;	
     }
 .current-ourFavorites .ourFavorites a:link, .current-ourFavorites .ourFavorites a:visited 
 	{
-	background: url(images/subnav/noteworthy-options.png) no-repeat 0px -18px;
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat 0px -18px;
+	background-size: 253px 36px;
 	cursor: default;
 	}  
 .partNoteOpt-ourFavorites, .partNoteOpt-ourFavorites-click 
@@ -1656,11 +1663,13 @@ a:link, a:visited, a:hover, a:active
 	left: 0px;
 	width: 84px;
 	height: 18px;
-	background: url(images/subnav/noteworthy-options.png) no-repeat 0px -18px;
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat 0px -18px;
+	background-size: 253px 36px;	
 	}
 .partNoteOpt-ourFavorites-click 
 	{
-	background: url(images/subnav/noteworthy-options.png) no-repeat 0px -18px;
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat 0px -18px;
+	background-size: 253px 36px;
 	}
 	
 /* --------------------- # MOST VIEWS  */
@@ -1672,16 +1681,19 @@ a:link, a:visited, a:hover, a:active
     }
 .partNoteOpt .mostViews a:hover, .partNoteOpt .mostViews a:focus 
 	{
-	background: url(images/subnav/noteworthy-options.png) no-repeat -84px -18px;
-    }
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat -84px -18px;
+ 	background-size: 253px 36px;
+   }
 .partNoteOpt .mostViews a:active
 	{
-	background: url(images/subnav/noteworthy-options.png) no-repeat -84px -18px;
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat -84px -18px;
+	background-size: 253px 36px;
     }
 .current-mostViews .mostViews a:link, .current-mostViews .mostViews a:visited 
 	{
-	background: url(images/subnav/noteworthy-options.png) no-repeat -84px -18px;
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat -84px -18px;
 	cursor: default;
+	background-size: 253px 36px;
 	}  
 .partNoteOpt-mostViews, .partNoteOpt-mostViews-click 
 	{
@@ -1690,11 +1702,13 @@ a:link, a:visited, a:hover, a:active
 	left: 84px;
 	width: 76px;
 	height: 18px;
-	background: url(images/subnav/noteworthy-options.png) no-repeat -84px -18px;
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat -84px -18px;
+	background-size: 253px 36px;
 	}
 .partNoteOpt-mostViews-click 
 	{
-	background: url(images/subnav/noteworthy-options.png) no-repeat -84px -18px;
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat -84px -18px;
+	background-size: 253px 36px;
 	}
 	
 /* --------------------- # MOST COMMENTS  */
@@ -1706,15 +1720,18 @@ a:link, a:visited, a:hover, a:active
     }
 .partNoteOpt .mostComments a:hover, .partNoteOpt .mostComments a:focus 
 	{
-	background: url(images/subnav/noteworthy-options.png) no-repeat -160px -18px;
-    }
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat -160px -18px;
+ 	background-size: 253px 36px;
+   }
 .partNoteOpt .mostComments a:active
 	{
-	background: url(images/subnav/noteworthy-options.png) no-repeat -160px -18px;
-    }
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat -160px -18px;
+ 	background-size: 253px 36px;
+   }
 .current-mostComments .mostComments a:link, .current-mostComments .mostComments a:visited 
 	{
-	background: url(images/subnav/noteworthy-options.png) no-repeat -160px -18px;
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat -160px -18px;
+	background-size: 253px 36px;
 	cursor: default;
 	}  
 .partNoteOpt-mostComments, .partNoteOpt-mostComments-click 
@@ -1724,11 +1741,13 @@ a:link, a:visited, a:hover, a:active
 	left: 160px;
 	width: 93px;
 	height: 18px;
-	background: url(images/subnav/noteworthy-options.png) no-repeat -160px -18px;
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat -160px -18px;
+	background-size: 253px 36px;
 	}
 .partNoteOpt-mostComments-click 
 	{
-	background: url(images/subnav/noteworthy-options.png) no-repeat -160px -18px;
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat -160px -18px;
+	background-size: 253px 36px;
 	}
 		
 

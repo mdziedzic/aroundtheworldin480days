@@ -53,7 +53,7 @@
 					<div id="noteworthy-container">
 						<div id="noteworthy">
 							<div id="particularly-noteworthy">
-								<img src="<?php bloginfo('template_url'); ?>/images/subnav/noteworthy.png" width="273" height="18" alt="Particularly Noteworthy" />
+								<img src="<?php bloginfo('template_url'); ?>/images/subnav/noteworthy2x.png" width="273" height="18" alt="Particularly Noteworthy" />
 								
 								<ul class="partNoteOpt current-ourFavorites current-mostViews current-mostComments">
 									<li class="ourFavorites"><a href="#pnote"></a></li>
