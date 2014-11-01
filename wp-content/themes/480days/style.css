@@ -1435,8 +1435,7 @@ a:link, a:visited, a:hover, a:active
 	
 #journal li.close
 	{
-	background-image: url(images/subnav/journal-close2x.png);
-	background-size: 16px 16px;
+	background-image: url(images/subnav/journal-close.png);
 	}
 	
 #journal li.open

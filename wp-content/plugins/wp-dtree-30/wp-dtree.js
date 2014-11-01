@@ -103,8 +103,8 @@ function wpdTree(objName, baseUrl, truncate){
 		plusBottom	: WPdTreeSettings.imgurl + 'dtree-img/plusbottom.gif',
 		minus		: WPdTreeSettings.imgurl + 'dtree-img/minus.gif',
 		minusBottom	: WPdTreeSettings.imgurl + 'dtree-img/minusbottom.gif',
-		nlPlus		: WPdTreeSettings.imgurl + 'dtree-img/nolines_plus.gif',
-		nlMinus		: WPdTreeSettings.imgurl + 'dtree-img/nolines_minus.gif'	
+		nlPlus		: WPdTreeSettings.imgurl + 'dtree-img/nolines_plus.png',	// eggfoo
+		nlMinus		: WPdTreeSettings.imgurl + 'dtree-img/nolines_minus.png'	// eggfoo
 	};
 	this._url = baseUrl; 
 	this._truncate = truncate;
@@ -243,7 +243,7 @@ wpdTree.prototype.indent = function(node, nodeId){
 			str += '<a href="javascript: ' + this._objName + '.o(' + nodeId + ');"><img id="j' + this._objName + nodeId + '" src="';
 			if(!this.config.useLines) str += (node._io) ? this.icon.nlMinus : this.icon.nlPlus;
 			else str += ( (node._io) ? ((node._ls && this.config.useLines) ? this.icon.minusBottom : this.icon.minus) : ((node._ls && this.config.useLines) ? this.icon.plusBottom : this.icon.plus ) );
-			str += '" alt="" /></a>';
+			str += '" alt="" width="8" height="8" /></a>';	// eggfoo
 		} else str += '<img src="' + ( (this.config.useLines) ? ((node._ls) ? this.icon.joinBottom : this.icon.join ) : this.icon.empty) + '" alt="" />';
 	}
 	return str;
