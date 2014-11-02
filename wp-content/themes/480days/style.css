@@ -1901,7 +1901,8 @@ a:link, a:visited, a:hover, a:active
 	height: 597px;
 	z-index: 501;
 	
-	background-image: url(images/map/map.png);
+	background-image: url(images/map/map2x.png);
+	background-size: 947px 597px;
 	}
 	
 #map-canvas
@@ -1932,8 +1933,9 @@ iframe
 	left: 21px;
 	top: 8px;
 	
-	background-image: url(images/map/map-close.png);
+	background-image: url(images/map/map-close2x.png);
 	cursor: pointer;
+	background-size: 30px 30px;
 	}	
 		
 #map-background
