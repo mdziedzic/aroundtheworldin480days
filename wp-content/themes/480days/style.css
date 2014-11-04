@@ -1914,9 +1914,10 @@ a:link, a:visited, a:hover, a:active
 	top: 21px;
 	overflow: hidden;
 	
-	background-image: url(images/map/loader.gif);
+	background-image: url(images/map/loader2x.gif);
 	background-repeat: no-repeat;
 	background-position: center center;
+	background-size: 128px 15px;
 	background-color: #99b3cc;
 	}
 

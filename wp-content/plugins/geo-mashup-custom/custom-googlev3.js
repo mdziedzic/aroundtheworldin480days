@@ -5,8 +5,8 @@
 		// but the 24x24 ones in the custom image directory
 		icon.image = properties.custom_url_path + '/images/single.png';
 		icon.iconShadow = '';
-		icon.iconSize = [ 12, 20 ];
-		icon.iconAnchor = [ 6, 20 ];
+		icon.iconSize = [ 24, 24 ];
+		icon.iconAnchor = [ 12, 12 ];
 		icon.iconInfoWindowAnchor = [ 12, 1 ];
 	} );
  

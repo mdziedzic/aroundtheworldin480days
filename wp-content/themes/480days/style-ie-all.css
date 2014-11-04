@@ -84,7 +84,15 @@
 	background-image: url(images/map/map.png);
 	}
 
-	
+#map-close
+	{
+	background-image: url(images/map/map-close.png);
+	}	
+
+#map-canvas
+	{
+	background-image: url(images/map/loader.gif);
+	}	
 	
 
 /* ---------------------------------------------------------- # NAV  */
