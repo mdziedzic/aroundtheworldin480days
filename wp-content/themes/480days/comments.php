@@ -19,12 +19,12 @@
 
 	<div id="comments"><a id="comments-link"></a>
 		<div class="comments-counter">
-			<p><img src="<?php bloginfo('template_url'); ?>/images/content/bubble-black.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></p>
+			<p><img src="<?php bloginfo('template_url'); ?>/images/content/bubble-black2x.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></p>
 		</div>
 		<div id="comments-title">
 			<?php $themePath = get_bloginfo('template_url'); ?>
-			<?php $imagePath = '<img src="' . $themePath . '/images/content/rss.gif" width="42" height="25" alt="RSS - This Post&rsquo;s Comments" title="RSS - This Post&rsquo;s Comments" />'; ?>		
-			<img src="<?php bloginfo('template_url'); ?>/images/content/comments.png" width="118" height="25" alt="Comments" />
+			<?php $imagePath = '<img src="' . $themePath . '/images/content/rss2x.png" width="42" height="25" alt="RSS - This Post&rsquo;s Comments" title="RSS - This Post&rsquo;s Comments" />'; ?>		
+			<img src="<?php bloginfo('template_url'); ?>/images/content/comments2x.png" width="118" height="25" alt="Comments" />
 			<?php post_comments_feed_link( $link_text = $imagePath) ?>
 		</div>
 
@@ -101,7 +101,7 @@
 					<textarea name="comment" id="comment" rows="10" cols="80" tabindex="4"></textarea>
 				</div>
 	
-				<input name="submit" type="image" id="submit" src="<?php bloginfo('template_url'); ?>/images/content/post-comments.png" tabindex="5" value="Submit Comment" />
+				<input name="submit" type="image" id="submit" src="<?php bloginfo('template_url'); ?>/images/content/post-comments2x.png" tabindex="5" value="Submit Comment" />
 				<p id="comments-inappropriate">We reserve the right to remove any off-topic or inappropriate comments.</p>
 
 				<?php comment_id_fields(); ?>

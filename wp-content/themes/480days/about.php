@@ -27,7 +27,7 @@ Template Name: About
 							<p class="body-text-first">We are a married couple in our mid-30s (at the time of the trip) from Portland, Oregon. We met at work in Boston, got married, and not too long after decided to quit our jobs and drive around all 48 states of the contiguous U.S. looking for a new place to call home. We chose Portland, and not too many years passed before we got it into our heads that we needed to travel around the world. When we are not traveling we sit in front of computers.</p>
 							
 							<div class="text-break">
-								<img src="<?php bloginfo('template_url'); ?>/images/content/text-break.png" width="78" height="18" alt="Text break" />
+								<img src="<?php bloginfo('template_url'); ?>/images/content/text-break2x.png" width="78" height="18" alt="Text break" />
 							</div>
 							
 							<div id="emily-photo">
@@ -60,7 +60,7 @@ Template Name: About
 							<p class="body-text">Lorem ipsum dolor sit amet, maecenas leo eos integer voluptatibus et molestie, aliquet purus pellentesque amet vestibulum amet risus, lobortis eu venenatis blandit velit id adipiscing, adipiscing sed lorem non phasellus quis. Fringilla massa sed, justo eget sociis aliquam consequat justo hic, parturient sed a nec accumsan mattis suspendisse, nunc vel pulvinar, sit urna et in. Risus vestibulum mattis, at per. Fringilla massa sed, justo eget sociis aliquam consequat justo hic, parturient.</p>
 							
 							<div class="text-break">
-								<img src="<?php bloginfo('template_url'); ?>/images/content/text-break.png" width="78" height="18" alt="Text break" />
+								<img src="<?php bloginfo('template_url'); ?>/images/content/text-break2x.png" width="78" height="18" alt="Text break" />
 							</div>
 							
 							<div id="michael-photo">

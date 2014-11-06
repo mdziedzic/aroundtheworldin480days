@@ -75,12 +75,12 @@ function mytheme_comment($comment, $args, $depth) {
 	
 			<?php if ($comment->comment_author == "Emily Dziedzic"){ ?>
 				<div class="respondee-emily">
-					<img src="<?php bloginfo('template_url'); ?>/images/content/response-emily.png" width="45" height="29" alt="Emily's Response" />
+					<img src="<?php bloginfo('template_url'); ?>/images/content/response-emily2x.png" width="45" height="29" alt="Emily's Response" />
 				</div>
 			<?php } ?>
 			<?php if ($comment->comment_author == "Michael Dziedzic"){ ?>
 				<div class="respondee-michael">
-					<img src="<?php bloginfo('template_url'); ?>/images/content/response-michael.png" width="45" height="29" alt="Michael's Response" />
+					<img src="<?php bloginfo('template_url'); ?>/images/content/response-michael2x.png" width="45" height="29" alt="Michael's Response" />
 				</div>
 			<?php } ?>		
 	

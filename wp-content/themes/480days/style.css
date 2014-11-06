@@ -747,7 +747,8 @@ a:link, a:visited, a:hover, a:active
 	width: 62px;
 	height: 62px;
 	margin: -10px 0 0 -81px;
-	background-image: url(images/content/day-bg.png);
+	background-image: url(images/content/day-bg2x.png);
+	background-size: 62px 62px;
 	}
 	
 .day-number p
@@ -1110,7 +1111,7 @@ a:link, a:visited, a:hover, a:active
 #post-comments #submit
 	{
 	position: relative;
-	width: 152px;
+	width: 175px;
 	height: 17px;
 	top: 9px;
 	left: 28px;

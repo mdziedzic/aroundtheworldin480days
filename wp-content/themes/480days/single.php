@@ -41,7 +41,7 @@
 				<div class="search-unleashed-patch"><?php the_title(); ?></div>
 			
 				<div class="comments-counter">
-					<p><a href="#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
+					<p><a href="#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble2x.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 				</div>	
 				<h1><?php echo relevanssi_highlight_in_docs(get_the_title()); ?></h1>	
 				<?php include (TEMPLATEPATH . '/font-size.php'); ?>
@@ -96,7 +96,7 @@
 				</div>
 				<h1><?php echo relevanssi_highlight_in_docs(get_the_title()); ?></h1>
 				<div class="comments-counter">
-					<p><a href="#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
+					<p><a href="#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble2x.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 				</div>
 				<h2><?php echo relevanssi_highlight_in_docs(strip_tags(get_the_excerpt())); ?><br /><?php include (TEMPLATEPATH . '/todays-photo-series.php'); ?></h2>
 				<?php include (TEMPLATEPATH . '/font-size.php'); ?>

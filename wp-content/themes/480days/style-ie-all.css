@@ -93,6 +93,11 @@
 	{
 	background-image: url(images/map/loader.gif);
 	}	
+
+.day-number
+	{
+	background-image: url(images/content/day-bg.png);
+	}	
 	
 
 /* ---------------------------------------------------------- # NAV  */

@@ -27,7 +27,7 @@ Template Name: FAQ
 									<?php while (have_posts()) : the_post(); ?>
 										<div class="faq-question">
 											<div class="comments-counter">
-												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
+												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble2x.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 											</div>
 											<div class="faq-x">
 												<img src="<?php bloginfo('template_url'); ?>/images/content/x.png" width="7" height="7" alt="x" />
@@ -48,7 +48,7 @@ Template Name: FAQ
 									<?php while (have_posts()) : the_post(); ?>
 										<div class="faq-question">
 											<div class="comments-counter">
-												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
+												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble2x.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 											</div>
 											<div class="faq-x">
 												<img src="<?php bloginfo('template_url'); ?>/images/content/x.png" width="7" height="7" alt="x" />
@@ -69,7 +69,7 @@ Template Name: FAQ
 									<?php while (have_posts()) : the_post(); ?>
 										<div class="faq-question">
 											<div class="comments-counter">
-												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
+												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble2x.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 											</div>
 											<div class="faq-x">
 												<img src="<?php bloginfo('template_url'); ?>/images/content/x.png" width="7" height="7" alt="x" />
@@ -90,7 +90,7 @@ Template Name: FAQ
 									<?php while (have_posts()) : the_post(); ?>
 										<div class="faq-question">
 											<div class="comments-counter">
-												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
+												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble2x.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 											</div>
 											<div class="faq-x">
 												<img src="<?php bloginfo('template_url'); ?>/images/content/x.png" width="7" height="7" alt="x" />
@@ -111,7 +111,7 @@ Template Name: FAQ
 									<?php while (have_posts()) : the_post(); ?>
 										<div class="faq-question">
 											<div class="comments-counter">
-												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
+												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble2x.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 											</div>
 											<div class="faq-x">
 												<img src="<?php bloginfo('template_url'); ?>/images/content/x.png" width="7" height="7" alt="x" />
@@ -132,7 +132,7 @@ Template Name: FAQ
 									<?php while (have_posts()) : the_post(); ?>
 										<div class="faq-question">
 											<div class="comments-counter">
-												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
+												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble2x.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 											</div>
 											<div class="faq-x">
 												<img src="<?php bloginfo('template_url'); ?>/images/content/x.png" width="7" height="7" alt="x" />

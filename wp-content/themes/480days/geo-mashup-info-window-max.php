@@ -42,7 +42,7 @@ add_filter( 'the_content', array( 'GeoMashupQuery', 'strip_map_shortcodes' ), 1,
 					</div>
 					<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 					<div class="comments-counter">
-						<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
+						<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble2x.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 					</div>				
 					<h2><?php $excerpt = strip_tags(get_the_excerpt()); echo $excerpt; ?></h2>
 					<?php the_content(); ?>
