@@ -29,7 +29,7 @@
 												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble2x.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 											</div>
 											<div class="search-results-x">
-												<img src="<?php bloginfo('template_url'); ?>/images/content/x.png" width="7" height="7" alt="x" />
+												<img src="<?php bloginfo('template_url'); ?>/images/content/x2x.png" width="7" height="7" alt="x" />
 											</div>
 											<?php
 												$key="dayNumber";

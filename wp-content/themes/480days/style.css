@@ -837,7 +837,8 @@ a:link, a:visited, a:hover, a:active
 	float: left;
 	width: 245px;
 	height: 90px;
-	background: url(images/content/previous-bg.png);
+	background: url(images/content/previous-bg2x.png);
+	background-size: 245px 90px;	
 	}
 
 #previous-blank
@@ -845,7 +846,8 @@ a:link, a:visited, a:hover, a:active
 	float: left;
 	width: 245px;
 	height: 90px;
-	background: url(images/content/previous-bg-blank.png);
+	background: url(images/content/previous-bg-blank2x.png);
+	background-size: 245px 90px;		
 	}
 
 #previous img
@@ -871,7 +873,8 @@ a:link, a:visited, a:hover, a:active
 	float: right;
 	width: 245px;
 	height: 90px;
-	background: url(images/content/next-bg.png);
+	background: url(images/content/next-bg2x.png);
+	background-size: 245px 90px;
 	}
 
 #next-blank
@@ -879,7 +882,8 @@ a:link, a:visited, a:hover, a:active
 	float: right;
 	width: 245px;
 	height: 90px;
-	background: url(images/content/next-bg-blank.png);
+	background: url(images/content/next-bg-blank2x.png);
+	background-size: 245px 90px;	
 	}
 
 #next img

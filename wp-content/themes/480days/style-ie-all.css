@@ -99,6 +99,33 @@
 	background-image: url(images/content/day-bg.png);
 	}	
 	
+#next
+	{
+	background: url(images/content/next-bg.png);
+	}
+
+#next-blank
+	{
+	background: url(images/content/next-bg-blank.png);
+	}
+
+#previous
+	{
+	background: url(images/content/previous-bg.png);
+	}
+
+#previous-blank
+	{
+	background: url(images/content/previous-bg-blank.png);
+	}
+
+
+
+
+
+
+
+
 
 /* ---------------------------------------------------------- # NAV  */
 

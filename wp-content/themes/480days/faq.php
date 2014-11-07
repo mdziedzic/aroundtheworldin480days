@@ -30,7 +30,7 @@ Template Name: FAQ
 												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble2x.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 											</div>
 											<div class="faq-x">
-												<img src="<?php bloginfo('template_url'); ?>/images/content/x.png" width="7" height="7" alt="x" />
+												<img src="<?php bloginfo('template_url'); ?>/images/content/x2x.png" width="7" height="7" alt="x" />
 											</div>
 											<p class="entry-link"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>			
 										</div>
@@ -51,7 +51,7 @@ Template Name: FAQ
 												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble2x.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 											</div>
 											<div class="faq-x">
-												<img src="<?php bloginfo('template_url'); ?>/images/content/x.png" width="7" height="7" alt="x" />
+												<img src="<?php bloginfo('template_url'); ?>/images/content/x2x.png" width="7" height="7" alt="x" />
 											</div>
 											<p class="entry-link"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>			
 										</div>
@@ -72,7 +72,7 @@ Template Name: FAQ
 												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble2x.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 											</div>
 											<div class="faq-x">
-												<img src="<?php bloginfo('template_url'); ?>/images/content/x.png" width="7" height="7" alt="x" />
+												<img src="<?php bloginfo('template_url'); ?>/images/content/x2x.png" width="7" height="7" alt="x" />
 											</div>
 											<p class="entry-link"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>			
 										</div>
@@ -93,7 +93,7 @@ Template Name: FAQ
 												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble2x.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 											</div>
 											<div class="faq-x">
-												<img src="<?php bloginfo('template_url'); ?>/images/content/x.png" width="7" height="7" alt="x" />
+												<img src="<?php bloginfo('template_url'); ?>/images/content/x2x.png" width="7" height="7" alt="x" />
 											</div>
 											<p class="entry-link"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>			
 										</div>
@@ -114,7 +114,7 @@ Template Name: FAQ
 												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble2x.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 											</div>
 											<div class="faq-x">
-												<img src="<?php bloginfo('template_url'); ?>/images/content/x.png" width="7" height="7" alt="x" />
+												<img src="<?php bloginfo('template_url'); ?>/images/content/x2x.png" width="7" height="7" alt="x" />
 											</div>
 											<p class="entry-link"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>			
 										</div>
@@ -135,7 +135,7 @@ Template Name: FAQ
 												<p><a href="<?php the_permalink() ?>#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble2x.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 											</div>
 											<div class="faq-x">
-												<img src="<?php bloginfo('template_url'); ?>/images/content/x.png" width="7" height="7" alt="x" />
+												<img src="<?php bloginfo('template_url'); ?>/images/content/x2x.png" width="7" height="7" alt="x" />
 											</div>
 											<p class="entry-link"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></p>			
 										</div>
