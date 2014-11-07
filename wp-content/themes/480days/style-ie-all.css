@@ -321,5 +321,83 @@
 		
 
 
+/* ---------------------------------------------------------- # FONT-SIZE  */
+
+.font 
+	{
+	background-image: url(images/content/font-size.png);
+	}
+	
+/* --------------------- # SMALLER  */
+
+.font .smaller a:hover, .font .smaller a:focus 
+	{
+	background: url(images/content/font-size.png) no-repeat 0px -18px;
+    }
+.font .smaller a:active
+	{
+	background: url(images/content/font-size.png) no-repeat 0px -18px;
+    }
+.current-smaller .smaller a:link, .current-smaller .smaller a:visited {
+	background: url(images/content/font-size.png) no-repeat 0px -18px;
+	}  
+.font-smaller, .font-smaller-click 
+	{
+	background: url(images/content/font-size.png) no-repeat 0px -18px;
+	}
+.font-smaller-click 
+	{
+	background: url(images/content/font-size.png) no-repeat 0px -18px;
+	}
+	
+/* --------------------- # NORMAL  */
+
+.font .normal a:hover, .font .normal a:focus 
+	{
+	background: url(images/content/font-size.png) no-repeat -14px -18px;
+    }
+.font .normal a:active
+	{
+	background: url(images/content/font-size.png) no-repeat -14px -18px;
+    }
+.current-normal .normal a:link, .current-normal .normal a:visited {
+	background: url(images/content/font-size.png) no-repeat -14px -18px;
+	}  
+.font-normal, .font-normal-click 
+	{
+	background: url(images/content/font-size.png) no-repeat -14px -18px;
+	}
+.font-normal-click 
+	{
+	background: url(images/content/font-size.png) no-repeat -14px -18px;
+	}
+	
+/* --------------------- # BIGGER  */
+
+.font .bigger a:hover, .font .bigger a:focus 
+	{
+	background: url(images/content/font-size.png) no-repeat -33px -18px;
+    }
+.font .bigger a:active
+	{
+	background: url(images/content/font-size.png) no-repeat -33px -18px;
+    }
+.current-bigger .bigger a:link, .current-bigger .bigger a:visited {
+	background: url(images/content/font-size.png) no-repeat -33px -18px;
+	}  
+.font-bigger, .font-bigger-click 
+	{
+	background: url(images/content/font-size.png) no-repeat -33px -18px;
+	}
+.font-bigger-click 
+	{
+	background: url(images/content/font-size.png) no-repeat -33px -18px;
+	}
+	
+ 	 
+
+
+
+
 
 

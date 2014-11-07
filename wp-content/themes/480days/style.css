@@ -617,8 +617,9 @@ a:link, a:visited, a:hover, a:active
 	float: left;
 	width: 52px;
 	height: 18px;
-	background-image: url(images/content/font-size.png);
+	background-image: url(images/content/font-size2x.png);
 	background-repeat: no-repeat;
+	background-size: 52px 36px;
 	}
 	
 .font li
@@ -646,14 +647,17 @@ a:link, a:visited, a:hover, a:active
     }
 .font .smaller a:hover, .font .smaller a:focus 
 	{
-	background: url(images/content/font-size.png) no-repeat 0px -18px;
+	background: url(images/content/font-size2x.png) no-repeat 0px -18px;
+	background-size: 52px 36px;
     }
 .font .smaller a:active
 	{
-	background: url(images/content/font-size.png) no-repeat 0px -18px;
+	background: url(images/content/font-size2x.png) no-repeat 0px -18px;
+	background-size: 52px 36px;	
     }
 .current-smaller .smaller a:link, .current-smaller .smaller a:visited {
-	background: url(images/content/font-size.png) no-repeat 0px -18px;
+	background: url(images/content/font-size2x.png) no-repeat 0px -18px;
+	background-size: 52px 36px;	
 	cursor: default;
 	}  
 .font-smaller, .font-smaller-click 
@@ -663,11 +667,13 @@ a:link, a:visited, a:hover, a:active
 	left: 0px;
 	width: 14px;
 	height: 18px;
-	background: url(images/content/font-size.png) no-repeat 0px -18px;
+	background: url(images/content/font-size2x.png) no-repeat 0px -18px;
+	background-size: 52px 36px;	
 	}
 .font-smaller-click 
 	{
-	background: url(images/content/font-size.png) no-repeat 0px -18px;
+	background: url(images/content/font-size2x.png) no-repeat 0px -18px;
+	background-size: 52px 36px;	
 	}
 	
 /* --------------------- # NORMAL  */
@@ -679,14 +685,17 @@ a:link, a:visited, a:hover, a:active
     }
 .font .normal a:hover, .font .normal a:focus 
 	{
-	background: url(images/content/font-size.png) no-repeat -14px -18px;
+	background: url(images/content/font-size2x.png) no-repeat -14px -18px;
+	background-size: 52px 36px;	
     }
 .font .normal a:active
 	{
-	background: url(images/content/font-size.png) no-repeat -14px -18px;
+	background: url(images/content/font-size2x.png) no-repeat -14px -18px;
+	background-size: 52px 36px;	
     }
 .current-normal .normal a:link, .current-normal .normal a:visited {
-	background: url(images/content/font-size.png) no-repeat -14px -18px;
+	background: url(images/content/font-size2x.png) no-repeat -14px -18px;
+	background-size: 52px 36px;	
 	cursor: default;
 	}  
 .font-normal, .font-normal-click 
@@ -696,11 +705,13 @@ a:link, a:visited, a:hover, a:active
 	left: 14px;
 	width: 19px;
 	height: 18px;
-	background: url(images/content/font-size.png) no-repeat -14px -18px;
+	background: url(images/content/font-size2x.png) no-repeat -14px -18px;
+	background-size: 52px 36px;	
 	}
 .font-normal-click 
 	{
-	background: url(images/content/font-size.png) no-repeat -14px -18px;
+	background: url(images/content/font-size2x.png) no-repeat -14px -18px;
+	background-size: 52px 36px;	
 	}
 	
 /* --------------------- # BIGGER  */
@@ -712,14 +723,17 @@ a:link, a:visited, a:hover, a:active
     }
 .font .bigger a:hover, .font .bigger a:focus 
 	{
-	background: url(images/content/font-size.png) no-repeat -33px -18px;
+	background: url(images/content/font-size2x.png) no-repeat -33px -18px;
+	background-size: 52px 36px;	
     }
 .font .bigger a:active
 	{
-	background: url(images/content/font-size.png) no-repeat -33px -18px;
+	background: url(images/content/font-size2x.png) no-repeat -33px -18px;
+	background-size: 52px 36px;	
     }
 .current-bigger .bigger a:link, .current-bigger .bigger a:visited {
-	background: url(images/content/font-size.png) no-repeat -33px -18px;
+	background: url(images/content/font-size2x.png) no-repeat -33px -18px;
+	background-size: 52px 36px;	
 	cursor: default;
 	}  
 .font-bigger, .font-bigger-click 
@@ -729,11 +743,13 @@ a:link, a:visited, a:hover, a:active
 	left: 33px;
 	width: 19px;
 	height: 18px;
-	background: url(images/content/font-size.png) no-repeat -33px -18px;
+	background: url(images/content/font-size2x.png) no-repeat -33px -18px;
+	background-size: 52px 36px;	
 	}
 .font-bigger-click 
 	{
-	background: url(images/content/font-size.png) no-repeat -33px -18px;
+	background: url(images/content/font-size2x.png) no-repeat -33px -18px;
+	background-size: 52px 36px;	
 	}
 	
  	 
