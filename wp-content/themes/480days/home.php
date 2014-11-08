@@ -8,7 +8,7 @@
 					<!-- ================================================= CONTENT -->									
 
 					<div id="content"><div id="content-home">
-						<img id="home-image" src="<?php bloginfo('template_url'); ?>/images/content/home/aroundtheworldin480days.png" width="540" height="342" alt="Around the World in 480 Days" />
+						<img id="home-image" src="<?php bloginfo('template_url'); ?>/images/content/home/aroundtheworldin480days2x.png" width="540" height="342" alt="Around the World in 480 Days" />
 
 						<div id="cont-container">
 						
@@ -33,7 +33,7 @@
 								<div id="previous-blank">
 								</div>
 								<div id="next">
-									<a href="http://localhost.local/aroundtheworldin480days/001-goodbye-portland-hello-world"><img src="<?php bloginfo('template_url'); ?>/images/content/home/daily-journal.gif" width="150" height="23" alt="Next Day" /></a>								
+									<a href="http://localhost.local/aroundtheworldin480days/001-goodbye-portland-hello-world"><img src="<?php bloginfo('template_url'); ?>/images/content/home/daily-journal2x.png" width="150" height="23" alt="Next Day" /></a>								
 									<p><a href="http://localhost.local/aroundtheworldin480days/001-goodbye-portland-hello-world">001: Goodbye Portland. Hello World.</a></p>	
 								</div>
 						</div>
