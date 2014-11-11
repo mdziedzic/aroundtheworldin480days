@@ -112,7 +112,7 @@
 					if (get_post_meta($post->ID, $key, true) != "001") { ?>
 					<div id="previous">
 						<?php 
-							$previous_image_link = "<img src='" . get_bloginfo('template_url') . "/images/content/single/previous.gif' width='150' height='23' alt='Previous Day' />";
+							$previous_image_link = "<img src='" . get_bloginfo('template_url') . "/images/content/single/previous2x.png' width='150' height='23' alt='Previous Day' />";
 							previous_post(' %', $previous_image_link, 'no');
 			
 							$prev_post = get_previous_post();				
@@ -134,7 +134,7 @@
 					if (get_post_meta($post->ID, $key, true) != "480") { ?>
 					<div id="next">
 						<?php 
-							$next_image_link = "<img src='" . get_bloginfo('template_url') . "/images/content/single/next.gif' width='150' height='23' alt='Next Day' />";
+							$next_image_link = "<img src='" . get_bloginfo('template_url') . "/images/content/single/next2x.png' width='150' height='23' alt='Next Day' />";
 							next_post(' %', $next_image_link, 'no');
 			
 							$next_post = get_next_post();				
