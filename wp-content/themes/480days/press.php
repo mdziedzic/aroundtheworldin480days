@@ -15,7 +15,7 @@ Template Name: Press
 					<!-- ================================================= CONTENT -->	
 
 					<div id="content"><div id="content-press">
-						<img src="<?php bloginfo('template_url'); ?>/images/content/press/title.png" width="380" height="90" alt="Press" />
+						<img src="<?php bloginfo('template_url'); ?>/images/content/press/press2x.png" width="380" height="90" alt="Press" />
 					
 					
 						
