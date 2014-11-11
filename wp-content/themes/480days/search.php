@@ -8,7 +8,7 @@
 					<!-- ================================================= CONTENT -->									
 
 					<div id="content"><div id="content-search-results">
-						<img src="<?php bloginfo('template_url'); ?>/images/content/search-results/title.png" width="380" height="90" alt="Search Results" />
+						<img src="<?php bloginfo('template_url'); ?>/images/content/search-results/searchresults2x.png" width="380" height="90" alt="Search Results" />
 						
 						<div id="cont-container">
 						

@@ -15,7 +15,7 @@ Template Name: Terms of Use
 					<!-- ================================================= CONTENT -->	
 
 					<div id="content"><div id="content-press">
-						<img src="<?php bloginfo('template_url'); ?>/images/content/terms/title.png" width="380" height="90" alt="Press" />
+						<img src="<?php bloginfo('template_url'); ?>/images/content/terms/termsofuse2x.png" width="380" height="90" alt="Press" />
 					
 					
 						
