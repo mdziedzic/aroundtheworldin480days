@@ -8,6 +8,11 @@ Author URI: www.eggfoo.com
 */
 
 
+html
+	{
+	-webkit-text-size-adjust: 100%;
+	}
+
 body
 	{
 	background-color: white;
