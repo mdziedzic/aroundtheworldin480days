@@ -115,16 +115,16 @@ jQuery(document).ready(function($) {
 	function changeFontSize(fontSize) {
 		switch (fontSize) {
 			case 'smaller':
-				$('.body-text, .body-text-first, #cont-container li').css('font-size', '14px');
-				$('.body-text, .body-text-first, #cont-container li').css('line-height', '21px');							
+				$('.body-text, .body-text-first, #cont-container li').css('font-size', '16px');
+				$('.body-text, .body-text-first, #cont-container li').css('line-height', '24px');							
 				break;
 			case 'normal':
-				$('.body-text, .body-text-first, #cont-container li').css('font-size', '16px');
-				$('.body-text, .body-text-first, #cont-container li').css('line-height', '24px');			
+				$('.body-text, .body-text-first, #cont-container li').css('font-size', '18px');
+				$('.body-text, .body-text-first, #cont-container li').css('line-height', '27px');			
 				break;
 			case 'bigger':
-				$('.body-text, .body-text-first, #cont-container li').css('font-size', '18px');
-				$('.body-text, .body-text-first, #cont-container li').css('line-height', '27px');						
+				$('.body-text, .body-text-first, #cont-container li').css('font-size', '20px');
+				$('.body-text, .body-text-first, #cont-container li').css('line-height', '30px');						
 				break;
 		}
 	}
