@@ -442,11 +442,16 @@ a:link, a:visited, a:hover, a:active
 
 .body-text, .body-text-home, .body-text-first, .body-text-first-home, #cont-container li
 	{
-	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Palatino, "Times New Roman", serif;	
-	font-size: 16px;
-	line-height: 24px;		
+	font-family: 'Sorts Mill Goudy', Baskerville, "Baskerville Old Face", "Hoefler Text", Palatino, "Times New Roman", serif;	
+	font-size: 18px;
+	line-height: 32px;		
 	}
 
+.body-text-home, .body-text-first-home
+	{
+	font-size: 16px;
+	line-height: 28px;	
+	}	
 
 .body-text, .body-text-home, .body-text-first, .body-text-first-home
 	{

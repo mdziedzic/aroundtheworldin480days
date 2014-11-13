@@ -98,8 +98,10 @@
 	<!-- For non-Retina iPhone, iPod Touch, and Android -->
 	<link rel="<?php bloginfo('template_url'); ?>/images/touch/apple-touch-icon-precomposed"
 	  href="apple-touch-icon-precomposed.png">	
-	
-	
+
+	<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic' rel='stylesheet' type='text/css'>	  	
 </head>
 
 <body onunload="GUnload()">

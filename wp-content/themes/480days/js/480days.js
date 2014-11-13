@@ -116,15 +116,15 @@ jQuery(document).ready(function($) {
 		switch (fontSize) {
 			case 'smaller':
 				$('.body-text, .body-text-first, #cont-container li').css('font-size', '16px');
-				$('.body-text, .body-text-first, #cont-container li').css('line-height', '24px');							
+				$('.body-text, .body-text-first, #cont-container li').css('line-height', '28px');							
 				break;
 			case 'normal':
 				$('.body-text, .body-text-first, #cont-container li').css('font-size', '18px');
-				$('.body-text, .body-text-first, #cont-container li').css('line-height', '27px');			
+				$('.body-text, .body-text-first, #cont-container li').css('line-height', '32px');			
 				break;
 			case 'bigger':
-				$('.body-text, .body-text-first, #cont-container li').css('font-size', '20px');
-				$('.body-text, .body-text-first, #cont-container li').css('line-height', '30px');						
+				$('.body-text, .body-text-first, #cont-container li').css('font-size', '24px');
+				$('.body-text, .body-text-first, #cont-container li').css('line-height', '40px');						
 				break;
 		}
 	}
