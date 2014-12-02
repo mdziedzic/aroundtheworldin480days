@@ -54,7 +54,7 @@ function mytheme_comment($comment, $args, $depth) {
 					
 				<?php } else { ?>
 					<?php comment_author(); ?>
-				<?php } ?></span>| <?php printf(__('%1$s'), get_comment_date()) ?></p>
+				<?php } ?></span>&nbsp;|&nbsp;&nbsp;<?php printf(__('%1$s'), get_comment_date()) ?></p>
 			</div>
 	
 			<div <?php if ($comment->comment_approved == '0') echo 'class="response-box-moderation"'; ?> class="response-box">

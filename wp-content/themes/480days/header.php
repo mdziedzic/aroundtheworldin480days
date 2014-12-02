@@ -101,7 +101,12 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic' rel='stylesheet' type='text/css'>	  	
+	<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic' rel='stylesheet' type='text/css'>	  
+
+	<link rel="stylesheet" href="//f.fontdeck.com/s/css/3nQ4Zt9uZHi/fSeMr4rODjmORk4/DOMAIN_NAME/50825.css" type="text/css" />	
+
+	<script src="//use.typekit.net/bwh4run.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
 </head>
 
 <body onunload="GUnload()">
