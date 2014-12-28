@@ -14,7 +14,7 @@
 						
 							<h1>Tasmania to Cape Town by Land<sup>*</sup></h1>
 
-							<h2>34 countries, 30,000 miles in 480 days. Untold landscapes. Dubious transport. A standoff or two (or three) with the locals. A drunken role-player and a dwarven army. A circus bear and one ubercaffeinated monkey. And probably a bit too much of the homegrown beer.<sup>&dagger;</sup> Oh, and lots of mosquitoes. Along the way we took some <a href="https://www.flickr.com/photos/aroundtheworldin480days/sets/" title="Photos">photos</a> (here are some of our <a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157624185440774/" title="Favorite photos">favorites</a>).</h2>
+							<h2>Thirty-four countries and over 30,000 miles in 480 days. Untold mosquitoes and probably a bit too much of the local beer.<sup>&dagger;</sup> Along the way we took some <a href="https://www.flickr.com/photos/aroundtheworldin480days/sets/" title="Photos">photos</a> (here are some of our <a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157624185440774/" title="Favorite photos">favorites</a>).</h2>
 							<div class="text-break">
 								<img src="<?php bloginfo('template_url'); ?>/images/content/text-break2x.png" width="78" height="18" alt="Text break" />
 							</div>
