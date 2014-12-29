@@ -105,8 +105,6 @@
 
 	<link rel="stylesheet" href="//f.fontdeck.com/s/css/3nQ4Zt9uZHi/fSeMr4rODjmORk4/DOMAIN_NAME/50825.css" type="text/css" />	
 
-	<script src="//use.typekit.net/bwh4run.js"></script>
-	<script>try{Typekit.load();}catch(e){}</script>
 </head>
 
 <body onunload="GUnload()">
