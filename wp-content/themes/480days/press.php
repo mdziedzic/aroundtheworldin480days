@@ -23,7 +23,7 @@ Template Name: Press
 						
 						
 							<div class="press-section">
-								<h2><em>Around the World in 480 Days</em> has been featured in the following publications, websites, networks, and podcasts.</h2>
+								<h2><em>Around the World in 480 Days</em> has been featured in the following publications, websites, and media.</h2>
 								<div class="press-entry">
 									<div class="press-x">
 										<img src="<?php bloginfo('template_url'); ?>/images/content/x2x.png" width="7" height="7" alt="x" />

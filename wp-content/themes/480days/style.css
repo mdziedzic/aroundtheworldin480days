@@ -603,12 +603,12 @@ a:link, a:visited, a:hover, a:active
 	
 #cont-container .comments-counter
 	{
-	margin: 7px 0 0 -79px;
+	margin: 6px 0 0 -79px;
 	}	
 	
 #faq-single-header .comments-counter
 	{
-	padding-top: 13px;
+	padding-top: 11px;
 	}
 
 #comments .comments-counter
@@ -637,7 +637,7 @@ a:link, a:visited, a:hover, a:active
 	float: left;
 	width: 60px;
 	height: 18px;
-	margin: 109px 0 0 -80px;
+	margin: 117px 0 0 -80px;
 	}
 	
 #font-size ul
@@ -812,12 +812,12 @@ a:link, a:visited, a:hover, a:active
 	
 .day-number p
 	{
-	margin-top: 21px;
+	margin-top: 22px;
 	text-align: center;
 
 	font-family:"Lisboa Pro Sans Bold", sans-serif; font-size-adjust:0.5; font-weight:bold; font-style:normal;
 	letter-spacing: normal;
-	font-size: 18px;
+	font-size: 20px;
 	}
 
 #day-prev
@@ -1350,10 +1350,17 @@ a:link, a:visited, a:hover, a:active
 /*	font-size: 14px;
 */	}	
 
+#content-press h2
+	{
+	font-family:"Lisboa Pro Sans Regular", sans-serif; font-size-adjust:0.48; font-weight:normal; font-style:normal;
+	font-size: 18px;
+	}
+
+
 #content-faq #cont-container .comments-counter, 
 #content-search-results #cont-container .comments-counter
 	{
-	margin-top: -8px;
+	margin-top: -9px;
 	}	
 	
 .faq-section, 
@@ -1390,6 +1397,12 @@ a:link, a:visited, a:hover, a:active
 	height: 7px;
 	margin: -2px 0 0 -19px;
 	}	
+
+.faq-x,
+.press-x
+	{
+	margin-top: -1px;	
+	}
 
 
 
@@ -1896,7 +1909,7 @@ a:link, a:visited, a:hover, a:active
 	position: absolute;	
 	width: 30px;
 	height: 34px;
-	top: 20px;
+	top: 21px;
 	left: 268px;
 	background: url(images/footer/submit2x.png);
 	background-repeat: no-repeat;
@@ -2100,7 +2113,7 @@ iframe
 	position: relative;	
 	width: 30px;
 	height: 34px;
-	top: -55px;
+	top: -57px;
 	left: 268px;
 	background: url(images/footer/submit2x.png);
 	background-repeat: no-repeat;
