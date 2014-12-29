@@ -568,11 +568,11 @@ a:link, a:visited, a:hover, a:active
 
 .photo-tagline-horiz, .photo-tagline-vert
 	{
-	margin: 1px 0px 17px 2px;
+	margin: 2px 0px 17px 2px;
 
 	font-family: 'Sorts Mill Goudy', Baskerville, "Baskerville Old Face", serif;	
 	letter-spacing: normal;	
-	font-size: 11px;
+	font-size: 14px;
 	font-style: italic;
 	color: #b0b0b0;
 	}
