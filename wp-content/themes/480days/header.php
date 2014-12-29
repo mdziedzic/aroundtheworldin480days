@@ -82,26 +82,13 @@
 
 
 	<!-- For iPhone 6 Plus with @3x Retina HD display: -->
-	<link rel="apple-touch-icon-precomposed" sizes="180x180" ! href="<?php bloginfo('template_url'); ?>/images/touch/apple-touch-icon-180x180-precomposed.png">
-	<!-- For iPad with Retina display on newer iOS: -->
-	<link rel="apple-touch-icon-precomposed" sizes="152x152" ! href="<?php bloginfo('template_url'); ?>/images/touch/apple-touch-icon-152x152-precomposed.png">
-	<!-- For third-generation iPad with Retina display: -->
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" ! href="<?php bloginfo('template_url'); ?>/images/touch/apple-touch-icon-144x144-precomposed.png">
-	<!-- For iPhone 4 and later on newer iOS: -->
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" ! href="<?php bloginfo('template_url'); ?>/images/touch/apple-touch-icon-120x120-precomposed.png">
-	<!-- For iPhone 4/5 with Retina display: -->
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" ! href="<?php bloginfo('template_url'); ?>/images/touch/apple-touch-icon-114x114-precomposed.png">
-	<!-- older full-size iPads and iPad mini on newer iOS: -->
-	<link rel="apple-touch-icon-precomposed" sizes="76x76" ! href="<?php bloginfo('template_url'); ?>/images/touch/apple-touch-icon-76x76-precomposed.png">
-	<!-- older full-size iPads and iPad mini: -->
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" ! href="<?php bloginfo('template_url'); ?>/images/touch/apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_url'); ?>/images/touch/apple-touch-icon-180x180-precomposed.png" />
 	<!-- For non-Retina iPhone, iPod Touch, and Android -->
-	<link rel="<?php bloginfo('template_url'); ?>/images/touch/apple-touch-icon-precomposed"
-	  href="apple-touch-icon-precomposed.png">	
+	<link rel="<?php bloginfo('template_url'); ?>/images/touch/apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />	
 
-	<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic' rel='stylesheet' type='text/css'>	  
+	<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic' rel='stylesheet' type='text/css' />	  
 
 	<link rel="stylesheet" href="//f.fontdeck.com/s/css/3nQ4Zt9uZHi/fSeMr4rODjmORk4/DOMAIN_NAME/50825.css" type="text/css" />	
 

@@ -14,11 +14,9 @@ html
 
 	font-variant-ligatures: common-ligatures;
 
-	text-rendering: optimizeLegibility; /* optional: for older browsers */
 	-webkit-font-variant-ligatures: common-ligatures; /* for iOS and Safari 6 */
 	font-variant-ligatures: common-ligatures; /* for up-to-date browsers, including IE10 and Opera 21 */
 
-	text-rendering: optimizeLegibility; /* optional: for older browsers */
 	-moz-font-feature-settings: "kern=1"; /* pre-Firefox 14+ */
 	-webkit-font-feature-settings: "kern";
 	-moz-font-feature-settings: "kern"; /* Firefox 14+ */

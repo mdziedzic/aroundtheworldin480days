@@ -24,7 +24,7 @@ Template Name: About
 						<div id="cont-container">
 							<?php include (TEMPLATEPATH . '/font-size.php'); ?>
 							
-							<p class="body-text-first">We met at work in Boston, got married, and not too long after decided to quit our jobs and drive around all 48 states of the contiguous U.S. looking for a new place to call home. We chose Portland, and not too many years passed before we got it into our heads that we needed to travel around the world. When we are not traveling we sit in front of computers.</p>
+							<p class="body-text-first">We met at work in Boston, got married, and quit our jobs to drive around all 48 states of the contiguous U.S. looking for a new place to call home. We chose Portland, and not too many years passed before we got it into our heads that we needed to travel around the world. When we are not traveling we sit in front of computers.</p>
 							
 							<div class="text-break">
 								<img src="<?php bloginfo('template_url'); ?>/images/content/text-break2x.png" width="78" height="18" alt="Text break" />
