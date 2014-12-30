@@ -435,7 +435,7 @@ a:link, a:visited, a:hover, a:active
 	font-size: 12px;
 	}
 	
-.location, location p
+.location
 	{
 	-webkit-text-size-adjust: 100%;
 	position: absolute;
@@ -453,6 +453,12 @@ a:link, a:visited, a:hover, a:active
 	{
 	position: relative;
 	top: 5px;
+	}
+
+#content-multiple .location
+	{
+	position: relative;
+	top: 7px;
 	}
 	
 .single-summary
@@ -994,7 +1000,7 @@ a:link, a:visited, a:hover, a:active
 	position: absolute;
 	width: 50px;
 	left: -74px;
-	top: 32px;	
+	top: 33px;	
 	}
 
 .response-counter p
@@ -1262,6 +1268,11 @@ a:link, a:visited, a:hover, a:active
 
 
 /* ----------------------------------------- # CONTENT (MULTIPLE)  */
+
+#content-multiple
+	{
+	top: 28px;
+	}
 
 #content-multiple
 	{
@@ -2190,7 +2201,6 @@ h2#noresults-h2
 	font-family:"Lisboa Pro Sans Regular", sans-serif !important; 
 	font-size-adjust:0.48; font-weight:normal; font-style:normal;
 	letter-spacing: .2px;		
-	/*font-family: "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif !important;*/
 	font-size: 9px !important;
 	}
 
