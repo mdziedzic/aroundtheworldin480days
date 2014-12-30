@@ -32,7 +32,7 @@ body
 	margin: 0 0 0 0;
 	}
 
-p, li, h1, h2, h3, #pc-name-input, #pc-email-input, #pc-url-input, #pc-comments-input
+p, li, h1, h2, h3, #pc-name-input, #pc-email-input, #pc-url-input, #pc-comments-input, #todayphotos a
 	{	
 	font-family:"Lisboa Pro Sans Regular", sans-serif; font-size-adjust:0.48; font-weight:normal; font-style:normal;
 	letter-spacing: .2px;
@@ -508,7 +508,7 @@ a:link, a:visited, a:hover, a:active
 	margin: 0 8px 0 8px;
 	}
 
-#todayphotos p
+#todayphotos a
 	{
 	margin-top: 4px;
 	font-size: 10px;

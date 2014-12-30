@@ -38,8 +38,8 @@
 	$tomorrow->format('Y-m-d');
 
 	if (!(in_array(get_post_meta($post->ID, $key, true), $noTodayPhotoSeries) or in_array(get_post_meta($post->ID, $key, true), $onlyUsTodayPhotoSeries))) { ?>
-<!-- 		<span id="todayphotos"><a href="http://www.flickr.com/photos/aroundtheworldin480days/archives/date-taken/<?php echo get_the_date('Y/m/d'); ?>/detail/?view=md">Photo Series Photos</a></span>
-		<span id="todayphotos"><a href="http://www.flickr.com/search/?q=travel&m=tags&d=taken-<?php echo get_the_date('Ymd'); ?>-<?php echo get_the_date('Ymd'); ?>&ss=2&ct=0&mt=all&w=45697284%40N04&adv=1">Photo Series Photos</a></span>
- -->		<span id="todayphotos"><a href="https://www.flickr.com/search/?d=taken-<?php echo get_the_date('Ymd'); ?>-<?php echo $tomorrow->format('Ymd'); ?>&ss=0&ct=0&mt=all&w=45697284%40N04&adv=1&tags="><p>Photo Series Photos</p></a></span>
+		<!-- <span id="todayphotos"><a href="http://www.flickr.com/photos/aroundtheworldin480days/archives/date-taken/<?php echo get_the_date('Y/m/d'); ?>/detail/?view=md">Photo Series Photos</a></span>
+		<span id="todayphotos"><a href="http://www.flickr.com/search/?q=travel&m=tags&d=taken-<?php echo get_the_date('Ymd'); ?>-<?php echo get_the_date('Ymd'); ?>&ss=2&ct=0&mt=all&w=45697284%40N04&adv=1">Photo Series Photos</a></span> -->
+		<span id="todayphotos"><a href="https://www.flickr.com/search/?d=taken-<?php echo get_the_date('Ymd'); ?>-<?php echo $tomorrow->format('Ymd'); ?>&amp;ss=0&amp;ct=0&amp;mt=all&amp;w=45697284%40N04&amp;adv=1&amp;tags=">Photo Series Photos</a></span>
 
  <?php } ?>
