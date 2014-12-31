@@ -6,4 +6,10 @@ jQuery(document).ready(function($) {
 		}  
 	});	 
 
+	$("html").swipe({
+		swipeRight:function(event, direction, distance, duration, fingerCount) {
+			location.href = $('#day-prev a').attr('href')
+		}
+	});	
+
 });
