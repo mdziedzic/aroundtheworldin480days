@@ -75,6 +75,13 @@ a:link, a:visited, a:hover, a:active
 }
 
 
+input, textarea 	/* to fix rounded submit buttons in ios */
+	{
+  	-webkit-appearance: none;
+  	-webkit-border-radius: 0;
+	}
+
+
 
 
 
@@ -1404,8 +1411,6 @@ a:link, a:visited, a:hover, a:active
 	{
 	position: relative;
 	float: left;
-	width: 7px;
-	height: 7px;
 	margin: -2px 0 0 -19px;
 	}	
 
