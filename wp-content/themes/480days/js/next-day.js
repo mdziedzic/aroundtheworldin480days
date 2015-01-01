@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
 	$(document).keydown(function(e) {  
-		if(e.which == 39) {  
+		if ((e.which == 39) && (!$("input,textarea").is(":focus"))) {  
 			location.href = $('#day-next a').attr('href')
 		}  
 	});	 

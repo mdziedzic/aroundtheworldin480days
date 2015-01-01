@@ -14,7 +14,7 @@
 						
 							<h1>Tasmania to Cape Town by Land<sup>*</sup></h1>
 
-							<h2>Over 30,000 miles through 34 countries in 480 days. Along the way, untold mosquitoes, a healthy (perhaps to healthy)  sampling of the local beer,<sup>&dagger;</sup> and at least one over-caffeinated monkey. We took some <a href="https://www.flickr.com/photos/aroundtheworldin480days/sets/" title="Photos">photos</a> (here are some of our <a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157624185440774/" title="Favorite photos">favorites</a>).</h2>
+							<h2>Over 30,000 miles through 34 countries in 480 days. We took a lot of <a href="https://www.flickr.com/photos/aroundtheworldin480days/sets/" title="Photos">photos</a> (here are some of our <a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157624185440774/" title="Favorite photos">favorites</a>).</h2>
 							<div class="text-break">
 								<img src="<?php bloginfo('template_url'); ?>/images/content/text-break2x.png" width="78" height="18" alt="Text break" />
 							</div>
@@ -23,8 +23,6 @@
 							<p class="body-text-home">And, while we are at it, though we did expend a fair amount of effort trying, the land border between Thailand and Myanmar was closed, and despite considerable effort and contemplated bribery, we had to take a short round-trip flight between Chiang Mai, Thailand and Yangon to get in and out of Myanmar.</p>
 							<p class="body-text-home">And in the interest of full disclosure, a small prop plane in Ethiopia from Lalibela to Addis Ababa as we had already done the trip in reverse by bus, it was near the end our trip, and we were running out steam (money, and, quite frankly, the will to live).</p>
 							<br/>
-							<p class="body-text-first-home"><sup>&dagger;</sup>Wine, whiskey, vodka, mead, waragi, arak, betel, kef, tej...</p>
-
 
 							<?php include (TEMPLATEPATH . '/share.php'); ?>
 

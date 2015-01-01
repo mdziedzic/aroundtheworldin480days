@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
 	$(document).keydown(function(e) {  
-		if(e.which == 37) {  
+		if ((e.which == 37) && (!$("input,textarea").is(":focus"))) {  
 			location.href = $('#day-prev a').attr('href')
 		}  
 	});	 
