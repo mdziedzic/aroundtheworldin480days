@@ -1839,6 +1839,18 @@ if ( !class_exists('WordpressPopularPosts') ) {
 			// build custom layout
 			if ($instance['markup']['custom_html']) {
 
+
+// eggfoo (added)                 
+                    $key="dayNumber";
+                    $ddaynnumber =  get_post_meta($p->id, $key, true);
+                    $title_sub = $ddaynnumber . ": " . htmlspecialchars(stripslashes($title));
+// eggfoo                   
+
+                    // eggfoo (changed)
+						$_stats = "<span class=\"wpp-views\">" . "(" . $_stats . ")" . "</span>";
+// eggfoo
+
+
 				$data = array(
 					'title' => '<a href="'.$permalink.'" title="'. esc_attr($title) .'" class="wpp-post-title" target="' . $this->user_settings['tools']['link']['target'] . '">'.$title_sub.'</a>',
 					'summary' => $excerpt,
@@ -2263,7 +2275,8 @@ if ( !class_exists('WordpressPopularPosts') ) {
 				}
 				else {
 					$views_text = sprintf(
-					_n('1 view', '%s views', intval($pageviews), $this->plugin_slug),
+					// _n('1 view', '%s views', intval($pageviews), $this->plugin_slug),  		eggfoo
+					_n('1', '%s', intval($pageviews), $this->plugin_slug),						// eggfoo
 					number_format_i18n($pageviews)
 					);
 				}
