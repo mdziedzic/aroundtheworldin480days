@@ -138,7 +138,7 @@ jQuery(document).ready(function($) {
 			$(this).append('<div class="font-' + myClass + '"></div>');
 			$("div.font-" + myClass).css({display:"none"}).fadeIn(200);
 
-			// for ios. basically, mousever is treated as .click below
+			// for mobile. basically, mousever is treated as .click below
 			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 				currentFontSize = myClass;
 				changeFontSize(myClass);
@@ -236,7 +236,7 @@ jQuery(document).ready(function($) {
 			$(this).append('<div class="partNoteOpt-' + myClass + '"></div>');
 			$("div.partNoteOpt-" + myClass).css({display:"none"}).fadeIn(200);
 
-			// for ios. basically, mousever is treated as .click below
+			// for mobile. basically, mousever is treated as .click below
 			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 				currentPartNote = myClass;
 				changePartNote(myClass);
