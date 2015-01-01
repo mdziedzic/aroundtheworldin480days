@@ -9,7 +9,9 @@ jQuery(document).ready(function($) {
 	$("body").swipe({
 		swipeLeft:function(event, direction, distance, duration, fingerCount) {
 			location.href = $('#day-next a').attr('href');
-		}
+		},
+		threshold:400
+
 	});
 
 });

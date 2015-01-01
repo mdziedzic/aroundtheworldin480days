@@ -32,13 +32,6 @@ jQuery(document).ready(function($) {
     		$(this).children("a").css({backgroundImage:"none"});
 	    }
 	});  	
-	
-	// create events for each nav item
-	attachNavEvents(".nav", "home");
-	attachNavEvents(".nav", "about");
-	attachNavEvents(".nav", "faq");
-	// attachNavEvents(".nav", "press");
-	attachNavEvents(".nav", "map");
 
 	function attachNavEvents(parent, myClass) {
 		$(parent + " ." + myClass).mouseover(function() {
@@ -50,7 +43,18 @@ jQuery(document).ready(function($) {
 				$(this).remove();
 			});
 		});
-	}
+	}	
+	
+
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	} else {
+		// create events for each nav item
+		attachNavEvents(".nav", "home");
+		attachNavEvents(".nav", "about");
+		attachNavEvents(".nav", "faq");
+		// attachNavEvents(".nav", "press");
+		attachNavEvents(".nav", "map");
+	}	
 
 
 
@@ -133,6 +137,15 @@ jQuery(document).ready(function($) {
 		$(parent + " ." + myClass).mouseover(function() {
 			$(this).append('<div class="font-' + myClass + '"></div>');
 			$("div.font-" + myClass).css({display:"none"}).fadeIn(200);
+
+			// for ios. basically, mousever is treated as .click below
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				currentFontSize = myClass;
+				changeFontSize(myClass);
+				moveCurrentFontSizeIndicator(myClass);
+				$.cookie(cookieName, currentFontSize, { expires: 100, path: '/' });
+			}
+
 		}).mouseout(function() {
 			// fade out & destroy pseudo-link
 			$("div.font-" + myClass).fadeOut(200, function() {
@@ -160,7 +173,7 @@ jQuery(document).ready(function($) {
 	}
 
 	moveCurrentFontSizeIndicator(currentFontSize);
-
+ 
 	// create events for each font size selector
 	attachFontEvents(".font", "smaller");
 	attachFontEvents(".font", "normal");
@@ -222,6 +235,15 @@ jQuery(document).ready(function($) {
 		$(parent + " ." + myClass).mouseover(function() {
 			$(this).append('<div class="partNoteOpt-' + myClass + '"></div>');
 			$("div.partNoteOpt-" + myClass).css({display:"none"}).fadeIn(200);
+
+			// for ios. basically, mousever is treated as .click below
+			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				currentPartNote = myClass;
+				changePartNote(myClass);
+				moveCurrentPartNoteIndicator(myClass);
+				$.cookie(partNoteCookieName, currentPartNote, { expires: 100, path: '/' })
+			}
+
 		}).mouseout(function() {
 			// fade out & destroy pseudo-link
 			$("div.partNoteOpt-" + myClass).fadeOut(200, function() {
