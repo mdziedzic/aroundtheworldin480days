@@ -10,6 +10,10 @@
                 }
               ?>
 
+            <div id="copyright-notice">
+              <p>&copy; Michael Dziedzic and Emily Dziedzic, 2015. All rights reserved. Unauthorized use and/or duplication of this material without express and written permission from this blog’s author and/or owner is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to Michael Dziedzic, Emily Dziedzic, and Around the World in 480 Days with appropriate and specific direction to the original content.</p>
+            </div>              
+
 						<div id="share">
 							<ul>
 								<li><a href="#" onclick="window.open(
@@ -36,5 +40,7 @@
 								<li><a href="mailto:?subject=<? echo $title; ?>&amp;body=<?php echo "http://" . $_SERVER['HTTP_HOST']  . $_SERVER['REQUEST_URI']; ?>"><img src="<?php bloginfo('template_url'); ?>/images/content/share/mail2x.png" width="16" height="16" alt="Mail Share" /></a></li>
 							</ul>
 						</div>
+
+
 
 

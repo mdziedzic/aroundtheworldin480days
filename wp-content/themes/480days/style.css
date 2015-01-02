@@ -854,7 +854,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 #share
 	{
 	text-align: left;;
-	margin-top: 30px;
+	margin-top: 24px;
 	}
 
 #share ul
@@ -878,7 +878,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	{
 	width: 490px;
 	height: 90px;
-	margin: 32px 0 188px 50px;
+	margin: 20px 0 188px 50px;
 	}
 	
 #previous-next p
@@ -1269,7 +1269,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 
 #content-single #previous-next
 	{
-	margin-top: 33px;
+	margin-top: 20px;
 	}
 
 
@@ -2282,4 +2282,23 @@ h2#noresults-h2
 	font-weight: bold;
 	font-size: 11px;
 	}
+
+
+
+
+/* ----------------------------------------- # COPYRIGHT NOTICE  */
+
+#copyright-notice p
+	{
+	width: 450px;
+	margin: 45px 0 0px 0px;
+
+	font-family:"Lisboa Pro Sans Light", sans-serif; font-size-adjust:0.49; font-weight:200; font-style:normal;
+	letter-spacing: normal;
+	font-size: 12px;
+	line-height: 14px;
+	font-weight: 100;
+	color: #b0b0b0;
+	}	
+
 

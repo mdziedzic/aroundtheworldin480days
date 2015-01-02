@@ -30,7 +30,7 @@
 					<a href="http://www.eggfoo.com" class="external-link"><img src="<?php bloginfo('template_url'); ?>/images/footer/eggfoo2x.png" width="96" height="24"	alt="EGGFOO" /></a><br />				
 				</div>
 				<div id="copyright-footer">
-					<p>Copyright &copy; 2004-2014 Emily &amp; Michael Dziedzic<br /><a href="index.php?page_id=16058">Terms of Use</a></p>		
+					<p>&copy; Michael Dziedzic and Emily Dziedzic, 2015<br /><a href="index.php?page_id=16058">Terms of Use</a></p>		
 				</div>
 				<div id="xhtml-css-wordpress">
 					<p>Powered by <a href="http://www.wordpress.org" class="external-link">WordPress</a></p>			
