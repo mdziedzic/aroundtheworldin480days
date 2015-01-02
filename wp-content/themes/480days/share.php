@@ -11,7 +11,7 @@
               ?>
 
             <div id="copyright-notice">
-              <p>&copy; Michael Dziedzic and Emily Dziedzic, 2015. All rights reserved. Unauthorized use and/or duplication of this material without express and written permission from this blog’s author and/or owner is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to Michael Dziedzic, Emily Dziedzic, and Around the World in 480 Days with appropriate and specific direction to the original content.</p>
+              <p>&copy; Michael Dziedzic 2015. Photographs &copy; Michael Dziedzic and Emily Dziedzic 2015. All rights reserved. Unauthorized use and/or duplication of this material without express and written permission from this blog’s author and/or owner is strictly prohibited. Excerpts and links may be used, provided that full and clear credit is given to Michael Dziedzic, Emily Dziedzic, and Around the World in 480 Days with appropriate and specific direction to the original content.</p>
             </div>              
 
 						<div id="share">
