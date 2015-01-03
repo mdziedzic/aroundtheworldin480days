@@ -6,12 +6,14 @@ jQuery(document).ready(function($) {
 		}  
 	});	 
 
-	$("body").swipe({
-		swipeLeft:function(event, direction, distance, duration, fingerCount) {
-			location.href = $('#day-next a').attr('href');
-		},
-		threshold:400
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 
-	});
+		$("body").swipe({
+			swipeLeft:function(event, direction, distance, duration, fingerCount) {
+				location.href = $('#day-next a').attr('href');
+			},
+			threshold:400
+		});
+	}
 
 });
