@@ -583,9 +583,10 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 
 	font-family: 'Sorts Mill Goudy', Baskerville, "Baskerville Old Face", serif;	
 	letter-spacing: normal;	
-	font-size: 14px;
-	font-style: italic;
+	font-size: .9em;
 	color: #b0b0b0;
+	font-weight: 400;
+	font-style: italic;
 	}
 
 .photo-tagline-horiz em, .photo-tagline-vert em
