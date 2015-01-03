@@ -1852,10 +1852,21 @@ if ( !class_exists('WordpressPopularPosts') ) {
 
 
 				$data = array(
-					'title' => '<a href="'.$permalink.'" title="'. esc_attr($title) .'" class="wpp-post-title" target="' . $this->user_settings['tools']['link']['target'] . '">'.$title_sub.'</a>',
+
+// eggfoo begin					
+//					'title' => '<a href="'.$permalink.'" title="'. esc_attr($title) .'" class="wpp-post-title" target="' . $this->user_settings['tools']['link']['target'] . '">'.$title_sub.'</a>',
+					'title' => '<a href="'.$permalink.'" title="'. esc_attr($title) .'" class="wpp-post-title">'.$title_sub.'</a>',
+// eggfoo end
+
 					'summary' => $excerpt,
 					'stats' => $_stats,
-					'img' => '<a href="'.$permalink.'" title="'. esc_attr($title) .'" target="' . $this->user_settings['tools']['link']['target'] . '">' . $thumb . '</a>',
+
+// eggfoo begin
+//					'img' => '<a href="'.$permalink.'" title="'. esc_attr($title) .'" target="' . $this->user_settings['tools']['link']['target'] . '">' . $thumb . '</a>',
+					'img' => '<a href="'.$permalink.'" title="'. esc_attr($title) .'">' . $thumb . '</a>',
+// eggfoo end
+
+
 					'img_no_link' => $thumb,
 					'id' => $p->id,
 					'url' => $permalink,
