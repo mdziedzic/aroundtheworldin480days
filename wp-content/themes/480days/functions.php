@@ -47,7 +47,7 @@ function mytheme_comment($comment, $args, $depth) {
 				<?php if (get_comment_author_url() != "") { ?>
 				
 					<?php if ($comment->comment_author == "Emily Dziedzic" || $comment->comment_author == "Michael Dziedzic"){ ?>
-						<a href="<?php comment_author_url(); ?>"><?php comment_author(); ?></a>
+						<a href="<?php comment_author_url(); ?>" class="external-link"><?php comment_author(); ?></a>
 					<?php } else { ?>
 						<a href="<?php comment_author_url(); ?>" class="external-link"><?php comment_author(); ?></a>
 					<?php } ?>
