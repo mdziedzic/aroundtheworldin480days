@@ -16,7 +16,7 @@ add_filter( 'the_excerpt', array( 'GeoMashupQuery', 'strip_brackets' ) );
 
 ?>
 
-<div class="locationinfo post-location-info">
+<div class="locationinfo post-location-info noselect">
 
 <?php /* query_posts($query_string."&orderby=date&order=ASC");  */ ?>
 
@@ -29,7 +29,7 @@ add_filter( 'the_excerpt', array( 'GeoMashupQuery', 'strip_brackets' ) );
 	
 	<?php while (have_posts()) : the_post(); ?>
 	
-		<div class="map-info-window">
+		<div class="map-info-window noselect">
 		
 			<?php 
 				if ($postCount == 0) {
