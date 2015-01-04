@@ -33,7 +33,7 @@
 					<p>&copy; Michael Dziedzic 2015<br /><a href="index.php?page_id=16058">Terms of Use</a></p>		
 				</div>
 				<div id="xhtml-css-wordpress">
-					<p>Powered by <a href="http://www.wordpress.org" class="external-link">WordPress</a></p>			
+					<p>Powered by <a href="http://wordpress.org" class="external-link">WordPress</a></p>			
 				</div>				
 			</div>
 		</div>
