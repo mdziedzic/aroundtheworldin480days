@@ -73,7 +73,12 @@ Template Name: Privacy Policy
 
 								<h3>Google Adsense</h3>
 
-								<p class="body-text-first">Some of the ads may be served by Google. Google's use of the DART cookie enables it to serve ads to Users based on their visit to our Site and other sites on the Internet. DART uses &ldquo;non personally identifiable information&rdquo; and does NOT track personal information about you, such as your name, email address, physical address, etc. You may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy at http://www.google.com/privacy_ads.html</p>
+								<p class="body-text-first">Some of the ads on this Site may be served by Google. Google uses cookies to serve ads based on a User's prior visits to this Site.</p>
+
+								<p class="body-text">Google's use of the DoubleClick cookie enables it and its partners to serve ads to Users of this Site based on their visit to this Site and/or other sites on the Internet.</p>
+								
+								<p class="body-text">Users may opt out of the use of the DoubleClick cookie for interest-based advertising by visiting <a href="http://www.google.com/ads/preferences/" class="external-link">Ads Settings</a>.</p>
+
 
 								<!-- ================================================= DIVIDER -->
 								<div class="text-break"><img src="http://localhost.local/aroundtheworldin480days/wp-content/themes/480days/images/content/text-break2x.png" width="78" height="18" alt="Text break" /></div>
@@ -99,7 +104,7 @@ Template Name: Privacy Policy
 								<!-- ================================================= DIVIDER -->
 								<div class="text-break"><img src="http://localhost.local/aroundtheworldin480days/wp-content/themes/480days/images/content/text-break2x.png" width="78" height="18" alt="Text break" /></div>
 
-								<p class="body-text-first">This document was last updated on January 05, 2015</p></br>
+								<p class="body-text-first">This document was last updated on January 5, 2015</p><br />
 
 								<p class="body-text-first">Privacy policy created by http://www.generateprivacypolicy.com</p>
 

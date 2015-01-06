@@ -30,7 +30,7 @@ Template Name: Terms of Use
 
 								<p class="body-text">By using our Website, you agree to fully comply with and be bound by our Legal Terms. Please review them carefully. If you do not accept our Legal Terms, do not access and use our Website. If you have already accessed our Website and do not accept our Legal Terms, you should immediately discontinue use of our Website.</p>
 
-								<p class="body-text">The last update to our Terms of Use was posted on October 14, 2014.</p>
+								<p class="body-text">The last update to our Terms of Use was posted on January 5, 2015.</p>
 
 
 
