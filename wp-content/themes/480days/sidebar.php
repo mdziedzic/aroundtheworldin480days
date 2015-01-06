@@ -68,7 +68,7 @@
 											<li><a href="index.php?page_id=276">050: Indonesian Jones</a></li>
 											<li><a href="index.php?page_id=280">052: O Canada</a></li>
 											<li><a href="index.php?page_id=429">122: Best Cowboy</a></li>
-											<li><a href="index.php?page_id=468">140: I Like it Authentic</a></li>
+											<li><a href="index.php?page_id=468">140: I Like It Authentic</a></li>
 											<li><a href="index.php?page_id=492">152: Happy Herb’s Pizza</a></li>
 											<li><a href="index.php?page_id=542">176: Maybe Next Time</a></li>
 											<li><a href="index.php?page_id=564">187: Chinese-Mexican Standoff</a></li>
