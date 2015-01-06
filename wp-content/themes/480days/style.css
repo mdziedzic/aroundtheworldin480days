@@ -34,7 +34,7 @@ body
 
 p, li, h1, h2, h3, #pc-name-input, #pc-email-input, #pc-url-input, #pc-comments-input, #todayphotos a
 	{	
-	font-family:"Lisboa Pro Sans Regular", sans-serif; font-size-adjust:0.48; font-weight:normal; font-style:normal;
+	font-family:"Lisboa Pro Sans Regular", sans-serif; font-weight:normal; font-style:normal;
 	letter-spacing: .2px;
 	line-height: 18px;
 	}
@@ -592,7 +592,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 
 	font-family: 'Sorts Mill Goudy', Baskerville, "Baskerville Old Face", serif;	
 	letter-spacing: normal;	
-	font-size: .9em;
+	font-size: 14px;
 	color: #b0b0b0;
 	font-weight: 400;
 	font-style: italic;
