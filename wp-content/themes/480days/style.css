@@ -70,10 +70,10 @@ a:link, a:visited, a:hover, a:active
 	position: relative;
 	}
 	
-:focus {
+:focus 
+	{
 /* 	outline: 0; */
-}
-
+	}
 
 input, textarea 	/* to fix rounded submit buttons in ios */
 	{
