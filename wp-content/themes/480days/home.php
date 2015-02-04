@@ -26,18 +26,18 @@
 							<br/>
 							<p class="body-text-first-home"><sup>&dagger;</sup>Somehow making it despite untold malaria-carrying mosquitoes, a dangerously over-caffeinated monkey, and an  inebriated role-player with connections to the largest army of Dwarves in all of Eastern Europe (allegedly).</p>
 
-                        
+                            
 
 							<?php include (TEMPLATEPATH . '/share.php'); ?>
 
 						</div>
 						<div id="previous-next">
-								<div id="previous-blank">
-								</div>
-								<div id="next">
-									<a href="http://localhost.local/aroundtheworldin480days/001-goodbye-portland-hello-world"><img src="<?php bloginfo('template_url'); ?>/images/content/home/daily-journal2x.png" width="150" height="23" alt="Next Day" /></a>								
-									<p><a href="http://localhost.local/aroundtheworldin480days/001-goodbye-portland-hello-world">001: Goodbye Portland. Hello World.</a></p>	
-								</div>
+				            <div id="previous-blank">
+				            </div>
+				            <div id="next">
+                                <a href="http://localhost.local/aroundtheworldin480days/001-goodbye-portland-hello-world"><img src="<?php bloginfo('template_url'); ?>/images/content/home/daily-journal2x.png" width="150" height="23" alt="Next Day" /></a>								
+                                <p><a href="http://localhost.local/aroundtheworldin480days/001-goodbye-portland-hello-world">001: Goodbye Portland. Hello World.</a></p>	
+                            </div>
 						</div>
 
 
