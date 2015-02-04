@@ -24,9 +24,9 @@
 							<p class="body-text-home">And in the interest of full disclosure, a small prop plane in Ethiopia from Lalibela to Addis Ababa as we had already done the trip in reverse by bus, it was near the end our trip, and we were running out steam (money, and, quite frankly, the will to live).</p>
 
 							<br/>
-							<p class="body-text-first-home"><sup>&dagger;</sup>Somehow making it despite untold malaria-carrying mosquitoes, a dangerously over-caffeinated monkey, and an  inebriated role-player with connections to the largest army of Dwarves in all of Eastern Europe.</p>
+							<p class="body-text-first-home"><sup>&dagger;</sup>Somehow making it despite untold malaria-carrying mosquitoes, a dangerously over-caffeinated monkey, and an  inebriated role-player with connections to the largest army of Dwarves in all of Eastern Europe (allegedly).</p>
 
-
+                        
 
 							<?php include (TEMPLATEPATH . '/share.php'); ?>
 
