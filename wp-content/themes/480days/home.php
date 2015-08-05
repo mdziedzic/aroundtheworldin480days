@@ -14,7 +14,7 @@
 						
 							<h1>Tasmania to Cape Town by Land<sup>*</sup></h1>
 
-							<h2>Over 30,000 miles through 34 countries in 480 days<sup>&dagger;</sup>. We took a lot of <a href="https://www.flickr.com/photos/aroundtheworldin480days/sets/" title="Photos">photos</a>; here are some of our <a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157624185440774/" title="Favorite photos">favorites</a>.</h2>
+							<h2>Over 30,000 miles through 34 countries in 480 days<sup>&dagger;</sup>. Almost enitirely by local transportation. We took a lot of <a href="https://www.flickr.com/photos/aroundtheworldin480days/sets/" title="Photos">photos</a>; here are some of our <a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157624185440774/" title="Favorite photos">favorites</a>.</h2>
 							<div class="text-break">
 								<img src="<?php bloginfo('template_url'); ?>/images/content/text-break2x.png" width="78" height="18" alt="Text break" />
 							</div>
