@@ -31,6 +31,8 @@ final class Eeb_Site extends Eeb_Admin {
     private $regexp_patterns = array(
         'mailto' => '/<a([^<>]*?)href=["\']mailto:(.*?)["\'](.*?)>(.*?)<\/a[\s+]*>/is',
         'email' => '/([A-Z0-9._-]+@[A-Z0-9][A-Z0-9.-]{0,61}[A-Z0-9]\.[A-Z.]{2,6})/is',
+        'input' => '/<input([^>]*)value=["\'][\s+]*([A-Z0-9._-]+@[A-Z0-9][A-Z0-9.-]{0,61}[A-Z0-9]\.[A-Z.]{2,6})[\s+]*["\']([^>]*)>/is',
+        'class' => '/class=["\'](.*?)["\']/i',
     );
 
     /**
@@ -144,16 +146,20 @@ final class Eeb_Site extends Eeb_Admin {
      * WP head
      */
     public function wp_head() {
-            // add styling for encoding check message + icon
-            if ($this->is_admin_user && $this->options['show_encoded_check']) {
-                echo <<<CSS
-<style type="text/css">
-    a.encoded-check { opacity:0.5; position:absolute; text-decoration:none !important; font:10px Arial !important; margin-top:-3px; color:#629632; font-weight:bold; }
-    a.encoded-check:hover { opacity:1; cursor:help; }
-    a.encoded-check img { width:10px; height:10px; }
-</style>
-CSS;
-            }
+        $css = '';
+        $css .= '<style type="text/css" media="screen">';
+
+        // add styling for encoding check message + icon
+        if ($this->is_admin_user && $this->options['show_encoded_check']) {
+            $css .= 'a.encoded-check { opacity:0.5; position:absolute; text-decoration:none !important; font:10px Arial !important; margin-top:-3px; color:#629632; font-weight:bold; }';
+            $css .= 'a.encoded-check:hover { opacity:1; cursor:help; }';
+            $css .= 'a.encoded-check img { width:10px; height:10px; }';
+        }
+
+//        $css .= 'a[href^="mailto:"] .fa { margin-right:0.4em; }';
+        $css .= '</style>';
+
+        echo $css;
     }
 
     /* -------------------------------------------------------------------------
@@ -172,7 +178,7 @@ CSS;
             return $content;
         }
 
-        return $this->encode_email_filter($content, true, $this->options['encode_mailtos'], $this->options['encode_emails']);
+        return $this->encode_email_filter($content, true, $this->options['encode_mailtos'], $this->options['encode_emails'], $this->options['encode_fields']);
     }
 
     /**
@@ -204,9 +210,15 @@ CSS;
      * @param boolean $enc_tags Optional, default true
      * @param boolean $enc_mailtos  Optional, default true
      * @param boolean $enc_plain_emails Optional, default true
+     * @param boolean $enc_input_fields Optional, default true
      * @return string
      */
-    public function encode_email_filter($content, $enc_tags = true, $enc_mailtos = true, $enc_plain_emails = true) {
+    public function encode_email_filter($content, $enc_tags = true, $enc_mailtos = true, $enc_plain_emails = true, $enc_input_fields = true) {
+        // encode input fields with prefilled email address
+        if ($enc_input_fields) {
+            $content = preg_replace_callback($this->regexp_patterns['input'], array($this, 'callback_encode_input_field'), $content);
+        }
+
         // encode mailto links
         if ($enc_mailtos) {
             $content = preg_replace_callback($this->regexp_patterns['mailto'], array($this, 'callback_encode_email'), $content);
@@ -218,10 +230,7 @@ CSS;
         }
 
         // workaround for double encoding bug when auto-protect mailto is enabled and method is enc_html
-        if ($this->options['encode_mailtos'] == 1) {
-            // change back to html tag
-            $content = str_replace('[a-replacement]', '<a', $content);
-        }
+        $content = str_replace('[a-replacement]', '<a', $content);
 
         return $content;
     }
@@ -233,12 +242,37 @@ CSS;
      */
     public function callback_encode_email($match) {
         if (count($match) < 3) {
-            return $this->encode_email($match[1]);
+            $encoded = $this->encode_email($match[1]);
         } else if (count($match) == 3) {
-            return $this->encode_email($match[2]);
+            $encoded = $this->encode_email($match[2]);
+        } else {
+            $encoded = $this->encode_email($match[2], $match[4], $match[1] . ' ' . $match[3]);
         }
 
-        return $this->encode_email($match[2], $match[4], $match[1] . ' ' . $match[3]);
+        // workaround for double encoding bug when auto-protect mailto is enabled and method is enc_html
+        $encoded = str_replace('<a', '[a-replacement]', $encoded);
+
+        return $encoded;
+    }
+
+    /**
+     * Callback for encoding input field with email address
+     * @param array $match
+     * @return string
+     */
+    public function callback_encode_input_field($match) {
+        if ($this->method === 'enc_html') {
+            // enc_html method
+            $email = $match[2];
+            $encoded_email = $this->enc_html($email);
+
+            $encoded = str_replace($email , $encoded_email, $match[0]);
+            $encoded = $this->get_success_check($encoded);
+        } else {
+            $encoded = $this->encode_content($match[0]);
+        }
+
+        return $encoded;
     }
 
     /* -------------------------------------------------------------------------
@@ -251,6 +285,7 @@ CSS;
      */
     public function shortcode_email_encoder_form() {
         // add style and script for ajax encoder
+//        wp_enqueue_script('email_encoder', plugins_url('js/src/email-encoder-bundle.js', EMAIL_ENCODER_BUNDLE_FILE), array('jquery'), EMAIL_ENCODER_BUNDLE_VERSION);
         wp_enqueue_script('email_encoder', plugins_url('js/email-encoder-bundle.min.js', EMAIL_ENCODER_BUNDLE_FILE), array('jquery'), EMAIL_ENCODER_BUNDLE_VERSION);
 
         return $this->get_encoder_form();
@@ -274,10 +309,7 @@ CSS;
         $encoded = $this->encode_email($email, $display, $extra_attrs, $method);
 
         // workaround for double encoding bug when auto-protect mailto is enabled and method is enc_html
-        if ($this->options['encode_mailtos'] == 1 && $method === 'enc_html') {
-            // change html tag to entity
-            $encoded = str_replace('<a', '[a-replacement]', $encoded);
-        }
+        $encoded = str_replace('<a', '[a-replacement]', $encoded);
 
         return $encoded;
     }
@@ -302,15 +334,20 @@ CSS;
      * Encode the given email into an encoded HTML link
      * @param string $content
      * @param string $method Optional, else the default setted method will; be used
-     * @param boolean $no_html_checked
+     * @param boolean $no_html_checked  Optional
+     * @param string $protection_text  Optional
      * @return string
      */
-    public function encode_content($content, $method = null, $no_html_checked = false) {
+    public function encode_content($content, $method = null, $no_html_checked = false, $protection_text = null) {
+        if ($protection_text === null) {
+            $protection_text = $this->options['protection_text_content'];
+        }
+
         // get encode method
         $method = $this->get_method($method, $this->method);
 
         // get encoded email code
-        $content = $this->{$method}($content);
+        $content = $this->{$method}($content, $protection_text);
 
         // add visual check
         if ($no_html_checked !== true) {
@@ -351,9 +388,18 @@ CSS;
             $email = $this->enc_html($email);
         }
 
-        $class = $this->options['class_name'];
         $extra_attrs = ' ' . trim($extra_attrs);
-        $mailto = '<a class="'. $class .'" href="mailto:' . $email . '"'. $extra_attrs . '>' . $display . '</a>';
+
+        // add class
+        if (preg_match($this->regexp_patterns['class'], $extra_attrs, $matches)) {
+            // class attribute set
+            $extra_attrs = str_replace($matches[0], sprintf('class="%s"', $matches[1] . ' ' . $this->options['class_name']), $extra_attrs);
+        } else {
+            // class attribute not set
+            $extra_attrs .= ' class="' . $this->options['class_name'] . '"';
+        }
+
+        $mailto = '<a href="mailto:' . $email . '"'. $extra_attrs . '>' . $display . '</a>';
 
         if ($method === 'enc_html') {
             // add visual check
@@ -361,7 +407,7 @@ CSS;
                 $mailto = $this->get_success_check($mailto);
             }
         } else {
-            $mailto = $this->encode_content($mailto, $method, $no_html_checked);
+            $mailto = $this->encode_content($mailto, $method, $no_html_checked, $this->options['protection_text']);
         }
 
         // get encoded email code
@@ -390,21 +436,20 @@ CSS;
      *  Different Encoding Methods
      * ------------------------------------------------------------------------*/
 
-    //public function encodeURIComponent($str) {
-    //    $revert = array('%21'=>'!', '%2A'=>'*', '%27'=>"'", '%28'=>'(', '%29'=>')');
-    //    return strtr(rawurlencode($str), $revert);
-    //}
-
     /**
      * ASCII method
      * Based on function from Tyler Akins (http://rumkin.com/tools/mailto_encoder/)
      *
      * @param string $value
+     * @param string $protection_text
      * @return string
      */
-    private function enc_ascii($value) {
+    private function enc_ascii($value, $protection_text) {
         $mail_link = $value;
 
+        // first encode, so special chars can be supported
+        $mail_link = $this->encodeURIComponent($mail_link);
+        
         $mail_letters = '';
 
         for ($i = 0; $i < strlen($mail_link); $i ++) {
@@ -433,19 +478,24 @@ CSS;
         return '<script type="text/javascript">'
                 . '(function(){'
                 . 'var ml="'. $mail_letters_enc .'",mi="'. $mail_indices .'",o="";'
-//                . 'console.log("-----");'
-//                . 'console.log("' . $mail_letters_enc . '");'
-//                . 'console.log("' . $this->encodeURIComponent($mail_letters_enc) . '");'
-//                . 'var test = decodeURIComponent(\'' . $this->encodeURIComponent($mail_letters_enc) . '\');'
-//                . 'test = test.replace("\", "");'
-//                . 'console.log(test);'
                 . 'for(var j=0,l=mi.length;j<l;j++){'
                 . 'o+=ml.charAt(mi.charCodeAt(j)-48);'
-                . '}document.write(o);'
+                . '}document.write(decodeURIComponent(o));' // decode at the end, this way special chars can be supported
                 . '}());'
                 . '</script><noscript>'
-                . $this->options['protection_text']
+                . $protection_text
                 . '</noscript>';
+    }
+
+    /**
+     * This is the opponent of JavaScripts decodeURIComponent()
+     * @link http://stackoverflow.com/questions/1734250/what-is-the-equivalent-of-javascripts-encodeuricomponent-in-php
+     * @param string $str
+     * @return string
+     */
+    private function encodeURIComponent($str) {
+        $revert = array('%21'=>'!', '%2A'=>'*', '%27'=>"'", '%28'=>'(', '%29'=>')');
+        return strtr(rawurlencode($str), $revert);
     }
 
     /**
@@ -453,14 +503,15 @@ CSS;
      * Taken from the plugin "Email Spam Protection" by Adam Hunter (http://blueberryware.net/2008/09/14/email-spam-protection/)
      *
      * @param string $value
+     * @param string $protection_text
      * @return string
      */
-    private function enc_escape($value) {
+    private function enc_escape($value, $protection_text) {
         $string = 'document.write(\'' . $value . '\')';
 
         // break string into array of characters, we can't use string_split because its php5 only
         $split = preg_split('||', $string);
-        $out =  '<script type="text/javascript">' . "eval(unescape('";
+        $out =  '<script type="text/javascript">' . "eval(decodeURIComponent('";
 
         foreach ($split as $c) {
             // preg split will return empty first and last characters, check for them and ignore
@@ -470,7 +521,7 @@ CSS;
         }
 
         $out .= "'))" . '</script><noscript>'
-            . $this->options['protection_text']
+            . $protection_text
             . '</noscript>';
 
         return $out;

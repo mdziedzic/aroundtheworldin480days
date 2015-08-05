@@ -18,15 +18,16 @@ abstract class Eeb_Admin {
      * @var array
      */
     private $default_options = array(
-        'version' => null,
         'method' => 'enc_ascii',
         'encode_mailtos' => 1,
         'encode_emails' => 0,
+        'encode_fields' => 1,
         'filter_posts' => 1,
         'filter_widgets' => 1,
         'filter_comments' => 1,
         'skip_posts' => '',
         'protection_text' => '*protected email*',
+        'protection_text_content' => '*protected content*',
         'class_name' => 'mailto-link',
         'filter_rss' => 1,
         'remove_shortcodes_rss' => 1,
@@ -109,8 +110,6 @@ abstract class Eeb_Admin {
      * Set options from save values or defaults
      */
     private function set_options() {
-        $upgrade = false;
-
         // first set defaults
         $this->options = $this->default_options;
 
@@ -119,49 +118,26 @@ abstract class Eeb_Admin {
 
         // backwards compatible (old values)
         if (empty($saved_options)) {
+            // check old values
             $saved_options = get_option(EMAIL_ENCODER_BUNDLE_KEY . 'options');
 
             // cleanup old values
             delete_option(EMAIL_ENCODER_BUNDLE_KEY . 'options');
-        }
-
-        $version = get_option('eeb_version');
-        if ($version !== false) {
-            $saved_options['version'] = $version;
-
-            // cleanup old value
-            delete_option('eeb_version');
-        }
-
-        // set all options
-        if (!empty($saved_options)) {
-            $upgrade = true;
-
+        } else {
             foreach ($saved_options AS $key => $value) {
                 $this->options[$key] = $value;
             }
         }
 
-        if ($saved_options['version'] != EMAIL_ENCODER_BUNDLE_VERSION) {
-            if (empty($saved_options['version'])) {
-                if ($upgrade) {
-                // upgrade from version < 1.0.0
-                    $this->options['support_deprecated_names'] = 1;
-                    $this->options['shortcodes_in_widgets'] = 1;
-
-                    //update_option(EMAIL_ENCODER_BUNDLE_OPTIONS_NAME, $this->options);
-                } else {
-                // first time
-                    $this->initial_metabox_settings = true;
-                }
-            } else {
-            // upgrading from version >= 1.0.0
-
-            }
-
-            // update version
-            update_option(EMAIL_ENCODER_BUNDLE_OPTIONS_NAME, $this->options);
-        }
+        // @todo Update current version value
+//        $version = get_option('eeb_version');
+//        if ($version !== EMAIL_ENCODER_BUNDLE_VERSION) {
+//            update_option('eeb_version', $version);
+//            delete_option('eeb_version');
+//
+//            // on first time loading
+//            $this->initial_metabox_settings = true;
+//        }
 
         // set encode method
         $this->method = $this->get_method($this->options['method'], 'enc_ascii');
@@ -350,7 +326,11 @@ abstract class Eeb_Admin {
                             <span><?php _e('Protect mailto links, like f.e. <code>&lt;a href="info@myemail.com"&gt;My Email&lt;/a&gt;</code>', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
                         <br/><label><input type="checkbox" id="encode_emails" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[encode_emails]" value="1" <?php checked('1', (int) $options['encode_emails']); ?> disabled="disabled" />
                             <span><?php _e('Replace plain email addresses to protected mailto links.', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
-                            <span class="description notice-form-field-bug"><br/><?php _e('Notice: be carefull with this option when using email addresses on form fields, please <a href="http://wordpress.org/extend/plugins/email-encoder-bundle/faq/" target="_blank">check the FAQ</a> for more info.', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
+                            <!--<span class="description notice-form-field-bug"><br/><?php _e('Notice: be carefull with this option when using email addresses on form fields, please <a href="http://wordpress.org/extend/plugins/email-encoder-bundle/faq/" target="_blank">check the FAQ</a> for more info.', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>-->
+                        </label>
+                        <br/><label><input type="checkbox" id="encode_fields" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[encode_fields]" value="1" <?php checked('1', (int) $options['encode_fields']); ?> />
+                            <span><?php _e('Replace prefilled email addresses in input fields.', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
+                            <span class="description"><?php _e(' - Recommended!', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
                         </label>
                     <br/>
                     </td>
@@ -431,9 +411,18 @@ abstract class Eeb_Admin {
                 </tr>
                 <tr>
                     <th><?php _e('Set <code>&lt;noscript&gt;</code> text', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></th>
-                    <td><label><input type="text" id="protection_text" class="regular-text" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[protection_text]" value="<?php echo $options['protection_text']; ?>" />
-                            <br/><span class="description"><?php _e('Used for the <code>&lt;noscript&gt;</code> fallback for JavaScrip methods.', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
+                    <td><label>
+                            <span><?php _e('For encoded emails:', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
+                            <br/><input type="text" id="protection_text" class="regular-text" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[protection_text]" value="<?php echo $options['protection_text']; ?>" />
                         </label>
+                        <br/>
+                        <br/>
+                        <label>
+                            <span><?php _e('For other encoded content:', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
+                            <br/><input type="text" id="protection_text_content" class="regular-text" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[protection_text_content]" value="<?php echo $options['protection_text_content']; ?>" />
+                        </label>
+                        <br/>
+                        <br/><span class="description"><?php _e('Used as <code>&lt;noscript&gt;</code> fallback for JavaScrip methods.', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
                     </td>
                 </tr>
                 <tr>
@@ -486,7 +475,7 @@ abstract class Eeb_Admin {
                     <th><?php _e('Choose admin menu position', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></th>
                     <td><label><input type="checkbox" id="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[own_admin_menu]" name="<?php echo EMAIL_ENCODER_BUNDLE_OPTIONS_NAME ?>[own_admin_menu]" value="1" <?php checked('1', (int) $options['own_admin_menu']); ?> />
                             <span><?php _e('Show as main menu item.', EMAIL_ENCODER_BUNDLE_DOMAIN) ?></span>
-                             <br /><span class="description">When disabled this page will be available under "General settings".</span>
+                             <br /><span class="description">When disabled this page will be available under "<?php _e('Settings') ?>".</span>
                         </label>
                     </td>
                 </tr>
@@ -679,7 +668,7 @@ abstract class Eeb_Admin {
                      . '    echo eeb_email_filter(\'Some content with email like info@somedomein.com or a mailto link\');' . "\n"
                      . '}' . "\n"
                      . '&#63;></code></pre>'
-                     . '<p>You can pass a few extra optional params (in this order): <code>enc_tags</code>, <code>enc_mailtos</code>, <code>enc_plain_emails</code></p>'
+                     . '<p>You can pass a few extra optional params (in this order): <code>enc_tags</code>, <code>enc_mailtos</code>, <code>enc_plain_emails</code>, <code>enc_input_fields</code></p>'
                      . '<h4>eeb_form()</h4>'
                      . '<p>Create an encoder form:</p>'
                      . '<pre><code><&#63;php' . "\n"
