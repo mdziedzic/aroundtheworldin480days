@@ -1,8 +1,12 @@
+/*global $, jQuery, document, navigator, location */
+
 jQuery(document).ready(function($) {
+    
+    "use strict";
 
 	$(document).keydown(function(e) {  
 		if ((e.which == 39) && (!$("input,textarea").is(":focus"))) {  
-			location.href = $('#day-next a').attr('href')
+			location.href = $('#day-next a').attr('href');
 		}  
 	});	 
 
@@ -15,5 +19,4 @@ jQuery(document).ready(function($) {
 			threshold:400
 		});
 	}
-
 });

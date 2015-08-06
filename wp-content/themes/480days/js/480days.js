@@ -1,5 +1,9 @@
+/*global $, jQuery, document, navigator */
+
 jQuery(document).ready(function($) {
-	
+    
+    "use strict";
+    
 	/* 
 		------------------------------------------------------------------ EXTERNAL LINKS
 	*/
@@ -7,17 +11,6 @@ jQuery(document).ready(function($) {
 	$(".external-link").attr("target", "_blank");
 	$("a[href^='http://www.flickr.com']").attr("target", "flickr-view");
 	$("a[href^='https://www.flickr.com']").attr("target", "flickr-view");
-	
-	// $("#photo a[href^=http://www.flickr.com]").each(function() {
-	// 	var ssUrl = $(this).attr("href");
-	// 	ssUrl += "show/";
-	// 	var ssAlt = $(this).attr("title");
-	// 	$(this).after('<a href="' + ssUrl + '" title="' + ssAlt 
-	// 					+ ' Slideshow" target="flickr-view"><span class="slideshow-icon">&nbsp;&nbsp;&nbsp;</span></a>');
-	// });
-	
-
-
 
 
 
@@ -45,7 +38,6 @@ jQuery(document).ready(function($) {
 		});
 	}	
 	
-
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 	} else {
 		// create events for each nav item
@@ -58,32 +50,29 @@ jQuery(document).ready(function($) {
 
 
 
-
-
 	/* 
 		------------------------------------------------------------------ DAY NUMBER
 	*/
 
-	$('#day-prev').css('opacity', .25);
+	$('#day-prev').css('opacity', 0.25);
 	$('#day-prev').hover(
 		function() {
 			$(this).fadeTo(200, 1);
 		},
 		function() {
-			$(this).fadeTo(200, .25);
+			$(this).fadeTo(200, 0.25);
 		}
 	);
 
-	$('#day-next').css('opacity', .25);
+	$('#day-next').css('opacity', 0.25);
 	$('#day-next').hover(
 		function() {
 			$(this).fadeTo(200, 1);
 		},
 		function() {
-			$(this).fadeTo(200, .25);
+			$(this).fadeTo(200, 0.25);
 		}
 	);
-
 
 
 
@@ -105,11 +94,13 @@ jQuery(document).ready(function($) {
 					break;
 			}
 			
+            var bgPosition;
+            
 			if ($(this).attr("class") != newCurrentFontSize) {
-				var bgPosition = xoffset + "px -100px";
+				bgPosition = xoffset + "px -100px";
 				$(this).children("a").css('background-position', bgPosition);	
 			} else {
-				var bgPosition = xoffset + "px -18px";
+				bgPosition = xoffset + "px -18px";
 				$(this).children("a").css('background-position', bgPosition);
 			}
 		});
@@ -156,10 +147,8 @@ jQuery(document).ready(function($) {
 			changeFontSize(myClass);
 			moveCurrentFontSizeIndicator(myClass);
 			$.cookie(cookieName, currentFontSize, { expires: 100, path: '/' });
-		})
+		});
 	}
-
-
 
 	var currentFontSize = "normal";
 	var cookieName = "aroundtheworldin480days-FontSize2014";
@@ -181,8 +170,6 @@ jQuery(document).ready(function($) {
 	
 	
 	
-	
-	
 	/* 
 		------------------------------------------------------------------ PARTICULARLY NOTEWORTHY
 	*/
@@ -201,11 +188,13 @@ jQuery(document).ready(function($) {
 					break;
 			}
 			
+            var bgPosition;
+            
 			if ($(this).attr("class") != newCurrentPartNote) {
-				var bgPosition = xoffset + "px -100px";
+				bgPosition = xoffset + "px -100px";
 				$(this).children("a").css('background-position', bgPosition);	
 			} else {
-				var bgPosition = xoffset + "px -18px";
+				bgPosition = xoffset + "px -18px";
 				$(this).children("a").css('background-position', bgPosition);
 			}
 		});
@@ -241,7 +230,7 @@ jQuery(document).ready(function($) {
 				currentPartNote = myClass;
 				changePartNote(myClass);
 				moveCurrentPartNoteIndicator(myClass);
-				$.cookie(partNoteCookieName, currentPartNote, { expires: 100, path: '/' })
+				$.cookie(partNoteCookieName, currentPartNote, { expires: 100, path: '/' });
 			}
 
 		}).mouseout(function() {
@@ -254,10 +243,8 @@ jQuery(document).ready(function($) {
 			changePartNote(myClass);
 			moveCurrentPartNoteIndicator(myClass);
 			$.cookie(partNoteCookieName, currentPartNote, { expires: 100, path: '/' });
-		})
+		});
 	}
-
-
 
 	var currentPartNote = "ourFavorites";
 	var partNoteCookieName = "aroundtheworldin480days-PartNote2014";
@@ -276,6 +263,5 @@ jQuery(document).ready(function($) {
 	attachPartNoteEvents(".partNoteOpt", "ourFavorites");
 	attachPartNoteEvents(".partNoteOpt", "mostViews");
 	attachPartNoteEvents(".partNoteOpt", "mostComments");
-	
 
 });
