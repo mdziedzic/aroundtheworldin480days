@@ -19,7 +19,7 @@
 				<div id="contact">
 					<img src="<?php bloginfo('template_url'); ?>/images/footer/contact2x.png" width="60" height="18"	alt="Contact" /><br />
 					<p>Feel free to send us an <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/email.js"></script><br />
-					Or look for us in the great Pacific Northwest, USA</p>
+					Or take a bottled message to the sea...</p>
 				</div>
 				<div id="follow">
 					<img src="<?php bloginfo('template_url'); ?>/images/footer/follow2x.png" width="60" height="18" alt="Follow" /><br />
