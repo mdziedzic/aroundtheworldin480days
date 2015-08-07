@@ -17,7 +17,6 @@ jQuery(document).ready(function($) {
 				location.href = $('#day-prev a').attr('href');
 			},
 			threshold:400
-
 		});	
 	}
 });
