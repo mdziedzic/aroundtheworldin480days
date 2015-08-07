@@ -1,6 +1,5 @@
 <div id="map-container"></div>
 
-
 <!-- ================================================= FOOTER -->
 
 	<div id="footer">
@@ -41,8 +40,12 @@
 
     <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAABirsfoKq35Bh2fyEpxTGYxTMrxmENqKxPChPlSpAGCDWPT-A7hRLudVBOuQXaOaZ7zh5U7aqZn4MIA" type="text/javascript"></script>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>              
-    <script>window.jQuery || document.write('<script src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-2.1.4.min.js"><\/script>')</script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>              
+    <script type="text/javascript">
+        //<![CDATA[
+        window.jQuery || document.write('<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-2.1.4.min.js"><\/script>')
+        //]]>
+    </script>
 	
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.cookie.js"></script>	
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/480days.js"></script>
@@ -60,7 +63,5 @@
 		<?php } ?>
 	<?php } ?>
 	
-
-
 </body>
 </html>

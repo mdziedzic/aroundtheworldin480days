@@ -40,7 +40,3 @@
 								<li><a href="mailto:?subject=<? echo $title; ?>&amp;body=<?php echo "http://" . $_SERVER['HTTP_HOST']  . $_SERVER['REQUEST_URI']; ?>"><img src="<?php bloginfo('template_url'); ?>/images/content/share/mail2x.png" width="16" height="16" alt="Mail Share" /></a></li>
 							</ul>
 						</div>
-
-
-
-

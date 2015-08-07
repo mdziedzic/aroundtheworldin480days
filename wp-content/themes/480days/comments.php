@@ -28,7 +28,6 @@
 			<?php post_comments_feed_link( $link_text = $imagePath) ?>
 		</div>
 
-
 <?php if ( have_comments() ) : ?>
 
 	<ul class="commentlist">
@@ -40,13 +39,6 @@
 			<p>No longer taking comments on this post.</p>
 		</div>
 	<?php } ?>
-	
-<!--
-	<div class="navigation">
-		<div class="alignleft"><?php previous_comments_link() ?></div>
-		<div class="alignright"><?php next_comments_link() ?></div>
-	</div>
--->
 	
 <?php else : // this is displayed if there are no comments so far ?>
 	<?php if ('open' == $post->comment_status) : ?>
@@ -60,13 +52,9 @@
 	<?php endif; ?>
 <?php endif; ?>
 
-
-
 <?php if ('open' == $post->comment_status) : ?>
 
 	<div id="respond">
-
-<!-- 		<h3><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></h3> -->
 
 		<div class="cancel-comment-reply">
 			<small><?php cancel_comment_reply_link(); ?></small>

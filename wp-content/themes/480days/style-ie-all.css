@@ -10,8 +10,6 @@
 	-moz-opacity:.25;	
 	}
 
-
-
 /*ie8 doesn't support background-size, so use non-retina images */
 
 #main 
@@ -118,12 +116,6 @@
 	{
 	background: url(images/content/previous-bg-blank.png);
 	}
-
-
-
-
-
-
 
 
 
@@ -266,7 +258,6 @@
 	/*background: url(images/nav/nav.png) no-repeat -316px -36px;*/
 	background: url(images/nav/nav-nopress.png) no-repeat -230px -36px;
 	}	
-
 
 
 
@@ -421,13 +412,6 @@
 	background: url(images/content/font-size.png) no-repeat -33px -18px;
 	}
 	
- 	 
-
-
-
-
-
-
 
 
 #emily-photo-01
@@ -547,7 +531,6 @@
 
 
 
-
 #michael-photo-01
 	{
 	background: url(images/content/about/michael-01.png) no-repeat;
@@ -652,9 +635,3 @@
 	{
 	background: url(images/content/about/michael-21.png) no-repeat;
 	}
-
-
-
-
-
-

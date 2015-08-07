@@ -17,10 +17,7 @@ Template Name: Privacy Policy
 					<div id="content"><div id="content-press">
 						<img src="<?php bloginfo('template_url'); ?>/images/content/privacy/privacy2x.png" width="380" height="90" alt="Press" />
 					
-					
-						
 						<div id="cont-container">
-						
 						
 							<div class="terms-section">
 
@@ -111,8 +108,6 @@ Template Name: Privacy Policy
 							</div>
 							
 						</div>
-					
-					
 					
 					</div></div>
 

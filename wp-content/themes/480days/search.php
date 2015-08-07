@@ -54,13 +54,11 @@
 							
 								<?php endif; ?>
 
-
-
 							</div> <!-- .search-results-section -->
 						
 						</div>
 					</div></div>
 
-
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+

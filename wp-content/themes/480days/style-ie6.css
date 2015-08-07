@@ -62,6 +62,7 @@ body
 	}
 
 
+
 /* ----------------------------------------- # CONTENT  */
 
 #content
@@ -156,9 +157,6 @@ body
 	{
 	top: 33px;
 	}
-
-
-
 
 
 
@@ -284,6 +282,7 @@ body
 	}	
 
 
+
 /* ----------------------------------------- # MAP  */
 
 #map
@@ -295,6 +294,3 @@ body
 	{	
 	background-image: url(images/map/map-close.gif);
 	}	
-
-
-

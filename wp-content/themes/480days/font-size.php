@@ -5,5 +5,3 @@
 		<li class="bigger"><a href="#navigation"></a></li>
 	</ul>
 </div>						
-
-

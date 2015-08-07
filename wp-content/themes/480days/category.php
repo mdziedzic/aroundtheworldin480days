@@ -38,7 +38,6 @@
 		<?php endwhile; ?>
 		
 	</div>
-	
 
 	<?php else : ?>
 		Not found (no posts)

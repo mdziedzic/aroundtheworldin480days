@@ -4,7 +4,7 @@
 					<?php include (TEMPLATEPATH . '/navigation.php'); ?>
 
 
-
+                
 					<!-- ================================================= CONTENT -->	
 
 					<div id="content"><div id="content-about">

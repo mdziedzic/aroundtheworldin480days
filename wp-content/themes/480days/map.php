@@ -18,4 +18,3 @@ Template Name: Map
 	}
 
 ?>
-

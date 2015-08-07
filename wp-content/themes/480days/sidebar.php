@@ -44,7 +44,6 @@
 											<li><a href="http://www.flickr.com/photos/aroundtheworldin480days/sets/72157624443442383/" title="Us">Us</a></li>
 										</ul>
 
-
 								</div> <!-- photo-content -->
 							</div> <!-- photo -->
 						</div> <!-- journal-photo -->
@@ -110,5 +109,3 @@
 			</div> <!-- container -->
 		</div>
 	</div>
-
-

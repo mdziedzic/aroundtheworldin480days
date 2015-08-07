@@ -94,8 +94,6 @@
 	
 
 
-	
-
 /* ----------------------------------------- # NAVIGATION  */
 
 .nav li
@@ -144,9 +142,9 @@
 	}		
 
 
+
 /* ----------------------------------------- # CONTENT / COMMENTS  */
 	
-
 #comments
 	{
 	height: 1%; /* to fix javascript font-size change bug */

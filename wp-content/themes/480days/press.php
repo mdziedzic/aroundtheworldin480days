@@ -4,7 +4,6 @@ Template Name: Press
 */
 ?>
 
-
 <?php get_header(); ?>
 
 					<!-- ================================================= NAVIGATION -->	
@@ -17,10 +16,7 @@ Template Name: Press
 					<div id="content"><div id="content-press">
 						<img src="<?php bloginfo('template_url'); ?>/images/content/press/press2x.png" width="380" height="90" alt="Press" />
 					
-					
-						
 						<div id="cont-container">
-						
 						
 							<div class="press-section">
 								<h2><em>Around the World in 480 Days</em> has been featured in the following publications, websites, and media.</h2>
@@ -33,8 +29,6 @@ Template Name: Press
 							</div>
 							
 						</div>
-					
-					
 					
 					</div></div>
 

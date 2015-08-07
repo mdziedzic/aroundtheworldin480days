@@ -70,11 +70,6 @@ a:link, a:visited, a:hover, a:active
 	position: relative;
 	}
 	
-:focus 
-	{
-/* 	outline: 0; */
-	}
-
 input, textarea 	/* to fix rounded submit buttons in ios */
 	{
   	-webkit-appearance: none;
@@ -89,8 +84,6 @@ input, textarea 	/* to fix rounded submit buttons in ios */
     -moz-user-select: none;
     -ms-user-select: none;
 	}	
-
-
 
 
 
@@ -129,11 +122,6 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 
 #main .container 
 	{
-/*
-	min-height: 2304px;
-	height:auto !important;
-  	height:2304px;
-*/
 	min-height: 288px;
 	background-image: url(images/main/masthead2x.png);
 	background-repeat: no-repeat;
@@ -312,6 +300,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	}	
 
     
+
 /* --------------------- # PRESS  */
 
 /*.nav .press a:link, .nav .press a:visited 
@@ -349,6 +338,8 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	background: url(images/nav/nav.png) no-repeat -230px -36px;
 	background-size: 291px 72px;
 	}	*/
+
+
 
 /* --------------------- # MAP  */
 
@@ -704,6 +695,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 }
 	
 	
+
 /* --------------------- # SMALLER  */
 
 .font .smaller a:link, .font .smaller a:visited 
@@ -1098,9 +1090,6 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	font-size: 10px;
 	}
 
-
-
-
 #comments ul
 	{
 	margin-left: -40px;
@@ -1124,6 +1113,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	left: 43px;
 	}
 	
+
 
 /* ----------------------------------------- # CONTENT / POST-COMMENTS  */
 
@@ -1163,7 +1153,6 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	height: 189px;
 	}	
 	
-/* #pc-name-input, #pc-email-input, #pc-url-input, #pc-comments-input, */
 #post-comments #author, #post-comments #email, 
 #post-comments #url, #post-comments #comment
 	{
@@ -1187,7 +1176,6 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 #post-comments #comment
 	{
 	height: 162px;
-/* 	overflow: hidden; */
 	}	
 	
 #post-comments-notification
@@ -1624,15 +1612,9 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	width: 9px;
 	height: 8px;
 	margin-left: 2px;
-	
-/* 	display: inline-table; */
-	
-		
 	background-image: url(images/subnav/slideshow-icon.gif);
 	background-repeat: no-repeat;
 	background-position: left center;
-				
-/* 	background-color: #f4e6d4; */
 	}		
 
 
@@ -1659,23 +1641,6 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	background-size: 380px 1px;
 	}
 	
-/*
-#noteworthy ul
-	{
-	list-style-type: none;
-	margin: 0px;
-	margin-left: -1px;
-	padding: 0px;
-	padding-left: 0px;
-	}
-
-#noteworthy li
-	{
-	display: inline;
-	padding-right: 8px;
-	}	
-*/
-
 #noteworthy a
 	{
 	font-size: 12px;
@@ -1761,6 +1726,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	{
 	display: none;
 	}
+
 
 
 /* --------------------- # OUR FAVORITES  */
@@ -1882,8 +1848,6 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 		
 
 
-	
-			
 /* ----------------------------------------- # FOOTER  */
 
 #footer 
@@ -2021,6 +1985,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	}
 	
 
+
 /* ----------------------------------------- # MAP  */
 
 #map
@@ -2080,7 +2045,6 @@ iframe
 	background: #ffffff;
 	z-index: 500;
 	}
-
 
 
 	
@@ -2284,6 +2248,7 @@ h2#noresults-h2
 	}
 
 
+
 /* ----------------------------------------- # WP POPULAR MOST COMMENTED PLUGIN  */
 
 .post-stats-mostcomments
@@ -2292,7 +2257,6 @@ h2#noresults-h2
 	font-weight: bold;
 	font-size: 11px;
 	}
-
 
 
 
@@ -2310,5 +2274,3 @@ h2#noresults-h2
 	font-weight: 100;
 	color: #b0b0b0;
 	}	
-
-

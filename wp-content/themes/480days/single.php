@@ -17,11 +17,6 @@
 
 <?php } ?>
 
-
-
-	
-
-
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
 		<?php if (get_post_meta($post->ID, $key, true) != "FAQ") { ?>
@@ -98,7 +93,7 @@
 				<div class="comments-counter">
 					<p><a href="#comments-link"><img src="<?php bloginfo('template_url'); ?>/images/content/bubble2x.png" width="11" height="10" alt="Comments" /> <?php comments_number('0', '1', '%' );?></a></p>
 				</div>
-				<h2><?php echo relevanssi_highlight_in_docs(strip_tags(get_the_excerpt())); ?><!-- <br /><?php include (TEMPLATEPATH . '/todays-photo-series.php'); ?> --></h2>
+				<h2><?php echo relevanssi_highlight_in_docs(strip_tags(get_the_excerpt())); ?></h2>
 				<?php include (TEMPLATEPATH . '/font-size.php'); ?>
 				<?php the_content(); ?>
 
@@ -155,8 +150,6 @@
 		
 		<?php } ?>
 			
-			
-												
 </div></div>
 
 	<?php comments_template(); ?>
@@ -167,8 +160,6 @@
 		<p>Sorry, no posts matched your criteria.</p>
 
 	<?php endif; ?>
-
-
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
