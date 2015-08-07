@@ -53,22 +53,6 @@
     	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style-ie6.css" type="text/css" />
 	<![endif]-->	
 
-    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAABirsfoKq35Bh2fyEpxTGYxTMrxmENqKxPChPlSpAGCDWPT-A7hRLudVBOuQXaOaZ7zh5U7aqZn4MIA" type="text/javascript"></script>
-    <script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.cookie.js"></script>	
-	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/480days.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/map.js"></script>	
-	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/jquery.touchSwipe.min.js"></script>
-		
-	<?php if (is_single()) { ?>
-		<?php if (($dayNumber != "001") && ($dayNumber != "FAQ")) { ?>
-			<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/prev-day.js"></script>
-		<?php } ?>
-		<?php if (($dayNumber != "480") && ($dayNumber != "FAQ")) { ?>
-			<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/next-day.js"></script>
-		<?php } ?>
-	<?php } ?>
-	
 	<script type="text/javascript">
 		var mapWhereAmI = "<?php echo "5000"; ?>"; // default map postion when not on post or cateogry page
 	</script>
