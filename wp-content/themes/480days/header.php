@@ -32,6 +32,8 @@
 		<title><?php bloginfo('name'); ?> <?php wp_title('&raquo;'); ?></title>		
 	<?php } ?>
 	
+    <meta name="description" content="Around the World in 480 Days is the travelogue of a couple's backpacking trip around the world, traveling mainly by land." />
+	
 	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />	
 	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
@@ -71,8 +73,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css' />
 	<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic' rel='stylesheet' type='text/css' />	  
 
-	<link rel="stylesheet" href="//f.fontdeck.com/s/css/3nQ4Zt9uZHi/fSeMr4rODjmORk4/DOMAIN_NAME/50825.css" type="text/css" />	
-
+	<link rel="stylesheet" href="//f.fontdeck.com/s/css/3nQ4Zt9uZHi/fSeMr4rODjmORk4/DOMAIN_NAME/50825.css" type="text/css" />
 </head>
 
 <body onunload="GUnload()">
