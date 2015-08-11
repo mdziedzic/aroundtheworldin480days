@@ -47,7 +47,7 @@ h3
 
 img 
 	{
-	border: 0px;
+	border: 0;
 	}
 
 sup	
@@ -66,7 +66,7 @@ a:link, a:visited, a:hover, a:active
 .container 
 	{
 	width: 980px;
-	margin: 0px auto;
+	margin: 0 auto;
 	position: relative;
 	}
 	
@@ -173,24 +173,24 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 
 .nav .home a:link, .nav .home a:visited 
 	{
-	left: 0px;
+	left: 0;
 	width: 69px;
     }
 .nav .home a:hover, .nav .home a:focus 
 	{
-	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
-	background: url(images/nav/nav-nopress2x.png) no-repeat 0px -36px;
+	/*background: url(images/nav/nav.png) no-repeat 0 -36px;*/
+	background: url(images/nav/nav-nopress2x.png) no-repeat 0 -36px;
 	background-size: 291px 72px;
     }
 .nav .home a:active
 	{
-	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
-	background: url(images/nav/nav-nopress2x.png) no-repeat 0px -36px;
+	/*background: url(images/nav/nav.png) no-repeat 0 -36px;*/
+	background: url(images/nav/nav-nopress2x.png) no-repeat 0 -36px;
 	background-size: 291px 72px;
     }
 .current-home .home a:link, .current-home .home a:visited {
-	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
-	background: url(images/nav/nav-nopress2x.png) no-repeat 0px -36px;
+	/*background: url(images/nav/nav.png) no-repeat 0 -36px;*/
+	background: url(images/nav/nav-nopress2x.png) no-repeat 0 -36px;
 	cursor: default;
 	background-size: 291px 72px;
 	}  
@@ -198,17 +198,17 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	{
 	position: absolute;
 	top: 0;
-	left: 0px;
+	left: 0;
 	width: 69px;
 	height: 36px;
-	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
-	background: url(images/nav/nav-nopress2x.png) no-repeat 0px -36px;
+	/*background: url(images/nav/nav.png) no-repeat 0 -36px;*/
+	background: url(images/nav/nav-nopress2x.png) no-repeat 0 -36px;
 	background-size: 291px 72px;
 	}
 .nav-home-click 
 	{
-	/*background: url(images/nav/nav.png) no-repeat 0px -36px;*/
-	background: url(images/nav/nav-nopress2x.png) no-repeat 0px -36px;
+	/*background: url(images/nav/nav.png) no-repeat 0 -36px;*/
+	background: url(images/nav/nav-nopress2x.png) no-repeat 0 -36px;
 	background-size: 291px 72px;
 	}
  	  
@@ -394,7 +394,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	clear: both;
 	position: relative;
 	width: 550px;
-	margin: 0px 0 68px 0;
+	margin: 0 0 68px 0;
 	}
 	
 #cont-container
@@ -417,7 +417,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 #content h2
 	{
 	width: 420px;
-	margin: -4px 0 0px 0;
+	margin: -4px 0 0 0;
 
 	font-family:"Lisboa Pro Sans Light", sans-serif; font-size-adjust:0.49; font-weight:200; font-style:normal;
 	letter-spacing: normal;
@@ -498,7 +498,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	
 .body-text-first, .body-text-first-home
 	{
-	text-indent: 0px;
+	text-indent:0;
 	}
 
 #big-asterix
@@ -511,7 +511,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	margin: 31px 255px -6px -30px;
 	padding: 5px 0 4px 31px;
 	font-size: 11px;
-	text-indent: 0px;
+	text-indent:0;
 	
 	background-color: #f3f9fe;
 	}	
@@ -531,7 +531,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	{
 	margin: 17px 10px 0 0;
 	font-size: 16px;
-	text-indent: 0px;
+	text-indent: 0;
 	}		
 	
 .text-break
@@ -579,7 +579,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 
 .photo-tagline-horiz, .photo-tagline-vert
 	{
-	margin: 2px 0px 17px 2px;
+	margin: 2px 0 17px 2px;
 
 	font-family: 'Sorts Mill Goudy', Baskerville, "Baskerville Old Face", serif;	
 	letter-spacing: normal;	
@@ -657,9 +657,9 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 #font-size ul
 	{
 	list-style-type: none;
-	margin: 0px;
-	padding: 0px;
-	padding-left: 0px;
+	margin: 0;
+	padding: 0;
+	padding-left: 0;
 	}
 
 #font-size li
@@ -700,21 +700,21 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 
 .font .smaller a:link, .font .smaller a:visited 
 	{
-	left: 0px;
+	left: 0;
 	width: 14px;
     }
 .font .smaller a:hover, .font .smaller a:focus 
 	{
-	background: url(images/content/font-size2x.png) no-repeat 0px -18px;
+	background: url(images/content/font-size2x.png) no-repeat 0 -18px;
 	background-size: 52px 36px;
     }
 .font .smaller a:active
 	{
-	background: url(images/content/font-size2x.png) no-repeat 0px -18px;
+	background: url(images/content/font-size2x.png) no-repeat 0 -18px;
 	background-size: 52px 36px;	
     }
 .current-smaller .smaller a:link, .current-smaller .smaller a:visited {
-	background: url(images/content/font-size2x.png) no-repeat 0px -18px;
+	background: url(images/content/font-size2x.png) no-repeat 0 -18px;
 	background-size: 52px 36px;	
 	cursor: default;
 	}  
@@ -722,15 +722,15 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	{
 	position: absolute;
 	top: 0;
-	left: 0px;
+	left: 0;
 	width: 14px;
 	height: 18px;
-	background: url(images/content/font-size2x.png) no-repeat 0px -18px;
+	background: url(images/content/font-size2x.png) no-repeat 0 -18px;
 	background-size: 52px 36px;	
 	}
 .font-smaller-click 
 	{
-	background: url(images/content/font-size2x.png) no-repeat 0px -18px;
+	background: url(images/content/font-size2x.png) no-repeat 0 -18px;
 	background-size: 52px 36px;	
 	}
 	
@@ -838,14 +838,14 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 #day-prev
 	{
 	position: absolute;
-	top: 0px;
-	left: 0px;
+	top: 0;
+	left: 0;
 	}
 	
 #day-next
 	{
 	position: absolute;
-	top: 0px;
+	top: 0;
 	left: 32px;
 	}
 	
@@ -991,7 +991,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 
 #comments-closed-no-responses
 	{
-	padding-top: 0px;
+	padding-top: 0;
 	}
 
 #comments-closed p, #comments-closed-no-responses p
@@ -1060,7 +1060,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	{
 	position: relative;
 	top: -15px;
-	margin: 0 20px 0px 0;
+	margin: 0 20px 0 0;
 	padding: 13px 20px 13px 29px;
 	background-color: #fef1e2;
 	font-size: 13px;
@@ -1071,7 +1071,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	{
 	position: relative;
 	top: -15px;
-	margin: 0 20px 0px 0;
+	margin: 0 20px 0 0;
 	padding: 12px 20px 13px 29px;
 	background-color: #f2f2f2;
 	color: black;
@@ -1144,7 +1144,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	height: 36px;
 	width: 490px;
 	margin: 0 0 9px 0;
-	padding: 0px 0 0px 0;
+	padding: 0 0 0 0;
 	background-color: #fde4c6;
 	}
 
@@ -1161,7 +1161,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	height: 18px;
 	top: 9px;
 	left: 28px;
-	padding: 0px;
+	padding: 0;
 	margin-top: 2px;
 	border: none;	
 	color: #000000;
@@ -1205,7 +1205,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	top: 9px;
 	left: 28px;
 	border: none;
-	font-size: 0px;
+	font-size: 0;
 	text-indent: -280px; /* for OmniWeb */
 	overflow: hidden;
 	}
@@ -1236,7 +1236,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 #content-home .body-text
 	{
 	margin-top: 18px;
-	text-indent: 0px;
+	text-indent: 0;
 	}
 	
 #content-home .body-text-first
@@ -1286,7 +1286,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 
 #content-multiple h2
 	{
-	margin-bottom: 0px;
+	margin-bottom: 0;
 	}
 	
 .continue-reading
@@ -1521,7 +1521,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	
 #journal-photo ul li ul li
 	{
-	padding-left: 0px;
+	padding-left: 0;
 	}	
 
 
@@ -1599,7 +1599,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	position: relative;
 	width: 150px;
 	top: 18px;
-	left: 0px;
+	left: 0;
 	}
 		
 #photo-content li
@@ -1659,7 +1659,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	position: relative;
 	width: 340px;
 	top: 14px;
-	left: 0px;
+	left: 0;
 	}
 	
 #particularly-noteworthy-content a:hover
@@ -1733,22 +1733,22 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 
 .partNoteOpt .ourFavorites a:link, .partNoteOpt .ourFavorites a:visited 
 	{
-	left: 0px;
+	left: 0;
 	width: 84px;
     }
 .partNoteOpt .ourFavorites a:hover, .partNoteOpt .ourFavorites a:focus 
 	{
-	background: url(images/subnav/noteworthy-options2x.png) no-repeat 0px -18px;
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat 0 -18px;
 	background-size: 253px 36px;	
     }
 .partNoteOpt .ourFavorites a:active
 	{
-	background: url(images/subnav/noteworthy-options2x.png) no-repeat 0px -18px;
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat 0 -18px;
 	background-size: 253px 36px;	
     }
 .current-ourFavorites .ourFavorites a:link, .current-ourFavorites .ourFavorites a:visited 
 	{
-	background: url(images/subnav/noteworthy-options2x.png) no-repeat 0px -18px;
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat 0 -18px;
 	background-size: 253px 36px;
 	cursor: default;
 	}  
@@ -1756,15 +1756,15 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	{
 	position: absolute;
 	top: 0;
-	left: 0px;
+	left: 0;
 	width: 84px;
 	height: 18px;
-	background: url(images/subnav/noteworthy-options2x.png) no-repeat 0px -18px;
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat 0 -18px;
 	background-size: 253px 36px;	
 	}
 .partNoteOpt-ourFavorites-click 
 	{
-	background: url(images/subnav/noteworthy-options2x.png) no-repeat 0px -18px;
+	background: url(images/subnav/noteworthy-options2x.png) no-repeat 0 -18px;
 	background-size: 253px 36px;
 	}
 	
@@ -1887,7 +1887,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	width: 259px;
 	height: 16px;
 	top: 27px;
-	left: 0px;
+	left: 0;
 	padding: 2px 0 0 1px;
 	border: none;	
 	font-weight: bold;
@@ -1906,7 +1906,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	background-position: top;
 	background-size: 30px 34px;
 	border: none;
-	font-size: 0px;
+	font-size: 0;
 	text-indent: -50px; /* for OmniWeb */
 	overflow: hidden;
 	cursor: pointer;
@@ -2062,7 +2062,7 @@ iframe
 	
 .search-results-entry p
 	{
-	margin: 0px 0 0px 0;
+	margin: 0 0 0 0;
 	}
 	
 .search-results-entry
@@ -2090,7 +2090,7 @@ iframe
 	width: 259px;
 	height: 16px;
 	top: -15px;
-	left: 0px;
+	left: 0;
 	padding: 2px 0 0 1px;
 	background: #eeeeee;
 	border: none;	
@@ -2110,7 +2110,7 @@ iframe
 	background-position: top;
 	background-size: 30px 34px;
 	border: none;
-	font-size: 0px;
+	font-size: 0;
 	text-indent: -50px; /* for OmniWeb */
 	overflow: hidden;
 	cursor: pointer;
@@ -2141,7 +2141,7 @@ h2#noresults-h2
 		
 .map-info-window h2
 	{
-	margin-bottom: 0px;
+	margin-bottom: 0;
 	font-size: 14px;
 	}
 	
@@ -2196,7 +2196,7 @@ h2#noresults-h2
 .dtree 
 	{
 	white-space: nowrap !important;
-	margin: 0px 0px 0px 0px;
+	margin: 0 0 0 0;
 	font-family:"Lisboa Pro Sans Regular", sans-serif; font-size-adjust:0.48; font-weight:normal; font-style:normal;
 	letter-spacing: .2px;
 	font-size: 12px;
@@ -2207,10 +2207,6 @@ h2#noresults-h2
 	{
 	margin-top: -2px;
 	margin-bottom: -1px;
-	}
-	
-.clip .clip a
-	{
 	}
 	
 .dtree a.nodeSel 
@@ -2265,7 +2261,7 @@ h2#noresults-h2
 #copyright-notice p
 	{
 	width: 450px;
-	margin: 45px 0 0px 0px;
+	margin: 45px 0 0 0;
 
 	font-family:"Lisboa Pro Sans Light", sans-serif; font-size-adjust:0.49; font-weight:200; font-style:normal;
 	letter-spacing: normal;
