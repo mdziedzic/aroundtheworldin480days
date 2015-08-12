@@ -62,21 +62,7 @@
 			
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	
-	
-    <!-- 	wp_head();	-->
-    <link rel='stylesheet' id='wordpress-popular-posts-css'  href='http://localhost.local/aroundtheworldin480days/wp-content/plugins/wordpress-popular-posts/style/wpp.css?ver=3.2.3' type='text/css' media='all' />
-    <script type='text/javascript'>
-        /* <![CDATA[ */
-        var WPdTreeSettings = {"animate":"1","duration":"250","imgurl":"http:\/\/localhost.local\/aroundtheworldin480days\/wp-content\/plugins\/wp-dtree-30\/"};
-        /* ]]> */
-    </script>
-    <script type='text/javascript' src='http://localhost.local/aroundtheworldin480days/wp-content/plugins/wp-dtree-30/wp-dtree.min.js?ver=4.4.3.1'></script>
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost.local/aroundtheworldin480days/xmlrpc.php?rsd" />
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://localhost.local/aroundtheworldin480days/wp-includes/wlwmanifest.xml" /> 
-    <!-- 	wp_head();	-->
-	
-
-
+    <?php wp_head(); ?>
 
 	<!-- For iPhone 6 Plus with @3x Retina HD display: -->
 	<link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_url'); ?>/images/touch/apple-touch-icon-180x180-precomposed.png" />

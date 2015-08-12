@@ -31,7 +31,16 @@ function post_is_in_descendant_category( $cats, $_post = null )
 	return false;
 }
 
-
+// eggfoo
+add_action('wp_enqueue_scripts', 'no_more_jquery');
+function no_more_jquery(){
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', "http" . 
+    ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . 
+    "://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js", false, null);
+    wp_enqueue_script('jquery');
+}
+// eggfoo
 
 function mytheme_comment($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; 
