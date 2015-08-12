@@ -1,0 +1,12 @@
+[08/12/2015 4:28 PM] - NOTICE : The following IP address range has been locked out for exceeding the maximum login attempts: 10.0.1
+[08/12/2015 4:28 PM] - NOTICE : Login attempt from blocked IP range - 10.0.1.*
+[08/12/2015 4:28 PM] - NOTICE : Login attempt from blocked IP range - 10.0.1.*
+[08/12/2015 4:28 PM] - NOTICE : Login attempt from blocked IP range - 10.0.1.*
+[08/12/2015 4:28 PM] - NOTICE : Login attempt from blocked IP range - 10.0.1.*
+[08/12/2015 4:28 PM] - NOTICE : Login attempt from blocked IP range - 10.0.1.*
+[08/12/2015 4:29 PM] - NOTICE : Login attempt from blocked IP range - 10.0.1.*
+[08/12/2015 4:49 PM] - NOTICE : The following IP address range has been locked out for exceeding the maximum login attempts: 10.0.1
+[08/12/2015 4:49 PM] - NOTICE : Login attempt from blocked IP range - 10.0.1.*
+[08/12/2015 4:50 PM] - NOTICE : Login attempt from blocked IP range - 10.0.1.*
+[08/12/2015 6:43 PM] - SUCCESS : File Change Detection Feature: change to filesystem detected!
+[08/12/2015 6:44 PM] - SUCCESS : File Change Detection Feature: change to filesystem detected!

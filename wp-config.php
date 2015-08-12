@@ -45,6 +45,9 @@ define('DB_COLLATE', '');
 	// needed to add this to repiar db on 2013-09-07
 	define('WP_ALLOW_REPAIR', true);
 
+    // extra security
+//    define('FORCE_SSL_ADMIN', true);    
+
 // eggfoo
 
 
@@ -96,4 +99,6 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
-?>
+
+//Disable File Edits
+define('DISALLOW_FILE_EDIT', true);
