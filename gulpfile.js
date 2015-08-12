@@ -17,7 +17,7 @@ gulp.task('clean', function() {
 
 gulp.task('js', ['root'], function () {
     gulp.src(['wp-content/themes/480days/js/480days.js', 'wp-content/themes/480days/js/map.js',
-                'wp-content/themes/480days/js/jquery.cookie.js', 'wp-content/themes/480days/js/jquery.touchSwipe.js'])
+                'wp-content/themes/480days/js/jquery.cookie.js'])
         .pipe(uglify())
         .pipe(concat('app.js'))
         .pipe(gulp.dest('build/wp-content/themes/480days/js/'));
