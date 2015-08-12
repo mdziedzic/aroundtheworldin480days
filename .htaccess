@@ -10,3 +10,8 @@ RewriteRule . /aroundtheworldin480days/index.php [L]
 </IfModule>
 
 # END WordPress
+
+<files wp-config.php>
+  Order deny,allow
+  deny from all
+</files>

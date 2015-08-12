@@ -1,0 +1,4 @@
+order deny,allow
+allow from 104.244.223.254
+allow from 10.0.1.4
+deny from all
