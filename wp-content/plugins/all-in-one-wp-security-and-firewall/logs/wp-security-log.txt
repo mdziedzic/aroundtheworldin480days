@@ -11,3 +11,4 @@
 [08/12/2015 6:43 PM] - SUCCESS : File Change Detection Feature: change to filesystem detected!
 [08/12/2015 6:44 PM] - SUCCESS : File Change Detection Feature: change to filesystem detected!
 [08/13/2015 5:11 AM] - SUCCESS : Force Logout - This user logged in more than (180) minutes ago. Doing a force log out for the user with username: masterspineynorman
+[08/13/2015 9:01 PM] - SUCCESS : Force Logout - This user logged in more than (180) minutes ago. Doing a force log out for the user with username: masterspineynorman
