@@ -31,9 +31,7 @@
 	<?php } else { ?>
 		<title><?php bloginfo('name'); ?> <?php wp_title('&raquo;'); ?></title>		
 	<?php } ?>
-	
-    <meta name="description" content="Around the World in 480 Days is the travelogue of a couple's backpacking trip around the world, traveling mainly by land." />
-	
+		
 	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" />	
 	
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
