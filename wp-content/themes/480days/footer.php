@@ -12,7 +12,7 @@
 			<div id="footer-content">
 				<div id="search">
 					<img src="<?php bloginfo('template_url'); ?>/images/footer/search2x.png" width="60" height="18"	alt="Search" />
-					<form method="get" id="searchform" action="http://localhost.local/aroundtheworldin480days/" >
+					<form method="get" id="searchform" action="<?php bloginfo('template_url'); ?>/../../../" >
 						<p><input type="text" id="search-input" name="s" tabindex="5" /></p><div><input type="submit" id="search-submit" /></div>
 					</form>
 				</div>

@@ -47,7 +47,7 @@
 									<h2 id="noresults-h2">Alas, no posts found. Common words ("the," "while," "somehow," etc.) are not included in the search.</h2>
 
 									<div>
-										<form method="get" action="http://localhost.local/aroundtheworldin480days/" >
+										<form method="get" action="<?php bloginfo('template_url'); ?>/../../../" >
 											<p><input type="text" id="search-input-noresults" name="s" tabindex="1" /></p><div><input type="submit" id="search-submit-noresults" /></div>
 										</form>
 									</div>
