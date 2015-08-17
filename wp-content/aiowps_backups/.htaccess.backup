@@ -13,7 +13,6 @@ RewriteRule . /aroundtheworldin480days/index.php [L]
 
 # END WordPress
 
-
 # WordPress SEO - XML Sitemap Rewrite Fix
 <IfModule mod_rewrite.c>
 RewriteEngine On
