@@ -57,20 +57,6 @@
 		var mapWhereAmI = "<?php echo "5000"; ?>"; // default map postion when not on post or cateogry page
 	</script>
             
-    <script type="text/javascript">
-        WebFontConfig = { fontdeck: { id: '50825' } };
-
-        (function() {
-            var wf = document.createElement('script');
-            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-            wf.type = 'text/javascript';
-            wf.async = 'true';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(wf, s);
-        })();
-    </script>
-			
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 	
     <?php wp_head(); ?>
@@ -81,7 +67,8 @@
 	<link rel="<?php bloginfo('template_url'); ?>/images/touch/apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />	
 
 	<link href='https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy' rel='stylesheet' type='text/css' />
-	<link href='https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic' rel='stylesheet' type='text/css' />	  
+	<link href='https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400italic' rel='stylesheet' type='text/css' />	 
+	<link rel="stylesheet" href="//f.fontdeck.com/s/css/3XGWpNOqLfog08lBG6c5ifV5Z/M/aroundtheworldin480days.com/50825.css" type="text/css" /> 
 </head>
 
 <body onunload="GUnload()">
