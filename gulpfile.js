@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     htmlreplace = require('gulp-html-replace'),
     rename    = require('gulp-rename'),
-    del = require('del');
+    del = require('del'),
+    preservetime = require('gulp-preservetime');
 
 // delete the build directory
 gulp.task('clean', function() {
@@ -36,14 +37,21 @@ gulp.task('css', ['root'], function () {
 
 gulp.task('root', ['clean'], function () {
     gulp.src('wp-admin/**/*', { "base" : 'wp-admin'})
-        .pipe(gulp.dest('build/wp-admin/'));
+        .pipe(gulp.dest('build/wp-admin/'))
+        .pipe(preservetime());
+    gulp.src('wp-admin/.htaccess', { "base" : 'wp-admin'})
+        .pipe(gulp.dest('build/wp-admin/'))
+        .pipe(preservetime());
     gulp.src('wp-includes/**/*', { "base" : 'wp-includes'})
-        .pipe(gulp.dest('build/wp-includes/'));
+        .pipe(gulp.dest('build/wp-includes/'))
+        .pipe(preservetime());
     gulp.src(['wp-content/**/*', '!wp-content/themes/480days/*.css', '!wp-content/themes/480days/js/*',
              '!wp-content/themes/480days/footer.php'], { "base" : 'wp-content'})
-        .pipe(gulp.dest('build/wp-content/'));
-    return gulp.src(['*.html', '*.php', '*.txt', '.htaccess'])
-        .pipe(gulp.dest('build/'));
+        .pipe(gulp.dest('build/wp-content/'))
+        .pipe(preservetime());
+    return gulp.src(['*.html', '*.php', '*.txt', '!.htaccess', '!wp-config.php'])
+        .pipe(gulp.dest('build/'))
+        .pipe(preservetime());
 });
 
 gulp.task('htmladjust', ['root'], function () {
