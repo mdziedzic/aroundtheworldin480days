@@ -1,2 +1,0 @@
-[08/19/2015 12:45 AM] - SUCCESS : Force Logout - This user logged in more than (180) minutes ago. Doing a force log out for the user with username: masterspineynorman
-[08/19/2015 4:34 PM] - SUCCESS : Force Logout - This user logged in more than (180) minutes ago. Doing a force log out for the user with username: masterspineynorman
