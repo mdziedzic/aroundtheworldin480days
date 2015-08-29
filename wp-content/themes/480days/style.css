@@ -2017,7 +2017,7 @@ input, textarea 	/* to fix rounded submit buttons in ios */
 	background-color: #99b3cc;
 	}
 
-iframe
+#map iframe
 	{
 	visibility: hidden;
 	}
@@ -2271,3 +2271,13 @@ h2#noresults-h2
 	font-weight: 100;
 	color: #b0b0b0;
 	}	
+
+
+
+/* ----------------------------------------- # ADS  */
+
+.ad-container {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding-left: 55px;
+}

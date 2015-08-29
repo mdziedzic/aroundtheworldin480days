@@ -145,5 +145,6 @@ jQuery(document).ready(function($) {
 // necessar to avoid white background while iframe is loading
 
 function displayIframe() {
-    document.getElementsByTagName("iframe")[0].style.visibility = "visible";
+//    document.getElementsByTagName("iframe")[0].style.visibility = "visible";
+    document.getElementsByName("gm-map-1")[0].style.visibility = "visible";
 }
