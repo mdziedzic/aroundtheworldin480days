@@ -1,0 +1,12 @@
+/* Webfont: LisboaSansLF-Light */@font-face {
+    font-family: 'LisboaSansLFLight';
+    src: url('LisboaSansLF-Light.eot'); /* IE9 Compat Modes */
+    src: url('LisboaSansLF-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('LisboaSansLF-Light.woff') format('woff'), /* Modern Browsers */
+         url('LisboaSansLF-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('LisboaSansLF-Light.svg#LisboaSansLF-Light') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
